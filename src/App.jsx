@@ -5,34 +5,24 @@ import HempMap from './components/charts/HempMap';
 
 function App() {
   return (
-    <MainLayout
-      leftPanel={<RankingChart />} 
-    >
-      {/* 전체 컨테이너: 세로 방향 (flex-col), 높이 100% (h-full) */}
-      <div className="flex flex-col gap-6 w-full h-full">
+    // ⚠️ 주의: MainLayout 바깥에 <div className="p-10"> 같은 게 있으면 레이아웃이 망가집니다.
+    // MainLayout이 최상위 태그가 되도록 해주세요.
+    <MainLayout leftSidebar={<RankingChart />}>
+      
+      {/* 오른쪽 메인 영역 내용 */}
+      <div className="flex flex-col w-full h-full p-6 gap-6">
         
-        {/* 1. 상단 HEMP Map 영역 (화면의 60% 차지) */}
-        {/* min-h-[400px]: 화면이 작아져도 최소 400px은 확보해라! */}
-        <div className="flex-[1.5] w-full min-h-[400px] bg-[#1A1B20] rounded-lg relative overflow-hidden">
-          {/* 차트 컴포넌트 */}
-          <div className="absolute inset-0 w-full h-full">
-             <HempMap />
-          </div>
+        {/* 상단 버블 차트 */}
+        <div className="flex-[1.5] w-full bg-[#1A1B20] rounded-lg relative overflow-hidden border border-gray-800">
+           <div className="absolute inset-0 w-full h-full">
+              <HempMap />
+           </div>
         </div>
         
-        {/* 2. 하단 차트 영역 (나머지 공간 차지) */}
-        {/* min-h-[250px]: 최소 높이 확보 */}
-        <div className="flex-1 w-full min-h-[250px] flex gap-6">
-           
-           {/* 준혁님 레이더 차트 자리 */}
-           <div className="flex-1 border border-dashed border-gray-600 rounded-lg flex items-center justify-center bg-[#1A1B20]/50 text-gray-400">
-              Radar Chart
-           </div>
-           
-           {/* 준혁님 생키 차트 자리 */}
-           <div className="flex-1 border border-dashed border-gray-600 rounded-lg flex items-center justify-center bg-[#1A1B20]/50 text-gray-400">
-              Sankey Chart
-           </div>
+        {/* 하단 차트들 */}
+        <div className="flex-1 flex gap-6 min-h-[250px]">
+           <div className="flex-1 border border-dashed border-gray-700 rounded-lg"></div>
+           <div className="flex-1 border border-dashed border-gray-700 rounded-lg"></div>
         </div>
 
       </div>

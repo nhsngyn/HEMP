@@ -1,27 +1,21 @@
 import React from 'react';
 
-const MainLayout = ({ leftPanel, children }) => {
+const MainLayout = ({ leftSidebar, children }) => {
   return (
-    // 1. 전체 화면 고정 (h-screen, overflow-hidden)
-    <div className="flex h-screen w-screen bg-hemp-bg text-white overflow-hidden">
+    // 전체 컨테이너: flex, 높이 고정(1004px), 검은 배경
+    <div className="flex w-full h-[1004px] bg-black overflow-hidden relative">
       
-      {/* 2. 좌측 사이드바 (너비 고정, 높이 100%) */}
-      <aside className="w-[360px] h-full border-r border-hemp-gray bg-hemp-bg flex flex-col z-10 flex-shrink-0">
-        <div className="h-full p-6 overflow-hidden">
-           {leftPanel}
-        </div>
+      {/* 왼쪽: 랭킹 차트 (362px 고정) */}
+      <aside className="w-[362px] h-full shrink-0 border-r border-gray-700 bg-gray-900 overflow-y-auto z-20">
+        {/* leftSidebar가 없으면 에러 방지를 위해 null 처리 */}
+        {leftSidebar || <div className="text-white p-4">랭킹 차트 없음</div>}
       </aside>
 
-      {/* 3. 우측 메인 컨텐츠 (남은 공간 채우기) */}
-      <main className="flex-1 h-full min-w-0 flex flex-col relative">
-        {/* 내부 스크롤 영역 */}
-        <div className="flex-1 w-full h-full overflow-y-auto p-6">
-          {/* ★ 여기가 핵심! children을 감싸는 div도 h-full이어야 함 */}
-          <div className="w-full h-full max-w-[1800px] mx-auto">
-             {children}
-          </div>
-        </div>
+      {/* 오른쪽: 버블 차트 (나머지 채움) */}
+      <main className="flex-1 h-full relative z-10 bg-black">
+        {children || <div className="text-white p-4">메인 차트 없음</div>}
       </main>
+
     </div>
   );
 };

@@ -3,13 +3,13 @@ import ReactECharts from 'echarts-for-react';
 import useChainStore from '../../store/useChainStore';
 import { COLORS } from '../../constants/colors';
 
-const HempMap = () => { 
+const HempMap = () => {
   const { allChains, selectedMainId, selectedSubId1, selectedSubId2 } = useChainStore();
 
   const option = useMemo(() => {
-    // 데이터가 없으면 빈 옵션 반환 (에러 방지)
     if (!allChains || allChains.length === 0) return {};
 
+    // 1. 선택 여부 확인 헬퍼 함수
     const getSelectionInfo = (id) => {
       if (id === selectedMainId) return { type: 'main', color: COLORS.MAIN, z: 100 };
       if (id === selectedSubId1) return { type: 'sub1', color: COLORS.SUB1, z: 90 };
@@ -17,61 +17,97 @@ const HempMap = () => {
       return null;
     };
 
-    // 2. 실제 데이터 매핑
+    // 2. 버블 크기 계산 함수 (프로포절 개수 기준)
+    const calculateBubbleSize = (proposalCount, isSelected) => {
+      const count = proposalCount || 0;
+      
+      let size = (count * 0.5) + 25; 
+      size = Math.min(Math.max(size, 25), 85);
+      return isSelected ? size + 10 : size;
+    };
+
     const seriesData = allChains.map((chain) => {
       const selection = getSelectionInfo(chain.id);
       const isSelected = !!selection;
-      
       const hasAnySelection = selectedMainId || selectedSubId1 || selectedSubId2;
+      
+      const size = calculateBubbleSize(chain.proposals, isSelected);
+      
+      // 로고 이미지 경로 (데이터에 logoUrl이 있다고 가정)
+      const logoUrl = chain.logoUrl || "";
 
       return {
         name: chain.name,
         value: [
           chain.score,        
-          chain.participation || 0 // 데이터 없을 경우 0 처리
+          chain.participation || 0 
         ],
+        
+        // 1. 심볼은 투명한 원으로 설정
+        symbol: 'circle',
+        symbolSize: size, 
+
+        // 2. 실제 이미지는 배경으로
+        label: {
+          show: true,
+          position: 'inside', 
+          formatter: '{logo|}',
+          rich: {
+            logo: {
+              backgroundColor: { image: logoUrl },
+              width: size,
+              height: size,
+              borderRadius: size / 2
+            }
+          }
+        },
+
+        // 3. 스타일 설정
         itemStyle: {
-          color: isSelected 
-            ? selection.color 
-            : (hasAnySelection ? '#374151' : '#6B7280'),
+          color: 'transparent', 
           
-          opacity: isSelected ? 1 : (hasAnySelection ? 0.3 : 0.7),
-      
-          borderColor: isSelected ? '#fff' : 'transparent',
-          borderWidth: isSelected ? 2 : 0,
-          shadowBlur: isSelected ? 15 : 0,
+          // 선택 안 된 애들은 흐리게
+          opacity: isSelected ? 1 : (hasAnySelection ? 0.3 : 0.9),
+          
+          borderColor: isSelected ? selection.color : 'transparent',
+          borderWidth: isSelected ? 3 : 0,
+          shadowBlur: isSelected ? 20 : 0,
           shadowColor: isSelected ? selection.color : 'transparent'
         },
         
-        symbolSize: isSelected ? 35 : 15,
-        
+        // Z-index: 선택된 게 위로 올라오게
         z: selection ? selection.z : 2
       };
     });
 
     return {
       backgroundColor: 'transparent',
+      // 차트 여백 설정
       grid: {
-        top: '15%', right: '8%', bottom: '15%', left: '8%',
+        top: '12%', right: '8%', bottom: '12%', left: '8%',
         containLabel: true
       },
-
-      // 툴팁 기능 : 구체적인 디자인은 나중에 정하기!
+      // 툴팁 
       tooltip: {
         trigger: 'item',
-        backgroundColor: 'rgba(26, 27, 32, 0.9)', // 반투명 검정
+        backgroundColor: 'rgba(26, 27, 32, 0.95)',
         borderColor: '#4B5563',
         textStyle: { color: '#fff' },
         formatter: (params) => {
+          const chainData = allChains.find(c => c.name === params.name);
+          const logoImg = chainData?.logoUrl ? `<img src="${chainData.logoUrl}" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;border-radius:50%;" />` : '';
+          
           return `
-            <div style="font-weight:bold; margin-bottom:5px; font-size:14px;">${params.name}</div>
-            <div style="color:#bbb">HEMP Score: <b style="color:white">${params.value[0]}</b></div>
-            <div style="color:#bbb">Participation: <b style="color:white">${params.value[1]}</b></div>
+            <div style="font-weight:bold; margin-bottom:8px; font-size:15px; display:flex; align-items:center;">
+              ${logoImg} ${params.name}
+            </div>
+            <div style="color:#bbb; margin-bottom:4px;">HEMP Score: <b style="color:white">${params.value[0]}</b></div>
+            <div style="color:#bbb; margin-bottom:4px;">Participation: <b style="color:white">${params.value[1]}%</b></div>
+            <div style="color:#bbb;">Proposals: <b style="color:#FCD34D">${chainData?.proposals || 0}개</b></div>
           `;
         }
       },
-
-      // X축 설정
+      // X축 
       xAxis: {
         name: 'HEMP Score',
         type: 'value',
@@ -80,21 +116,20 @@ const HempMap = () => {
         axisLabel: { color: '#9CA3AF' },
         nameTextStyle: { color: '#9CA3AF', fontWeight: 'bold' }
       },
-      // Y축 설정
+      // Y축
       yAxis: {
         name: 'Participation',
         type: 'value',
         scale: true,
         splitLine: { lineStyle: { color: '#2A2B30' } },
-        axisLabel: { color: '#9CA3AF' },
+        axisLabel: { formatter: '{value}%', color: '#9CA3AF' },
         nameTextStyle: { color: '#9CA3AF', fontWeight: 'bold' }
       },
-      // 시리즈 설정
+      
       series: [
         {
           type: 'scatter',
           data: seriesData,
-          // 애니메이션 설정
           animationDurationUpdate: 500,
           animationEasingUpdate: 'cubicOut'
         }

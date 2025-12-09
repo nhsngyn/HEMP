@@ -4,49 +4,31 @@ import { createPortal } from 'react-dom';
 import useChainStore from '../../store/useChainStore';
 import { COLORS } from '../../constants/colors';
 
-const DraggableChain = ({ chain, selectionInfo, isOverlay = false }) => {
+import ChainCard from "./ChainCard";
+
+const DraggableChain = ({ chain, selectionInfo, isOverlay = false, onPointerDown, onPointerUp }) => {
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
     id: chain.id,
   });
-
-  const isSelected = !!selectionInfo;
-  const borderColor = isSelected ? selectionInfo.color : '#374151';
-  
-  const style = {
-    borderColor: isOverlay ? '#FFFFFF' : borderColor,
-    boxShadow: isSelected && !isDragging && !isOverlay 
-      ? `0 0 10px ${selectionInfo.color}40` // 40은 투명도
-      : 'none',
-    opacity: isDragging ? 0.3 : 1,
-  };
 
   return (
     <div
       ref={setNodeRef}
       {...listeners}
       {...attributes}
-      style={style}
-      className={`
-        p-3 mb-2 rounded border-2 cursor-grab flex justify-between items-center group transition-all duration-300 ease-in-out
-        ${isOverlay ? 'bg-gray-700 scale-105 z-50' : 'bg-[#1A1B20]'}
-        ${isSelected ? 'bg-opacity-20' : 'hover:border-gray-400'}
-      `}
+      onPointerDown={onPointerDown}
+      onPointerUp={onPointerUp}
     >
-      <div className="flex items-center gap-2">
-        {isSelected && (
-          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: selectionInfo.color }} />
-        )}
-        <span className={`font-bold ${isSelected ? 'text-white' : 'text-gray-300'}`}>
-          {chain.name}
-        </span>
-      </div>
-      
-      <span className={`text-xs ${isOverlay ? 'text-white' : 'text-gray-500'}`}>
-        Score: {chain.score}
-      </span>
+      <ChainCard 
+        chain={chain}
+        selectionInfo={selectionInfo}
+        isOverlay={isOverlay}
+        isDragging={isDragging}
+      />
     </div>
   );
 };
+
 
 const DroppableListArea = ({ children }) => {
   const { setNodeRef, isOver } = useDroppable({ id: 'ranking-list' });

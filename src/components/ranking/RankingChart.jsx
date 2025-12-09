@@ -9,7 +9,7 @@ const ChainCard = ({ chain, selectionInfo, isOverlay, isDragging, style, ...prop
   const isSelected = !!selectionInfo;
   const borderColor = isSelected ? selectionInfo.color : '#374151';
 
-  const finalStyle = {
+  const finalStyle = { 
     ...style,
     borderColor: isOverlay ? '#FFFFFF' : borderColor,
     boxShadow: isSelected && !isDragging && !isOverlay 
@@ -84,7 +84,7 @@ const DroppableListArea = ({ children }) => {
   );
 };
 
-// 4. 슬롯 영역 (높이 조정됨)
+// 4. 슬롯 영역
 const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
   const { setNodeRef, isOver } = useDroppable({ id });
   const { allChains } = useChainStore();

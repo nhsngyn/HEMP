@@ -3,90 +3,86 @@ import { mockChains } from '../data/mockData';
 
 const useChainStore = create((set) => ({
   allChains: mockChains,
-
   selectedMainId: null,
   selectedSubId1: null,
   selectedSubId2: null,
 
-
-
-  // setSlot: 부분 업데이트 & 매핑 사용
-  setSlot: (slotType, chainId) => set((state) => {
-    // 1. 슬롯 이름과 상태 키 매핑
-    const slotKeyMap = {
-      main: 'selectedMainId',
-      sub1: 'selectedSubId1',
-      sub2: 'selectedSubId2',
-    };
-    
-    const targetKey = slotKeyMap[slotType];
-    if (!targetKey) return {}; // 잘못된 슬롯 타입이면 무시
-
-    // 2. 토글 기능
-    if (state[targetKey] === chainId) {
-      return { [targetKey]: null };
-    }
-
-    // 3. 중복 방지: 다른 슬롯에 이 체인이 있다면 거기서는 비워야 함
-    const updates = {};
-    
-    Object.values(slotKeyMap).forEach((key) => {
-      if (state[key] === chainId) {
-        updates[key] = null; // 기존 자리 비우기
-      }
-    });
-
-    // 4. 목표 슬롯에 채우기
-    updates[targetKey] = chainId;
-
-    // 5. 변경된 것만 반환
-    return updates;
-  }),
-
-  //불필요한 복사 제거
+  // --- 🗑️ 해제 액션 (오직 X 버튼용) ---
+  
+  // 1. 슬롯의 X 버튼 클릭 시
   clearSlot: (slotType) => set(() => {
-    const slotKeyMap = {
-      main: 'selectedMainId',
-      sub1: 'selectedSubId1',
-      sub2: 'selectedSubId2',
-    };
-    const targetKey = slotKeyMap[slotType];
-    
-    return targetKey ? { [targetKey]: null } : {};
+    const key = { main: 'selectedMainId', sub1: 'selectedSubId1', sub2: 'selectedSubId2' }[slotType];
+    return key ? { [key]: null } : {};
   }),
 
+  // 2. 리스트로 드래그해서 버릴 때
   removeChainById: (chainId) => set((state) => {
     const updates = {};
-    
     if (state.selectedMainId === chainId) updates.selectedMainId = null;
     if (state.selectedSubId1 === chainId) updates.selectedSubId1 = null;
     if (state.selectedSubId2 === chainId) updates.selectedSubId2 = null;
+    return updates;
+  }),
+
+  // --- 🔥 [핵심] 통합 선택 엔진 applySelection ---
+  // targetSlot이 있으면(드래그) -> 강제 배치
+  // targetSlot이 없으면(클릭) -> 자동 배치 (Main->Sub1->Sub2)
+  applySelection: (chainId, targetSlot = null) => set((state) => {
+    const slots = {
+      main: state.selectedMainId,
+      sub1: state.selectedSubId1,
+      sub2: state.selectedSubId2,
+    };
+
+    const slotKeyMap = {
+      main: 'selectedMainId',
+      sub1: 'selectedSubId1',
+      sub2: 'selectedSubId2',
+    };
+
+    const isAlreadySelected = Object.values(slots).includes(chainId);
+
+    // Case 1: 이미 선택된 체인을 그냥 클릭함 (targetSlot 없음)
+    // 👉 "해제 금지" 규칙에 따라 아무것도 안 함.
+    if (isAlreadySelected && !targetSlot) {
+      return {}; 
+    }
+
+    const updates = {};
+
+    // Case 2: 드래그 앤 드롭 (targetSlot 있음) OR 클릭인데 선택 안 된 상태
+    // 일단 기존에 다른 슬롯에 있었다면 거기서는 비워줘야 함 (이동 처리)
+    if (isAlreadySelected) {
+      for (const [key, value] of Object.entries(slots)) {
+        if (value === chainId) {
+          updates[slotKeyMap[key]] = null;
+        }
+      }
+    }
+
+    // 배치할 목표 슬롯 결정
+    let finalTargetKey = null;
+
+    if (targetSlot) {
+      // [드래그] 사용자가 지정한 슬롯
+      finalTargetKey = slotKeyMap[targetSlot];
+    } else {
+      // [클릭/버블] 자동 우선순위 배치
+      if (!slots.main) finalTargetKey = 'selectedMainId';
+      else if (!slots.sub1) finalTargetKey = 'selectedSubId1';
+      else if (!slots.sub2) finalTargetKey = 'selectedSubId2';
+      else finalTargetKey = 'selectedMainId'; // 꽉 찼으면 Main 교체
+    }
+
+    // 최종 업데이트
+    if (finalTargetKey) {
+      updates[finalTargetKey] = chainId;
+    }
     
     return updates;
   }),
 
-  // 스마트 셀렉트: 버블 차트를 누르면 빈 슬롯에 우선순위대로 들어감
-smartSelect: (chainId) => set((state) => {
-    // 1. 이미 선택된 체인이면? -> 해제 (토글 기능)
-    if (state.selectedMainId === chainId) return { selectedMainId: null };
-    if (state.selectedSubId1 === chainId) return { selectedSubId1: null };
-    if (state.selectedSubId2 === chainId) return { selectedSubId2: null };
-
-    // 2. 빈 슬롯 찾기 (우선순위: Main -> Sub1 -> Sub2)
-    if (!state.selectedMainId) return { selectedMainId: chainId };
-    if (!state.selectedSubId1) return { selectedSubId1: chainId };
-    if (!state.selectedSubId2) return { selectedSubId2: chainId };
-
-    // 3. 꽉 찼다면? -> Main을 교체
-    return { selectedMainId: chainId };
-  }),
-
-  // 초기화
-  resetAll: () => set({ 
-    selectedMainId: null, 
-    selectedSubId1: null, 
-    selectedSubId2: null 
-  }),
+  resetAll: () => set({ selectedMainId: null, selectedSubId1: null, selectedSubId2: null }),
 }));
 
 export default useChainStore;

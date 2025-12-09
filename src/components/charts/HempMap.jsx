@@ -1,28 +1,23 @@
 import React, { useMemo } from 'react';
 import ReactECharts from 'echarts-for-react';
 import useChainStore from '../../store/useChainStore';
-import useChainSelection from '../../hooks/useChainSelection'; // ✅ 만든 훅 Import
+import useChainSelection from '../../hooks/useChainSelection';
 
 const HempMap = () => {
-  // 1. 데이터 가져오기
   const { allChains } = useChainStore();
   
-  // 2. 훅 사용하기
+  // ✅ selectChain 가져오기
   const { 
+    selectChain, // 클릭용 함수
     getSelectionInfo, 
-    toggleChainSelection, 
-    selectedMainId, 
-    selectedSubId1, 
-    selectedSubId2 
+    selectedMainId, selectedSubId1, selectedSubId2 
   } = useChainSelection();
 
   const option = useMemo(() => {
     if (!allChains || allChains.length === 0) return {};
 
-    // 뭔가 하나라도 선택된 게 있는지 확인
     const hasAnySelection = selectedMainId || selectedSubId1 || selectedSubId2;
 
-    // 버블 크기 계산 함수
     const calculateBubbleSize = (proposalCount, isSelected) => {
       const count = proposalCount || 0;
       let size = (count * 0.5) + 25; 
@@ -30,9 +25,7 @@ const HempMap = () => {
       return isSelected ? size + 10 : size;
     };
 
-    // 3. 데이터 매핑
     const seriesData = allChains.map((chain) => {
-      // 훅을 통해 선택 정보져오기
       const selection = getSelectionInfo(chain.id);
       const isSelected = !!selection;
       
@@ -42,12 +35,8 @@ const HempMap = () => {
       return {
         name: chain.name,
         value: [chain.score, chain.participation || 0],
-        
-        // --- 스타일링 로직 ---
         symbol: 'circle',
         symbolSize: size, 
-
-        // 이미지 마스킹 (원형 로고)
         label: {
           show: true,
           position: 'inside',
@@ -61,21 +50,14 @@ const HempMap = () => {
             }
           }
         },
-
         itemStyle: {
-          color: 'transparent', // 심볼 투명화
-          
-          // 선택 안 된 것들은 흐리게 처리
+          color: 'transparent',
           opacity: isSelected ? 1 : (hasAnySelection ? 0.3 : 0.85),
-          
-          // 선택된 것만 훅에서 가져온 색상으로 네온 효과
           borderColor: isSelected ? selection.color : 'transparent',
           borderWidth: isSelected ? 3 : 0,
           shadowBlur: isSelected ? 20 : 0,
           shadowColor: isSelected ? selection.color : 'transparent'
         },
-        
-        // 선택된 것이 더 위에 오도록 z-index 설정
         z: selection ? selection.z : 2
       };
     });
@@ -94,7 +76,6 @@ const HempMap = () => {
         formatter: (params) => {
           const chainData = allChains.find(c => c.name === params.name);
           const logoImg = chainData?.logoUrl ? `<img src="${chainData.logoUrl}" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;border-radius:50%;" />` : '';
-          
           return `
             <div style="font-weight:bold; margin-bottom:8px; font-size:15px; display:flex; align-items:center;">
               ${logoImg} ${params.name}
@@ -130,17 +111,14 @@ const HempMap = () => {
         }
       ]
     };
-  }, [allChains, selectedMainId, selectedSubId1, selectedSubId2, getSelectionInfo]); // getSelectionInfo 의존성 추가
+  }, [allChains, selectedMainId, selectedSubId1, selectedSubId2, getSelectionInfo]);
 
-  // ✅ 4. 클릭 이벤트 핸들러
+  // ✅ 클릭 핸들러
   const onChartClick = (params) => {
-    // 클릭된 데이터의 이름을 통해 ID 찾기
     const clickedChain = allChains.find(c => c.name === params.name);
-    
     if (clickedChain) {
-      console.log("버블 클릭:", clickedChain.name);
-      // 선택 안 됐으면 빈 곳에 넣고, 됐으면 빼기
-      toggleChainSelection(clickedChain.id);
+      // ✅ 클릭 시: 자동 배치 (이미 선택된 체인이면 무시됨)
+      selectChain(clickedChain.id);
     }
   };
 
@@ -153,7 +131,6 @@ const HempMap = () => {
         option={option} 
         style={{ height: '100%', width: '100%' }} 
         opts={{ renderer: 'svg' }}
-        // 클릭 이벤트 연결
         onEvents={{
           click: onChartClick
         }}

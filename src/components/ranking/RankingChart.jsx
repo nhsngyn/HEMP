@@ -1,71 +1,90 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { DndContext, useDraggable, useDroppable, DragOverlay } from '@dnd-kit/core';
 import { createPortal } from 'react-dom';
 import useChainStore from '../../store/useChainStore';
 import { COLORS } from '../../constants/colors';
 
-const DraggableChain = ({ chain, selectionInfo, isOverlay = false }) => {
-  const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
-    id: chain.id,
-  });
-
+// 1. 공통 디자인 컴포넌트
+const ChainCard = ({ chain, selectionInfo, isOverlay, isDragging, style, ...props }) => {
   const isSelected = !!selectionInfo;
   const borderColor = isSelected ? selectionInfo.color : '#374151';
-  
-  const style = {
+
+  const finalStyle = {
+    ...style,
     borderColor: isOverlay ? '#FFFFFF' : borderColor,
     boxShadow: isSelected && !isDragging && !isOverlay 
-      ? `0 0 10px ${selectionInfo.color}40` // 40은 투명도
+      ? `0 0 10px ${selectionInfo.color}40` 
       : 'none',
-    opacity: isDragging ? 0.3 : 1,
+    opacity: isDragging || (isSelected && !isOverlay && !props.isSlotItem) ? 0.3 : 1, 
   };
 
   return (
     <div
-      ref={setNodeRef}
-      {...listeners}
-      {...attributes}
-      style={style}
+      style={finalStyle}
       className={`
-        p-3 mb-2 rounded border-2 cursor-grab flex justify-between items-center group transition-all duration-300 ease-in-out
-        ${isOverlay ? 'bg-gray-700 scale-105 z-50' : 'bg-[#1A1B20]'}
+        p-3 mb-2 rounded border-2 flex justify-between items-center group transition-all duration-300 ease-in-out
+        ${isOverlay ? 'bg-gray-700 scale-105 z-50 shadow-xl' : 'bg-[#1A1B20]'}
         ${isSelected ? 'bg-opacity-20' : 'hover:border-gray-400'}
+        ${props.cursor ? props.cursor : ''} 
       `}
+      {...props}
     >
       <div className="flex items-center gap-2">
         {isSelected && (
           <div className="w-2 h-2 rounded-full" style={{ backgroundColor: selectionInfo.color }} />
         )}
-        <span className={`font-bold ${isSelected ? 'text-white' : 'text-gray-300'}`}>
+        <span className={`font-bold text-sm ${isSelected ? 'text-white' : 'text-gray-300'}`}>
           {chain.name}
         </span>
       </div>
       
       <span className={`text-xs ${isOverlay ? 'text-white' : 'text-gray-500'}`}>
-        Score: {chain.score}
+        {chain.score}
       </span>
     </div>
   );
 };
 
+// 2. 드래그 기능이 있는 체인 (Wrapper)
+const DraggableChain = ({ chain, selectionInfo, isOverlay = false }) => {
+  const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
+    id: chain.id,
+  });
+
+  return (
+    <div ref={setNodeRef} {...listeners} {...attributes}>
+      <ChainCard 
+        chain={chain} 
+        selectionInfo={selectionInfo} 
+        isOverlay={isOverlay}
+        isDragging={isDragging}
+        isSlotItem={true} 
+        cursor="cursor-grab active:cursor-grabbing"
+      />
+    </div>
+  );
+};
+
+// 3. 리스트 영역
 const DroppableListArea = ({ children }) => {
   const { setNodeRef, isOver } = useDroppable({ id: 'ranking-list' });
 
   return (
     <div 
       ref={setNodeRef} 
-      className={`flex-1 overflow-y-auto pr-2 custom-scrollbar transition-colors rounded-lg p-2
+      className={`flex-1 overflow-y-auto px-4 pt-2 custom-scrollbar transition-colors
         ${isOver ? 'bg-white/5' : ''} 
       `}
     >
-      <h3 className="text-sm text-gray-400 mb-2">
-        {isOver ? 'Release to Unselect ↩️' : 'All Chains'}
+      <h3 className="text-xs text-gray-500 mb-3 uppercase font-bold tracking-wider">
+        All Chains List
       </h3>
       {children}
     </div>
   );
 };
 
+// 4. 슬롯 영역 (높이 조정됨)
 const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
   const { setNodeRef, isOver } = useDroppable({ id });
   const { allChains } = useChainStore();
@@ -75,8 +94,8 @@ const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
   return (
     <div 
       ref={setNodeRef}
-      className={`relative w-full h-24 rounded-lg border-2 mb-3 flex flex-col justify-center transition-all duration-200
-        ${isOver ? 'bg-gray-700' : 'border-dashed border-gray-600'}
+      className={`relative w-full h-16 rounded-lg border-2 mb-0 flex flex-col justify-center transition-all duration-200
+        ${isOver ? 'bg-gray-700 border-white' : 'border-dashed border-gray-600'}
         ${selectedChain ? 'border-solid bg-opacity-10' : ''}
       `}
       style={{ 
@@ -84,24 +103,24 @@ const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
         backgroundColor: selectedChain ? `${color}10` : undefined,
       }}
     >
-      <span className="absolute top-1 left-2 text-[10px] font-bold uppercase opacity-70" style={{ color: color }}>
+      <span className="absolute top-1 left-2 text-[9px] font-bold uppercase opacity-70 tracking-widest" style={{ color: color }}>
         {title}
       </span>
 
       {selectedChain ? (
-        <div className="w-full h-full flex items-center justify-center p-2">
+        <div className="w-full h-full flex items-center justify-center px-2 pt-3">
             <div className="w-full">
-                 <DraggableChain chain={selectedChain} selectionInfo={null} />
+                 <DraggableChain chain={selectedChain} selectionInfo={{ color }} />
             </div>
             <button 
                 onClick={(e) => { e.stopPropagation(); onClear(); }}
-                className="absolute top-1 right-2 text-gray-500 hover:text-white text-xs z-10"
+                className="absolute top-1 right-2 text-gray-500 hover:text-white text-xs z-10 p-1"
             >
                 ✕
             </button>
         </div>
       ) : (
-        <div className="flex items-center justify-center h-full text-gray-500 text-sm pointer-events-none">
+        <div className="flex items-center justify-center h-full text-gray-600 text-sm pointer-events-none pt-2">
           Drag here
         </div>
       )}
@@ -109,9 +128,14 @@ const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
   );
 };
 
+// 5. 메인 컴포넌트
 const RankingChart = () => {
   const { allChains, selectedMainId, selectedSubId1, selectedSubId2, setSlot, clearSlot, removeChainById } = useChainStore();
-  const [activeId, setActiveId] = React.useState(null);
+  const [activeId, setActiveId] = useState(null);
+
+  const sortedChains = useMemo(() => {
+    return [...(allChains || [])].sort((a, b) => b.score - a.score);
+  }, [allChains]);
 
   const handleDragStart = (event) => {
     setActiveId(event.active.id);
@@ -144,15 +168,42 @@ const RankingChart = () => {
 
   return (
     <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
-      <div className="flex flex-col h-full select-none">
-        <h2 className="text-xl font-bold mb-4 text-white">HEMP Rank</h2>
+      <div className="w-full h-full relative bg-[#0d0d0d] flex flex-col overflow-hidden select-none">
         
-        <div className="mb-6 space-y-2">
-          <DroppableSlot 
-            id="main" title="MAIN CHAIN" color={COLORS.MAIN} 
-            selectedChainId={selectedMainId} onClear={() => clearSlot('main')} 
-          />
-          <div className="flex gap-2">
+        <div className="p-4 bg-[#0d0d0d] z-10 border-b border-gray-800 shrink-0">
+          <h2 className="text-xl font-bold text-white">HEMP Rank</h2>
+        </div>
+
+        <DroppableListArea>
+          {sortedChains.map((chain) => {
+            const selectionInfo = getSelectionInfo(chain.id);
+            if (selectionInfo) {
+              return (
+                <ChainCard 
+                  key={chain.id}
+                  chain={chain}
+                  selectionInfo={selectionInfo}
+                  cursor="cursor-default"
+                />
+              );
+            }
+            return (
+              <DraggableChain 
+                key={chain.id} 
+                chain={chain} 
+                selectionInfo={null} 
+              />
+            );
+          })}
+        </DroppableListArea>
+        <div className="p-4 bg-[#141414] border-t border-gray-800 shrink-0 z-20 shadow-[0_-5px_15px_rgba(0,0,0,0.5)]">
+          <h3 className="text-xs text-gray-500 mb-2 font-bold">SELECTION SLOTS</h3>
+          <div className="space-y-2">
+            <DroppableSlot 
+              id="main" title="MAIN CHAIN" color={COLORS.MAIN} 
+              selectedChainId={selectedMainId} onClear={() => clearSlot('main')} 
+            />
+
             <DroppableSlot 
               id="sub1" title="SUB 1" color={COLORS.SUB1} 
               selectedChainId={selectedSubId1} onClear={() => clearSlot('sub1')} 
@@ -164,30 +215,19 @@ const RankingChart = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 my-2"></div>
-
-        <DroppableListArea>
-          {(allChains || []).map((chain) => {
-            const selectionInfo = getSelectionInfo(chain.id);
-            return (
-              <DraggableChain 
-                key={chain.id} 
-                chain={chain} 
-                selectionInfo={selectionInfo} 
-              />
-            );
-          })}
-        </DroppableListArea>
       </div>
 
       {createPortal(
         <DragOverlay>
           {activeChain ? (
-            <DraggableChain 
-              chain={activeChain} 
-              isOverlay 
-              selectionInfo={null} 
-            />
+            <div style={{ width: '320px' }}>
+              <ChainCard 
+                chain={activeChain} 
+                isOverlay 
+                selectionInfo={null} 
+                cursor="cursor-grabbing"
+              />
+            </div>
           ) : null}
         </DragOverlay>,
         document.body

@@ -1,18 +1,6 @@
-import React from "react";
-
-/*
- props:
- - chain: { id, name, score }
- - selectionInfo: { type, color } | null
- - isDragging: boolean
- - isOverlay: boolean
-*/
-
 const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
   const isSelected = !!selectionInfo;
   const highlightColor = selectionInfo?.color;
-
-  // Figma 기준: score 100 → 143px 막대 길이
   const barWidth = Math.min(chain.score * 1.43, 143);
 
   return (
@@ -23,10 +11,9 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
         px-[11px]
         rounded-[7.4px]
         transition-all 
-        cursor-pointer 
-        ${isSelected ? "" : "hover:shadow-[0_0_8px_rgba(255,255,255,0.07)]"}
       `}
       style={{
+        pointerEvents: "none", 
         border: isSelected
           ? `0.93px solid ${highlightColor}`
           : "0.93px solid rgba(255,255,255,0.12)",
@@ -48,7 +35,6 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
       {/* 막대 + 점수 */}
       <div className="flex-1 flex items-center">
         <div className="relative w-full h-[21px] bg-[#2A2B30] rounded-[4px] overflow-hidden">
-          {/* Score bar */}
           <div
             className="h-full rounded-[4px]"
             style={{
@@ -58,11 +44,9 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
           ></div>
         </div>
 
-        {/* 점수 텍스트 */}
         <span className="ml-2 text-[12px] text-gray-300">{chain.score}</span>
       </div>
     </div>
   );
 };
-
 export default ChainCard;

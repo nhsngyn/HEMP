@@ -2,48 +2,87 @@ import { create } from 'zustand';
 import { mockChains } from '../data/mockData';
 
 const useChainStore = create((set) => ({
-  // 1. 데이터 상태
   allChains: mockChains,
-  
   selectedMainId: null,
   selectedSubId1: null,
   selectedSubId2: null,
 
-  // 2. 액션
+  // --- 🗑️ 해제 액션 (오직 X 버튼용) ---
   
-  // (기존) 특정 슬롯에 체인 넣기 + 이동 로직 포함
-  setSlot: (slotType, chainId) => set((state) => {
-    const newState = { ...state };
-    
-    // 이미 다른 칸에 있던 놈이면 거기서 뺌 (이동 기능)
-    if (state.selectedMainId === chainId) newState.selectedMainId = null;
-    if (state.selectedSubId1 === chainId) newState.selectedSubId1 = null;
-    if (state.selectedSubId2 === chainId) newState.selectedSubId2 = null;
-
-    // 새 자리에 넣기
-    if (slotType === 'main') newState.selectedMainId = chainId;
-    if (slotType === 'sub1') newState.selectedSubId1 = chainId;
-    if (slotType === 'sub2') newState.selectedSubId2 = chainId;
-
-    return newState;
+  // 1. 슬롯의 X 버튼 클릭 시
+  clearSlot: (slotType) => set(() => {
+    const key = { main: 'selectedMainId', sub1: 'selectedSubId1', sub2: 'selectedSubId2' }[slotType];
+    return key ? { [key]: null } : {};
   }),
 
-  // (기존) X버튼용 - 슬롯 비우기
-  clearSlot: (slotType) => set((state) => {
-    if (slotType === 'main') return { selectedMainId: null };
-    if (slotType === 'sub1') return { selectedSubId1: null };
-    if (slotType === 'sub2') return { selectedSubId2: null };
-    return state;
-  }),
-
-  // [NEW] 리스트로 드래그했을 때 - ID 기반 삭제
+  // 2. 리스트로 드래그해서 버릴 때
   removeChainById: (chainId) => set((state) => {
-    const newState = { ...state };
-    if (state.selectedMainId === chainId) newState.selectedMainId = null;
-    if (state.selectedSubId1 === chainId) newState.selectedSubId1 = null;
-    if (state.selectedSubId2 === chainId) newState.selectedSubId2 = null;
-    return newState;
+    const updates = {};
+    if (state.selectedMainId === chainId) updates.selectedMainId = null;
+    if (state.selectedSubId1 === chainId) updates.selectedSubId1 = null;
+    if (state.selectedSubId2 === chainId) updates.selectedSubId2 = null;
+    return updates;
   }),
+
+  // --- 🔥 [핵심] 통합 선택 엔진 applySelection ---
+  // targetSlot이 있으면(드래그) -> 강제 배치
+  // targetSlot이 없으면(클릭) -> 자동 배치 (Main->Sub1->Sub2)
+  applySelection: (chainId, targetSlot = null) => set((state) => {
+    const slots = {
+      main: state.selectedMainId,
+      sub1: state.selectedSubId1,
+      sub2: state.selectedSubId2,
+    };
+
+    const slotKeyMap = {
+      main: 'selectedMainId',
+      sub1: 'selectedSubId1',
+      sub2: 'selectedSubId2',
+    };
+
+    const isAlreadySelected = Object.values(slots).includes(chainId);
+
+    // Case 1: 이미 선택된 체인을 그냥 클릭함 (targetSlot 없음)
+    // 👉 "해제 금지" 규칙에 따라 아무것도 안 함.
+    if (isAlreadySelected && !targetSlot) {
+      return {}; 
+    }
+
+    const updates = {};
+
+    // Case 2: 드래그 앤 드롭 (targetSlot 있음) OR 클릭인데 선택 안 된 상태
+    // 일단 기존에 다른 슬롯에 있었다면 거기서는 비워줘야 함 (이동 처리)
+    if (isAlreadySelected) {
+      for (const [key, value] of Object.entries(slots)) {
+        if (value === chainId) {
+          updates[slotKeyMap[key]] = null;
+        }
+      }
+    }
+
+    // 배치할 목표 슬롯 결정
+    let finalTargetKey = null;
+
+    if (targetSlot) {
+      // [드래그] 사용자가 지정한 슬롯
+      finalTargetKey = slotKeyMap[targetSlot];
+    } else {
+      // [클릭/버블] 자동 우선순위 배치
+      if (!slots.main) finalTargetKey = 'selectedMainId';
+      else if (!slots.sub1) finalTargetKey = 'selectedSubId1';
+      else if (!slots.sub2) finalTargetKey = 'selectedSubId2';
+      else finalTargetKey = 'selectedMainId'; // 꽉 찼으면 Main 교체
+    }
+
+    // 최종 업데이트
+    if (finalTargetKey) {
+      updates[finalTargetKey] = chainId;
+    }
+    
+    return updates;
+  }),
+
+  resetAll: () => set({ selectedMainId: null, selectedSubId1: null, selectedSubId2: null }),
 }));
 
 export default useChainStore;

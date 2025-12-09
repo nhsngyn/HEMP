@@ -3,11 +3,12 @@ import { DndContext, DragOverlay } from "@dnd-kit/core";
 import { createPortal } from "react-dom";
 
 import useChainStore from "../../store/useChainStore";
-import { COLORS } from "../../constants/colors";
+import useChainSelection from "../../hooks/useChainSelection";
 
 import DraggableChain from "./DraggableChain";
 import DroppableSlot from "./DroppableSlot";
 import DroppableListArea from "./DroppableListArea";
+import { COLORS } from "../../constants/colors";
 
 const RankingChart = () => {
   const {
@@ -15,19 +16,23 @@ const RankingChart = () => {
     selectedMainId,
     selectedSubId1,
     selectedSubId2,
-    setSlot,
-    clearSlot,
     removeChainById,
   } = useChainStore();
 
+  const { selectChain, applySelection } = useChainSelection(); // ⭐ 클릭 + 드래그 로직 통합
+
   const [activeId, setActiveId] = React.useState(null);
 
-  // 드래그 시작
+  /* ---------------------------
+        Drag Start
+  -----------------------------*/
   const handleDragStart = (event) => {
     setActiveId(event.active.id);
   };
 
-  // 드래그 종료 → 슬롯 또는 리스트로 drop
+  /* ---------------------------
+        Drag End → applySelection
+  -----------------------------*/
   const handleDragEnd = (event) => {
     const { active, over } = event;
     setActiveId(null);
@@ -37,17 +42,19 @@ const RankingChart = () => {
     const chainId = active.id;
     const target = over.id;
 
-    // 리스트로 버리기
+    // 리스트 영역에 놓으면 → unselect
     if (target === "ranking-list") {
       removeChainById(chainId);
       return;
     }
 
-    // 슬롯에 배치
-    setSlot(target, chainId);
+    // 슬롯(main/sub1/sub2)에 놓으면 → 훅으로 처리
+    applySelection(chainId, target);
   };
 
-  // 선택된 슬롯 정보를 전달해주는 함수
+  /* ---------------------------
+      선택된 슬롯 하이라이트 정보
+  -----------------------------*/
   const getSelectionInfo = (id) => {
     if (id === selectedMainId) return { type: "main", color: COLORS.MAIN };
     if (id === selectedSubId1) return { type: "sub1", color: COLORS.SUB1 };
@@ -55,44 +62,41 @@ const RankingChart = () => {
     return null;
   };
 
-  const activeChain = allChains.find((item) => item.id === activeId);
+  const activeChain = allChains.find((c) => c.id === activeId);
 
   return (
     <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
       <div className="flex flex-col h-full select-none">
 
         {/* HEADER */}
-        <h2 className="text-xl font-bold mb-4 text-white">HEMP Rank</h2>
+        <h2 className="text-lg font-semibold text-white mb-6">HEMP Rank</h2>
 
         {/* SLOT AREA */}
-        <div className="mb-6 space-y-2">
+        <div className="mb-6 space-y-4">
           <DroppableSlot
             id="main"
-            title="MAIN CHAIN"
+            title="Main"
             color={COLORS.MAIN}
             selectedChainId={selectedMainId}
-            onClear={() => clearSlot("main")}
+            onSelect={selectChain}
           />
 
-          <div className="flex gap-2">
-            <DroppableSlot
-              id="sub1"
-              title="SUB 1"
-              color={COLORS.SUB1}
-              selectedChainId={selectedSubId1}
-              onClear={() => clearSlot("sub1")}
-            />
-            <DroppableSlot
-              id="sub2"
-              title="SUB 2"
-              color={COLORS.SUB2}
-              selectedChainId={selectedSubId2}
-              onClear={() => clearSlot("sub2")}
-            />
-          </div>
-        </div>
+          <DroppableSlot
+            id="sub1"
+            title="Comparison"
+            color={COLORS.SUB1}
+            selectedChainId={selectedSubId1}
+            onSelect={selectChain}
+          />
 
-        <div className="border-t border-gray-700 my-2"></div>
+          <DroppableSlot
+            id="sub2"
+            title="Comparison"
+            color={COLORS.SUB2}
+            selectedChainId={selectedSubId2}
+            onSelect={selectChain}
+          />
+        </div>
 
         {/* LIST AREA */}
         <DroppableListArea>
@@ -101,23 +105,21 @@ const RankingChart = () => {
               key={chain.id}
               chain={chain}
               selectionInfo={getSelectionInfo(chain.id)}
+              onClick={() => selectChain(chain.id)}
             />
           ))}
         </DroppableListArea>
       </div>
 
+      {/* OVERLAY (드래그 미리보기) */}
       {createPortal(
-  <DragOverlay>
-    {activeChain ? (
-      <DraggableChain 
-        chain={activeChain}
-        isOverlay
-      />
-    ) : null}
-  </DragOverlay>,
-  document.body
-)}
-
+        <DragOverlay>
+          {activeChain ? (
+            <DraggableChain chain={activeChain} isOverlay />
+          ) : null}
+        </DragOverlay>,
+        document.body
+      )}
     </DndContext>
   );
 };

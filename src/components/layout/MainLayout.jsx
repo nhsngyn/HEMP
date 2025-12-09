@@ -1,18 +1,30 @@
-import React from 'react';
+// src/components/layout/MainLayout.jsx
+import React from "react";
+import RankingChart from "../ranking/RankingChart";
 
-const MainLayout = ({ leftPanel, children }) => {
+const MainLayout = ({ children }) => {
   return (
-    <div className="flex h-screen w-full bg-hemp-bg text-white overflow-hidden">
-      {/* 좌측 패널 (Ranking & Selection) - 고정 너비 (360px) */}
-      <aside className="w-[360px] h-full border-r border-hemp-gray p-6 flex flex-col z-10 bg-hemp-bg">
-        {leftPanel}
+    <div className="w-[1920px] h-[1080px] flex bg-[#0E0F12] text-white overflow-hidden">
+
+      {/* LEFT SIDEBAR */}
+      <aside
+        className="
+          w-[390px] h-full 
+          flex flex-col 
+          px-6 py-8 
+          border-r border-white/10
+        "
+      >
+        {/* HEMP Title */}
+        <h1 className="text-3xl font-bold mb-10">HEMP</h1>
+
+        {/* Ranking Component */}
+        <RankingChart />
       </aside>
 
-      {/* 우측 메인 컨텐츠 (Charts) - 남은 공간 다 차지 */}
-      <main className="flex-1 h-full p-8 overflow-y-auto relative">
-        <div className="max-w-[1600px] mx-auto h-full flex flex-col gap-6">
-          {children}
-        </div>
+      {/* RIGHT CONTENT AREA */}
+      <main className="flex-1 h-full overflow-hidden p-8">
+        {children}
       </main>
     </div>
   );

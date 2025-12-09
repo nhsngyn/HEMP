@@ -3,15 +3,22 @@ import { useDroppable } from "@dnd-kit/core";
 import DraggableChain from "./DraggableChain";
 import useChainStore from "../../store/useChainStore";
 
-const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
+const DroppableSlot = ({ id, title, color, selectedChainId, onSelect, onClear }) => {
   const { setNodeRef, isOver } = useDroppable({ id });
   const { allChains } = useChainStore();
 
   const selectedChain = allChains.find((c) => c.id === selectedChainId);
 
+  // 클릭으로 슬롯 체인 선택
+  const handleClick = () => {
+    if (!selectedChain) return;
+    onSelect?.(selectedChain.id);
+  };
+
   return (
     <div
       ref={setNodeRef}
+      onClick={handleClick}
       className={`
         relative 
         w-full h-[64px] 
@@ -19,7 +26,7 @@ const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
         border-2 
         flex items-center 
         px-3
-        transition-all
+        transition-all cursor-pointer
         ${isOver ? "bg-gray-700 border-white" : "border-dashed border-gray-600"}
         ${selectedChain ? "border-solid" : ""}
       `}
@@ -37,15 +44,18 @@ const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
 
       {selectedChain ? (
         <>
+          {/* 슬롯 안 카드도 draggable */}
           <DraggableChain
             chain={selectedChain}
             selectionInfo={{ type: id, color }}
+            onClick={() => onSelect?.(selectedChain.id)}
           />
 
+          {/* Clear 버튼 */}
           <button
             onClick={(e) => {
               e.stopPropagation();
-              onClear();
+              onClear?.();
             }}
             className="absolute top-1 right-2 text-gray-400 hover:text-white text-xs"
           >

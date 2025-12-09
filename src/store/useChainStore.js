@@ -65,6 +65,22 @@ const useChainStore = create((set) => ({
     return updates;
   }),
 
+  // 스마트 셀렉트: 버블 차트를 누르면 빈 슬롯에 우선순위대로 들어감
+smartSelect: (chainId) => set((state) => {
+    // 1. 이미 선택된 체인이면? -> 해제 (토글 기능)
+    if (state.selectedMainId === chainId) return { selectedMainId: null };
+    if (state.selectedSubId1 === chainId) return { selectedSubId1: null };
+    if (state.selectedSubId2 === chainId) return { selectedSubId2: null };
+
+    // 2. 빈 슬롯 찾기 (우선순위: Main -> Sub1 -> Sub2)
+    if (!state.selectedMainId) return { selectedMainId: chainId };
+    if (!state.selectedSubId1) return { selectedSubId1: chainId };
+    if (!state.selectedSubId2) return { selectedSubId2: chainId };
+
+    // 3. 꽉 찼다면? -> Main을 교체
+    return { selectedMainId: chainId };
+  }),
+
   // 초기화
   resetAll: () => set({ 
     selectedMainId: null, 

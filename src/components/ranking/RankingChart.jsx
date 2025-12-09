@@ -46,14 +46,43 @@ const ChainCard = ({ chain, selectionInfo, isOverlay, isDragging, style, ...prop
   );
 };
 
-// 2. 드래그 기능이 있는 체인 (Wrapper)
-const DraggableChain = ({ chain, selectionInfo, isOverlay = false }) => {
+// 2. 드래그 기능이 있는 체인 -> 드래그인지 클릭인지 구분할 수 있는 기능 수동으로 구현해야함!
+const DraggableChain = ({ chain, selectionInfo, isOverlay = false, onClick }) => {
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
     id: chain.id,
   });
 
+  const [pointerDownPos, setPointerDownPos] = useState(null);
+
+  const handlePointerDown = (e) => {
+    setPointerDownPos({ x: e.clientX, y: e.clientY });
+  };
+
+  const handlePointerUp = (e) => {
+    if (isDragging) {
+  setPointerDownPos(null);
+  return;
+}
+
+    const diffX = Math.abs(e.clientX - pointerDownPos.x);
+    const diffY = Math.abs(e.clientY - pointerDownPos.y);
+
+    // 움직임이 거의 없으면 → 클릭으로 처리
+    if (diffX < 5 && diffY < 5) {
+      if (onClick) onClick();
+    }
+
+    setPointerDownPos(null);
+  };
+
   return (
-    <div ref={setNodeRef} {...listeners} {...attributes}>
+    <div
+      ref={setNodeRef}
+      {...listeners}
+      {...attributes}
+      onPointerDown={handlePointerDown}
+      onPointerUp={handlePointerUp}
+    >
       <ChainCard 
         chain={chain} 
         selectionInfo={selectionInfo} 
@@ -65,6 +94,7 @@ const DraggableChain = ({ chain, selectionInfo, isOverlay = false }) => {
     </div>
   );
 };
+
 
 // 3. 리스트 영역
 const DroppableListArea = ({ children }) => {
@@ -113,9 +143,10 @@ const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
             <div className="w-full">
                  <DraggableChain chain={selectedChain} selectionInfo={{ color }} />
             </div>
+    
             <button 
                 onClick={(e) => { e.stopPropagation(); onClear(); }}
-                className="absolute top-1 right-2 text-gray-500 hover:text-white text-xs z-10 p-1"
+                className="absolute top-1 right-2 text-gray-500 hover:text-white text-xs z-10 p-1 cursor-pointer"
             >
                 ✕
             </button>
@@ -131,11 +162,9 @@ const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
 
 // 5. 메인 컴포넌트
 const RankingChart = () => {
-  // 스토어에서 액션과 상태 가져오기
-  const { allChains, selectedMainId, selectedSubId1, selectedSubId2, setSlot, clearSlot, removeChainById } = useChainStore();
-  
-  // 훅 사용 (getSelectionInfo, toggleChainSelection)
-  const { toggleChainSelection, getSelectionInfo } = useChainSelection();
+  const { allChains, selectedMainId, selectedSubId1, selectedSubId2, clearSlot, removeChainById } = useChainStore();
+
+  const { selectChain, applySelection, getSelectionInfo } = useChainSelection();
   
   const [activeId, setActiveId] = useState(null);
 
@@ -143,23 +172,17 @@ const RankingChart = () => {
     return [...(allChains || [])].sort((a, b) => b.score - a.score);
   }, [allChains]);
 
-  const handleDragStart = (event) => {
-    setActiveId(event.active.id);
-  };
+  const handleDragStart = (event) => setActiveId(event.active.id);
 
   const handleDragEnd = (event) => {
     const { active, over } = event;
     setActiveId(null);
-
     if (!over) return;
 
-    const chainId = active.id;
-    const targetId = over.id;
-
-    if (targetId === 'ranking-list') {
-      removeChainById(chainId);
+    if (over.id === 'ranking-list') {
+      removeChainById(active.id);
     } else {
-      setSlot(targetId, chainId);
+      applySelection(active.id, over.id);
     }
   };
 
@@ -177,28 +200,28 @@ const RankingChart = () => {
           {sortedChains.map((chain) => {
             const selectionInfo = getSelectionInfo(chain.id);
             
-            // 이미 선택된 체인 (클릭 시 토글/해제)
+            // Case 1: 이미 슬롯에 들어간 체인
             if (selectionInfo) {
               return (
                 <ChainCard 
                   key={chain.id}
                   chain={chain}
                   selectionInfo={selectionInfo}
-                  cursor="cursor-pointer" // 클릭 가능 표시
-                  onClick={() => toggleChainSelection(chain.id)}
+                  cursor="cursor-default"
                 />
               );
             }
 
-            // 선택되지 않은 체인 (드래그 가능 + 클릭 시 스마트 선택)
-            return (
-              <div key={chain.id} onClick={() => toggleChainSelection(chain.id)}>
-                <DraggableChain 
-                  chain={chain} 
-                  selectionInfo={null} 
-                />
-              </div>
-            );
+            // Case 2: 선택 안 된 체인
+          return (
+  <DraggableChain 
+    key={chain.id}
+    chain={chain}
+    selectionInfo={null}
+    onClick={() => selectChain(chain.id)}
+  />
+);
+
           })}
         </DroppableListArea>
 
@@ -226,12 +249,7 @@ const RankingChart = () => {
         <DragOverlay>
           {activeChain ? (
             <div style={{ width: '320px' }}>
-              <ChainCard 
-                chain={activeChain} 
-                isOverlay 
-                selectionInfo={null} 
-                cursor="cursor-grabbing"
-              />
+              <ChainCard chain={activeChain} isOverlay selectionInfo={null} cursor="cursor-grabbing" />
             </div>
           ) : null}
         </DragOverlay>,

@@ -1,6 +1,11 @@
+// src/components/ranking/ChainCard.jsx
+import React from "react";
+
 const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
   const isSelected = !!selectionInfo;
   const highlightColor = selectionInfo?.color;
+
+  // Score 100 → 143px 막대
   const barWidth = Math.min(chain.score * 1.43, 143);
 
   return (
@@ -11,9 +16,9 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
         px-[11px]
         rounded-[7.4px]
         transition-all 
+        ${isSelected ? "" : "hover:shadow-[0_0_8px_rgba(255,255,255,0.07)]"}
       `}
       style={{
-        pointerEvents: "none", 
         border: isSelected
           ? `0.93px solid ${highlightColor}`
           : "0.93px solid rgba(255,255,255,0.12)",
@@ -27,7 +32,7 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
             : "none",
       }}
     >
-      {/* 이름 영역 */}
+      {/* 이름 */}
       <div className="w-[71px] flex-shrink-0 text-white font-medium text-sm truncate">
         {chain.name}
       </div>
@@ -49,4 +54,5 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
     </div>
   );
 };
+
 export default ChainCard;

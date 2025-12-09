@@ -1,8 +1,9 @@
+// src/components/ranking/DraggableChain.jsx
 import React from "react";
 import { useDraggable } from "@dnd-kit/core";
 import ChainCard from "./ChainCard";
 
-const DraggableChain = ({ chain, selectionInfo, isOverlay = false, onClick }) => {
+const DraggableChain = ({ chain, selectionInfo, onClick, isOverlay = false }) => {
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
     id: chain.id,
   });
@@ -19,7 +20,7 @@ const DraggableChain = ({ chain, selectionInfo, isOverlay = false, onClick }) =>
     const dx = Math.abs(e.clientX - downPos.x);
     const dy = Math.abs(e.clientY - downPos.y);
 
-    // 클릭 판단
+    // 클릭 판정
     if (dx < 5 && dy < 5 && !isDragging) {
       onClick?.();
     }
@@ -34,6 +35,7 @@ const DraggableChain = ({ chain, selectionInfo, isOverlay = false, onClick }) =>
       {...attributes}
       onPointerDown={handlePointerDown}
       onPointerUp={handlePointerUp}
+      style={{ cursor: "grab", opacity: isOverlay ? 0.6 : 1 }}
     >
       <ChainCard
         chain={chain}

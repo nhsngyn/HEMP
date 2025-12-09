@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { DndContext, useDraggable, useDroppable, DragOverlay } from '@dnd-kit/core';
 import { createPortal } from 'react-dom';
 import useChainStore from '../../store/useChainStore';
+import useChainSelection from '../../hooks/useChainSelection';
 import { COLORS } from '../../constants/colors';
 
 // 1. 공통 디자인 컴포넌트
@@ -9,7 +10,7 @@ const ChainCard = ({ chain, selectionInfo, isOverlay, isDragging, style, ...prop
   const isSelected = !!selectionInfo;
   const borderColor = isSelected ? selectionInfo.color : '#374151';
 
-  const finalStyle = {
+  const finalStyle = { 
     ...style,
     borderColor: isOverlay ? '#FFFFFF' : borderColor,
     boxShadow: isSelected && !isDragging && !isOverlay 
@@ -84,7 +85,7 @@ const DroppableListArea = ({ children }) => {
   );
 };
 
-// 4. 슬롯 영역 (높이 조정됨)
+// 4. 슬롯 영역
 const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
   const { setNodeRef, isOver } = useDroppable({ id });
   const { allChains } = useChainStore();
@@ -130,7 +131,12 @@ const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
 
 // 5. 메인 컴포넌트
 const RankingChart = () => {
+  // 스토어에서 액션과 상태 가져오기
   const { allChains, selectedMainId, selectedSubId1, selectedSubId2, setSlot, clearSlot, removeChainById } = useChainStore();
+  
+  // 훅 사용 (getSelectionInfo, toggleChainSelection)
+  const { toggleChainSelection, getSelectionInfo } = useChainSelection();
+  
   const [activeId, setActiveId] = useState(null);
 
   const sortedChains = useMemo(() => {
@@ -157,13 +163,6 @@ const RankingChart = () => {
     }
   };
 
-  const getSelectionInfo = (id) => {
-    if (id === selectedMainId) return { type: 'main', color: COLORS.MAIN };
-    if (id === selectedSubId1) return { type: 'sub1', color: COLORS.SUB1 };
-    if (id === selectedSubId2) return { type: 'sub2', color: COLORS.SUB2 };
-    return null; 
-  };
-
   const activeChain = allChains.find(c => c.id === activeId);
 
   return (
@@ -177,25 +176,32 @@ const RankingChart = () => {
         <DroppableListArea>
           {sortedChains.map((chain) => {
             const selectionInfo = getSelectionInfo(chain.id);
+            
+            // 이미 선택된 체인 (클릭 시 토글/해제)
             if (selectionInfo) {
               return (
                 <ChainCard 
                   key={chain.id}
                   chain={chain}
                   selectionInfo={selectionInfo}
-                  cursor="cursor-default"
+                  cursor="cursor-pointer" // 클릭 가능 표시
+                  onClick={() => toggleChainSelection(chain.id)}
                 />
               );
             }
+
+            // 선택되지 않은 체인 (드래그 가능 + 클릭 시 스마트 선택)
             return (
-              <DraggableChain 
-                key={chain.id} 
-                chain={chain} 
-                selectionInfo={null} 
-              />
+              <div key={chain.id} onClick={() => toggleChainSelection(chain.id)}>
+                <DraggableChain 
+                  chain={chain} 
+                  selectionInfo={null} 
+                />
+              </div>
             );
           })}
         </DroppableListArea>
+
         <div className="p-4 bg-[#141414] border-t border-gray-800 shrink-0 z-20 shadow-[0_-5px_15px_rgba(0,0,0,0.5)]">
           <h3 className="text-xs text-gray-500 mb-2 font-bold">SELECTION SLOTS</h3>
           <div className="space-y-2">
@@ -203,7 +209,6 @@ const RankingChart = () => {
               id="main" title="MAIN CHAIN" color={COLORS.MAIN} 
               selectedChainId={selectedMainId} onClear={() => clearSlot('main')} 
             />
-
             <DroppableSlot 
               id="sub1" title="SUB 1" color={COLORS.SUB1} 
               selectedChainId={selectedSubId1} onClear={() => clearSlot('sub1')} 

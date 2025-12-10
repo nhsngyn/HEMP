@@ -1,37 +1,40 @@
-import useChainStore from '../store/useChainStore';
-import { COLORS } from '../constants/colors';
+// src/hooks/useChainSelection.js
+import useChainStore from "../store/useChainStore";
+import { COLORS } from "../constants/colors";
 
 const useChainSelection = () => {
-  const { 
+  const {
     selectedMainId,
     selectedSubId1,
     selectedSubId2,
-    applySelection
+    setSlot,
   } = useChainStore();
 
-  const getSelectionInfo = (chainId) => {
-    if (chainId === selectedMainId) 
-      return { type: 'main', color: COLORS.MAIN, z: 100, label: 'MAIN' };
+  const getSelectionInfo = (id) => {
+    if (id === selectedMainId)
+      return { type: "main", color: COLORS.MAIN };
 
-    if (chainId === selectedSubId1) 
-      return { type: 'sub1', color: COLORS.SUB1, z: 90, label: 'SUB 1' };
+    if (id === selectedSubId1)
+      return { type: "sub1", color: COLORS.SUB1 };
 
-    if (chainId === selectedSubId2) 
-      return { type: 'sub2', color: COLORS.SUB2, z: 90, label: 'SUB 2' };
+    if (id === selectedSubId2)
+      return { type: "sub2", color: COLORS.SUB2 };
 
     return null;
   };
 
-  // ⭐ 클릭 전용 함수: 자동 우선순위(Main→Sub1→Sub2) 배치
   const selectChain = (chainId) => {
-    applySelection(chainId);  
-    // targetSlot 없음 → 자동 우선순위 배치
+    if (!selectedMainId) return setSlot("main", chainId);
+    if (!selectedSubId1) return setSlot("sub1", chainId);
+    if (!selectedSubId2) return setSlot("sub2", chainId);
+
+    // 모든 슬롯이 찼으면 → Main 교체
+    return setSlot("main", chainId);
   };
 
   return {
     getSelectionInfo,
-    applySelection, // 드래그에서 사용
-    selectChain,    // 클릭에서 사용
+    selectChain,
     selectedMainId,
     selectedSubId1,
     selectedSubId2,

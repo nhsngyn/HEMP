@@ -6,7 +6,7 @@ import useChainSelection from '../../hooks/useChainSelection';
 const HempMap = () => {
   const { allChains } = useChainStore();
   
-  // ✅ selectChain 가져오기
+  // selectChain 가져오기
   const { 
     selectChain, // 클릭용 함수
     getSelectionInfo, 

@@ -6,8 +6,6 @@ const useChainStore = create((set) => ({
   selectedMainId: null,
   selectedSubId1: null,
   selectedSubId2: null,
-
-  // --- 🗑️ 해제 액션 (오직 X 버튼용) ---
   
   // 1. 슬롯의 X 버튼 클릭 시
   clearSlot: (slotType) => set(() => {
@@ -24,7 +22,7 @@ const useChainStore = create((set) => ({
     return updates;
   }),
 
-  // --- 🔥 [핵심] 통합 선택 엔진 applySelection ---
+  // --- 선택 엔진 applySelection ---
   // targetSlot이 있으면(드래그) -> 강제 배치
   // targetSlot이 없으면(클릭) -> 자동 배치 (Main->Sub1->Sub2)
   applySelection: (chainId, targetSlot = null) => set((state) => {
@@ -43,7 +41,6 @@ const useChainStore = create((set) => ({
     const isAlreadySelected = Object.values(slots).includes(chainId);
 
     // Case 1: 이미 선택된 체인을 그냥 클릭함 (targetSlot 없음)
-    // 👉 "해제 금지" 규칙에 따라 아무것도 안 함.
     if (isAlreadySelected && !targetSlot) {
       return {}; 
     }
@@ -51,7 +48,6 @@ const useChainStore = create((set) => ({
     const updates = {};
 
     // Case 2: 드래그 앤 드롭 (targetSlot 있음) OR 클릭인데 선택 안 된 상태
-    // 일단 기존에 다른 슬롯에 있었다면 거기서는 비워줘야 함 (이동 처리)
     if (isAlreadySelected) {
       for (const [key, value] of Object.entries(slots)) {
         if (value === chainId) {

@@ -9,7 +9,7 @@ import {
 import { createPortal } from "react-dom";
 
 import useChainStore from "../../store/useChainStore";
-// [추가] useChainSelection 훅을 가져옵니다.
+// useChainSelection 훅을 가져오기
 import useChainSelection from "../../hooks/useChainSelection"; 
 import { COLORS } from "../../constants/colors";
 
@@ -18,15 +18,15 @@ import DroppableSlot from "./DroppableSlot";
 import DroppableListArea from "./DroppableListArea";
 
 const RankingChart = () => {
-  // [수정] DND 처리에 필요한 함수만 useChainStore에서 가져옵니다.
+  // DND 처리에 필요한 함수만 useChainStore에서 가져오기
   const {
     allChains,
-    applySelection, // DND dragEnd 로직을 위해 유지
+    applySelection,
     clearSlot,
     removeChainById,
   } = useChainStore();
   
-  // [추가] 선택 로직 관련 모든 상태와 함수는 useChainSelection에서 가져옵니다.
+  // 선택 로직 관련 모든 상태와 함수는 useChainSelection에서 가져오기
   const { 
       selectChain, 
       getSelectionInfo, 
@@ -54,8 +54,6 @@ const RankingChart = () => {
 
   const selectedIds = [selectedMainId, selectedSubId1, selectedSubId2].filter(id => id !== null);
 
-  // NOTE: getSelectionInfo는 이제 useChainSelection 훅에서 제공합니다.
-
   const handleDragEnd = (event) => {
     const { active, over } = event;
     setActiveId(null);
@@ -64,7 +62,7 @@ const RankingChart = () => {
     const chainId = active.id;
     const target = over.id;
 
-    // 리스트 영역으로 드롭 → 슬롯 해제 (리스트로 되돌리기)
+    // 리스트 영역으로 드롭 → 슬롯 해제
     if (target === "ranking-list") {
       removeChainById(chainId); 
       return;
@@ -80,18 +78,46 @@ const RankingChart = () => {
       onDragStart={(e) => setActiveId(e.active.id)}
       onDragEnd={handleDragEnd}
     >
-      <div className="flex flex-col h-full select-none">
+  <div className="flex flex-col h-full select-none">
 
-        {/* TITLE and FILTER BUTTONS (생략) */}
+        {/* TITLE */}
         <h2 className="text-[18px] font-semibold mb-[29.9px]">HEMP Rank</h2>
+
+        {/* FILTER BUTTONS */}
         <div className="flex items-center gap-4 mb-4">
-          <button className="flex items-center gap-1" onClick={() => setSortType("name")}>
-             <span className={sortType === "name" ? "text-white font-semibold text-[16px]" : "text-gray-400 font-semibold text-[16px]"}>Chain</span>
-             <img src="/Icons/filter.png" className="w-4 h-4 opacity-70" alt="filter" />
+          {/* Chain 정렬 */}
+          <button
+            className="flex items-center gap-1"
+            onClick={() => setSortType("name")}
+          >
+            <span
+              className={
+                sortType === "name"
+                  ? "text-white text-xs font-semibold leading-tight" 
+                  : "text-gray-400 text-xs font-semibold leading-tight" 
+              }
+            >
+              Chain
+            </span>
+            <img src="/Icons/filter.png" className="w-4 h-4 opacity-70" alt="filter" />
           </button>
-          <button className="flex items-center gap-1" onClick={() => setSortType("score")}>
-             <span className={sortType === "score" ? "text-white font-semibold text-[16px]" : "text-gray-400 font-semibold text-[16px]"}>HEMP Score</span>
-             <img src="/Icons/filter.png" className="w-4 h-4 opacity-70" alt="filter" />
+
+          {/* Score 정렬 */}
+          <button
+            className="flex items-center gap-1"
+            onClick={() => setSortType("score")}
+          >
+            <span
+ 
+              className={
+                sortType === "score"
+                  ? "text-white text-xs font-semibold leading-tight"
+                  : "text-gray-400 text-xs font-semibold leading-tight"
+              }
+            >
+              HEMP Score
+            </span>
+            <img src="/Icons/filter.png" className="w-4 h-4 opacity-70" alt="filter" />
           </button>
         </div>
 
@@ -106,7 +132,7 @@ const RankingChart = () => {
                   chain={chain}
                   selectionInfo={getSelectionInfo(chain.id)}
                   isSelected={isSelected}
-                  // [수정] onClick에 selectChain 함수를 사용합니다.
+                  // onClick에 selectChain 함수를 사용합니다.
                   // selectChain 함수가 useChainStore의 applySelection(null)을 호출하여 스마트 셀렉션을 실행합니다.
                   onClick={() => selectChain(chain.id)} 
                 />
@@ -115,7 +141,7 @@ const RankingChart = () => {
           </DroppableListArea>
         </div>
 
-        {/* SLOT AREA (기존 코드 유지) */}
+        {/* SLOT AREA */}
         <div className="h-[226px] mt-6 flex flex-col justify-between">
           <DroppableSlot
             id="main"
@@ -141,7 +167,7 @@ const RankingChart = () => {
         </div>
       </div>
 
-      {/* DRAG OVERLAY (기존 코드 유지) */}
+      {/* DRAG OVERLAY */}
       {createPortal(
         <DragOverlay>
           {activeChain && (

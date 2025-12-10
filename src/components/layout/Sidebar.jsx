@@ -1,3 +1,5 @@
+// src/components/layout/Sidebar.jsx
+
 import React from "react";
 import RankingChart from "../ranking/RankingChart";
 
@@ -13,6 +15,7 @@ const Sidebar = () => {
         flex flex-col
         px-6
         py-[60px]
+        flex-shrink-0
       "
     >
       {/* 상단 타이틀 */}

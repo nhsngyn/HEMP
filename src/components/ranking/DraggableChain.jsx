@@ -2,22 +2,20 @@ import React from "react";
 import { useDraggable } from "@dnd-kit/core";
 import ChainCard from "./ChainCard";
 
-const DraggableChain = ({ chain, selectionInfo, onClick, isOverlay = false }) => {
-  // [수정 1] Overlay 상태일 때는 훅을 비활성화하여 ID 중복 에러 방지
+const DraggableChain = ({ chain, selectionInfo, onClick, isOverlay = false, isSelected = false }) => {
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
     id: chain.id,
-    disabled: isOverlay, 
+    // 오버레이거나 리스트에서 이미 선택된 상태면 드래그 비활성화
+    disabled: isOverlay || isSelected, 
   });
 
   const [downPos, setDownPos] = React.useState(null);
 
   const handlePointerDown = (e) => {
-    // [수정 2] dnd-kit의 드래그 리스너를 먼저 실행 (중요!)
+    // dnd-kit 리스너 호출. disabled 여부는 훅에서 처리함.
     if (listeners?.onPointerDown) {
       listeners.onPointerDown(e);
     }
-    
-    // 클릭 판정을 위한 좌표 저장
     setDownPos({ x: e.clientX, y: e.clientY });
   };
 
@@ -27,10 +25,13 @@ const DraggableChain = ({ chain, selectionInfo, onClick, isOverlay = false }) =>
     const dx = Math.abs(e.clientX - downPos.x);
     const dy = Math.abs(e.clientY - downPos.y);
 
-    // 5px 미만 움직임이고 드래그 중이 아닐 때만 클릭으로 인정
-    if (dx < 5 && dy < 5 && !isDragging) {
-      onClick?.();
+    // [핵심 변경] 클릭 판정 및 실행 로직
+    // 1. 5px 미만 움직임이고 드래그 중이 아닐 때만 클릭으로 인정
+    // 2. '이미 선택된 상태가 아닐 때만' onClick을 발생시켜 토글을 원천 봉쇄함.
+    if (dx < 5 && dy < 5 && !isDragging && !isSelected) { 
+      onClick?.(); 
     }
+
     setDownPos(null);
   };
 
@@ -38,19 +39,16 @@ const DraggableChain = ({ chain, selectionInfo, onClick, isOverlay = false }) =>
     <div
       ref={setNodeRef}
       {...attributes}
-      // {...listeners}  <-- [제거] 아래 onPointerDown에서 직접 호출하므로 여기선 뺍니다.
-      
-      // [수정 3] 합성된 이벤트 핸들러 연결
-      onPointerDown={handlePointerDown} 
+      onPointerDown={handlePointerDown}
       onPointerUp={handlePointerUp}
-      
-      // 키보드 접근성 등 나머지 리스너는 필요 시 개별 연결 (보통 마우스 드래그엔 불필요)
       onKeyDown={listeners?.onKeyDown}
       
       style={{ 
-        cursor: isOverlay ? "grabbing" : "grab", 
-        opacity: isOverlay ? 0.8 : (isDragging ? 0.3 : 1), // 드래그 중인 원본은 흐리게
-        touchAction: "none" // 모바일/터치 드래그 오류 방지
+        // 선택된 아이템은 커서를 default로 변경하여 클릭이 안 되는 것을 시각적으로 표시
+        cursor: (isOverlay || isSelected) ? "default" : "grab", 
+        // 선택됨(isSelected): 0.4 (흐릿), 나머지 기존 로직 유지
+        opacity: isOverlay ? 0.8 : (isDragging ? 0.3 : (isSelected ? 0.4 : 1)), 
+        touchAction: "none"
       }}
     >
       <ChainCard
@@ -58,6 +56,7 @@ const DraggableChain = ({ chain, selectionInfo, onClick, isOverlay = false }) =>
         selectionInfo={selectionInfo}
         isOverlay={isOverlay}
         isDragging={isDragging}
+        isSelected={isSelected}
       />
     </div>
   );

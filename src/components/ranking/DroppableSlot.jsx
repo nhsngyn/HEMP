@@ -43,6 +43,8 @@ const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
           <DraggableChain
             chain={selectedChain}
             selectionInfo={{ type: id, color }}
+            // [수정] 슬롯에 들어간 카드는 isSelected=true로 비활성화하여 ID 충돌을 방지합니다.
+            isSelected={true} 
           />
 
           {/* CLEAR BUTTON */}

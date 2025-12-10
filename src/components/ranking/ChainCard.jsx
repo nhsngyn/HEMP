@@ -1,4 +1,3 @@
-// src/components/ranking/ChainCard.jsx
 import React from "react";
 
 const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
@@ -46,7 +45,7 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
               width: `${barWidth}px`,
               backgroundColor: isSelected ? highlightColor : "#4B4B4B",
             }}
-          ></div>
+          />
         </div>
 
         <span className="ml-2 text-[12px] text-gray-300">{chain.score}</span>

@@ -1,4 +1,3 @@
-// src/components/ranking/DraggableChain.jsx
 import React from "react";
 import { useDraggable } from "@dnd-kit/core";
 import ChainCard from "./ChainCard";

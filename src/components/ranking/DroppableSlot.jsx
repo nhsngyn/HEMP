@@ -1,10 +1,9 @@
-// src/components/ranking/DroppableSlot.jsx
 import React from "react";
 import { useDroppable } from "@dnd-kit/core";
 import DraggableChain from "./DraggableChain";
 import useChainStore from "../../store/useChainStore";
 
-const DroppableSlot = ({ id, title, color, selectedChainId, onClear, onClick }) => {
+const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
   const { setNodeRef, isOver } = useDroppable({ id });
   const { allChains } = useChainStore();
 
@@ -14,28 +13,39 @@ const DroppableSlot = ({ id, title, color, selectedChainId, onClear, onClick }) 
     <div
       ref={setNodeRef}
       className={`
-        relative w-full h-[64px] rounded-lg border-2 px-3 
-        flex items-center transition-all 
-        ${isOver ? "bg-gray-700 border-white" : "border-dashed border-gray-600"}
+        relative 
+        w-full 
+        min-h-[80px]
+        rounded-lg 
+        px-3 
+        py-2
+        flex items-center 
+        transition-all 
+        ${isOver ? "bg-white/10 border border-white" : "border border-dashed border-gray-600"}
         ${selectedChain ? "border-solid" : ""}
       `}
       style={{
-        borderColor: isOver ? "#fff" : selectedChain ? color : undefined,
+        borderColor: isOver ? "#fff" : selectedChain ? color : "rgba(255,255,255,0.3)",
         backgroundColor: selectedChain ? color + "15" : undefined,
       }}
     >
-      <span className="absolute top-1 left-2 text-[10px] font-bold opacity-70 tracking-widest" style={{ color }}>
+      {/* SLOT LABEL */}
+      <span
+        className="absolute top-1 left-2 text-[10px] font-bold opacity-70 tracking-widest"
+        style={{ color }}
+      >
         {title}
       </span>
 
+      {/* IF SLOT HAS SELECTED CHAIN */}
       {selectedChain ? (
         <>
           <DraggableChain
             chain={selectedChain}
             selectionInfo={{ type: id, color }}
-            onClick={() => onClick(selectedChain.id)}
           />
 
+          {/* CLEAR BUTTON */}
           <button
             onClick={(e) => {
               e.stopPropagation();

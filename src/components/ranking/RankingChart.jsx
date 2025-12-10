@@ -21,42 +21,14 @@ const RankingChart = () => {
   } = useChainStore();
 
   const [activeId, setActiveId] = React.useState(null);
-
-  // 🔵 현재 필터 상태 ("score" | "name")
   const [sortType, setSortType] = React.useState("score");
 
-  // 🔵 정렬된 데이터 생성
-  const sortedChains = [...allChains].sort((a, b) => {
-    if (sortType === "name") {
-      return a.name.localeCompare(b.name);
-    }
-    return b.score - a.score; // score 기본
-  });
+  const sortedChains = [...allChains].sort((a, b) =>
+    sortType === "name" ? a.name.localeCompare(b.name) : b.score - a.score
+  );
 
-  // 🟢 드래그 시작
-  const handleDragStart = (event) => {
-    setActiveId(event.active.id);
-  };
+  const activeChain = allChains.find((c) => c.id === activeId);
 
-  // 🟢 드래그 종료
-  const handleDragEnd = (event) => {
-    const { active, over } = event;
-    setActiveId(null);
-
-    if (!over) return;
-
-    const chainId = active.id;
-    const target = over.id;
-
-    if (target === "ranking-list") {
-      removeChainById(chainId);
-      return;
-    }
-
-    setSlot(target, chainId);
-  };
-
-  // 🟢 슬롯 UI 색상 제공
   const getSelectionInfo = (id) => {
     if (id === selectedMainId) return { type: "main", color: COLORS.MAIN };
     if (id === selectedSubId1) return { type: "sub1", color: COLORS.SUB1 };
@@ -64,67 +36,71 @@ const RankingChart = () => {
     return null;
   };
 
-  const activeChain = allChains.find((c) => c.id === activeId);
-
   return (
-    <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
-      <div className="flex flex-col h-full select-none">
-        
-        {/* TITLE */}
-        <h2 className="text-xl font-bold mb-6">HEMP Rank</h2>
+    <DndContext
+      onDragStart={(e) => setActiveId(e.active.id)}
+      onDragEnd={(event) => {
+        const { active, over } = event;
+        setActiveId(null);
+        if (!over) return;
 
-        {/* 🔵 FILTER BUTTONS */}
+        const chainId = active.id;
+        const target = over.id;
+
+        // 리스트 영역으로 드롭 → 리스트로 되돌리기
+        if (target === "ranking-list") {
+          removeChainById(chainId);
+          return;
+        }
+
+        // 슬롯(main/sub1/sub2)으로 드롭
+        setSlot(target, chainId);
+      }}
+    >
+      <div className="flex flex-col h-full select-none">
+
+        {/* TITLE */}
+        <h2 className="text-[18px] font-semibold mb-[29.9px]">HEMP Rank</h2>
+
+        {/* FILTER BUTTONS */}
         <div className="flex items-center gap-4 mb-4">
-          
-          {/* Chain 정렬 버튼 */}
+          {/* Chain 정렬 */}
           <button
             className="flex items-center gap-1"
             onClick={() => setSortType("name")}
           >
             <span
-              style={{
-                color: sortType === "name" ? "#FFFFFF" : "#6D7380",
-                fontFamily: "SUIT",
-                fontSize: "16px",
-                fontWeight: 600,
-              }}
+              className={
+                sortType === "name"
+                  ? "text-white font-semibold text-[16px]"
+                  : "text-gray-400 font-semibold text-[16px]"
+              }
             >
               Chain
             </span>
-
-            <img
-              src="/Icons/filter.png"
-              alt="filter"
-              className="w-4 h-4 opacity-70"
-            />
+            <img src="/Icons/filter.png" className="w-4 h-4 opacity-70" />
           </button>
 
-          {/* Score 정렬 버튼 */}
+          {/* Score 정렬 */}
           <button
             className="flex items-center gap-1"
             onClick={() => setSortType("score")}
           >
             <span
-              style={{
-                color: sortType === "score" ? "#FFFFFF" : "#6D7380",
-                fontFamily: "SUIT",
-                fontSize: "16px",
-                fontWeight: 600,
-              }}
+              className={
+                sortType === "score"
+                  ? "text-white font-semibold text-[16px]"
+                  : "text-gray-400 font-semibold text-[16px]"
+              }
             >
               HEMP Score
             </span>
-
-            <img
-              src="/Icons/filter.png"
-              alt="filter"
-              className="w-4 h-4 opacity-70"
-            />
+            <img src="/Icons/filter.png" className="w-4 h-4 opacity-70" />
           </button>
         </div>
 
-        {/* 🔵 LIST AREA (스크롤) */}
-        <div className="flex-1 overflow-y-auto pr-1">
+        {/* LIST AREA (고정 height + 내부 DroppableListArea) */}
+        <div className="h-[280px]">
           <DroppableListArea>
             {sortedChains.map((chain) => (
               <DraggableChain
@@ -136,8 +112,8 @@ const RankingChart = () => {
           </DroppableListArea>
         </div>
 
-        {/* 🔵 SLOT AREA (아래 고정) */}
-        <div className="mt-6 space-y-3 flex-shrink-0 pb-4">
+        {/* SLOT AREA (고정 height) */}
+        <div className="h-[226px] mt-6 flex flex-col justify-between">
           <DroppableSlot
             id="main"
             title="MAIN CHAIN"
@@ -145,7 +121,6 @@ const RankingChart = () => {
             selectedChainId={selectedMainId}
             onClear={() => clearSlot("main")}
           />
-
           <DroppableSlot
             id="sub1"
             title="SUB 1"
@@ -153,7 +128,6 @@ const RankingChart = () => {
             selectedChainId={selectedSubId1}
             onClear={() => clearSlot("sub1")}
           />
-
           <DroppableSlot
             id="sub2"
             title="SUB 2"
@@ -167,7 +141,7 @@ const RankingChart = () => {
       {/* DRAG OVERLAY */}
       {createPortal(
         <DragOverlay>
-          {activeChain ? <DraggableChain chain={activeChain} isOverlay /> : null}
+          {activeChain && <DraggableChain chain={activeChain} isOverlay />}
         </DragOverlay>,
         document.body
       )}

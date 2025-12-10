@@ -1,18 +1,17 @@
-import React from "react";
-import Sidebar from "./Sidebar";
+// src/components/layout/DashboardLayout.jsx
 
+import React from "react";
+// Sidebar를 여기서 import하여 레이아웃을 분리합니다.
+import Sidebar from "./Sidebar"; 
+// DashboardLayout은 이제 앱의 메인 컨테이너 역할을 합니다.
 const DashboardLayout = ({ children }) => {
   return (
-    <div className="w-full h-screen flex bg-[#0D0D0F] text-white">
-      
-      {/* 왼쪽 사이드바 (고정형 + sticky) */}
-      <Sidebar />
-
+    <div className="w-full min-h-screen flex text-white">
+      <Sidebar /> 
       {/* 오른쪽 콘텐츠 영역 (반응형) */}
-      <main className="flex-1 h-screen overflow-y-auto p-8">
+      <main className="flex-1 p-8">
         {children}
       </main>
-
     </div>
   );
 };

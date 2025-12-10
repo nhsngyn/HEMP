@@ -8,7 +8,7 @@ const HempMap = () => {
   
   // selectChain 가져오기
   const { 
-    selectChain, // 클릭용 함수
+    selectChain,
     getSelectionInfo, 
     selectedMainId, selectedSubId1, selectedSubId2 
   } = useChainSelection();
@@ -18,11 +18,26 @@ const HempMap = () => {
 
     const hasAnySelection = selectedMainId || selectedSubId1 || selectedSubId2;
 
+   const Q1 = 83.25;
+    const Q2 = 158;
+    const Q3 = 246.75;
+
     const calculateBubbleSize = (proposalCount, isSelected) => {
       const count = proposalCount || 0;
-      let size = (count * 0.5) + 25; 
-      size = Math.min(Math.max(size, 25), 85);
-      return isSelected ? size + 10 : size;
+      let baseSize;
+      if (count >= Q3) {
+        baseSize = 50;
+      } 
+      else if (count >= Q2) {
+        baseSize = 38;
+      } 
+      else if (count >= Q1) {
+        baseSize = 28;
+      } 
+      else {
+        baseSize = 18;
+      }
+      return isSelected ? baseSize + 10 : baseSize;
     };
 
     const seriesData = allChains.map((chain) => {
@@ -65,7 +80,7 @@ const HempMap = () => {
     return {
       backgroundColor: 'transparent',
       grid: {
-        top: '12%', right: '8%', bottom: '12%', left: '8%',
+        top: '20%', right: '8%', bottom: '12%', left: '8%',
         containLabel: true
       },
       tooltip: {
@@ -113,11 +128,11 @@ const HempMap = () => {
     };
   }, [allChains, selectedMainId, selectedSubId1, selectedSubId2, getSelectionInfo]);
 
-  // ✅ 클릭 핸들러
+  // 클릭 핸들러
   const onChartClick = (params) => {
     const clickedChain = allChains.find(c => c.name === params.name);
     if (clickedChain) {
-      // ✅ 클릭 시: 자동 배치 (이미 선택된 체인이면 무시됨)
+      // 클릭 시 자동 배치 (이미 선택된 체인이면 무시됨)
       selectChain(clickedChain.id);
     }
   };

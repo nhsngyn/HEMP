@@ -12,7 +12,7 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
     <div
       className={`
         flex items-center 
-        w-full
+        w-[188px]
         h-[44px] // height: 44px
         px-2 // padding: 0 8px
         gap-2 // gap: 8px
@@ -33,24 +33,22 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
       }}
     >
       {/* 이름 */}
-      <div
-        className="
-          flex-shrink-0 
-          text-gray-200 
-          text-base 
-          font-medium 
-          leading-[140%] 
-          tracking-tight 
-          truncate
-        "
-        style={{ flex: '264 0 0' }}
-      >
+      <div className="
+        w-[60px] 
+        flex-shrink-0 
+        text-gray-200 
+        text-base 
+        font-medium 
+        leading-[140%] 
+        tracking-tight 
+        truncate
+      ">
         {chain.name}
       </div>
 
       {/* 막대 + 점수 컨테이너 */}
-      <div className="flex items-center gap-2" style={{ flex: '56 0 0' }}>
-
+      <div className="flex-1 flex items-center gap-2">
+        
         {/* 막대바 배경 */}
         <div className="
           flex-1
@@ -68,10 +66,10 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
           />
         </div>
       </div>
-
+      
       {/* 메인/서브 표시 */}
       {isSelected && (
-        <div
+        <div 
           style={{ backgroundColor: highlightColor }}
         ></div>
       )}

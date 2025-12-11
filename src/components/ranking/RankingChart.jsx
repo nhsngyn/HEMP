@@ -179,7 +179,7 @@ const RankingChart = () => {
     const target = over.id;
 
     if (target === "ranking-list") {
-      removeChainById(chainId);
+      removeChainById(chainId); 
       return;
     }
 

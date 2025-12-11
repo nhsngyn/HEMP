@@ -53,7 +53,6 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
         <div className="
           flex-1 // flex: 1 0 0
           h-[20px] // height: 20px
-          bg-gray-700 // background: var(--gray700, #29303A)
           rounded-[3.59px] // border-radius: 3.59px
           relative overflow-hidden
         ">

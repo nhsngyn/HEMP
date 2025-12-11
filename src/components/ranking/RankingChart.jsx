@@ -122,7 +122,7 @@ const RankingChart = () => {
         </div>
 
         {/* LIST AREA */}
-        <div className="h-[280px]">
+        <div className="h-[444px]">
           <DroppableListArea>
             {sortedChains.map((chain) => {
               const isSelected = selectedIds.includes(chain.id);
@@ -132,8 +132,6 @@ const RankingChart = () => {
                   chain={chain}
                   selectionInfo={getSelectionInfo(chain.id)}
                   isSelected={isSelected}
-                  // onClick에 selectChain 함수를 사용합니다.
-                  // selectChain 함수가 useChainStore의 applySelection(null)을 호출하여 스마트 셀렉션을 실행합니다.
                   onClick={() => selectChain(chain.id)} 
                 />
               );

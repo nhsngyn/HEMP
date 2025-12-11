@@ -14,6 +14,13 @@ const HempMap = () => {
     selectedMainId, selectedSubId1, selectedSubId2 
   } = useChainSelection();
 
+const chainMap = useMemo(() => {
+    return allChains.reduce((acc, chain) => {
+      acc[chain.name] = chain;
+      return acc;
+    }, {});
+  }, [allChains]);
+
   const option = useMemo(() => {
     if (!allChains || allChains.length === 0) return {};
 
@@ -38,6 +45,7 @@ const HempMap = () => {
       }
       return isSelected ? baseSize + SIZES.SELECTED_OFFSET : baseSize;
     };
+
     const seriesData = allChains.map((chain) => {
       const selection = getSelectionInfo(chain.id);
       const isSelected = !!selection;
@@ -81,21 +89,27 @@ const HempMap = () => {
         top: '20%', right: '8%', bottom: '12%', left: '8%',
         containLabel: true
       },
-      tooltip: {
+     tooltip: {
         trigger: 'item',
         backgroundColor: 'rgba(26, 27, 32, 0.95)',
         borderColor: '#4B5563',
         textStyle: { color: '#fff' },
         formatter: (params) => {
-          const chainData = allChains.find(c => c.name === params.name);
-          const logoImg = chainData?.logoUrl ? `<img src="${chainData.logoUrl}" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;border-radius:50%;" />` : '';
+          const chainData = chainMap[params.name]; 
+          
+          if (!chainData) return '';
+
+          const logoImg = chainData.logoUrl 
+            ? `<img src="${chainData.logoUrl}" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;border-radius:50%;" />` 
+            : '';
+            
           return `
             <div style="font-weight:bold; margin-bottom:8px; font-size:15px; display:flex; align-items:center;">
               ${logoImg} ${params.name}
             </div>
             <div style="color:#bbb; margin-bottom:4px;">HEMP Score: <b style="color:white">${params.value[0]}</b></div>
             <div style="color:#bbb; margin-bottom:4px;">Participation: <b style="color:white">${params.value[1]}%</b></div>
-            <div style="color:#bbb;">Proposals: <b style="color:#FCD34D">${chainData?.proposals || 0}개</b></div>
+            <div style="color:#bbb;">Proposals: <b style="color:#FCD34D">${chainData.proposals || 0}개</b></div>
           `;
         }
       },

@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import ReactECharts from 'echarts-for-react';
 import useChainStore from '../../store/useChainStore';
 import useChainSelection from '../../hooks/useChainSelection';
+import { BUBBLE_CHART } from '../../constants/chart';
 
 const HempMap = () => {
   const { allChains } = useChainStore();
@@ -18,28 +19,25 @@ const HempMap = () => {
 
     const hasAnySelection = selectedMainId || selectedSubId1 || selectedSubId2;
 
-   const Q1 = 83.25;
-    const Q2 = 158;
-    const Q3 = 246.75;
+   const { THRESHOLDS, SIZES } = BUBBLE_CHART;
 
     const calculateBubbleSize = (proposalCount, isSelected) => {
       const count = proposalCount || 0;
       let baseSize;
-      if (count >= Q3) {
-        baseSize = 50;
+      if (count >= THRESHOLDS.Q3) {
+        baseSize = SIZES.HUGE;
       } 
-      else if (count >= Q2) {
-        baseSize = 38;
+      else if (count >= THRESHOLDS.Q2) {
+        baseSize = SIZES.LARGE;
       } 
-      else if (count >= Q1) {
-        baseSize = 28;
+      else if (count >= THRESHOLDS.Q1) {
+        baseSize = SIZES.MEDIUM;
       } 
       else {
-        baseSize = 18;
+        baseSize = SIZES.SMALL;
       }
-      return isSelected ? baseSize + 10 : baseSize;
+      return isSelected ? baseSize + SIZES.SELECTED_OFFSET : baseSize;
     };
-
     const seriesData = allChains.map((chain) => {
       const selection = getSelectionInfo(chain.id);
       const isSelected = !!selection;

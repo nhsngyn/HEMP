@@ -14,7 +14,7 @@ import useChainSelection from '../../hooks/useChainSelection';
 import { COLORS } from '../../constants/colors';
 
 // ---------------------------
-// 1. 공통 디자인 컴포넌트
+// 1. 공통 디자인 컴포넌트 (변경 없음)
 // ---------------------------
 const ChainCard = ({ chain, selectionInfo, isOverlay, isDragging, style, ...props }) => {
   const isSelected = !!selectionInfo;
@@ -26,7 +26,7 @@ const ChainCard = ({ chain, selectionInfo, isOverlay, isDragging, style, ...prop
     boxShadow: isSelected && !isDragging && !isOverlay 
       ? `0 0 10px ${selectionInfo.color}40` 
       : 'none',
-    opacity: isDragging || (isSelected && !isOverlay && !props.isSlotItem) ? 0.3 : 1, 
+    opacity: isDragging ? 0.3 : 1,
   };
 
   return (
@@ -35,7 +35,7 @@ const ChainCard = ({ chain, selectionInfo, isOverlay, isDragging, style, ...prop
       className={`
         p-3 mb-2 rounded border-2 flex justify-between items-center group transition-all duration-300 ease-in-out
         ${isOverlay ? 'bg-gray-700 scale-105 z-50 shadow-xl' : 'bg-[#1A1B20]'}
-        ${isSelected ? 'bg-opacity-20' : 'hover:border-gray-400'}
+        ${isSelected && !isOverlay ? 'bg-opacity-20' : 'hover:border-gray-400'}
         ${props.cursor ? props.cursor : ''} 
       `}
       {...props}
@@ -56,13 +56,13 @@ const ChainCard = ({ chain, selectionInfo, isOverlay, isDragging, style, ...prop
   );
 };
 
-
 // ---------------------------
-// 2. DraggableChain (클릭 + 드래그 공존)
+// 2. DraggableChain
 // ---------------------------
-const DraggableChain = ({ chain, selectionInfo, isOverlay = false, onClick }) => {
+const DraggableChain = ({ chain, selectionInfo, onClick }) => {
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
     id: chain.id,
+    data: { chain, selectionInfo } 
   });
 
   return (
@@ -75,7 +75,6 @@ const DraggableChain = ({ chain, selectionInfo, isOverlay = false, onClick }) =>
       <ChainCard 
         chain={chain} 
         selectionInfo={selectionInfo} 
-        isOverlay={isOverlay}
         isDragging={isDragging}
         isSlotItem={true} 
         cursor="cursor-grab active:cursor-grabbing"
@@ -84,9 +83,8 @@ const DraggableChain = ({ chain, selectionInfo, isOverlay = false, onClick }) =>
   );
 };
 
-
 // ---------------------------
-// 3. 리스트 영역
+// 3. 리스트 영역 (변경 없음)
 // ---------------------------
 const DroppableListArea = ({ children }) => {
   const { setNodeRef, isOver } = useDroppable({ id: 'ranking-list' });
@@ -105,7 +103,6 @@ const DroppableListArea = ({ children }) => {
     </div>
   );
 };
-
 
 // ---------------------------
 // 4. 슬롯 영역
@@ -135,10 +132,12 @@ const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
       {selectedChain ? (
         <div className="w-full h-full flex items-center justify-center px-2 pt-3">
             <div className="w-full">
+                 {/* 슬롯에 있는 아이템은 Draggable 상태 */}
                  <DraggableChain chain={selectedChain} selectionInfo={{ color }} />
             </div>
     
             <button 
+                onPointerDown={(e) => e.stopPropagation()} 
                 onClick={(e) => { e.stopPropagation(); onClear(); }}
                 className="absolute top-1 right-2 text-gray-500 hover:text-white text-xs z-10 p-1 cursor-pointer"
             >
@@ -154,7 +153,6 @@ const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
   );
 };
 
-
 // ---------------------------
 // 5. 메인 컴포넌트
 // ---------------------------
@@ -164,11 +162,10 @@ const RankingChart = () => {
   
   const [activeId, setActiveId] = useState(null);
 
-  // 🔥 dnd-kit 공식: 클릭/드래그 공존 센서
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: {
-        distance: 5,   // ← 5px 움직여야 드래그로 인식
+        distance: 5, 
       },
     })
   );
@@ -187,21 +184,30 @@ const RankingChart = () => {
     const chainId = active.id;
     const target = over.id;
 
-    // 리스트 영역으로 드롭 → 슬롯 해제
     if (target === "ranking-list") {
       removeChainById(chainId); 
       return;
     }
 
-    // 슬롯(main/sub1/sub2)으로 드롭
     applySelection(chainId, target);
   };
+
+  // [FIX 1] activeChain 계산 로직 추가
+  const activeChain = useMemo(() => 
+    allChains.find((c) => c.id === activeId),
+  [activeId, allChains]);
+
+  // [FIX 1-1] DragOverlay에 표시할 선택 정보 (색상 등) 계산
+  const activeSelectionInfo = useMemo(() => {
+    if (!activeId) return null;
+    return getSelectionInfo(activeId); 
+  }, [activeId, getSelectionInfo]);
 
   return (
     <DndContext sensors={sensors} onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
       <div className="w-full h-full relative bg-[#0d0d0d] flex flex-col overflow-hidden select-none">
         
-        <div className="p-4 bg-[#0d0d0d]ㅍ z-10 border-b border-gray-800 shrink-0">
+        <div className="p-4 bg-[#0d0d0d] z-10 border-b border-gray-800 shrink-0">
           <h2 className="text-xl font-bold text-white">HEMP Rank</h2>
         </div>
 
@@ -211,12 +217,13 @@ const RankingChart = () => {
             
             if (selectionInfo) {
               return (
-                <DraggableChain
-                  key={chain.id}
-                  chain={chain}
-                  selectionInfo={selectionInfo}
-                  cursor="cursor-default"
-                />
+                <div key={chain.id} className="opacity-50 pointer-events-none grayscale">
+                   <ChainCard
+                    chain={chain}
+                    selectionInfo={selectionInfo}
+                    cursor="cursor-default"
+                  />
+                </div>
               );
             }
 
@@ -231,7 +238,6 @@ const RankingChart = () => {
           })}
         </DroppableListArea>
 
-        {/* SLOT AREA */}
         <div className="h-[226px] mt-6 flex flex-col justify-between">
           <DroppableSlot
             id="main"
@@ -260,12 +266,13 @@ const RankingChart = () => {
       {/* DRAG OVERLAY */}
       {createPortal(
         <DragOverlay>
-          {activeChain && (
-            <DraggableChain 
+          {activeChain ? (
+            <ChainCard 
               chain={activeChain} 
+              selectionInfo={activeSelectionInfo}
               isOverlay={true} 
             />
-          )}
+          ) : null}
         </DragOverlay>,
         document.body
       )}

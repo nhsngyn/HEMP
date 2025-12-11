@@ -1,16 +1,16 @@
 import React from "react";
-import { 
-  DndContext, 
-  DragOverlay, 
-  useSensor, 
-  useSensors, 
-  PointerSensor 
+import {
+  DndContext,
+  DragOverlay,
+  useSensor,
+  useSensors,
+  PointerSensor
 } from "@dnd-kit/core";
 import { createPortal } from "react-dom";
 
 import useChainStore from "../../store/useChainStore";
 // useChainSelection 훅을 가져오기
-import useChainSelection from "../../hooks/useChainSelection"; 
+import useChainSelection from "../../hooks/useChainSelection";
 import { COLORS } from "../../constants/colors";
 
 import DraggableChain from "./DraggableChain";
@@ -25,14 +25,14 @@ const RankingChart = () => {
     clearSlot,
     removeChainById,
   } = useChainStore();
-  
+
   // 선택 로직 관련 모든 상태와 함수는 useChainSelection에서 가져오기
-  const { 
-      selectChain, 
-      getSelectionInfo, 
-      selectedMainId, 
-      selectedSubId1, 
-      selectedSubId2 
+  const {
+    selectChain,
+    getSelectionInfo,
+    selectedMainId,
+    selectedSubId1,
+    selectedSubId2
   } = useChainSelection();
 
   const [activeId, setActiveId] = React.useState(null);
@@ -64,7 +64,7 @@ const RankingChart = () => {
 
     // 리스트 영역으로 드롭 → 슬롯 해제
     if (target === "ranking-list") {
-      removeChainById(chainId); 
+      removeChainById(chainId);
       return;
     }
 
@@ -78,13 +78,13 @@ const RankingChart = () => {
       onDragStart={(e) => setActiveId(e.active.id)}
       onDragEnd={handleDragEnd}
     >
-  <div className="flex flex-col h-full select-none">
+      <div className="flex flex-col h-full w-full select-none p-6">
 
         {/* TITLE */}
-        <h2 className="text-[18px] font-semibold mb-[29.9px]">HEMP Rank</h2>
+        <h2 className="text-[18px] font-semibold mb-[29.9px] shrink-0">HEMP Rank</h2>
 
         {/* FILTER BUTTONS */}
-        <div className="flex items-center gap-4 mb-4">
+        <div className="flex items-center gap-4 mb-4 shrink-0">
           {/* Chain 정렬 */}
           <button
             className="flex items-center gap-1"
@@ -93,8 +93,8 @@ const RankingChart = () => {
             <span
               className={
                 sortType === "name"
-                  ? "text-white text-xs font-semibold leading-tight" 
-                  : "text-gray-400 text-xs font-semibold leading-tight" 
+                  ? "text-white text-xs font-semibold leading-tight"
+                  : "text-gray-400 text-xs font-semibold leading-tight"
               }
             >
               Chain
@@ -108,7 +108,7 @@ const RankingChart = () => {
             onClick={() => setSortType("score")}
           >
             <span
- 
+
               className={
                 sortType === "score"
                   ? "text-white text-xs font-semibold leading-tight"
@@ -122,7 +122,7 @@ const RankingChart = () => {
         </div>
 
         {/* LIST AREA */}
-        <div className="h-[280px]">
+        <div className="flex-1 min-h-0 overflow-y-auto">
           <DroppableListArea>
             {sortedChains.map((chain) => {
               const isSelected = selectedIds.includes(chain.id);
@@ -134,7 +134,7 @@ const RankingChart = () => {
                   isSelected={isSelected}
                   // onClick에 selectChain 함수를 사용합니다.
                   // selectChain 함수가 useChainStore의 applySelection(null)을 호출하여 스마트 셀렉션을 실행합니다.
-                  onClick={() => selectChain(chain.id)} 
+                  onClick={() => selectChain(chain.id)}
                 />
               );
             })}
@@ -142,7 +142,7 @@ const RankingChart = () => {
         </div>
 
         {/* SLOT AREA */}
-        <div className="h-[226px] mt-6 flex flex-col justify-between">
+        <div className="mt-6 flex flex-col justify-between shrink-0">
           <DroppableSlot
             id="main"
             title="MAIN CHAIN"
@@ -171,9 +171,9 @@ const RankingChart = () => {
       {createPortal(
         <DragOverlay>
           {activeChain && (
-            <DraggableChain 
-              chain={activeChain} 
-              isOverlay={true} 
+            <DraggableChain
+              chain={activeChain}
+              isOverlay={true}
             />
           )}
         </DragOverlay>,

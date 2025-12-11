@@ -1,4 +1,5 @@
 // src/constants/chart.js
+
 export const BUBBLE_CHART = {
   THRESHOLDS: {
     Q3: 246.75,

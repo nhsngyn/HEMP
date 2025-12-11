@@ -53,10 +53,9 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
 
         {/* 막대바 배경 */}
         <div className="
-          flex-1 // flex: 1 0 0
-          h-[20px] // height: 20px
-          bg-gray-700 // background: var(--gray700, #29303A)
-          rounded-[3.59px] // border-radius: 3.59px
+          flex-1
+          h-[20px]
+          rounded-[3.59px]
           relative overflow-hidden
         ">
           <div

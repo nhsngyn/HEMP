@@ -49,13 +49,16 @@ const useChainStore = create((set) => ({
       else if (!slots.sub1) finalTargetKey = 'selectedSubId1';
       else if (!slots.sub2) finalTargetKey = 'selectedSubId2';
       
+      if (!finalTargetKey) {
+          finalTargetKey = 'selectedMainId'; // Main Chain으로 강제 지정
+      }
+
       if (finalTargetKey) {
         updates[finalTargetKey] = chainId;
       }
       
       return updates;
-    } 
-
+    }
     // 드래그 앤 드롭
     if (currentSlotKey) {
       updates[slotKeyMap[currentSlotKey]] = null;

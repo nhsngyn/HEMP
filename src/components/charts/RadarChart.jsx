@@ -180,9 +180,24 @@ const RadarChart = () => {
     };
 
     drawChart();
+
+    // Window resize 이벤트
     const handleResize = () => drawChart();
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+
+    // ResizeObserver로 컨테이너 크기 변경 감지 (더 정확함)
+    const resizeObserver = new ResizeObserver(() => {
+      drawChart();
+    });
+
+    if (radarContainerRef.current) {
+      resizeObserver.observe(radarContainerRef.current);
+    }
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      resizeObserver.disconnect();
+    };
   }, [mainChain, subChain1, subChain2]);
 
   // 점수 계산

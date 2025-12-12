@@ -4,18 +4,19 @@ const MainLayout = ({ leftSidebar, children }) => {
   // Rank : Bubble : Radar = 39 : 76 : 64
   // Total = 179
   // Rank = 39/179 ≈ 21.8%, Main area = 140/179 ≈ 78.2%
-  // 1920x1080 비율 유지 (16:9)
+  // 반응형 레이아웃: 1024px ~ 1920px
+  // 기준 폭: 1440px
   return (
-    <div className="w-screen h-screen bg-black flex items-center justify-center overflow-auto">
+    <div className="w-screen h-screen bg-black flex items-center justify-center overflow-hidden">
       <div
-        className="grid bg-black overflow-hidden p-[60px]"
+        className="grid bg-black overflow-hidden"
         style={{
           gridTemplateColumns: '21.8% 78.2%',
-          width: '1920px',
-          height: '1080px',
-          maxWidth: '100vw',
+          width: 'clamp(1024px, 100vw, 1920px)',
+          height: '100vh',
+          padding: 'clamp(30px, 4.17vw, 60px)',
           maxHeight: '100vh',
-          aspectRatio: '16/9'
+          boxSizing: 'border-box'
         }}
       >
 

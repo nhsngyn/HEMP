@@ -462,10 +462,21 @@ const SankeyChart = ({ width = 1400, height = 800 }) => {
       drawChart();
     };
 
+    // Window resize 이벤트
     window.addEventListener('resize', handleResize);
+
+    // ResizeObserver로 컨테이너 크기 변경 감지 (더 정확함)
+    const resizeObserver = new ResizeObserver(() => {
+      drawChart();
+    });
+
+    if (containerRef.current) {
+      resizeObserver.observe(containerRef.current);
+    }
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      resizeObserver.disconnect();
     };
   }, [width, height, mainChain, sankeyData]);
 

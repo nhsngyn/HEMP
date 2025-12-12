@@ -17,7 +17,14 @@ function App() {
   return (
     <MainLayout leftSidebar={<RankingChart />}>
 
-      <div className="flex flex-col w-full h-full p-6 gap-6">
+      <div 
+        className="flex flex-col w-full h-full gap-6"
+        style={{ 
+          padding: 'clamp(12px, 1.5vw, 24px)',
+          minHeight: 0,
+          overflow: 'hidden'
+        }}
+      >
 
         {/* Chain 제목 */}
         {mainChain && (

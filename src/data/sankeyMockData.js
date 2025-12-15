@@ -35,7 +35,7 @@ const generateDummyPropositions = (count = 50) => {
   for (let i = 0; i < count; i++) {
     const result = randomChoice(results);
     const processingSpeed = randomChoice(processingSpeeds);
-    
+
     // Status formatting based on result
     let status = '';
     if (result === 'Passed') {
@@ -43,7 +43,8 @@ const generateDummyPropositions = (count = 50) => {
     } else if (result === 'Rejected') {
       status = `REJECTED (${(Math.random() * 30 + 70).toFixed(1)}%)`;
     } else {
-      status = 'VOTING PERIOD';
+      // Spec: Failed 상태는 단순히 FAILED로 표기
+      status = 'FAILED';
     }
 
     // Processing time based on speed

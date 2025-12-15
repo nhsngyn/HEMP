@@ -18,15 +18,15 @@ const TYPE_COLORS = {
 
 const RESULT_TO_PARTICIPATION_COLORS = {
   'Passed': '#3B82494D',
-  'Rejected': '#887E244D',
-  'Failed': '#8D3C3C4D'
+  'Rejected': '#8D3C3C4d',
+  'Failed': '#4C556445'
 };
 
 // Result → Participation 링크 활성화 색상 (호버/선택 시)
 const RESULT_TO_PARTICIPATION_ACTIVATED_COLORS = {
   'Passed': '#4DD36899',
-  'Rejected': '#E4D43F99',
-  'Failed': '#DF4E4Ecc'
+  'Rejected': '#DF4E4Ecc',
+  'Failed': '#8590A2e6'
 };
 
 const COLUMN_LABELS = ['Type', 'Result', 'Participation', 'Vote Composition', 'Processing Speed'];
@@ -96,8 +96,15 @@ const generateSankeyData = (mainChain, mockPropositions) => {
 
   const getNodeIndex = (name, column) => nodes.findIndex(n => n.name === name && n.column === column);
 
-  // Aggregate link counts by type
-  const linkCounts = new Map();
+  // 링크들은 모두 "같은 속성을 갖는 프로포절들을 묶어서" 집계된 형태로 생성
+  const links = [];
+
+  // Type→Result 링크 카운트 (집계)
+  const typeResultCounts = new Map();
+  // Result→Participation, Participation→Vote, Vote→Speed 링크 카운트 (타입 구분 없이 집계)
+  const resultParticipationCounts = new Map();
+  const participationVoteCounts = new Map();
+  const voteSpeedCounts = new Map();
   propositions.forEach(prop => {
     const propType = prop.type || 'Other';
     const participationLevel = prop.participationLevel || 'Mid';
@@ -105,68 +112,102 @@ const generateSankeyData = (mainChain, mockPropositions) => {
     const result = prop.result || 'Passed';
     const processingSpeed = prop.processingSpeed || 'Normal';
 
-    const linkKeys = [
-      `type-${propType}|result-${result}|${propType}`,
-      `result-${result}|participation-${participationLevel}|${propType}`,
-      `participation-${participationLevel}|vote-${voteComposition}|${propType}`,
-      `vote-${voteComposition}|speed-${processingSpeed}|${propType}`
-    ];
+    // Type → Result 집계 (타입별)
+    const trKey = `type-${propType}|result-${result}`;
+    typeResultCounts.set(trKey, (typeResultCounts.get(trKey) || 0) + 1);
 
-    linkKeys.forEach(key => {
-      linkCounts.set(key, (linkCounts.get(key) || 0) + 1);
+    // Result → Participation (타입 구분 없이 결과/참여만으로 집계)
+    const rpKey = `result-${result}|participation-${participationLevel}`;
+    resultParticipationCounts.set(rpKey, (resultParticipationCounts.get(rpKey) || 0) + 1);
+
+    // Participation → Vote Composition
+    const pvKey = `participation-${participationLevel}|vote-${voteComposition}`;
+    participationVoteCounts.set(pvKey, (participationVoteCounts.get(pvKey) || 0) + 1);
+
+    // Vote Composition → Processing Speed
+    const vsKey = `vote-${voteComposition}|speed-${processingSpeed}`;
+    voteSpeedCounts.set(vsKey, (voteSpeedCounts.get(vsKey) || 0) + 1);
+  });
+
+  // Type→Result 링크 생성 (집계된 value 사용, 타입별 링크 유지)
+  sortedTypes.forEach(type => {
+    results.forEach(result => {
+      const key = `type-${type}|result-${result}`;
+      const count = typeResultCounts.get(key) || 0;
+      if (count > 0) {
+        const sourceIdx = getNodeIndex(type, 0);
+        const targetIdx = getNodeIndex(result, 1);
+        if (sourceIdx !== -1 && targetIdx !== -1) {
+          links.push({
+            source: sourceIdx,
+            target: targetIdx,
+            value: count,
+            type
+          });
+        }
+      }
     });
   });
 
-  // Generate links between columns
-  const createLinks = (sourceColumn, targetColumn, sourceValues, targetValues, keyPrefix, includeType = false) => {
-    const links = [];
-    // Maintain order: iterate sourceValues and targetValues in their sorted order
-    sourceValues.forEach(sourceVal => {
-      targetValues.forEach(targetVal => {
-        if (includeType) {
-          // Use sorted types to maintain order
-          sortedTypes.forEach(type => {
-            const key = `${keyPrefix}-${sourceVal}|${keyPrefix === 'type' ? 'result' : keyPrefix === 'result' ? 'participation' : keyPrefix === 'participation' ? 'vote' : 'speed'}-${targetVal}|${type}`;
-            const count = linkCounts.get(key) || 0;
-            if (count > 0) {
-              const sourceIdx = getNodeIndex(sourceVal, sourceColumn);
-              const targetIdx = getNodeIndex(targetVal, targetColumn);
-              if (sourceIdx !== -1 && targetIdx !== -1) {
-                links.push({ source: sourceIdx, target: targetIdx, value: count, type });
-              }
-            }
+  // Result→Participation 링크 생성 (Result/Participation 조합당 하나의 굵은 링크)
+  results.forEach(result => {
+    participationLevels.forEach(level => {
+      const key = `result-${result}|participation-${level}`;
+      const count = resultParticipationCounts.get(key) || 0;
+      if (count > 0) {
+        const sourceIdx = getNodeIndex(result, 1);
+        const targetIdx = getNodeIndex(level, 2);
+        if (sourceIdx !== -1 && targetIdx !== -1) {
+          links.push({
+            source: sourceIdx,
+            target: targetIdx,
+            value: count,
+            type: null
           });
-        } else {
-          const key = `${keyPrefix}-${sourceVal}|${keyPrefix === 'type' ? 'result' : 'participation'}-${targetVal}|${sourceVal}`;
-          const count = linkCounts.get(key) || 0;
-          if (count > 0) {
-            const sourceIdx = getNodeIndex(sourceVal, sourceColumn);
-            const targetIdx = getNodeIndex(targetVal, targetColumn);
-            if (sourceIdx !== -1 && targetIdx !== -1) {
-              links.push({ source: sourceIdx, target: targetIdx, value: count, type: sourceVal });
-            }
-          }
         }
-      });
-    });
-
-    // Sort links to match node order: first by source index, then by target index
-    links.sort((a, b) => {
-      if (a.source !== b.source) {
-        return a.source - b.source;
       }
-      return a.target - b.target;
     });
+  });
 
-    return links;
-  };
+  // Participation→Vote Composition 링크 생성
+  participationLevels.forEach(level => {
+    voteCompositions.forEach(vote => {
+      const key = `participation-${level}|vote-${vote}`;
+      const count = participationVoteCounts.get(key) || 0;
+      if (count > 0) {
+        const sourceIdx = getNodeIndex(level, 2);
+        const targetIdx = getNodeIndex(vote, 3);
+        if (sourceIdx !== -1 && targetIdx !== -1) {
+          links.push({
+            source: sourceIdx,
+            target: targetIdx,
+            value: count,
+            type: null
+          });
+        }
+      }
+    });
+  });
 
-  const links = [
-    ...createLinks(0, 1, sortOrders[0], sortOrders[1], 'type'),
-    ...createLinks(1, 2, sortOrders[1], sortOrders[2], 'result', true),
-    ...createLinks(2, 3, sortOrders[2], sortOrders[3], 'participation', true),
-    ...createLinks(3, 4, sortOrders[3], sortOrders[4], 'vote', true)
-  ];
+  // Vote Composition→Processing Speed 링크 생성
+  voteCompositions.forEach(vote => {
+    processingSpeeds.forEach(speed => {
+      const key = `vote-${vote}|speed-${speed}`;
+      const count = voteSpeedCounts.get(key) || 0;
+      if (count > 0) {
+        const sourceIdx = getNodeIndex(vote, 3);
+        const targetIdx = getNodeIndex(speed, 4);
+        if (sourceIdx !== -1 && targetIdx !== -1) {
+          links.push({
+            source: sourceIdx,
+            target: targetIdx,
+            value: count,
+            type: null
+          });
+        }
+      }
+    });
+  });
 
   return { nodes, links };
 };
@@ -174,7 +215,8 @@ const generateSankeyData = (mainChain, mockPropositions) => {
 const SankeyChart = ({ width = 1400, height = 800 }) => {
   const svgRef = useRef(null);
   const containerRef = useRef(null);
-  const { allChains, selectedMainId } = useChainStore();
+  const propositionInfoRef = useRef(null);
+  const { allChains, selectedMainId, setSankeyFilter, clearSankeyFilter } = useChainStore();
   const [selectedLink, setSelectedLink] = useState(null);
 
   // Get main chain data
@@ -188,6 +230,18 @@ const SankeyChart = ({ width = 1400, height = 800 }) => {
       'default': defaultDummyPropositions
     };
     return generateSankeyData(mainChain, mockData);
+  }, [mainChain]);
+
+  // Get propositions data (for external consumers like ProposalsTable)
+  const propositionsData = useMemo(() => {
+    if (!mainChain) return [];
+    const mockData = {
+      ...sankeyMockPropositions,
+      'default': defaultDummyPropositions
+    };
+    return (mainChain.propositions && Array.isArray(mainChain.propositions) && mainChain.propositions.length > 0)
+      ? mainChain.propositions
+      : (mockData[mainChain.id] || mockData['default'] || []);
   }, [mainChain]);
 
   const hasPropositionsData = useMemo(() => {
@@ -223,6 +277,7 @@ const SankeyChart = ({ width = 1400, height = 800 }) => {
         // Only deselect if clicking directly on SVG background (not on links/nodes)
         if (event.target === this || event.target.tagName === 'svg') {
           setSelectedLink(null);
+          clearSankeyFilter();
         }
       });
 
@@ -312,7 +367,10 @@ const SankeyChart = ({ width = 1400, height = 800 }) => {
           source: d.source,
           target: d.target,
           value: d.value,
-          type: d.type || null
+          type: d.type || null,
+          // Preserve proposition metadata so it survives through sankey() processing
+          propositionId: d.propositionId,
+          propositionIndex: d.propositionIndex
         }))
       };
 
@@ -329,6 +387,13 @@ const SankeyChart = ({ width = 1400, height = 800 }) => {
       // Process data with sankey
       const graph = sankeyGenerator(dataCopy);
       let { nodes, links } = graph;
+
+      // Add stable keys to Type→Result links for accurate matching
+      links.forEach(link => {
+        if (link.source && link.target && link.source.column === 0 && link.target.column === 1) {
+          link.stableKey = `${link.source.name}-${link.source.column}->${link.target.name}-${link.target.column}-${link.type || 'ALL'}`;
+        }
+      });
 
       // Adjust horizontal spacing between columns
       const groupNodesByColumn = (nodes) => {
@@ -369,122 +434,10 @@ const SankeyChart = ({ width = 1400, height = 800 }) => {
         });
       }
 
-      // Restore original node metadata
-      nodes.forEach((node) => {
-        const originalNode = originalNodes.find(n => n.name === node.name);
-        if (originalNode) {
-          node.column = originalNode.column;
-          node.type = originalNode.type;
-        }
-      });
-
-      // Define sort orders for each column (same as in generateSankeyData)
-      const getProposalCounts = () => {
-        const counts = new Map();
-        sankeyData.links.forEach(link => {
-          if (link.source && link.source.column === 0) {
-            const typeName = link.source.name;
-            counts.set(typeName, (counts.get(typeName) || 0) + (link.value || 0));
-          }
-        });
-        return counts;
-      };
-
-      const typeCounts = getProposalCounts();
-      const sortedTypes = [...NODE_CATEGORIES.types].sort((a, b) => {
-        const countA = typeCounts.get(a) || 0;
-        const countB = typeCounts.get(b) || 0;
-        return countB - countA;
-      });
-
-      const columnSortOrders = {
-        0: sortedTypes, // Type: sorted by proposal count
-        1: ['Passed', 'Rejected', 'Failed'], // Result
-        2: ['High', 'Mid', 'Low'], // Participation
-        3: ['Consensus', 'Contested', 'Polarized'], // Vote Composition
-        4: ['Fast', 'Normal', 'Slow'] // Processing Speed
-      };
-
-      // Create a map for quick lookup of sort order index
-      const getSortIndex = (nodeName, column) => {
-        const sortOrder = columnSortOrders[column] || [];
-        const index = sortOrder.indexOf(nodeName);
-        return index === -1 ? 999 : index; // Put unknown nodes at the end
-      };
-
-      // Adjust node heights proportionally within each column
-      const nodesByColumnForHeight = groupNodesByColumn(nodes);
-
-      // Adjust node heights and maintain sort order
-      Object.keys(nodesByColumnForHeight).forEach(columnIndex => {
-        const colIdx = parseInt(columnIndex);
-        const columnNodes = nodesByColumnForHeight[columnIndex];
-        if (columnNodes.length === 0) return;
-
-        // Sort nodes by defined order (ensure consistent ordering)
-        const sortedNodes = [...columnNodes].sort((a, b) => {
-          const indexA = getSortIndex(a.name, colIdx);
-          const indexB = getSortIndex(b.name, colIdx);
-          return indexA - indexB;
-        });
-
-        // Calculate node values for proportional sizing
-        const nodeValues = sortedNodes.map(node => {
-          const incomingValue = links
-            .filter(link => link.target === node)
-            .reduce((sum, link) => sum + (link.value || 0), 0);
-          const outgoingValue = links
-            .filter(link => link.source === node)
-            .reduce((sum, link) => sum + (link.value || 0), 0);
-
-          // For first column (Type), use only outgoing value
-          // For last column, use only incoming value
-          // For middle columns, use the maximum
-          if (colIdx === 0) {
-            return Math.max(outgoingValue, 1); // Type nodes: use outgoing only
-          } else if (colIdx === 4) {
-            return Math.max(incomingValue, 1); // Last column: use incoming only
-          } else {
-            return Math.max(incomingValue, outgoingValue, 1); // Middle columns: use max
-          }
-        });
-
-        const totalValue = nodeValues.reduce((sum, val) => sum + val, 0);
-
-        // Get column bounds from sankey layout, but ensure it fits within container
-        // Use the actual sankey-calculated bounds to maintain link alignment
-        const sankeyColumnTop = Math.min(...columnNodes.map(n => n.y0));
-        const sankeyColumnBottom = Math.max(...columnNodes.map(n => n.y1));
-        const sankeyColumnHeight = sankeyColumnBottom - sankeyColumnTop;
-
-        // Ensure column fits within container bounds
-        const maxAllowedTop = padding.top;
-        const maxAllowedBottom = padding.top + chartHeight;
-        const columnTop = Math.max(maxAllowedTop, sankeyColumnTop);
-        const columnBottom = Math.min(maxAllowedBottom, sankeyColumnBottom);
-        const columnHeight = columnBottom - columnTop;
-
-        // Calculate total gap needed
-        const totalGap = (sortedNodes.length - 1) * MIN_NODE_GAP;
-        const availableHeight = Math.max(columnHeight - totalGap, sortedNodes.length * MIN_NODE_HEIGHT);
-
-        // Reassign y positions in sort order from top to bottom
-        // This ensures links start from the correct node positions matching the sort order
-        const maxY = maxAllowedBottom;
-        const maxAvailableHeight = maxY - columnTop - (sortedNodes.length - 1) * MIN_NODE_GAP;
-        const finalAvailableHeight = Math.min(availableHeight, maxAvailableHeight);
-
-        // Start from the actual column top (which may be adjusted for container bounds)
-        // 모든 노드를 동일한 높이로 통일
-        const uniformNodeHeight = finalAvailableHeight / sortedNodes.length;
-        let currentY = columnTop;
-        sortedNodes.forEach((node, idx) => {
-          // Update node position - sankeyLinkHorizontal() will use these updated positions
-          node.y0 = currentY;
-          node.y1 = currentY + uniformNodeHeight;
-          currentY = node.y1 + MIN_NODE_GAP;
-        });
-      });
+      // NOTE:
+      // 여기서는 d3-sankey가 계산한 node.y0 / y1 / link.y0 / y1 를 그대로 사용한다.
+      // (수동으로 y를 재조정하면, 중간 컬럼에서 노드와 리본의 경계가 미세하게 틀어지는 문제가 생기기 때문에
+      //  완벽 정렬을 위해 기본 레이아웃을 신뢰한다.)
 
       // Link color function (기본 색상)
       const getLinkColor = (link) => {
@@ -549,11 +502,13 @@ const SankeyChart = ({ width = 1400, height = 800 }) => {
       // Helper function to check if link is selected
       const isLinkSelected = (link) => {
         if (!selectedLink || !link.source || !link.target) return false;
-        // Compare both name and column for accurate matching
-        return link.source.name === selectedLink.source.name &&
-          link.source.column === selectedLink.source.column &&
-          link.target.name === selectedLink.target.name &&
-          link.target.column === selectedLink.target.column;
+
+        // For other links, compare name and column
+        const sourceMatches = String(link.source.name) === String(selectedLink.source.name) &&
+          Number(link.source.column) === Number(selectedLink.source.column);
+        const targetMatches = String(link.target.name) === String(selectedLink.target.name) &&
+          Number(link.target.column) === Number(selectedLink.target.column);
+        return sourceMatches && targetMatches;
       };
 
       // Helper function to check if link should use gray color scheme
@@ -608,10 +563,24 @@ const SankeyChart = ({ width = 1400, height = 800 }) => {
         .append('g')
         .attr('class', 'links')
         .selectAll('path')
-        .data(links)
+        .data(links, (d) => {
+          // Use stable key for Type→Result links, index for others
+          if (d.source && d.target && d.source.column === 0 && d.target.column === 1) {
+            return d.stableKey || `${d.source.name}-${d.source.column}->${d.target.name}-${d.target.column}`;
+          }
+          return null; // Let D3 use default key for other links
+        })
         .enter()
         .append('path')
-        .attr('d', sankeyLinkHorizontal())
+        .attr('d', (d) => {
+          // CRITICAL: For Type→Result links, ALWAYS recompute path using current node positions
+          // This ensures links align perfectly with the updated node y0/y1 positions
+          if (d.source && d.target && d.source.column === 0 && d.target.column === 1) {
+            // Always use current node positions - don't rely on cached computedPath
+            return sankeyLinkHorizontal()(d);
+          }
+          return sankeyLinkHorizontal()(d);
+        })
         .attr('stroke', getLinkStrokeColor)
         .attr('stroke-width', (d) => Math.max(MIN_LINK_WIDTH, d.width || MIN_LINK_WIDTH))
         .attr('fill', 'none')
@@ -636,11 +605,40 @@ const SankeyChart = ({ width = 1400, height = 800 }) => {
           // Toggle selection: if same link clicked, deselect; otherwise select new link
           if (isLinkSelected(d)) {
             setSelectedLink(null);
+            clearSankeyFilter();
           } else {
-            setSelectedLink({
-              source: { name: d.source.name, column: d.source.column },
-              target: { name: d.target.name, column: d.target.column }
+            // CRITICAL: Get actual node properties directly from the link's source/target nodes
+            // For Type→Result links, also store propositionId for exact matching
+            const sourceNode = d.source;
+            const targetNode = d.target;
+            const linkData = {
+              source: {
+                name: String(sourceNode.name),
+                column: Number(sourceNode.column)
+              },
+              target: {
+                name: String(targetNode.name),
+                column: Number(targetNode.column)
+              },
+              type: d.type || null
+            };
+            setSelectedLink(linkData);
+            setSankeyFilter({
+              sourceColumn: Number(sourceNode.column),
+              targetColumn: Number(targetNode.column),
+              sourceName: String(sourceNode.name),
+              targetName: String(targetNode.name),
+              type: d.type || null
             });
+
+            // 선택된 리본에 맞는 Proposal 테이블 섹션으로 자동 스크롤
+            const proposalsSection = document.getElementById('proposals-section');
+            if (proposalsSection) {
+              proposalsSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
           }
         });
 
@@ -669,9 +667,25 @@ const SankeyChart = ({ width = 1400, height = 800 }) => {
       // Helper function to check if node is part of selected link
       const isNodeSelected = (node) => {
         if (!selectedLink || !node) return false;
-        // Compare both name and column for accurate matching
-        return (node.name === selectedLink.source.name && node.column === selectedLink.source.column) ||
-          (node.name === selectedLink.target.name && node.column === selectedLink.target.column);
+
+        // Type → Result 리본 선택 시, Type 컬럼 노드는 항상 리본의 시작 Type과 정확히 매칭되도록 별도 처리
+        let selectedTypeName = null;
+        if (Number(selectedLink.source?.column) === 0) {
+          selectedTypeName = String(selectedLink.source.name);
+        } else if (Number(selectedLink.target?.column) === 0) {
+          selectedTypeName = String(selectedLink.target.name);
+        }
+
+        if (node.column === 0 && selectedTypeName) {
+          return String(node.name) === selectedTypeName;
+        }
+
+        // 그 외 컬럼은 기존 방식대로 source/target 비교
+        const matchesSource = String(node.name) === String(selectedLink.source.name) &&
+          Number(node.column) === Number(selectedLink.source.column);
+        const matchesTarget = String(node.name) === String(selectedLink.target.name) &&
+          Number(node.column) === Number(selectedLink.target.column);
+        return matchesSource || matchesTarget;
       };
 
       // Add node labels (centered on node with 8px offset)
@@ -788,22 +802,23 @@ const SankeyChart = ({ width = 1400, height = 800 }) => {
             backgroundColor: '#4C5564',
             color: '#9CA3AF',
             fontSize: '12px',
-            fontWeight: '400'
+            fontWeight: '900'
           }}
         >
           3
         </div>
         <h2
-          className="text-gray-100 font-semibold"
+          className="text-gray-100 font-extrabold"
           style={{ fontSize: '14px' }}
         >
           Proposal Configuration Flow
         </h2>
       </div>
       {/* Chart area */}
-      <div className="flex-1 min-h-0 relative">
+      <div className="flex-1 min-h-0 relative mt-2">
         <svg ref={svgRef} className="w-full h-full " style={{ overflow: 'visible' }} />
       </div>
+
     </div>
   );
 };

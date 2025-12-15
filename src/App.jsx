@@ -66,13 +66,14 @@ function App() {
 
         {/* Section 2: Proposals Table (16:9 slide) */}
         <section
+          id="proposals-section"
           className="w-full"
           style={{
             padding: 'calc(12px * var(--scale))',
             scrollSnapAlign: 'start',
             scrollSnapStop: 'always',
             height: '1080px',
-            boxSizing: 'border-box'
+            boxSizing: 'border-box',
           }}
         >
           <ProposalsTable mainChain={mainChain} />

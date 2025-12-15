@@ -298,13 +298,13 @@ const RadarChart = () => {
             backgroundColor: '#4C5564',
             color: '#9CA3AF',
             fontSize: '12px',
-            fontWeight: '400'
+            fontWeight: '900'
           }}
         >
           2
         </div>
         <h2
-          className="text-white font-semibold " style={{ fontSize: '13px' }}
+          className="text-white font-extrabold" style={{ fontSize: '13px' }}
         >
           HEMP Comparison Radar Chart
         </h2>
@@ -319,7 +319,7 @@ const RadarChart = () => {
       >
         {/* 왼쪽: 레이더 차트 (60%) */}
         <div ref={radarContainerRef} className="h-full" style={{ width: '60%' }}>
-          <svg ref={svgRef} className="w-full h-full mt-2" />
+          <svg ref={svgRef} className="w-full h-full mt-4" />
         </div>
 
         {/* Divider */}

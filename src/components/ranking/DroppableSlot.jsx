@@ -3,7 +3,7 @@ import { useDroppable } from "@dnd-kit/core";
 import useChainStore from "../../store/useChainStore";
 
 const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
-  const { setNodeRef, isOver } = useDroppable({ id });
+  const { setNodeRef } = useDroppable({ id });
   const { allChains } = useChainStore(); 
 
   const selectedChain = allChains.find((c) => c.id === selectedChainId);

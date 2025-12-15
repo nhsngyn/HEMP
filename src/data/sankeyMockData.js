@@ -22,14 +22,48 @@ const randomChoice = (arr) => arr[Math.floor(Math.random() * arr.length)];
 // 더미 프로포절 생성 함수
 const generateDummyPropositions = (count = 50) => {
   const propositions = [];
+  const titles = [
+    'Increase voting period to 14 days and expedited voting period',
+    'Update governance parameters for better decision making',
+    'Proposal to modify token distribution',
+    'Security enhancement proposal',
+    'Network upgrade proposal',
+    'Parameter adjustment for stability',
+    'Community governance improvement'
+  ];
 
   for (let i = 0; i < count; i++) {
+    const result = randomChoice(results);
+    const processingSpeed = randomChoice(processingSpeeds);
+    
+    // Status formatting based on result
+    let status = '';
+    if (result === 'Passed') {
+      status = `PASSED (${(Math.random() * 30 + 50).toFixed(1)}%)`;
+    } else if (result === 'Rejected') {
+      status = `REJECTED (${(Math.random() * 30 + 70).toFixed(1)}%)`;
+    } else {
+      status = 'VOTING PERIOD';
+    }
+
+    // Processing time based on speed
+    const processingTimes = {
+      'Fast': `${Math.floor(Math.random() * 2) + 1}days, ${Math.floor(Math.random() * 12)}h ${Math.floor(Math.random() * 60)}m`,
+      'Normal': `${Math.floor(Math.random() * 3) + 2}days, ${Math.floor(Math.random() * 12)}h ${Math.floor(Math.random() * 60)}m`,
+      'Slow': `${Math.floor(Math.random() * 5) + 4}days, ${Math.floor(Math.random() * 12)}h ${Math.floor(Math.random() * 60)}m`
+    };
+
     propositions.push({
+      id: 1000 + i,
+      title: randomChoice(titles),
       type: randomChoice(types),
       participationLevel: randomChoice(participationLevels),
       voteComposition: randomChoice(voteCompositions),
-      result: randomChoice(results),
-      processingSpeed: randomChoice(processingSpeeds)
+      result: result,
+      processingSpeed: processingSpeed,
+      status: status,
+      processingTime: processingTimes[processingSpeed],
+      participation: (Math.random() * 100).toFixed(2) + '%'
     });
   }
 

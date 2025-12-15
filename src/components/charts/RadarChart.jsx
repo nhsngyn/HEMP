@@ -310,7 +310,13 @@ const RadarChart = () => {
         </h2>
       </div>
       {/* Chart area - original layout maintained */}
-      <div className="radar_arena w-full h-full flex gap-6 my-1 p-3 min-h-0">
+      <div
+        className="radar_arena w-full h-full flex my-1 min-h-0"
+        style={{
+          gap: 'clamp(16px, 1.5vw, 24px)',
+          padding: 'clamp(8px, 0.6vw, 12px)'
+        }}
+      >
         {/* 왼쪽: 레이더 차트 (60%) */}
         <div ref={radarContainerRef} className="h-full" style={{ width: '60%' }}>
           <svg ref={svgRef} className="w-full h-full mt-2" />
@@ -320,19 +326,38 @@ const RadarChart = () => {
         <div className="border-r border-gray-700 h-full mt-auto"></div>
 
         {/* 오른쪽: 점수 정보 (40%) */}
-        <div className="info_arena h-full flex flex-col gap-2 min-h-0 overflow-hidden" style={{ width: '40%' }}>
+        <div
+          className="info_arena h-full flex flex-col min-h-0 overflow-hidden"
+          style={{
+            width: '40%',
+            gap: 'clamp(6px, 0.6vh, 10px)',
+            paddingTop: 'clamp(8px, 0.8vw, 14px)',
+            paddingBottom: 'clamp(8px, 0.8vw, 14px)',
+            paddingLeft: 'clamp(8px, 0.7vw, 12px)',
+            paddingRight: 'clamp(8px, 0.7vw, 12px)',
+            boxSizing: 'border-box'
+          }}
+        >
           {/* Chain name badge 또는 Median 레이블 */}
           <div className="flex justify-start shrink-0">
             <div
-              className="px-4 py-1.5 rounded-lg"
-              style={{ backgroundColor: '#282a2e' }}
+              className="rounded-lg shrink-0"
+              style={{
+                backgroundColor: '#282a2e',
+                padding: 'clamp(3px, 0.25vw, 6px) clamp(10px, 0.7vw, 14px)',
+                maxWidth: '100%',
+                boxSizing: 'border-box'
+              }}
             >
               {mainChain ? (
                 <span
                   className="font-bold truncate block max-w-full"
                   style={{
                     color: '#80ff00',
-                    fontSize: 'var(--font-size-xs)'
+                    fontSize: 'clamp(10px, 0.65vw, 13px)',
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis'
                   }}
                 >
                   {mainChain.name}
@@ -342,7 +367,10 @@ const RadarChart = () => {
                   className="font-bold truncate block max-w-full"
                   style={{
                     color: '#9ca3af',
-                    fontSize: 'var(--font-size-xs)'
+                    fontSize: 'clamp(10px, 0.65vw, 13px)',
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis'
                   }}
                 >
                   Median
@@ -352,52 +380,118 @@ const RadarChart = () => {
           </div>
 
           {/* HEMP Score 영역 (4/10) */}
-          <div className="flex flex-col gap-1 min-h-0" style={{ flex: '4 0 0' }}>
-            <div className="flex flex-col gap-1">
+          <div
+            className="flex flex-col min-h-0 shrink-0"
+            style={{
+              flex: '4 0 0',
+              gap: 'clamp(4px, 0.5vh, 8px)',
+              maxHeight: '100%',
+              overflow: 'hidden'
+            }}
+          >
+            <div className="flex flex-col shrink-0" style={{ gap: 'clamp(3px, 0.3vh, 6px)' }}>
               <p
-                className="text-gray-100 font-extrabold"
-                style={{ fontSize: 'var(--font-size-sm)' }}
+                className="text-gray-100 font-extrabold shrink-0"
+                style={{
+                  fontSize: 'clamp(13px, 0.85vw, 20px)',
+                  lineHeight: 'clamp(1.2, 1.3vh, 1.4)',
+                  margin: 0
+                }}
               >
                 HEMP Score
               </p>
-              <div className="flex items-baseline justify-end gap-1">
+              <div
+                className="flex items-baseline justify-end shrink-0"
+                style={{ gap: 'clamp(1px, 0.12vw, 2px)' }}
+              >
                 <span
-                  className="font-bold"
+                  className="font-bold shrink-0"
                   style={{
                     color: mainChain ? COLORS.MAIN : '#FFFFFF',
-                    fontSize: 'var(--font-size-lg)'
+                    fontSize: 'clamp(26px, 2.5vw, 46px)',
+                    lineHeight: '1',
+                    whiteSpace: 'nowrap'
                   }}
                 >
                   {scorePercentage}
                 </span>
                 <span
-                  className="text-gray-500"
-                  style={{ fontSize: 'var(--font-size-xs)' }}
+                  className="text-gray-500 shrink-0"
+                  style={{
+                    fontSize: 'clamp(10px, 0.75vw, 15px)',
+                    lineHeight: 'clamp(1.2, 1.3vh, 1.4)',
+                    whiteSpace: 'nowrap'
+                  }}
                 >
                   /100
                 </span>
               </div>
             </div>
             {/* Divider */}
-            <div className="border-t border-gray-700 mt-2"></div>
+            <div
+              className="border-t border-gray-700 shrink-0"
+              style={{ marginTop: 'clamp(6px, 0.6vh, 10px)' }}
+            ></div>
           </div>
 
           {/* Individual metric scores 영역 (6/10) */}
-          <div className="flex flex-col gap-1 min-h-0" style={{ flex: '6 0 0' }}>
+          <div
+            className="flex flex-col min-h-0 overflow-hidden"
+            style={{
+              flex: '6 0 0',
+              gap: 'clamp(4px, 0.6vh, 9px)',
+              maxHeight: '100%'
+            }}
+          >
             {METRICS.map(metric => {
               const value = getValue(displayChain, metric.key);
               // Score label에서는 VIB만 표시
               const displayLabel = metric.key === 'vib' ? 'VIB' : metric.label;
               return (
-                <div key={metric.key} className="flex justify-between items-center shrink-0">
-                  <span className="text-gray-300 font-extrabold" style={{ fontSize: 'var(--font-size-xs)' }}>
+                <div
+                  key={metric.key}
+                  className="flex justify-between items-center shrink-0"
+                  style={{
+                    gap: 'clamp(6px, 0.8vw, 12px)',
+                    paddingTop: 'clamp(1px, 0.15vh, 2px)',
+                    paddingBottom: 'clamp(1px, 0.15vh, 2px)',
+                    minHeight: 0
+                  }}
+                >
+                  <span
+                    className="text-gray-300 font-extrabold shrink-0"
+                    style={{
+                      fontSize: 'clamp(10px, 0.7vw, 14px)',
+                      lineHeight: 'clamp(1.2, 1.3vh, 1.4)',
+                      whiteSpace: 'nowrap',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis'
+                    }}
+                  >
                     {displayLabel}
                   </span>
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-white font-extrabold" style={{ fontSize: 'var(--font-size-xs)' }}>
+                  <div
+                    className="flex items-baseline shrink-0"
+                    style={{ gap: 'clamp(1px, 0.12vw, 2px)' }}
+                  >
+                    <span
+                      className="text-white font-extrabold shrink-0"
+                      style={{
+                        fontSize: 'clamp(10px, 0.7vw, 14px)',
+                        lineHeight: 'clamp(1.2, 1.3vh, 1.4)',
+                        whiteSpace: 'nowrap'
+                      }}
+                    >
                       {Math.round(value)}
                     </span>
-                    <span className="text-gray-500" style={{ fontSize: 'var(--font-size-xs)' }}>
+                    <span
+                      className="text-gray-500 shrink-0"
+                      style={{
+                        fontSize: 'clamp(10px, 0.7vw, 14px)',
+                        lineHeight: 'clamp(1.2, 1.3vh, 1.4)',
+                        whiteSpace: 'nowrap'
+                      }}
+                    >
                       /{metric.maxValue}
                     </span>
                   </div>

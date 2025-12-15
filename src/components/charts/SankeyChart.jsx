@@ -283,7 +283,7 @@ const SankeyChart = ({ width = 1400, height = 800 }) => {
         return;
       }
       // padding 값 조절
-      const padding = { top: 25, right: 60, bottom: 55, left: 50 };
+      const padding = { top: 25, right: 60, bottom: 60, left: 50 };
       const chartWidth = containerWidth - padding.left - padding.right;
       const chartHeight = containerHeight - padding.top - padding.bottom;
 

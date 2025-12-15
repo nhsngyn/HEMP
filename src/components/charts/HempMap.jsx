@@ -60,15 +60,15 @@ const chainMap = useMemo(() => {
       // Top 25% (75% 초과) → 50px
       if (count > p75) {
         baseSize = 50;
-      }
+      } 
       // 50-75% (50% 초과 ~ 75% 이하) → 38px
       else if (count > p50) {
         baseSize = 38;
-      }
+      } 
       // 25-50% (25% 초과 ~ 50% 이하) → 28px
       else if (count > p25) {
         baseSize = 28;
-      }
+      } 
       // Bottom 25% (25% 이하) → 18px
       else {
         baseSize = 18;

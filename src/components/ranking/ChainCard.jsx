@@ -43,7 +43,7 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
           tracking-tight 
           truncate
         "
-        style={{ width: '88px' }} 
+        style={{ width: '62px' }} 
       >
         {chain.name}
       </div>

@@ -12,10 +12,10 @@ const DashboardPage = () => {
     return allChains.find(c => c.id === selectedMainId);
   }, [allChains, selectedMainId]);
 
-  // ✨ 공통 스타일 (사용자 코드 기준)
+  // ✨ 배경색을 #111216으로 통일
   const cardStyle = {
     borderRadius: '15px',
-    background: 'var(--bg-2, rgba(255, 255, 255, 0.08))'
+    background: '#111216' 
   };
 
   return (
@@ -42,7 +42,7 @@ const DashboardPage = () => {
           </h2>
         </div>
 
-        {/* 상단 차트 영역 (Bubble + Radar) */}
+        {/* 상단 차트 영역 */}
         <div className="flex w-full min-h-0 h-[360px]" style={{ gap: 'calc(16px * var(--scale))' }}>
           
           {/* 1. HempMap (Bubble) */}

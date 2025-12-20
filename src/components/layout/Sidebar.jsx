@@ -3,7 +3,10 @@ import RankingChart from "../ranking/RankingChart";
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-col w-full h-full px-4 py-[60px] text-white">
+    <div className="flex flex-col w-full h-full px-4 py-[60px] text-white"
+    style={{
+        background: '#15171C', 
+        }}>
       {/* 상단 타이틀 */}
       <h1 className="text-[28px] font-bold mb-[43px]">HEMP</h1>
 

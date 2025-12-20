@@ -1,15 +1,49 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['SUIT', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
-      },
-    },
+      fontSize: {
+        // [fontSize, { lineHeight, letterSpacing, fontWeight }] 형식
+        
+        // Title 2
+        'title2-b': ['22px', { lineHeight: '145%', letterSpacing: '-0.01em', fontWeight: '700' }],
+        'title2-sb': ['22px', { lineHeight: '145%', letterSpacing: '-0.01em', fontWeight: '600' }],
+        'title2-m': ['22px', { lineHeight: '145%', letterSpacing: '-0.01em', fontWeight: '500' }],
+        
+        // Title 3
+        'title3-b': ['20px', { lineHeight: '145%', letterSpacing: '-0.01em', fontWeight: '700' }],
+        'title3-sb': ['20px', { lineHeight: '145%', letterSpacing: '-0.01em', fontWeight: '600' }],
+        'title3-m': ['20px', { lineHeight: '145%', letterSpacing: '-0.01em', fontWeight: '500' }],
+
+        // Body 1
+        'body1-b': ['18px', { lineHeight: '145%', letterSpacing: '-0.01em', fontWeight: '700' }],
+        'body1-sb': ['18px', { lineHeight: '145%', letterSpacing: '-0.01em', fontWeight: '600' }],
+        'body1-m': ['18px', { lineHeight: '145%', letterSpacing: '-0.01em', fontWeight: '500' }],
+        'body1-r': ['18px', { lineHeight: '145%', letterSpacing: '-0.01em', fontWeight: '400' }],
+
+        // Body 2 (Regular만 자간 -1%)
+        'body2-b': ['16px', { lineHeight: '140%', letterSpacing: '-0.02em', fontWeight: '700' }],
+        'body2-sb': ['16px', { lineHeight: '140%', letterSpacing: '-0.02em', fontWeight: '600' }],
+        'body2-m': ['16px', { lineHeight: '140%', letterSpacing: '-0.02em', fontWeight: '500' }],
+        'body2-r': ['16px', { lineHeight: '140%', letterSpacing: '-0.01em', fontWeight: '400' }],
+
+        // Body 3
+        'body3-b': ['14px', { lineHeight: '140%', letterSpacing: '-0.02em', fontWeight: '700' }],
+        'body3-sb': ['14px', { lineHeight: '140%', letterSpacing: '-0.02em', fontWeight: '600' }],
+        'body3-m': ['14px', { lineHeight: '140%', letterSpacing: '-0.02em', fontWeight: '500' }],
+        'body3-r': ['14px', { lineHeight: '140%', letterSpacing: '-0.02em', fontWeight: '400' }],
+
+        // Caption 1
+        'caption1-eb': ['12px', { lineHeight: '130%', letterSpacing: '-0.02em', fontWeight: '800' }],
+        'caption1-b': ['12px', { lineHeight: '130%', letterSpacing: '-0.02em', fontWeight: '700' }],
+        'caption1-sb': ['12px', { lineHeight: '130%', letterSpacing: '-0.02em', fontWeight: '600' }],
+        'caption1-m': ['12px', { lineHeight: '130%', letterSpacing: '-0.02em', fontWeight: '500' }],
+        'caption1-r': ['12px', { lineHeight: '130%', letterSpacing: '-0.02em', fontWeight: '400' }],
+      }
+    }
   },
   plugins: [],
 }

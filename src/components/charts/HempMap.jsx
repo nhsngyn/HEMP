@@ -7,73 +7,52 @@ import { BUBBLE_CHART } from '../../constants/chart';
 const HempMap = () => {
   const { allChains } = useChainStore();
   
-  // selectChain 가져오기
+  // 선택된 체인 정보 및 핸들러 가져오기
   const { 
     selectChain,
     getSelectionInfo, 
     selectedMainId, selectedSubId1, selectedSubId2 
   } = useChainSelection();
 
-const chainMap = useMemo(() => {
+  // 툴팁용 데이터 매핑 (체인 이름 -> 체인 객체)
+  const chainMap = useMemo(() => {
     return allChains.reduce((acc, chain) => {
       acc[chain.name] = chain;
       return acc;
     }, {});
   }, [allChains]);
 
-  // 프로포절 개수 백분위수 계산 (모든 체인 포함, 0도 포함)
-  const proposalPercentiles = useMemo(() => {
-    if (!allChains || allChains.length === 0) return { p25: 0, p50: 0, p75: 0 };
-
-    const proposalCounts = allChains
-      .map(chain => chain.proposals || 0)
-      .sort((a, b) => a - b);
-
-    if (proposalCounts.length === 0) return { p25: 0, p50: 0, p75: 0 };
-
-    const getPercentile = (arr, percentile) => {
-      if (arr.length === 0) return 0;
-      const index = Math.ceil((percentile / 100) * arr.length) - 1;
-      return arr[Math.max(0, Math.min(index, arr.length - 1))];
-    };
-
-    return {
-      p25: getPercentile(proposalCounts, 25),
-      p50: getPercentile(proposalCounts, 50),
-      p75: getPercentile(proposalCounts, 75)
-    };
-  }, [allChains]);
-
   const option = useMemo(() => {
     if (!allChains || allChains.length === 0) return {};
 
     const hasAnySelection = selectedMainId || selectedSubId1 || selectedSubId2;
+    
+    // ✨ 상수 파일에서 정의된 값 사용
+    const { SIZES, THRESHOLDS } = BUBBLE_CHART;
 
-    const { SIZES } = BUBBLE_CHART;
-    const { p25, p50, p75 } = proposalPercentiles;
-
-    // 프로포절 개수 기준 4단계 지름 계산
+    // 프로포절 개수 기준 버블 크기 계산 (고정 임계값 사용)
     const calculateBubbleSize = (proposalCount, isSelected) => {
       const count = proposalCount || 0;
       let baseSize;
 
-      // Top 25% (75% 초과) → 50px
-      if (count > p75) {
-        baseSize = 50;
+      // Q3 이상 (Huge)
+      if (count >= THRESHOLDS.Q3) {
+        baseSize = SIZES.HUGE;
       } 
-      // 50-75% (50% 초과 ~ 75% 이하) → 38px
-      else if (count > p50) {
-        baseSize = 38;
+      // Q2 이상 (Large)
+      else if (count >= THRESHOLDS.Q2) {
+        baseSize = SIZES.LARGE;
       } 
-      // 25-50% (25% 초과 ~ 50% 이하) → 28px
-      else if (count > p25) {
-        baseSize = 28;
+      // Q1 이상 (Medium)
+      else if (count >= THRESHOLDS.Q1) {
+        baseSize = SIZES.MEDIUM;
       } 
-      // Bottom 25% (25% 이하) → 18px
+      // 나머지 (Small)
       else {
-        baseSize = 18;
+        baseSize = SIZES.SMALL;
       }
 
+      // 선택된 경우 크기 확대
       return isSelected ? baseSize + SIZES.SELECTED_OFFSET : baseSize;
     };
 
@@ -86,108 +65,142 @@ const chainMap = useMemo(() => {
 
       return {
         name: chain.name,
+        // [X축: HEMP Score, Y축: Participation]
         value: [chain.score, chain.participation || 0],
         symbol: 'circle',
-        symbolSize: size, 
+        symbolSize: size,
+        
+        // 버블 내부 로고 (Rich Text)
         label: {
           show: true,
-          position: 'inside',
-          formatter: '{logo|}',
+          position: 'center',
+          formatter: logoUrl ? '{logo|}' : '', // 로고 없으면 빈 문자열
           rich: {
             logo: {
               backgroundColor: { image: logoUrl },
-              width: size,
-              height: size,
-              borderRadius: size / 2 
+              width: size * 0.9,
+              height: size * 0.9,
+              borderRadius: (size * 0.9) / 2, // 둥근 로고
             }
           }
         },
+        
+        // 스타일 설정
         itemStyle: {
-          color: 'transparent',
-          opacity: isSelected ? 1 : (hasAnySelection ? 0.3 : 0.85),
+          color: '#E5E7EB', // 기본 버블 색상 (연한 회색/흰색)
+          
+          // 선택 안 된 상태에서 다른 게 선택되어 있다면 흐리게 처리
+          opacity: hasAnySelection && !isSelected ? 0.1 : 1,
+          
+          // 선택 시 테두리 색상 (Main/Sub 색상)
           borderColor: isSelected ? selection.color : 'transparent',
           borderWidth: isSelected ? 3 : 0,
-          shadowBlur: isSelected ? 20 : 0,
+          
+          // 선택 시 그림자 효과
+          shadowBlur: isSelected ? 15 : 0,
           shadowColor: isSelected ? selection.color : 'transparent'
         },
-        z: selection ? selection.z : 2
+        // 선택된 버블이 항상 위에 오도록 Z-index 설정
+        z: isSelected ? 100 : 2
       };
     });
 
     return {
       backgroundColor: 'transparent',
-      textStyle: {
-        fontFamily: 'SUIT'
-      },
+      textStyle: { fontFamily: 'SUIT' },
       grid: {
-        top: '20%', right: '8%', bottom: '12%', left: '8%',
+        top: '25%', right: '10%', bottom: '15%', left: '10%',
         containLabel: true
       },
-     tooltip: {
+      tooltip: {
         trigger: 'item',
         backgroundColor: 'rgba(26, 27, 32, 0.95)',
         borderColor: '#4B5563',
         textStyle: { color: '#fff', fontFamily: 'SUIT' },
         formatter: (params) => {
           const chainData = chainMap[params.name]; 
-          
           if (!chainData) return '';
-
+          
+          // 툴팁 내용 구성
           const logoImg = chainData.logoUrl 
             ? `<img src="${chainData.logoUrl}" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;border-radius:50%;" />` 
             : '';
-            
+
           return `
-            <div style="font-weight:bold; margin-bottom:8px; font-size:15px; display:flex; align-items:center;">
+            <div style="font-weight:bold; margin-bottom:6px; font-size:14px; display:flex; align-items:center;">
               ${logoImg} ${params.name}
             </div>
-            <div style="color:#bbb; margin-bottom:4px;">HEMP Score: <b style="color:white">${params.value[0]}</b></div>
-            <div style="color:#bbb; margin-bottom:4px;">Participation: <b style="color:white">${params.value[1]}%</b></div>
-            <div style="color:#bbb;">Proposals: <b style="color:#FCD34D">${chainData.proposals || 0}개</b></div>
+            <div style="color:#9CA3AF; font-size:12px; line-height:1.6;">
+              HEMP Score: <b style="color:white">${params.value[0]}</b><br/>
+              Participation: <b style="color:white">${params.value[1]}%</b><br/>
+              Proposals: <b style="color:#FCD34D">${chainData.proposals || 0}</b>
+            </div>
           `;
         }
       },
       xAxis: {
         name: 'HEMP Score',
+        nameLocation: 'middle',
+        nameGap: 25,
         type: 'value',
-        scale: true,
-        splitLine: { lineStyle: { color: '#2A2B30' } },
-        axisLabel: { color: '#9CA3AF' },
-        nameTextStyle: { color: '#9CA3AF', fontWeight: 'bold' }
+        scale: true, // 0부터 시작하지 않음
+        splitLine: { 
+          show: true,
+          lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' } 
+        },
+        axisLabel: { color: '#6D7380', fontSize: 11 },
+        nameTextStyle: { color: '#6D7380', fontSize: 11, fontWeight: 'bold' }
       },
       yAxis: {
         name: 'Participation',
+        nameRotate: 90,
+        nameLocation: 'middle',
+        nameGap: 40,
         type: 'value',
         scale: true,
-        splitLine: { lineStyle: { color: '#2A2B30' } },
-        axisLabel: { formatter: '{value}%', color: '#9CA3AF' },
-        nameTextStyle: { color: '#9CA3AF', fontWeight: 'bold' }
+        splitLine: { 
+          show: true,
+          lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' } 
+        },
+        axisLabel: { formatter: '{value}%', color: '#6D7380', fontSize: 11 },
+        nameTextStyle: { color: '#6D7380', fontSize: 11, fontWeight: 'bold' }
       },
       series: [
         {
           type: 'scatter',
           data: seriesData,
+          // 애니메이션 설정
           animationDurationUpdate: 500,
           animationEasingUpdate: 'cubicOut'
         }
       ]
     };
-  }, [allChains, selectedMainId, selectedSubId1, selectedSubId2, getSelectionInfo, chainMap, proposalPercentiles]);
+  }, [allChains, selectedMainId, selectedSubId1, selectedSubId2, getSelectionInfo, chainMap]);
 
   // 클릭 핸들러
   const onChartClick = (params) => {
     const clickedChain = allChains.find(c => c.name === params.name);
     if (clickedChain) {
-      // 클릭 시 자동 배치 (이미 선택된 체인이면 무시됨)
+      // 체인 선택 액션 실행
       selectChain(clickedChain.id);
     }
   };
 
   return (
     <div className="w-full h-full relative">
-      <h3 className="absolute top-4 left-6 text-white font-bold text-lg z-10 pointer-events-none">
-        HEMP Map
-      </h3>
+      {/* 차트 제목 (왼쪽 상단 배지 스타일) */}
+      <div className="absolute top-4 left-5 flex items-center gap-2 z-10 pointer-events-none">
+        <div 
+          className="flex items-center justify-center rounded-full text-[11px] font-bold text-gray-300"
+          style={{ width: '20px', height: '20px', backgroundColor: 'rgba(255,255,255,0.1)' }}
+        >
+          1
+        </div>
+        <h3 className="text-white font-bold text-base">
+          HEMP Map
+        </h3>
+      </div>
+
       <ReactECharts 
         option={option} 
         style={{ height: '100%', width: '100%' }} 

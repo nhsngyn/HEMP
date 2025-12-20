@@ -74,6 +74,7 @@ const MainLayout = ({ leftSidebar, children }) => {
 
       {/* 우측 메인 콘텐츠 영역 - 16:10 캔버스 */}
       <div
+        id="main-scroll-container"
         className="overflow-y-auto overflow-x-hidden bg-[#101217]"
         style={{
           width: `${contentWidth}px`,

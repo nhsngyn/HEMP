@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import MainLayout from './components/layout/MainLayout';
 import RankingChart from './components/ranking/RankingChart';
 import HempMap from './components/charts/HempMap';
@@ -8,12 +8,40 @@ import ProposalsTable from './components/charts/ProposalsTable';
 import useChainStore from './store/useChainStore';
 
 function App() {
-  const { allChains, selectedMainId } = useChainStore();
+  const { allChains, selectedMainId, selectedSubId1, selectedSubId2 } = useChainStore();
 
   // 메인 체인 데이터
   const mainChain = useMemo(() => {
     return allChains.find(c => c.id === selectedMainId);
   }, [allChains, selectedMainId]);
+
+  const hasAnySelection = !!(selectedMainId || selectedSubId1 || selectedSubId2);
+  const prevHasSelectionRef = useRef(hasAnySelection);
+
+  // 체인이 처음 선택됐을 때만 헤더가 안 보이도록 아래로 자동 스크롤
+  useEffect(() => {
+    const prev = prevHasSelectionRef.current;
+
+    // 선택이 없거나, 이미 선택 상태였으면 스크롤하지 않음
+    if (!hasAnySelection || prev) {
+      prevHasSelectionRef.current = hasAnySelection;
+      return;
+    }
+
+    prevHasSelectionRef.current = hasAnySelection;
+
+    const scrollContainer = document.getElementById('main-scroll-container');
+    const headerEl = document.getElementById('dashboard-header');
+
+    if (!scrollContainer || !headerEl) return;
+
+    const headerBottom = headerEl.offsetTop + headerEl.offsetHeight;
+
+    scrollContainer.scrollTo({
+      top: headerBottom + 8,
+      behavior: 'smooth'
+    });
+  }, [hasAnySelection]);
 
   return (
     <MainLayout leftSidebar={<RankingChart />}>
@@ -33,7 +61,11 @@ function App() {
           }}
         >
           {/* Title */}
-          <header className="shrink-0 flex flex-col" style={{ gap: 'calc(4px * var(--scale))' }}>
+          <header
+            id="dashboard-header"
+            className="shrink-0 flex flex-col"
+            style={{ gap: 'calc(4px * var(--scale))' }}
+          >
             <p className="text-gray-400 font-normal" style={{ fontSize: 'calc(0.875rem * var(--scale))' }}>
               Multidimensional Chain Health via HEMP
             </p>

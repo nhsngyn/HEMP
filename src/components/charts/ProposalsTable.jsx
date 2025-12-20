@@ -19,38 +19,47 @@ const ProposalsTable = ({ mainChain }) => {
   }, [mainChain]);
 
   const filteredPropositions = useMemo(() => {
-    if (!sankeyFilter || !propositions.length) return propositions;
+    let result = propositions;
+    
+    if (sankeyFilter && propositions.length > 0) {
+      const { sourceColumn, targetColumn, sourceName, targetName, type } = sankeyFilter;
 
-    const { sourceColumn, targetColumn, sourceName, targetName, type } = sankeyFilter;
+      result = propositions.filter((p) => {
+        const propType = p.type || 'Other';
+        const result = p.result || 'Passed';
+        const participationLevel = p.participationLevel || p.participation || 'Mid';
+        const voteComposition = p.voteComposition || 'Consensus';
+        const processingSpeed = p.processingSpeed || 'Normal';
 
-    return propositions.filter((p) => {
-      const propType = p.type || 'Other';
-      const result = p.result || 'Passed';
-      const participationLevel = p.participationLevel || p.participation || 'Mid';
-      const voteComposition = p.voteComposition || 'Consensus';
-      const processingSpeed = p.processingSpeed || 'Normal';
+        // Type → Result
+        if (sourceColumn === 0 && targetColumn === 1) {
+          return propType === sourceName && result === targetName;
+        }
+        // Result → Participation
+        if (sourceColumn === 1 && targetColumn === 2) {
+          const typeMatch = type ? propType === type : true;
+          return result === sourceName && participationLevel === targetName && typeMatch;
+        }
+        // Participation → Vote Composition
+        if (sourceColumn === 2 && targetColumn === 3) {
+          const typeMatch = type ? propType === type : true;
+          return participationLevel === sourceName && voteComposition === targetName && typeMatch;
+        }
+        // Vote Composition → Processing Speed
+        if (sourceColumn === 3 && targetColumn === 4) {
+          const typeMatch = type ? propType === type : true;
+          return voteComposition === sourceName && processingSpeed === targetName && typeMatch;
+        }
 
-      // Type → Result
-      if (sourceColumn === 0 && targetColumn === 1) {
-        return propType === sourceName && result === targetName;
-      }
-      // Result → Participation
-      if (sourceColumn === 1 && targetColumn === 2) {
-        const typeMatch = type ? propType === type : true;
-        return result === sourceName && participationLevel === targetName && typeMatch;
-      }
-      // Participation → Vote Composition
-      if (sourceColumn === 2 && targetColumn === 3) {
-        const typeMatch = type ? propType === type : true;
-        return participationLevel === sourceName && voteComposition === targetName && typeMatch;
-      }
-      // Vote Composition → Processing Speed
-      if (sourceColumn === 3 && targetColumn === 4) {
-        const typeMatch = type ? propType === type : true;
-        return voteComposition === sourceName && processingSpeed === targetName && typeMatch;
-      }
-
-      return true;
+        return true;
+      });
+    }
+    
+    // ID 순서로 정렬 (오름차순)
+    return result.sort((a, b) => {
+      const idA = a.id || 0;
+      const idB = b.id || 0;
+      return idA - idB;
     });
   }, [sankeyFilter, propositions]);
 

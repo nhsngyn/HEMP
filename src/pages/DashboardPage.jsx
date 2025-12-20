@@ -19,7 +19,7 @@ const DashboardPage = () => {
       </div>
 
       <div className="flex flex-wrap gap-6">
-        <div className="flex-1 min-w-[540px] h-[320px] bg-[#111418] rounded-lg"> 
+        <div className="flex-1 min-w-[540px] h-[320px] bg-[#111418] rounded-lg">
           <BubbleChart />
         </div>
 
@@ -28,7 +28,7 @@ const DashboardPage = () => {
         </div>
       </div>
 
-      <div className="w-full min-w-[1024px] h-[320px] bg-[#111418] rounded-lg">
+      <div className="w-full min-w-[1024px] h-[400px] bg-[#111418] rounded-lg">
         <SankeyChart />
       </div>
 

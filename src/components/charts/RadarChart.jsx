@@ -4,12 +4,15 @@ import useChainStore from '../../store/useChainStore';
 import { COLORS } from '../../constants/colors';
 
 // 상수 정의
+// 각 지표별 만점(가중치)을 반영
+// - VIB, Participation: 26점 만점
+// - Success Rate(=Acceptance), Stability, Consensus: 16점 만점
 const METRICS = [
-  { key: 'vib', label: 'VIB (Validator Influence Balance)', maxValue: 20 },
-  { key: 'participation', label: 'Participation', maxValue: 20 },
-  { key: 'rejection', label: 'Success Rate', maxValue: 20 },
-  { key: 'stability', label: 'Stability', maxValue: 20 },
-  { key: 'consensus', label: 'Consensus', maxValue: 20 },
+  { key: 'vib', label: 'VIB (Validator Influence Balance)', maxValue: 26 },
+  { key: 'participation', label: 'Participation', maxValue: 26 },
+  { key: 'rejection', label: 'Success Rate', maxValue: 16 }, // Acceptance
+  { key: 'stability', label: 'Stability', maxValue: 16 },
+  { key: 'consensus', label: 'Consensus', maxValue: 16 },
 ];
 
 const CHART_CONFIG = {
@@ -41,11 +44,19 @@ const RadarChart = () => {
 
   const { main: mainChain, sub1: subChain1, sub2: subChain2 } = chains;
 
-  // 메트릭 값 가져오기
+  // 지표별 최대값 헬퍼
+  const getMetricMax = (metricKey) => {
+    const metric = METRICS.find((m) => m.key === metricKey);
+    return metric?.maxValue ?? 20;
+  };
+
+  // 메트릭 값 가져오기 (지표별 만점 기준으로 캡)
   const getValue = (chain, metricKey) => {
     if (!chain) return 0;
-    const value = chain[metricKey];
-    return value != null ? Math.min(value, 20) : 0;
+    const raw = chain[metricKey];
+    const max = getMetricMax(metricKey);
+    if (raw == null) return 0;
+    return Math.min(raw, max);
   };
 
   // 모든 체인의 중앙값 계산
@@ -115,7 +126,7 @@ const RadarChart = () => {
       const numAxes = METRICS.length;
       const angleStep = (2 * Math.PI) / numAxes;
 
-      // 스케일 생성
+      // 스케일 생성 (0~지표별 최대값 → 0~radius)
       const scales = METRICS.map(metric =>
         d3.scaleLinear().domain([0, metric.maxValue]).range([0, radius])
       );
@@ -209,15 +220,17 @@ const RadarChart = () => {
         const points = METRICS.map((metric, i) => {
           let distance;
           if (useCenterPoint) {
-            // 중앙에 작은 점으로 표시 (값 반영 없음)
-            distance = radius * 0.05; // 반지름의 5% 크기
+            // 각 축의 중앙~약간 위에 배치 (0.6, 즉 60%)
+            distance = radius * 0.6;
           } else if (useDefaultValue) {
-            // 기본값 15 사용
-            distance = scales[i](15);
+            // 기본값 15 사용 (각 지표 만점 대비 비율로 정규화)
+            const normalized = 15 / metric.maxValue; // 0~1
+            distance = normalized * radius;
           } else {
-            // 실제 값 반영
-            const value = Math.min(getValue(chain, metric.key), metric.maxValue);
-            distance = scales[i](value);
+            // 실제 값 반영 (0~1 범위로 정규화 후 반지름에 매핑)
+            const value = getValue(chain, metric.key);
+            const normalized = metric.maxValue > 0 ? value / metric.maxValue : 0; // 0~1
+            distance = normalized * radius;
           }
           const angle = i * angleStep - Math.PI / 2;
           return [
@@ -235,8 +248,8 @@ const RadarChart = () => {
 
         // 중앙값 폴리곤을 항상 먼저 그리기 (배경 레이어)
         const hasSelectedChain = !!mainChain;
-        // 체인 선택 전: 기본값 15, 체인 선택 후: 실제 median 값 반영
-        const medianPolygon = createPolygon(medianChain, false, !hasSelectedChain);
+        // 체인 선택 전: 중앙에 작은 점으로 표시, 체인 선택 후: 실제 median 값 반영
+        const medianPolygon = createPolygon(medianChain, !hasSelectedChain, false);
         if (medianPolygon) {
           const medianStrokeColor = hasSelectedChain ? COLORS.GRAY400 : COLORS.GRAY300;
           const medianStrokeWidth = hasSelectedChain ? 0.7 : 1;
@@ -260,13 +273,28 @@ const RadarChart = () => {
             const chain = chainMap[config.key];
             const polygon = createPolygon(chain);
             if (polygon) {
-              dataGroup.append('path')
-                .attr('d', polygon.line(polygon.points))
+              // 초기에는 중심에서 아주 작은 폴리곤으로 시작
+              const initialPoints = polygon.points.map(([x, y]) => {
+                const dx = x - centerX;
+                const dy = y - centerY;
+                const factor = 0.1; // 10% 크기에서 시작
+                return [centerX + dx * factor, centerY + dy * factor];
+              });
+
+              const path = dataGroup.append('path')
+                .attr('d', polygon.line(initialPoints))
                 .attr('fill', config.color)
                 .attr('fill-opacity', config.opacity)
                 .attr('stroke', config.color)
                 .attr('stroke-width', config.strokeWidth)
                 .attr('stroke-opacity', config.strokeOpacity);
+
+              // 메인/서브 체인이 선택되거나 변경될 때 부드럽게 확장되는 애니메이션
+              path
+                .transition()
+                .duration(700)
+                .ease(d3.easeCubicOut)
+                .attr('d', polygon.line(polygon.points));
             }
           });
         }

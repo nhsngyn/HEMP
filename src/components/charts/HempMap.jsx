@@ -21,28 +21,59 @@ const chainMap = useMemo(() => {
     }, {});
   }, [allChains]);
 
+  // 프로포절 개수 백분위수 계산 (모든 체인 포함, 0도 포함)
+  const proposalPercentiles = useMemo(() => {
+    if (!allChains || allChains.length === 0) return { p25: 0, p50: 0, p75: 0 };
+
+    const proposalCounts = allChains
+      .map(chain => chain.proposals || 0)
+      .sort((a, b) => a - b);
+
+    if (proposalCounts.length === 0) return { p25: 0, p50: 0, p75: 0 };
+
+    const getPercentile = (arr, percentile) => {
+      if (arr.length === 0) return 0;
+      const index = Math.ceil((percentile / 100) * arr.length) - 1;
+      return arr[Math.max(0, Math.min(index, arr.length - 1))];
+    };
+
+    return {
+      p25: getPercentile(proposalCounts, 25),
+      p50: getPercentile(proposalCounts, 50),
+      p75: getPercentile(proposalCounts, 75)
+    };
+  }, [allChains]);
+
   const option = useMemo(() => {
     if (!allChains || allChains.length === 0) return {};
 
     const hasAnySelection = selectedMainId || selectedSubId1 || selectedSubId2;
 
-   const { THRESHOLDS, SIZES } = BUBBLE_CHART;
+    const { SIZES } = BUBBLE_CHART;
+    const { p25, p50, p75 } = proposalPercentiles;
 
+    // 프로포절 개수 기준 4단계 지름 계산
     const calculateBubbleSize = (proposalCount, isSelected) => {
       const count = proposalCount || 0;
       let baseSize;
-      if (count >= THRESHOLDS.Q3) {
-        baseSize = SIZES.HUGE;
+
+      // Top 25% (75% 초과) → 50px
+      if (count > p75) {
+        baseSize = 50;
       } 
-      else if (count >= THRESHOLDS.Q2) {
-        baseSize = SIZES.LARGE;
+      // 50-75% (50% 초과 ~ 75% 이하) → 38px
+      else if (count > p50) {
+        baseSize = 38;
       } 
-      else if (count >= THRESHOLDS.Q1) {
-        baseSize = SIZES.MEDIUM;
+      // 25-50% (25% 초과 ~ 50% 이하) → 28px
+      else if (count > p25) {
+        baseSize = 28;
       } 
+      // Bottom 25% (25% 이하) → 18px
       else {
-        baseSize = SIZES.SMALL;
+        baseSize = 18;
       }
+
       return isSelected ? baseSize + SIZES.SELECTED_OFFSET : baseSize;
     };
 
@@ -85,6 +116,9 @@ const chainMap = useMemo(() => {
 
     return {
       backgroundColor: 'transparent',
+      textStyle: {
+        fontFamily: 'SUIT'
+      },
       grid: {
         top: '20%', right: '8%', bottom: '12%', left: '8%',
         containLabel: true
@@ -93,7 +127,7 @@ const chainMap = useMemo(() => {
         trigger: 'item',
         backgroundColor: 'rgba(26, 27, 32, 0.95)',
         borderColor: '#4B5563',
-        textStyle: { color: '#fff' },
+        textStyle: { color: '#fff', fontFamily: 'SUIT' },
         formatter: (params) => {
           const chainData = chainMap[params.name]; 
           
@@ -138,7 +172,7 @@ const chainMap = useMemo(() => {
         }
       ]
     };
-  }, [allChains, selectedMainId, selectedSubId1, selectedSubId2, getSelectionInfo]);
+  }, [allChains, selectedMainId, selectedSubId1, selectedSubId2, getSelectionInfo, chainMap, proposalPercentiles]);
 
   // 클릭 핸들러
   const onChartClick = (params) => {

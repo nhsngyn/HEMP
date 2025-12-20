@@ -13,7 +13,7 @@ import useChainSelection from "../../hooks/useChainSelection";
 import { COLORS } from "../../constants/colors";
 
 import DraggableChain from "./DraggableChain";
-import DroppableSlot from "./DroppableSlot"; // 아래 2번 코드로 저장된 파일
+import DroppableSlot from "./DroppableSlot"; 
 import DroppableListArea from "./DroppableListArea";
 
 const RankingChart = () => {
@@ -76,53 +76,27 @@ const RankingChart = () => {
         {/* TITLE */}
         <h2 className="text-[18px] font-semibold mb-[29.9px] shrink-0">HEMP Rank</h2>
 
-{/* FILTER BUTTONS */}
-        <div 
-          className="
+        {/* FILTER BUTTONS */}
+        <div className="
             flex items-center gap-4 
-            mb-4         
-            pb-3         
-            shrink-0 
-            border-b 
-            border-[#29303A]
-            w-full       
-          "
-        >
-          {/* Chain 정렬 */}
-          <button
-            className="flex items-center gap-1"
-            onClick={() => setSortType("name")}
-          >
-            <span
-              className={
-                sortType === "name"
-                  ? "text-white text-xs font-semibold leading-tight"
-                  : "text-gray-400 text-xs font-semibold leading-tight"
-              }
-            >
+            mb-4 pb-3 shrink-0 
+            border-b border-[#29303A] w-full
+        ">
+          <button className="flex items-center gap-1" onClick={() => setSortType("name")}>
+            <span className={sortType === "name" ? "text-white text-xs font-semibold leading-tight" : "text-gray-400 text-xs font-semibold leading-tight"}>
               Chain
             </span>
             <img src="/Icons/icn_sort_24.png" className="w-6 h-6" alt="filter" />
           </button>
 
-          {/* Score 정렬 */}
-          <button
-            className="flex items-center gap-1"
-            onClick={() => setSortType("score")}
-          >
-            <span
-              className={
-                sortType === "score"
-                  ? "text-white text-xs font-semibold leading-tight"
-                  : "text-gray-400 text-xs font-semibold leading-tight"
-              }
-            >
+          <button className="flex items-center gap-1" onClick={() => setSortType("score")}>
+            <span className={sortType === "score" ? "text-white text-xs font-semibold leading-tight" : "text-gray-400 text-xs font-semibold leading-tight"}>
               HEMP Score
             </span>
             <img src="/Icons/icn_sort_24.png" className="w-6 h-6" alt="filter" />
           </button>
         </div>
-        
+
         {/* LIST AREA */}
         <div className="flex-1 min-h-0 overflow-y-auto mb-4">
           <DroppableListArea>
@@ -141,10 +115,10 @@ const RankingChart = () => {
           </DroppableListArea>
         </div>
 
-        {/* ========== SLOT AREA (수정됨) ========== */}
+        {/* SLOT AREA */}
         <div className="shrink-0 flex flex-col gap-6 pt-2 border-t border-white/5">
           
-          {/* 1. Main Section */}
+          {/* Main Section */}
           <div>
             <h3 className="text-gray-500 text-xs font-medium mb-2 pl-1">
               Main
@@ -158,7 +132,7 @@ const RankingChart = () => {
             />
           </div>
 
-          {/* 2. Comparison Section */}
+          {/* Comparison Section */}
           <div>
             <h3 className="text-gray-500 text-xs font-medium mb-2 pl-1">
               Comparison
@@ -181,7 +155,6 @@ const RankingChart = () => {
             </div>
           </div>
         </div>
-        {/* ======================================= */}
 
       </div>
 

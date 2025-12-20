@@ -78,13 +78,13 @@ const RankingChart = () => {
       onDragStart={(e) => setActiveId(e.active.id)}
       onDragEnd={handleDragEnd}
     >
-      <div className="flex flex-col h-full w-full select-none p-6">
+      <div className="flex flex-col h-full w-full select-none" style={{ padding: 'clamp(20px, 2vw, 32px)' }}>
 
         {/* TITLE */}
-        <h2 className="text-[18px] font-semibold mb-[29.9px] shrink-0">HEMP Rank</h2>
+        <h2 className="font-semibold shrink-0" style={{ fontSize: 'clamp(16px, 1.2vw, 20px)', marginBottom: 'clamp(24px, 2vh, 32px)' }}>HEMP Rank</h2>
 
         {/* FILTER BUTTONS */}
-        <div className="flex items-center gap-4 mb-4 shrink-0">
+        <div className="flex items-center shrink-0" style={{ gap: 'clamp(12px, 1.2vw, 20px)', marginBottom: 'clamp(12px, 1.5vh, 20px)' }}>
           {/* Chain 정렬 */}
           <button
             className="flex items-center gap-1"

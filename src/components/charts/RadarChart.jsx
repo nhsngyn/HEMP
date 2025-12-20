@@ -14,14 +14,14 @@ const METRICS = [
 
 const CHART_CONFIG = {
   GRID_LEVELS: 5,
-  PADDING: 60,
-  LABEL_OFFSET: 30,
+  PADDING: 70,
+  LABEL_OFFSET: 40, // 차트와 축 라벨 사이 간격 (균일하게 조정)
 };
 
 const CHAIN_CONFIGS = [
-  { key: 'sub2', color: COLORS.SUB2, opacity: 0.2, strokeWidth: 1.5, strokeOpacity: 0.7 },
-  { key: 'sub1', color: COLORS.SUB1, opacity: 0.2, strokeWidth: 1.5, strokeOpacity: 0.7 },
-  { key: 'main', color: COLORS.MAIN, opacity: 0.3, strokeWidth: 2, strokeOpacity: 0.9 },
+  { key: 'sub2', color: COLORS.SUB2, opacity: 0.1, strokeWidth: 1.5, strokeOpacity: 0.7 },
+  { key: 'sub1', color: COLORS.SUB1, opacity: 0.1, strokeWidth: 1.5, strokeOpacity: 0.7 },
+  { key: 'main', color: COLORS.MAIN, opacity: 0.1, strokeWidth: 2, strokeOpacity: 0.9 },
 ];
 
 const RadarChart = () => {
@@ -109,9 +109,9 @@ const RadarChart = () => {
 
       // 차트 설정
       const size = Math.min(containerWidth, containerHeight) - CHART_CONFIG.PADDING * 2;
-      const centerX = containerWidth / 2;
+      const centerX = containerWidth / 2 - 2;
       const centerY = containerHeight / 2;
-      const radius = size / 2;
+      const radius = size / 1.7;
       const numAxes = METRICS.length;
       const angleStep = (2 * Math.PI) / numAxes;
 
@@ -162,15 +162,43 @@ const RadarChart = () => {
             .attr('opacity', 0.5);
 
           // 축 라벨
-          axesGroup.append('text')
-            .attr('x', centerX + Math.cos(angle) * (radius + CHART_CONFIG.LABEL_OFFSET))
-            .attr('y', centerY + Math.sin(angle) * (radius + CHART_CONFIG.LABEL_OFFSET))
-            .attr('text-anchor', 'middle')
-            .attr('dominant-baseline', 'middle')
-            .attr('fill', '#9ca3af')
-            .attr('font-size', 'var(--font-size-xs)')
-            .attr('font-weight', '500')
-            .text(metric.label);
+          const labelX = centerX + Math.cos(angle) * (radius + CHART_CONFIG.LABEL_OFFSET + 5);
+          const labelY = centerY + 7 + Math.sin(angle) * (radius + CHART_CONFIG.LABEL_OFFSET - 5);
+
+          if (metric.key === 'vib') {
+            // VIB는 두 줄로 표시
+            const textGroup = axesGroup.append('text')
+              .attr('x', labelX)
+              .attr('y', labelY)
+              .attr('text-anchor', 'middle')
+              .attr('dominant-baseline', 'middle')
+              .attr('fill', '#9ca3af')
+              .attr('font-family', 'SUIT')
+              .attr('font-size', 'var(--font-size-xs)')
+              .attr('font-weight', '700');
+
+            textGroup.append('tspan')
+              .attr('x', labelX)
+              .attr('dy', '0em')
+              .text('VIB (Validator');
+
+            textGroup.append('tspan')
+              .attr('x', labelX)
+              .attr('dy', '1.2em')
+              .text('Influence Balance)');
+          } else {
+            // 다른 메트릭은 한 줄로 표시
+            axesGroup.append('text')
+              .attr('x', labelX)
+              .attr('y', labelY)
+              .attr('text-anchor', 'middle')
+              .attr('dominant-baseline', 'middle')
+              .attr('fill', '#9ca3af')
+              .attr('font-family', 'SUIT')
+              .attr('font-size', 'var(--font-size-xs)')
+              .attr('font-weight', '700')
+              .text(metric.label);
+          }
         });
       };
 
@@ -215,11 +243,11 @@ const RadarChart = () => {
 
           dataGroup.append('path')
             .attr('d', medianPolygon.line(medianPolygon.points))
-            .attr('fill', '#282a2e')
-            .attr('fill-opacity', 0.5)
+            .attr('fill', '#9CA3AE')
+            .attr('fill-opacity', 0.03)
             .attr('stroke', medianStrokeColor)
             .attr('stroke-width', medianStrokeWidth)
-            .attr('stroke-dasharray', '4,4')
+            .attr('stroke-dasharray', '5,5')
             .attr('stroke-opacity', 0.8)
 
             .lower(); // 배경 레이어로 이동
@@ -293,18 +321,18 @@ const RadarChart = () => {
         <div
           className="flex items-center justify-center rounded-full"
           style={{
-            width: '20px',
-            height: '20px',
-            backgroundColor: '#4C5564',
-            color: '#9CA3AF',
+            width: '24px',
+            height: '24px',
+            backgroundColor: '#ffffff15',
+            color: '#D1D5DB',
             fontSize: '12px',
-            fontWeight: '900'
+            fontWeight: '700'
           }}
         >
           2
         </div>
         <h2
-          className="text-white font-extrabold" style={{ fontSize: '13px' }}
+          className="text-white font-bold text-lg"
         >
           HEMP Comparison Radar Chart
         </h2>
@@ -318,7 +346,7 @@ const RadarChart = () => {
         }}
       >
         {/* 왼쪽: 레이더 차트 (60%) */}
-        <div ref={radarContainerRef} className="h-full" style={{ width: '60%' }}>
+        <div ref={radarContainerRef} className="h-full" style={{ width: '65%' }}>
           <svg ref={svgRef} className="w-full h-full mt-4" />
         </div>
 
@@ -329,22 +357,22 @@ const RadarChart = () => {
         <div
           className="info_arena h-full flex flex-col min-h-0 overflow-hidden"
           style={{
-            width: '40%',
-            gap: 'clamp(6px, 0.6vh, 10px)',
-            paddingTop: 'clamp(8px, 0.8vw, 14px)',
-            paddingBottom: 'clamp(8px, 0.8vw, 14px)',
-            paddingLeft: 'clamp(8px, 0.7vw, 12px)',
-            paddingRight: 'clamp(8px, 0.7vw, 12px)',
+            width: '35%',
+            gap: 'clamp(4px, 0.5vh, 8px)',
+            paddingTop: 'clamp(2px, 0.6vw, 2px)',
+            paddingBottom: 'clamp(2px, 0.6vw, 10px)',
+            paddingLeft: 'clamp(2px, 0.7vw, 2px)',
+            paddingRight: 'clamp(4px, 0.7vw, 6px)',
             boxSizing: 'border-box'
           }}
         >
           {/* Chain name badge 또는 Median 레이블 */}
           <div className="flex justify-start shrink-0">
             <div
-              className="rounded-lg shrink-0"
+              className="rounded-md shrink-0"
               style={{
                 backgroundColor: '#282a2e',
-                padding: 'clamp(3px, 0.25vw, 6px) clamp(10px, 0.7vw, 14px)',
+                padding: 'clamp(2px, 0.25vw, 2px) clamp(8px, 0.7vw, 8px)',
                 maxWidth: '100%',
                 boxSizing: 'border-box'
               }}
@@ -354,10 +382,12 @@ const RadarChart = () => {
                   className="font-bold truncate block max-w-full"
                   style={{
                     color: '#80ff00',
-                    fontSize: 'clamp(10px, 0.65vw, 13px)',
+                    fontSize: 'clamp(15px, 0.65vw, 13px)',
                     whiteSpace: 'nowrap',
                     overflow: 'hidden',
-                    textOverflow: 'ellipsis'
+                    textOverflow: 'ellipsis',
+                    fontWeight: '500',
+                    fontFamily: 'SUIT'
                   }}
                 >
                   {mainChain.name}
@@ -367,10 +397,12 @@ const RadarChart = () => {
                   className="font-bold truncate block max-w-full"
                   style={{
                     color: '#9ca3af',
-                    fontSize: 'clamp(10px, 0.65vw, 13px)',
+                    fontSize: 'clamp(14px, 0.65vw, 13px)',
                     whiteSpace: 'nowrap',
                     overflow: 'hidden',
-                    textOverflow: 'ellipsis'
+                    textOverflow: 'ellipsis',
+                    fontWeight: '500',
+                    fontFamily: 'SUIT'
                   }}
                 >
                   Median
@@ -379,21 +411,22 @@ const RadarChart = () => {
             </div>
           </div>
 
-          {/* HEMP Score 영역 (4/10) */}
+          {/* HEMP Score 영역 (3.5/10) */}
           <div
             className="flex flex-col min-h-0 shrink-0"
             style={{
-              flex: '4 0 0',
-              gap: 'clamp(4px, 0.5vh, 8px)',
+              flex: '3.5 0 0',
+              gap: 'clamp(3px, 0.4vh, 6px)',
               maxHeight: '100%',
-              overflow: 'hidden'
+              overflow: 'hidden',
+              justifyContent: 'flex-start'
             }}
           >
-            <div className="flex flex-col shrink-0" style={{ gap: 'clamp(3px, 0.3vh, 6px)' }}>
+            <div className="flex flex-col shrink-0" style={{ gap: 'clamp(2px, 0.25vh, 4px)' }}>
               <p
-                className="text-gray-100 font-extrabold shrink-0"
+                className="text-gray-100 font-bold shrink-0"
                 style={{
-                  fontSize: 'clamp(13px, 0.85vw, 20px)',
+                  fontSize: 'clamp(20px, 0.85vw, 20px)',
                   lineHeight: 'clamp(1.2, 1.3vh, 1.4)',
                   margin: 0
                 }}
@@ -402,13 +435,16 @@ const RadarChart = () => {
               </p>
               <div
                 className="flex items-baseline justify-end shrink-0"
-                style={{ gap: 'clamp(1px, 0.12vw, 2px)' }}
+                style={{
+                  gap: 'clamp(1px, 0.12vw, 2px)',
+                  // marginTop: 'clamp(8px, 0.5vh, 8px)'
+                }}
               >
                 <span
                   className="font-bold shrink-0"
                   style={{
                     color: mainChain ? COLORS.MAIN : '#FFFFFF',
-                    fontSize: 'clamp(26px, 2.5vw, 46px)',
+                    fontSize: 'clamp(18px, 2.5vw, 30px)',
                     lineHeight: '1',
                     whiteSpace: 'nowrap'
                   }}
@@ -418,7 +454,7 @@ const RadarChart = () => {
                 <span
                   className="text-gray-500 shrink-0"
                   style={{
-                    fontSize: 'clamp(10px, 0.75vw, 15px)',
+                    fontSize: 'clamp(18px, 0.75vw, 15px)',
                     lineHeight: 'clamp(1.2, 1.3vh, 1.4)',
                     whiteSpace: 'nowrap'
                   }}
@@ -430,17 +466,18 @@ const RadarChart = () => {
             {/* Divider */}
             <div
               className="border-t border-gray-700 shrink-0"
-              style={{ marginTop: 'clamp(6px, 0.6vh, 10px)' }}
+              style={{ marginTop: 'clamp(10px, 1.5vh, 8px)' }}
             ></div>
           </div>
 
-          {/* Individual metric scores 영역 (6/10) */}
+          {/* Individual metric scores 영역 (6.5/10) */}
           <div
             className="flex flex-col min-h-0 overflow-hidden"
             style={{
-              flex: '6 0 0',
-              gap: 'clamp(4px, 0.6vh, 9px)',
-              maxHeight: '100%'
+              flex: '6.5 0 0',
+              gap: 'clamp(1px, 0.2vh, 3px)',
+              maxHeight: '100%',
+              justifyContent: 'space-between'
             }}
           >
             {METRICS.map(metric => {
@@ -453,15 +490,16 @@ const RadarChart = () => {
                   className="flex justify-between items-center shrink-0"
                   style={{
                     gap: 'clamp(6px, 0.8vw, 12px)',
-                    paddingTop: 'clamp(1px, 0.15vh, 2px)',
-                    paddingBottom: 'clamp(1px, 0.15vh, 2px)',
-                    minHeight: 0
+                    paddingTop: 'clamp(0px, 0.1vh, 2px)',
+                    paddingBottom: 'clamp(0px, 0.1vh, 2px)',
+                    minHeight: 0,
+                    flex: '1 1 0'
                   }}
                 >
                   <span
-                    className="text-gray-300 font-extrabold shrink-0"
+                    className="text-gray-300 font-semibold shrink-0"
                     style={{
-                      fontSize: 'clamp(10px, 0.7vw, 14px)',
+                      fontSize: 'clamp(15px, 0.7vw, 14px)',
                       lineHeight: 'clamp(1.2, 1.3vh, 1.4)',
                       whiteSpace: 'nowrap',
                       overflow: 'hidden',
@@ -475,11 +513,12 @@ const RadarChart = () => {
                     style={{ gap: 'clamp(1px, 0.12vw, 2px)' }}
                   >
                     <span
-                      className="text-white font-extrabold shrink-0"
+                      className="text-white font-semibold shrink-0"
                       style={{
-                        fontSize: 'clamp(10px, 0.7vw, 14px)',
+                        fontSize: 'clamp(18px, 0.7vw, 12px)',
                         lineHeight: 'clamp(1.2, 1.3vh, 1.4)',
-                        whiteSpace: 'nowrap'
+                        whiteSpace: 'nowrap',
+                        paddingRight: 'clamp(3px, 0.1vh, 2px)',
                       }}
                     >
                       {Math.round(value)}
@@ -487,9 +526,10 @@ const RadarChart = () => {
                     <span
                       className="text-gray-500 shrink-0"
                       style={{
-                        fontSize: 'clamp(10px, 0.7vw, 14px)',
-                        lineHeight: 'clamp(1.2, 1.3vh, 1.4)',
-                        whiteSpace: 'nowrap'
+                        fontSize: 'clamp(16px, 0.7vw, 14px)',
+                        lineHeight: 'clamp(1.40, 1.3vh, 1.4)',
+                        whiteSpace: 'nowrap',
+                        paddingRight: 'clamp(3px, 0.1vh, 2px)'
                       }}
                     >
                       /{metric.maxValue}

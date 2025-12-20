@@ -1,0 +1,138 @@
+﻿id,title,type,status,ProcessingTime,Participation,Consensus
+83,PersistenceCore v11,MsgSoftwareUpgrade,REJECTED,"5 days, 0 hours 0 minutes",0.894044674,0.7157
+47,ATOM Airdrop  ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.651507064,0.8992
+50,Atom x Celestia Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.618824478,0.9604
+49,XPRT Airdrop  ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.609834099,0.9999
+53,ATOM Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.59820193,0.9669
+46,ATOM Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.551451186,0.9185
+69,Incentivization of Dexter pools with XPRT from Dexter Grant for February 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.938431936,0.9999
+68,PersistenceCore v1040,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.932731952,1.0
+70,Allocate 1M XPRT for XPRT liquidity and Dexter incentives for 6 months,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",0.930066726,0.9999
+76,PersistenceCore v1041,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.92267198,0.982
+75,Create stkDYDXDYDX metastable pool on Dexter,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.917394214,0.9999
+74,Upgrade Dexter Governance admin contract to fix the pool creation bug,MsgMigrateContract,PASSED,"5 days, 0 hours 0 minutes",0.911144515,0.9999
+100,PersistenceCore v11110,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.906415722,1.0
+104,Create new WBTCXPRT Weighted Pool on Dexter,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.903369646,1.0
+103,Fix Configuration for Upgraded Dexter pool smart contracts,MsgUpdateInstantiateConfig,PASSED,"5 days, 0 hours 0 minutes",0.902716695,1.0
+107,Incentivization of Dexter pools with XPRT stkXPRT and PSTAKE rewards for June 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.896076106,0.9999
+72,Incentivize stkATOMATOM pool on Dexter with 150k PSTAKE tokens in February 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.894710304,0.9999
+65,XPRT Liquidity Bootstrapping XLB incentives on Dexter and Osmosis  January 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.883868873,0.9996
+73,XPRT Liquidity Bootstrapping XLB incentives on Dexter and Osmosis  February 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.882757765,0.9999
+106,Recover Carbon IBC transfer channel,MsgExecLegacyContent,PASSED,"5 days, 1 hours 9 minutes",0.879419763,0.9999
+92,Contract Instantiation Dexter Superfluid LP contract,MsgInstantiateContract,PASSED,"5 days, 0 hours 0 minutes",0.878442084,0.9999
+78,Create XPRTSHD pool on Dexter,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.876247618,0.9999
+80,Create new STARSstkSTARS Metastable Pool on Dexter,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.869793188,0.9995
+91,Contract Migration Migrate MultiStaking Contract on Dexter to version 31,MsgMigrateContract,PASSED,"5 days, 0 hours 0 minutes",0.869641005,0.9999
+90,PersistenceCore v1190,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.869572655,0.9999
+89,Fix PSTAKE incentive schedule for Dexter pools for April 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.86617892,0.9999
+55,PersistenceCore v10 Annapurna Upgrade,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.865162952,1.0
+87,Incentivization of Dexter pools with XPRT and PSTAKE rewards for April 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.864067674,0.9998
+67,PersistenceCore v1030 Upgrade,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.857549169,1.0
+61,Transfer Dexter Vault and Multistaking contract ownership to the Governance Admin Contract,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.848939518,1.0
+86,Create new HUAHUAstkHUAHUA Metastable Pool on Dexter,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.848764043,0.9999
+105,PersistenceCore v11120,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.848252543,0.9999
+95,Disable Instant LP Unbonding for stkXPRTXPRT Pool,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.847596785,0.9997
+84,PersistenceCore v11,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.843704981,1.0
+99,Upgrading Dexter Smart Contracts for Enhanced Functionality,MsgMigrateContract,PASSED,"5 days, 0 hours 0 minutes",0.843572153,0.9999
+56,Allowlist all messages via interchain host module,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.836511914,0.9999
+48,XPRT Liquidity Bootstrapping incentives October 2023,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",0.836498967,0.9947
+51,Increase minimum governance deposit,MsgUpdateParams,PASSED,"5 days, 21 hours 29 minutes",0.833098786,0.9999
+54,Bootstrap USDC and USDT liquidity on Dexter with Persistence Community Owned Liquidity,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",0.832496784,0.9536
+59,Instantiate Dexter Governance Admin contract,MsgInstantiateContract,PASSED,"5 days, 0 hours 0 minutes",0.828674847,0.9999
+58,Contract Migration Migrate MultiStaking Contract on Dexter to version 30,MsgMigrateContract,PASSED,"5 days, 0 hours 0 minutes",0.828653682,0.9999
+94,Disable LSM Validator Cap,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",0.828296967,0.9999
+101,Incentivization of stkXPRTXPRT Metastable pool with stkXPRT rewards,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.827913547,0.9999
+98,Incentivization of Dexter pools with PSTAKE and XPRT rewards for May 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.826659654,0.9999
+44,Upgrade v920 PersistenceCore,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.825393459,0.9999
+63,Collaboration with CryptoCrew for guaranteed Relayer SLAs,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 10 minutes",0.824106851,0.8829
+93,Create new stkXPRTXPRT Metastable Pool on Dexter,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.823903679,0.9999
+66,Incentivize stkATOM pool on Dexter with 300k PSTAKE tokens in January 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.821982623,0.9995
+114,Proposal for 1M XPRT Allocation to Boost MultiDEX Liquidity,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",0.818557494,0.9999
+96,PersistenceCore v11100,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 18 minutes",0.817552815,1.0
+112,PersistenceCore v11140,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 3 minutes",0.813519255,0.9999
+108,PersistenceCore v11130,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 3 minutes",0.810992929,1.0
+85,Param Update Liquidstake and Ratesync Params,MsgUpdateParams,PASSED,"5 days, 0 hours 2 minutes",0.807284231,0.9999
+109,Param Change Inflation Params,MsgUpdateParams,PASSED,"5 days, 0 hours 5 minutes",0.803263742,0.6763
+88,Change of PSTAKE incentive schedule for Dexter pools for April 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.802152823,0.9996
+60,XPRT Liquidity Bootstrapping XLB incentives on Dexter and Osmosis  December 2023,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.802137411,0.9999
+81,Incentivization of Dexter pools with XPRT and PSTAKE rewards for March 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.801850454,0.9999
+42,PersistenceCore v8 Pacaya Upgrade,MsgExecLegacyContent,PASSED,"5 days, 0 hours 36 minutes",0.799008814,0.9999
+111,Incentivization of Persistence DEX pools with XPRT stkXPRT and PSTAKE rewards for July 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.796302087,0.9999
+79,Incentivization of Dexter pools with XPRT rewards for March 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.796255876,0.9999
+110,Whitelist Skip API team address for the Persistence DEX integration,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",0.791722611,0.9714
+43,PersistenceCore v9 Katmai Upgrade,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 17 minutes",0.788794854,0.9978
+97,Extension of CryptoCrews IBC Relayer service mandate for 2 months,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 12 minutes",0.787337677,0.9999
+20,Dexter Update Instantiate Config of LP Token and Pool Codes,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.777416579,0.9999
+62,Increase the max spread of stkATOMATOM pool on Dexter from 2 to 5,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.771631641,1.0
+82,Create new XPRTSTARS Weighted Pool on Dexter,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.769944946,0.9994
+118,Incentivization of Persistence DEX pools with stkXPRT and PSTAKE rewards for November 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.764836159,0.9588
+21,Allocate XPRT Incentives to bootstrap deeper XPRT liquidity,MsgExecLegacyContent,PASSED,"7 days, 0 hours 5 minutes",0.763636889,0.9999
+116,PersistenceCore v11150,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 3 minutes",0.763301281,1.0
+37,Create and bootstrap PSTAKEXPRT pool on Dexter with Persistence Community Owned Liquidity,MsgExecLegacyContent,PASSED,"5 days, 18 hours 38 minutes",0.758351626,0.9999
+64,Incentivization of Dexter pools with XPRT from Dexter Grant for January 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.757279632,1.0
+77,Bootstrap XPRTSHD Community Owned Liquidity on ShadeSwap and Dexter,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",0.756954497,0.9995
+52,Update LiquidStakeIBC module parameters,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",0.753405718,0.9733
+27,Update pSTAKE on Cosmos revenue address,MsgExecLegacyContent,PASSED,"7 days, 0 hours 56 minutes",0.745352635,1.0
+26,Increase stkATOM Instant Redemption fee from 05 to 1,MsgExecLegacyContent,PASSED,"7 days, 0 hours 53 minutes",0.744710263,0.9989
+113,Incentivization of Persistence DEX pools with XPRT and stkXPRT rewards for August 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.734501629,0.9999
+25,Change of proposed incentives for ATOMXPRTpool on Dexter from 45 to 90 days,MsgExecLegacyContent,PASSED,"7 days, 0 hours 3 minutes",0.734062977,0.9999
+31,Change in Governance Parameters,MsgExecLegacyContent,PASSED,"7 days, 0 hours 11 minutes",0.733977311,0.9665
+57,XPRT Liquidity Bootstrapping XLB incentives on Dexter and Osmosis  November 2023,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",0.728464632,0.9999
+139,Incentivization of Persistence DEX pools with stkXPRT rewards for July 2025,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.720121684,1.0
+129,Incentivization of Persistence DEX pools with PSTAKE and stkXPRT rewards for March 2025,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.719710468,0.9994
+22,Phase 1 Incentives Distribution for bootstrapping XPRT liquidity,MsgExecLegacyContent,PASSED,"7 days, 0 hours 4 minutes",0.717282048,0.9998
+141,PersistenceCore v1200,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 7 minutes",0.714660862,1.0
+119,Recover Chihuahua ibcclient on Persistence,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",0.713824192,0.9986
+117,Incentivization of Persistence DEX pools with stkXPRT and PSTAKE rewards for October 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.712619322,1.0
+134,Disable Validator Bond Factor in LSM Module,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",0.712568308,1.0
+128,Proposal for 1M XPRT Allocation to Enhance DEX Liquidity,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",0.710722273,0.9742
+121,PersistenceCore v11160,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.70926713,1.0
+133,Incentivization of Persistence DEX pools with stkXPRT rewards for April 2025,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.702951862,0.9994
+123,Fund Incentivized Testnet for Persistence DEX V2,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",0.697868139,0.9999
+124,Incentivization of Persistence DEX pools with stkXPRT and PSTAKE rewards for February 2025,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.695937606,0.9974
+23,Change in Inflation Parameters,MsgExecLegacyContent,PASSED,"7 days, 1 hours 8 minutes",0.694682115,0.9888
+45,Reenable IBC Client to Acrechain,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.689617036,0.9999
+40,Next leg of XPRT Liquidity Bootstrapping XLB incentives on Dexter and Osmosis,MsgExecLegacyContent,PASSED,"5 days, 0 hours 13 minutes",0.688502934,0.9976
+115,Incentivization of Persistence DEX pools with stkXPRT rewards for September 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.687705147,0.9805
+19,Upgrade v7 PersistenceCore,MsgExecLegacyContent,PASSED,"7 days, 0 hours 4 minutes",0.677086217,1.0
+126,PersistenceCore v11170,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 5 minutes",0.673253085,1.0
+120,Incentivization of Persistence DEX pools with stkXPRT and PSTAKE rewards for December 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.671678709,0.999
+138,Reinvesting PCOL Rewards into XPRTPSTAKE Pool on Persistence DEX,Text,PASSED,"5 days, 1 hours 4 minutes",0.670818632,1.0
+131,Proposal to upgrade the Dex Keeper Contract Corrected Address,MsgMigrateContract,PASSED,"5 days, 0 hours 0 minutes",0.6702264,0.9998
+127,Adding PSTAKE address to cosmwasm allowlist,MsgUpdateParams,PASSED,"5 days, 1 hours 54 minutes",0.669099395,0.9999
+136,Incentivization of Persistence DEX pools with stkXPRT rewards for June 2025,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.662188684,0.9999
+137,PersistenceCore v11210,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.658689677,1.0
+143,Proposal for 1M XPRT allocation to enhance Persistence DEX  Interop incentives,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",0.643889054,0.9999
+140,Upgrade the Persistence Dex Vault contract for stkASSET deprecation process,MsgMigrateContract,PASSED,"5 days, 0 hours 0 minutes",0.639698242,0.9999
+132,Restore XPRT Inflation to Strengthen Staking Security,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",0.6344791,0.9498
+135,Incentivization of Persistence DEX pools with stkXPRT rewards for May 2025,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.632585127,1.0
+35,Change in Halving BlockHeight Parameter,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",0.631520894,1.0
+145,PersistenceCore v1300,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 8 minutes",0.628653768,0.9999
+34,Additional incentives for XPRT liquidity on Osmosis,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",0.625160163,0.9999
+147,PersistenceCore v1400,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 4 minutes",0.623243193,0.9999
+142,Incentivization of Persistence DEX pools with stkXPRT rewards for August 2025,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.608880217,0.9999
+146,Incentivization of Persistence DEX pools with stkXPRT rewards for October 2025,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.605648194,0.9999
+154,PersistenceCore v1600,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 13 minutes",0.59970616,1.0
+144,Incentivization of Persistence DEX pools with stkXPRT rewards for September 2025,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.598252956,0.9999
+16,Parameters Change for better distribution of inflation,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.590920612,0.9987
+153,Recover expired ibc client on Injective,MsgRecoverClient,PASSED,"5 days, 0 hours 21 minutes",0.577319335,1.0
+148,Persistence DEX Vault Contract Upgrade to v122  Fix Query Pools Function for Defunct Pool Handling,MsgMigrateContract,PASSED,"5 days, 0 hours 0 minutes",0.572137506,1.0
+122,Incentivization of Persistence DEX pools with PSTAKE and stkXPRT rewards for January 2025,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.571207764,0.9998
+18,Increase Minimum Validator Fee to 5,MsgExecLegacyContent,PASSED,"10 days, 20 hours 58 minutes",0.562718368,0.9865
+12,Upgrade v6 PersistenceCore,MsgExecLegacyContent,PASSED,"7 days, 5 hours 56 minutes",0.560750159,0.9879
+9,Upgrade v5 PersistenceCore,MsgExecLegacyContent,PASSED,"7 days, 3 hours 43 minutes",0.543716081,1.0
+10,Signalling proposal to revert the Tombstone and Slashing from Nov 6th block 8647535 network halt and restart due to appHash mismatch event,MsgExecLegacyContent,PASSED,"7 days, 0 hours 14 minutes",0.542821418,0.9298
+13,Grant proposal for Dexter  Interchain DEX for YieldGenerating Assets,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.53206419,0.9821
+149,PersistenceCore v1500,MsgSoftwareUpgrade,PASSED,"5 days, 2 hours 33 minutes",0.515959876,1.0
+151,Incentivization of Persistence DEX pools with stkXPRT rewards for November 2025,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",0.490908154,0.9999
+15,Whitelist Dexter teams address for permissionless code storage and instantiation,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.456511032,0.9804
+7,PersistenceCore v3 Upgrade,MsgExecLegacyContent,PASSED,"7 days, 0 hours 12 minutes",0.446058458,0.9999
+8,Upgrade v4 PersistenceCore,MsgExecLegacyContent,PASSED,"7 days, 0 hours 7 minutes",0.429479132,0.9987
+6,Increase Max validatros,MsgExecLegacyContent,PASSED,"7 days, 0 hours 5 minutes",0.422591976,0.9999
+5,Decrease voting period for proposals,MsgExecLegacyContent,PASSED,"14 days, 14 hours 10 minutes",0.416304753,0.9941
+2,XPRT on Osmosis  Allocate Community Pool Funds to incentivise XPRTUST pool liquidity providers on Osmosis,MsgExecLegacyContent,PASSED,"14 days, 0 hours 0 minutes",0.403913904,0.9984
+3,Upgrade PersistenceCore chain to v2,MsgExecLegacyContent,PASSED,"14 days, 0 hours 0 minutes",0.401079953,0.9999
+102,Create new WBTCXPRT Weighted Pool on Dexter,MsgExecuteContract,FAILED,"5 days, 0 hours 0 minutes",0.81947093,0.9999
+71,Create stkDYDXDYDX metastable pool on Dexter,MsgExecuteContract,FAILED,"5 days, 0 hours 0 minutes",0.807408888,0.9999
+152,Recover expired ibc client on Injective,MsgRecoverClient,FAILED,"5 days, 7 hours 13 minutes",0.560062145,0.3954
+150,Recover expired ibc client on Injective,MsgRecoverClient,FAILED,"5 days, 5 hours 37 minutes",0.520438412,0.9999

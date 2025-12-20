@@ -6,15 +6,15 @@ import { BUBBLE_CHART } from '../../constants/chart';
 
 const HempMap = () => {
   const { allChains } = useChainStore();
-  
+
   // selectChain 가져오기
-  const { 
+  const {
     selectChain,
-    getSelectionInfo, 
-    selectedMainId, selectedSubId1, selectedSubId2 
+    getSelectionInfo,
+    selectedMainId, selectedSubId1, selectedSubId2
   } = useChainSelection();
 
-const chainMap = useMemo(() => {
+  const chainMap = useMemo(() => {
     return allChains.reduce((acc, chain) => {
       acc[chain.name] = chain;
       return acc;
@@ -60,15 +60,15 @@ const chainMap = useMemo(() => {
       // Top 25% (75% 초과) → 50px
       if (count > p75) {
         baseSize = 50;
-      } 
+      }
       // 50-75% (50% 초과 ~ 75% 이하) → 38px
       else if (count > p50) {
         baseSize = 38;
-      } 
+      }
       // 25-50% (25% 초과 ~ 50% 이하) → 28px
       else if (count > p25) {
         baseSize = 28;
-      } 
+      }
       // Bottom 25% (25% 이하) → 18px
       else {
         baseSize = 18;
@@ -80,7 +80,7 @@ const chainMap = useMemo(() => {
     const seriesData = allChains.map((chain) => {
       const selection = getSelectionInfo(chain.id);
       const isSelected = !!selection;
-      
+
       const size = calculateBubbleSize(chain.proposals, isSelected);
       const logoUrl = chain.logoUrl || "";
 
@@ -88,7 +88,7 @@ const chainMap = useMemo(() => {
         name: chain.name,
         value: [chain.score, chain.participation || 0],
         symbol: 'circle',
-        symbolSize: size, 
+        symbolSize: size,
         label: {
           show: true,
           position: 'inside',
@@ -98,7 +98,7 @@ const chainMap = useMemo(() => {
               backgroundColor: { image: logoUrl },
               width: size,
               height: size,
-              borderRadius: size / 2 
+              borderRadius: size / 2
             }
           }
         },
@@ -123,20 +123,20 @@ const chainMap = useMemo(() => {
         top: '20%', right: '8%', bottom: '12%', left: '8%',
         containLabel: true
       },
-     tooltip: {
+      tooltip: {
         trigger: 'item',
         backgroundColor: 'rgba(26, 27, 32, 0.95)',
         borderColor: '#4B5563',
         textStyle: { color: '#fff', fontFamily: 'SUIT' },
         formatter: (params) => {
-          const chainData = chainMap[params.name]; 
-          
+          const chainData = chainMap[params.name];
+
           if (!chainData) return '';
 
-          const logoImg = chainData.logoUrl 
-            ? `<img src="${chainData.logoUrl}" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;border-radius:50%;" />` 
+          const logoImg = chainData.logoUrl
+            ? `<img src="${chainData.logoUrl}" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;border-radius:50%;" />`
             : '';
-            
+
           return `
             <div style="font-weight:bold; margin-bottom:8px; font-size:15px; display:flex; align-items:center;">
               ${logoImg} ${params.name}
@@ -188,9 +188,9 @@ const chainMap = useMemo(() => {
       <h3 className="absolute top-4 left-6 text-white font-bold text-lg z-10 pointer-events-none">
         HEMP Map
       </h3>
-      <ReactECharts 
-        option={option} 
-        style={{ height: '100%', width: '100%' }} 
+      <ReactECharts
+        option={option}
+        style={{ height: '100%', width: '100%' }}
         opts={{ renderer: 'svg' }}
         onEvents={{
           click: onChartClick

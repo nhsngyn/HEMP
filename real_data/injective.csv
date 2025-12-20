@@ -1,0 +1,378 @@
+﻿id,title,type,status,ProcessingTime,Participation,Consensus
+189,Upload Injective Adapter Contract,MsgExecLegacyContent,PASSED,"4 days, 0 hours 10 minutes",0.337587205,0.9925
+194,Trade and Earn rewards allocation,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.337714636,0.9921
+187,Wormhole  Upload Core Bridge Shutdown Contract,MsgExecLegacyContent,PASSED,"4 days, 1 hours 29 minutes",0.338847423,0.9927
+188,Wormhole  Upload Token Bridge Shutdown Contract,MsgExecLegacyContent,PASSED,"4 days, 1 hours 29 minutes",0.33886945,0.9926
+184,Wormhole  Upload Core Contract,MsgExecLegacyContent,PASSED,"4 days, 0 hours 8 minutes",0.339442387,1.0
+173,Disbursement of DMM rewards for epoch ended on 9 September 2022,MsgExecLegacyContent,PASSED,"4 days, 6 hours 53 minutes",0.340347479,0.9878
+542,Unpause iMETAUSDT Perp Market on Injective Exchange dApps,MsgBatchExchangeModification,PASSED,"1 days, 2 hours 19 minutes",0.34858762,0.9999
+572,Whitelisting Strategic Partner Addresses for Controlled Rollout of EVM on Mainnet V,MsgUpdateParams,PASSED,"1 days, 0 hours 30 minutes",0.348786146,0.9999
+181,Trade  Earn rewards points adjustment for epoch ended Nov 2 2022 UTC,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.349246249,0.993
+186,Wormhole  Upload CW20 Wrapped Contract,MsgExecLegacyContent,PASSED,"4 days, 0 hours 27 minutes",0.350632578,0.993
+177,Trade  Earn rewards points adjustment for epoch ended Oct 12 2022 UTC,MsgExecLegacyContent,PASSED,"4 days, 7 hours 52 minutes",0.352422896,0.9988
+182,Injective Mainnet Upgrade v18,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.356275712,0.9939
+530,Update Minimum Price and Quantity Tick Sizes for PUGGOINJ market on Injective Exchange dApps,MsgBatchExchangeModification,PASSED,"1 days, 0 hours 1 minutes",0.381863993,0.9999
+200,Disbursement of DMM rewards for epoch ended on 27 December 2022 and 24 Jan 2023,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.390013676,0.9926
+577,Whitelisting Strategic Partner Addresses for Controlled Rollout of EVM on Mainnet X,MsgUpdateParams,PASSED,"2 days, 20 hours 56 minutes",0.393931708,0.9999
+203,Increase the Validator Set to 60,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.402570874,0.9781
+196,Trade and Earn rewards allocation,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.407564143,0.9928
+515,Decrease hourly funding rate cap for various RWA markets,MsgBatchExchangeModification,PASSED,"1 days, 0 hours 4 minutes",0.408249768,0.9999
+176,Disbursement of DMM rewards for epoch ended on 4 October 2022,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.412360505,0.9913
+179,Trade  Earn rewards points adjustment for epoch ended Oct 19 2022 UTC,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.414455916,0.9902
+197,BONK Price Feed Oracle Integration,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.41484221,0.9938
+568,Whitelisting Strategic Partner Addresses for Controlled Rollout of EVM on Mainnet IV,MsgUpdateParams,PASSED,"1 days, 0 hours 6 minutes",0.418327811,0.9999
+538,Update Various iAsset Hourly Funding Rate Caps on Injective Exchange dApps,MsgBatchExchangeModification,PASSED,"1 days, 0 hours 15 minutes",0.421209088,0.9999
+204,Upgrade expired IBC client,MsgExecLegacyContent,PASSED,"4 days, 0 hours 2 minutes",0.426782331,0.9947
+546,Launch NVIDIA H100 Hourly Perpetuals on Injective Exchange dApps,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 9 minutes",0.426876005,0.9999
+235,Settle STXUSDT perp market,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.430468351,0.9914
+236,Settle LUNAUST perp market,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.430804143,0.9919
+201,Trade and Earn rewards allocation,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.43410612,0.9936
+208,Dual Incentives for Astroport Genesis Pools,MsgExecLegacyContent,PASSED,"4 days, 0 hours 5 minutes",0.437852088,0.9936
+199,Increase the Validator Set to 50,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.439360143,0.9934
+217,Trade and Earn rewards allocation,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.441540138,0.9947
+205,Disbursement of DMM rewards for epoch ended on 21 Feb 2023,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.443299675,0.9999
+198,Injective Mainnet Upgrade,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.445123102,0.9945
+545,Update Market Params for XRPUSDT spot market on Injective Exchange dApps,MsgBatchExchangeModification,PASSED,"1 days, 0 hours 0 minutes",0.446648761,0.9999
+543,Update Market Params for XRPUSDT and PUGGOINJ spot markets on Injective Exchange dApps,MsgBatchExchangeModification,PASSED,"1 days, 1 hours 1 minutes",0.451416954,0.9999
+565,OLP Reward Disbursement  Epoch 50,MsgBatchCommunityPoolSpend,PASSED,"4 days, 0 hours 0 minutes",0.45467273,0.9999
+564,Update OPENAIUSDT PERP Hourly Funding Rate Cap on Injective Exchange dApps,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.457479906,0.9999
+212,Oracle Script Upgrade,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.467309946,0.9951
+214,Deprecate legacy oracle requests,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.471296332,0.9951
+215,Disbursement of DMM rewards for epoch ended on 21 March 2023,MsgExecLegacyContent,PASSED,"4 days, 10 hours 26 minutes",0.471605473,0.9951
+220,Liquid Staking Incentives for INJ,MsgExecLegacyContent,PASSED,"4 days, 12 hours 33 minutes",0.473671192,0.9919
+213,Celer Bridge Contract,MsgExecLegacyContent,PASSED,"4 days, 0 hours 23 minutes",0.477091865,0.9948
+591,Whitelist Hyper Ninja Fighting Kaiju Addresses for Wasm Upload,MsgAddCodeUploadParamsAddresses,PASSED,"4 days, 0 hours 0 minutes",0.479323252,0.7876
+210,PUGUSDT Spot Market Launch,MsgExecLegacyContent,PASSED,"4 days, 23 hours 58 minutes",0.480377318,0.951
+206,Trade and Earn rewards allocation,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.481498823,0.997
+585,Whitelisting Strategic Partner Addresses for Controlled Rollout of EVM on Mainnet XII,MsgUpdateParams,PASSED,"1 days, 0 hours 22 minutes",0.482627229,1.0
+216,Exchange Module Upgrade Min tick size and margin ratio update for specific markets,MsgExecLegacyContent,PASSED,"4 days, 0 hours 1 minutes",0.492941385,0.9947
+552,Whitelist Hyper Ninja Addresses for Wasm Upload,MsgAddCodeUploadParamsAddresses,PASSED,"4 days, 0 hours 0 minutes",0.492999561,0.7646
+580,Whitelisting Strategic Partner Addresses for Controlled Rollout of EVM on Mainnet XI,MsgUpdateParams,PASSED,"1 days, 0 hours 1 minutes",0.495179625,0.9999
+227,Disbursement of DMM rewards for epoch ended on 16 May 2023,MsgExecLegacyContent,PASSED,"4 days, 0 hours 1 minutes",0.496791544,0.9951
+222,ERIS Upload Amplifier 170TF,MsgExecLegacyContent,PASSED,"4 days, 5 hours 48 minutes",0.498024133,0.9949
+569,Update ANTHROPICUSDT PERP Hourly Funding Rate Cap on Injective Exchange dApps,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.499330909,0.9999
+245,Disbursement of OLP rewards for epoch ended on 08 August 2023,MsgExecLegacyContent,PASSED,"4 days, 0 hours 46 minutes",0.499518398,0.9998
+207,Injective Mainnet Upgrade v110,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.500212453,1.0
+218,Upgrade expired IBC client,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.502791705,0.9943
+224,Talis The First NFT Marketplace on Injective,MsgExecLegacyContent,PASSED,"4 days, 0 hours 2 minutes",0.503010001,0.9954
+244,SEI PERP Launch,MsgExecLegacyContent,PASSED,"4 days, 0 hours 1 minutes",0.506086918,0.9999
+571,Update Community Burn Auction Maximum Caps For Auctioned Assets,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.506660738,0.9999
+246,VIP Fee Discount Program 20,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.507364163,0.9999
+219,Pyth Oracle Mainnet Deployment,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.50844374,0.9954
+521,Disbursement of OLP rewards for the epoch ended 14 April 2025,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.509089892,0.9999
+567,Whitelisting Strategic Partner Addresses for Controlled Rollout of EVM on Mainnet,MsgUpdateParams,PASSED,"1 days, 0 hours 1 minutes",0.521959338,0.9999
+223,Disbursement of DMM rewards for epoch ended on 17 April 2023,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.52684362,0.9939
+558,OLP Reward Disbursement  Epoch 49,MsgBatchCommunityPoolSpend,PASSED,"1 days, 0 hours 1 minutes",0.530219118,0.9998
+221,Injective Exchange dApp Update Market Parameter Changes,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.533088496,0.9952
+534,Update Various Oracle Feeds and iAsset Hourly Funding Rate Caps on Injective Exchange dApps,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.537904915,0.9999
+226,Injective Exchange dApp Update Launch 1000PEPEUSDT Perp,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.539833347,0.9943
+555,Update OnChain Denom Metadata for XRP,MsgSetDenomMetadata,PASSED,"4 days, 0 hours 0 minutes",0.540474923,0.9998
+559,Update Various FX iAsset Hourly Funding Rate Caps on Injective Exchange dApps,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.548488754,0.9999
+225,Injective Exchange dApp Update Market Parameter Changes,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.55172829,0.9859
+547,Whitelist HyperNinja Address for the game Mainnet beta testing and the official launch,MsgExecLegacyContent,REJECTED,"4 days, 0 hours 0 minutes",0.553130401,0.5333
+548,Whitelist HyperNinja Addresses for Wasm Upload,MsgAddCodeUploadParamsAddresses,REJECTED,"4 days, 0 hours 0 minutes",0.553137289,0.5339
+597,Update Hourly Funding Rate Cap for PreIPO Perpetuals on Injective Exchange dApps,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.554920828,0.9999
+238,Launch XRPUSDT PERP,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.558897026,0.9955
+527,Settle JELLYJELLYUSDT Perpetuals Across Injective DEXs,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.559416284,0.9999
+230,Trade and Earn rewards allocation,MsgExecLegacyContent,PASSED,"4 days, 0 hours 18 minutes",0.560177488,0.9956
+229,Injective Exchange dApp Update Launch 1MPEPEUSDT Perp,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.563750249,0.9951
+228,Injective Exchange dApp Update Settle 1000PEPEUSDT Perp,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.563752362,0.9953
+540,Settle Various Perpetuals Across Injective DEXs,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.564729273,0.9999
+535,OLP Reward Disbursement  Epoch 46,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.565110067,0.9999
+599,Reduce Onchain Maker Fee Rebates,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.566591173,0.9998
+514,Decrease hourly funding rate cap for various RWA markets,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.567431178,0.8202
+587,Token Metadata Update  wETH ,MsgSetDenomMetadata,PASSED,"1 days, 0 hours 6 minutes",0.568952085,0.9999
+588,Token Metadata Update  USDC ,MsgSetDenomMetadata,PASSED,"1 days, 0 hours 5 minutes",0.568952186,1.0
+586,Token Metadata Update  ATOM ,MsgSetDenomMetadata,PASSED,"1 days, 0 hours 12 minutes",0.568952314,0.9999
+589,Token Metadata Update  TIA ,MsgSetDenomMetadata,PASSED,"1 days, 0 hours 3 minutes",0.568957089,0.9999
+590,Token Metadata Update  stINJ ,MsgSetDenomMetadata,PASSED,"1 days, 0 hours 3 minutes",0.569009521,0.9999
+232,Frontunner Mainnet Provider Oracle,MsgExecLegacyContent,PASSED,"4 days, 0 hours 14 minutes",0.57164512,0.9959
+234,Disbursement of DMM and OLP rewards for epoch ended on 12 June 2023,MsgExecLegacyContent,PASSED,"4 days, 0 hours 17 minutes",0.574480007,0.9959
+240,Trade and Earn Rewards Allocation,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.574710827,0.9958
+574,Whitelisting Strategic Partner Addresses for Controlled Rollout of EVM on Mainnet VII,MsgUpdateParams,PASSED,"1 days, 0 hours 0 minutes",0.575092305,0.9999
+575,Whitelisting Strategic Partner Addresses for Controlled Rollout of EVM on Mainnet VIII,MsgUpdateParams,PASSED,"1 days, 0 hours 5 minutes",0.575951155,0.9999
+576,Whitelisting Strategic Partner Addresses for Controlled Rollout of EVM on Mainnet IV,MsgUpdateParams,PASSED,"1 days, 0 hours 7 minutes",0.575969964,0.9999
+579,Settle Deprecated Perpetuals Across Injective DEXs,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.577860061,0.9999
+582,OLP Reward Disbursement  Epoch 51,MsgBatchCommunityPoolSpend,PASSED,"4 days, 0 hours 0 minutes",0.578836753,0.9997
+500,Injective Mainnet Upgrade v1141,MsgSoftwareUpgrade,PASSED,"1 days, 5 hours 11 minutes",0.579681342,0.9999
+242,Price Feed Oracle Integration,MsgExecLegacyContent,PASSED,"4 days, 0 hours 1 minutes",0.58037467,0.9957
+239,Disbursement of OLP rewards for epoch ended on 11 July 2023,MsgExecLegacyContent,PASSED,"4 days, 0 hours 2 minutes",0.581219738,0.9957
+233,Nois  Store the noisproxy contract,MsgExecLegacyContent,PASSED,"4 days, 0 hours 4 minutes",0.582142188,0.9958
+583,Injective Altria Mainnet Upgrade,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 0 minutes",0.582450854,0.9999
+497,Update denom metadata for major stablecoins,MsgSetDenomMetadata,PASSED,"1 days, 0 hours 29 minutes",0.583031033,0.9999
+554,OLP Reward Disbursement  Epoch 48,MsgBatchCommunityPoolSpend,PASSED,"4 days, 0 hours 0 minutes",0.583766804,0.9999
+243,Update USDCUSDT Fees,MsgExecLegacyContent,PASSED,"4 days, 22 hours 23 minutes",0.584092316,0.9958
+528,OLP Reward Disbursement  Epoch 45,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.58545824,0.9927
+553,Update H100USDT PERP Hourly Funding Rate Cap on Injective Exchange dApps,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.586885509,0.9999
+231,Injective Avalon Upgrade v111,MsgExecLegacyContent,PASSED,"4 days, 0 hours 1 minutes",0.58783426,0.9959
+375,Upload Ninja Labs  Chads Draw Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.588580185,0.4233
+374,Moon App Staking  Staking contract upgrade v110,MsgStoreCode,PASSED,"4 days, 0 hours 6 minutes",0.588689742,0.6651
+541,Injective Evm Mainnet Upgrade,MsgSoftwareUpgrade,PASSED,"1 days, 0 hours 11 minutes",0.589350961,0.9999
+573,Whitelisting Strategic Partner Addresses for Controlled Rollout of EVM on Mainnet VI,MsgUpdateParams,PASSED,"1 days, 0 hours 1 minutes",0.589694543,0.9999
+241,Adjust Trade  Earn reward points,MsgExecLegacyContent,PASSED,"4 days, 0 hours 1 minutes",0.590175271,0.9958
+273,Decrease Max Block Size,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.591755737,0.9999
+249,Adjust Trade  Earn reward points,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.593366274,0.9959
+247,Adjust Trade  Earn reward points,MsgExecLegacyContent,PASSED,"4 days, 0 hours 3 minutes",0.593513895,0.9961
+556,OLP Reward Disbursement  Epoch 49,MsgBatchCommunityPoolSpend,FAILED,"4 days, 0 hours 0 minutes",0.596747563,0.9999
+387,Balanced Contracts 1,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.597591486,0.3203
+237,Enable Wasmx,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.597601475,0.9958
+388,Balanced Contracts 2,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.597614191,0.3202
+298,Add SNOWYINJ Spot Market Trading Pair,MsgExecLegacyContent,PASSED,"4 days, 1 hours 12 minutes",0.597748466,0.9992
+507,Launch McDonalds Onchain Stock Perpetuals on Injective Exchange dApps,MsgExecLegacyContent,PASSED,"1 days, 0 hours 5 minutes",0.59939304,0.9279
+381,Upload Ninza Contract  Game,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.601124367,0.6656
+248,Disbursement of OLP rewards for epoch ended on 5 September 2023,MsgExecLegacyContent,PASSED,"4 days, 0 hours 1 minutes",0.603688163,0.9959
+403,StartCooking Upload Contract,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.604611122,0.8079
+404,StartCooking Upload Factory Contract,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.604696439,0.8078
+382,INJBOYS STAKING PLATFORM  Upload Contract,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.605485717,0.1349
+531,Update Various Oracle Feeds on Injective Exchange dApps,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.605578221,0.9999
+362,Upload Aeroscraper Lending  Borrowing Protocol Contract  Wasm Code to Injective,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.606755372,0.9996
+529,Injective Validator Network Optimization,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.607515177,0.9132
+532,Whitelist Timeworxio Address for Wasm Upload,MsgAddCodeUploadParamsAddresses,PASSED,"4 days, 0 hours 0 minutes",0.607761755,0.6168
+533,Update Various Oracle Feeds and iAsset Hourly Funding Rate Caps on Injective Exchange dApps,MsgBatchExchangeModification,FAILED,"4 days, 0 hours 0 minutes",0.608081081,0.9999
+401,Upload DEGA Collection Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.608325487,0.801
+315,Upload the iLend Protocol contract,MsgStoreCode,PASSED,"4 days, 15 hours 45 minutes",0.60999099,0.6549
+254,Price Feed Oracle Integration,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.610866562,0.996
+261,Trade  Earn 20 Multiplier Updates,MsgExecLegacyContent,PASSED,"4 days, 0 hours 40 minutes",0.610893934,0.9999
+385,Upload Exotic RFQ Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.611451382,0.6808
+386,Upload Exotic Holding Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.611471395,0.6808
+384,Upload Exotic Vanilla Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.611485482,0.6808
+513,Modify fee tier discounts across Injective DEXs,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.613021936,0.9999
+365,Upload Ninja Blaze Contract  Jackpot,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.61381215,0.4002
+544,Injective Mainnet Performance Upgrade,MsgSoftwareUpgrade,PASSED,"1 days, 0 hours 1 minutes",0.613916909,0.9999
+288,PYTHUSDT Prelaunch Perpetual Futures Market Launch and Trade  Earn Multiplier Updates,MsgExecLegacyContent,PASSED,"4 days, 0 hours 2 minutes",0.614171445,0.9999
+278,Trade  Earn Multiplier Updates,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.614544075,0.9999
+251,Adjust Trade  Earn reward points,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.614805219,0.996
+578,Update SPACEXUSDT PERP Hourly Funding Rate Cap on Injective Exchange dApps,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.614989776,0.9999
+250,Trade and Earn Rewards Pool Update Epochs 96103,MsgExecLegacyContent,PASSED,"4 days, 0 hours 9 minutes",0.615420726,0.9958
+274,Adjust Trade  Earn reward points,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.615690665,0.9999
+380,Blocksmith Labs Presale  Instantiate Contract,MsgInstantiateContract,FAILED,"4 days, 0 hours 0 minutes",0.616649754,0.4584
+453,Whitelist Address for Wasm Upload,MsgAddCodeUploadParamsAddresses,PASSED,"4 days, 11 hours 24 minutes",0.617040286,0.903
+402,Upload DEGA Minter Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.618645243,0.8084
+321,NinjaRoll Deployment,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.621975227,0.9948
+352,Adjust Queue System and FCFS Mechanism for Rewards conversion,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.622834622,0.9996
+562,Whitelisting Strategic Partner Addresses for Controlled Rollout of EVM on Mainnet,MsgUpdateParams,PASSED,"1 days, 0 hours 19 minutes",0.623550375,0.9999
+563,Update Community Burn Auction Cadence and Whitelist Contribution Contract,MsgUpdateParams,PASSED,"1 days, 0 hours 17 minutes",0.62355097,0.9999
+399,Upload Exotic Escrow Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.623832924,0.6484
+383,Relaunch WUSDT Perp Market on Injective Exchange dApps,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.627222105,0.9999
+594,Enable EVM Mapping for DRUGS Token,MsgCreateTokenPair,PASSED,"4 days, 0 hours 0 minutes",0.628061046,0.9999
+389,Upload Stride Redemption Rate Oracle Contract,MsgStoreCode,PASSED,"4 days, 2 hours 50 minutes",0.628509327,0.9998
+259,Adjust Trade  Earn reward points,MsgExecLegacyContent,PASSED,"5 days, 1 hours 39 minutes",0.628800779,0.9961
+260,Disbursement of OLP rewards for epoch ended on 02 October 2023,MsgExecLegacyContent,PASSED,"4 days, 1 hours 43 minutes",0.628825239,0.9961
+355,Increase Peggy slashing window,MsgUpdateParams,PASSED,"4 days, 0 hours 51 minutes",0.629459152,0.9996
+595,Recover IBC light clients for Sommelier  Kujira,MsgRecoverClient,PASSED,"4 days, 0 hours 0 minutes",0.629947179,0.9999
+253,Trade  Earn 20,MsgExecLegacyContent,PASSED,"4 days, 3 hours 16 minutes",0.63018621,0.996
+390,UPLOAD Discoverinj 404 Mintpad,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.630587032,0.5743
+279,Adjust Trade  Earn reward points,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.631850527,0.9997
+280,Trade and Earn Rewards Pool Update Epochs 104111,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.632017946,0.9999
+257,TIAUSDT30NOV23 Expiry Futures Market Launch,MsgExecLegacyContent,PASSED,"4 days, 0 hours 36 minutes",0.632794927,0.9999
+256,Kava Assets and USDT Launch on Injective,MsgExecLegacyContent,PASSED,"4 days, 5 hours 13 minutes",0.632902421,0.9997
+258,AXLUSDT PERP Launch,MsgExecLegacyContent,PASSED,"4 days, 0 hours 31 minutes",0.633719405,0.9999
+282,Disbursement of OLP rewards for epoch ended on 30 October 2023,MsgExecLegacyContent,PASSED,"4 days, 0 hours 1 minutes",0.634180637,0.9999
+271,Adjust Trade  Earn reward points,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.63424878,0.9999
+367,Upload Ninja Blaze Contract  User profile  Fee collector,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.63446866,0.4318
+366,Upload Ninja Blaze Contract  User profile  Fee collector,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.634478119,0.4319
+368,Upload Ninja Blaze Contract  Double,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.634485546,0.4402
+286,Upload Ojo Oracle Contract Wasm Code,MsgExecLegacyContent,PASSED,"4 days, 0 hours 4 minutes",0.634699801,0.9999
+526,DojoSwap Atomic Swap,MsgStoreCode,PASSED,"4 days, 0 hours 1 minutes",0.63552061,0.8231
+471,Increase max trading leverage for various perp markets,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.63668539,0.9998
+411,Disbursement of OLP rewards for epoch ended on 10 June 2024,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.636753765,0.9999
+413,Deployment of StreamSwap Protocol contracts on Injective Hub,MsgStoreCode,PASSED,"4 days, 0 hours 13 minutes",0.637695155,0.9999
+323,Moon App Launchpad  Upload contract,MsgStoreCode,PASSED,"4 days, 0 hours 16 minutes",0.638026791,0.9802
+324,Adjust Trade  Earn reward points,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.638059434,0.9817
+291,Nois proxy beacon price change,MsgSudoContract,PASSED,"4 days, 2 hours 4 minutes",0.638103567,0.9999
+519,Settle OMUSDT Perpetuals Across Injective DEXs,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.63838489,0.9595
+581,Reduce Onchain Maker Fee Rebates,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.640592123,0.9999
+276,Trade  Earn Multiplier Updates,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.640603609,0.9999
+287,The Injective Oracle module will add a new feed from the Injective Ecosystem,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.642184593,0.9999
+592,Reduce Onchain Maker Fee Rebates,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.643241492,0.9999
+593,Settle NFLXUSDT Perpetuals Across Injective DEXs,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.64324209,0.9999
+601,Injective Mainnet Upgrade,MsgSoftwareUpgrade,PASSED,"1 days, 0 hours 4 minutes",0.644317559,1.0
+446,Upload Injex Finance Vesting Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.644340755,0.6269
+294,Disbursement of OLP rewards for epoch ended on 27 November 2023,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.644397422,0.9999
+252,Adjust Trade  Earn reward points,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.644419146,0.9962
+410,Upload ChainFactory Contract Wasm Code 22 Token,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.644697215,0.8288
+398,UPLOAD Discoverinj 404 Reroll,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.644718424,0.8224
+285,Add USDTkv and USDCnb Quoted Markets to Trade  Earn TE,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.644803613,0.9997
+284,Make USDTkv and USDCnb Quoted Markets Eligible for Fee Discounts,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.645047034,0.9999
+360,Update minimum quantity for QUNTINJ market on Injective Exchange dApps,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.645981736,0.9998
+322,Proposal Hinata Contract Upload,MsgStoreCode,REJECTED,"4 days, 0 hours 0 minutes",0.646326633,0.9297
+361,Increase maximum trading leverage for BTC Perp and ETH Perp to 20x,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.646361932,0.9973
+262,TIAUSDT30NOV23 Expiry Futures Market Launch,MsgExecLegacyContent,PASSED,"4 days, 0 hours 31 minutes",0.646404596,0.9999
+277,Adjust Trade  Earn reward points,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.647309806,0.9999
+598,Pause PUGGOINJ and XRPUSDT Spot Markets Across Injective DEXs,MsgBatchExchangeModification,PASSED,"1 days, 0 hours 19 minutes",0.648199832,0.9999
+518,Injective Lyora Mainnet Upgrade,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 0 minutes",0.649071002,0.9999
+354,Upload Injex Finance Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.650850933,0.8374
+289,Upgrade expired IBC client,MsgExecLegacyContent,PASSED,"4 days, 0 hours 2 minutes",0.652156849,0.9999
+379,Proposal Title,MsgStoreCode,REJECTED,"4 days, 0 hours 0 minutes",0.652785519,0.7874
+488,Update Various Oracle Feeds on Injective Exchange dApps,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.654638884,0.9999
+409,INJ 30 Inflation Parameters Update 24Q2,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.654652035,0.9999
+557,Settle MKRUSDT Perpetuals Across Injective DEXs,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.656759772,0.9999
+560,Injective Mainnet Performance Upgrade,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 0 minutes",0.657388762,0.9999
+467,Add relayer for PDYZE provider oracle,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.658459904,0.9031
+468,Remove relayer for PDYZE provider oracle,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.65848719,0.9054
+351,Disbursement of OLP rewards for epoch ended on 19 February 2024,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.659479317,0.9996
+309,Moon Pad Sale  Upload contract,MsgStoreCode,REJECTED,"5 days, 21 hours 22 minutes",0.65963846,0.5169
+353,Update min price tick and min quantity tick for USDeUSDT market on Injective Exchange dApps,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.659662153,0.9997
+510,Settle OMNIUSDT PERP market,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.659874054,0.9999
+310,Moon Pad Claim  Upload contract,MsgStoreCode,REJECTED,"5 days, 0 hours 40 minutes",0.659937257,0.3992
+405,Disbursement of OLP rewards for epoch ended on 13 May 2024,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.660444774,0.9999
+421,Upload Injex Finance Router and Limit Contract Wasm Code,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.660625626,0.1985
+561,Whitelist Choice Exchange Developer Address for Wasm Uploads,MsgAddCodeUploadParamsAddresses,PASSED,"4 days, 0 hours 0 minutes",0.660674138,0.9998
+503,Decrease hourly funding rate cap for various tradfi markets,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.660875345,0.9999
+508,Settle MELANIAUSDT PERP market,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.661740274,0.9999
+295,Change in Staking Thresholds for Trading Fee Discounts,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.662328366,0.9999
+539,OLP Reward Disbursement  Epoch 47,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.662865214,0.9999
+523,Settle Various Deprecated Perpetuals Across Injective DEXs,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.663565341,0.9998
+524,Decrease hourly funding rate cap for various RWA markets,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.663587442,0.9998
+522,Recover IBC client to Andromeda,MsgRecoverClient,FAILED,"4 days, 0 hours 0 minutes",0.663834891,0.9999
+505,B3XAI  Staking Contract ,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.663953999,0.7844
+506,B3XAI  Referral Contract ,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.663997666,0.7819
+504,Reactivate expired IBC client for Stargaze,MsgRecoverClient,FAILED,"5 days, 2 hours 46 minutes",0.664004116,0.9999
+313,CryptoGopniks NFT Staking Platform Staking Platform Contract v131,MsgStoreCode,PASSED,"4 days, 0 hours 24 minutes",0.664824047,0.2173
+400,Upload NFT Injstaking Contract,MsgStoreCode,PASSED,"4 days, 0 hours 5 minutes",0.66590148,0.6551
+550,Injective Mainnet Performance Upgrade,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 0 minutes",0.668835233,0.9999
+448,Kira Liquidity Pool Locker to be deployed on the injective mainnet,MsgStoreCode,PASSED,"4 days, 0 hours 7 minutes",0.670896465,0.5918
+319,iLend contract upgrade admin functions for markets management,MsgStoreCode,PASSED,"4 days, 0 hours 10 minutes",0.672831805,0.9994
+340,Launch LINKUSDT PERP and DOGEUSDT PERP Markets Relaunch BONKUSDT PERP Market for Injective Exchange dApps,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.673011436,0.9995
+318,Update min price tick and min quantity tick for GINGERINJ on Injective Exchange dApps,MsgExecLegacyContent,PASSED,"4 days, 0 hours 4 minutes",0.673163438,0.9996
+525,IBC light client recovery omnibus for Juno and Mantrachain,MsgRecoverClient,PASSED,"4 days, 0 hours 0 minutes",0.673240012,0.9999
+395,Disbursement of OLP rewards for epoch ended on 15 April 2024,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.673242092,0.9998
+320,Whitelist address for new provider oracle,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.67363479,0.9997
+480,Upload NinjaFactory Contract Wasm Code 23 Pair,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.673726563,0.8917
+479,Upload NinjaFactory Contract Wasm Code 13 Incubator,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.673727479,0.8845
+481,Upload NinjaFactory Contract Wasm Code 33 Token,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.674033562,0.8834
+341,Upload Injective Native Quadratic Funding Smart Contract,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.674257116,0.9996
+436,Settle BODENUSDT PERP and BONKUSDT PERP markets,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.675389805,0.9999
+372,Upload Ninza Contract  Multicall,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.676625213,0.662
+371,Upload Ninza Contract  Token InGame,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.676638553,0.6621
+293,Changes to Certain Markets on Exchange dApps on Injective,MsgExecLegacyContent,PASSED,"4 days, 0 hours 5 minutes",0.676641581,0.9999
+370,Upload Ninza Contract  Game,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.676644656,0.6616
+373,Upload Ninza Contract  Referral,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.676652882,0.6733
+369,Disbursement of OLP rewards for epoch ended on 18 March 2024,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.676801141,0.9998
+475,Giving AI on Injective a face,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.676826479,0.8455
+419,Disbursement of OLP rewards for epoch ended on 08 July 2024,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.677316567,0.9998
+376,Blocksmith Labs Presale  Upload Contract,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.677420014,0.3937
+463,Whitelist Address for TruFin liquid staker uploads,MsgAddCodeUploadParamsAddresses,PASSED,"4 days, 0 hours 8 minutes",0.677581637,0.912
+455,Decrease maker fee rebate to 05 bps,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.677903725,0.9998
+356,DegenFlips dApp  Upload Contract,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.678777547,0.837
+549,Modify Tickers for iAsset Perp Markets,MsgBatchExchangeModification,PASSED,"4 days, 0 hours 0 minutes",0.678805949,0.9999
+393,Upload Ninja Blaze Contract  Double,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.679371534,0.8498
+394,Upload Ninja Blaze Contract  Jackpot,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.679447872,0.8529
+414,Upload Exotic Vanilla Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.679738112,0.6644
+415,Upload Exotic Staking Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.679758057,0.6643
+416,Upload Exotic Escrow Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.679801382,0.6642
+477,Settle Specific PERP Markets on Injective DEXs,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.685485159,0.9999
+478,RWA Oracle Module Update,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.68551704,0.9401
+457,Settle 2024ELECTIONUSDT PERP and QUNTUSDT PERP markets,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.685573267,0.9997
+358,NFT Injstaking  Upload contract,MsgStoreCode,PASSED,"4 days, 0 hours 39 minutes",0.686934461,0.8247
+509,Revised Reactivate expired IBC client for Stargaze,MsgRecoverClient,PASSED,"4 days, 16 hours 53 minutes",0.687891994,0.9999
+464,Update minimum quantity for AGENTINJ market on Injective Exchange dApps,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.688150328,0.9999
+473,Disbursement of OLP rewards for epoch ended on 23 December 2024,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.688456507,0.9999
+301,Settle ETHUSDTkv perp market,MsgExecLegacyContent,PASSED,"4 days, 0 hours 1 minutes",0.688480265,0.9996
+300,Settle BTCUSDTkv perp market,MsgExecLegacyContent,PASSED,"4 days, 0 hours 3 minutes",0.68848613,0.9997
+456,Decrease default exchange maker fee rebate to 05 bps,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.688775934,0.9999
+302,Burn INJ Domain Name Revenue,MsgExecLegacyContent,PASSED,"4 days, 3 hours 31 minutes",0.688879436,0.9996
+472,INJ 30 Inflation Parameters Update 24Q4,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.68899462,0.9997
+426,Whitelist Gelotto Developer Wallet for Wasm Upload PampIT,MsgAddCodeUploadParamsAddresses,PASSED,"4 days, 0 hours 3 minutes",0.689417655,0.6664
+359,Upload Aeroscraper Lending  Borrowing Oracle Helper Contract  Wasm Code to Injective,MsgStoreCode,PASSED,"4 days, 0 hours 3 minutes",0.68945299,0.9998
+449,Reduce Peggy Slashing Percentage,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.689459637,0.9999
+482,Settle Specific PERP Markets on Injective DEXs,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.690379561,0.9999
+430,Upload Injex Finance Staking Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.69179094,0.8999
+357,Change maxderivativeordersidecount for exchange module,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.691915502,0.9998
+498,JNIHDRO Spot Market Launch,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.69373014,0.9998
+458,Remove relayers for Frontrunner provider oracle,MsgExecLegacyContent,PASSED,"4 days, 0 hours 8 minutes",0.695177235,0.9998
+452,Update Kira Liquidity Pool Locker,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.696753775,0.856
+423,Deployment of Volta Circuits Multisig Smart Contracts on Injective,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.697681651,0.7922
+490,Recover IBC client for Kopi chain,MsgRecoverClient,FAILED,"4 days, 0 hours 11 minutes",0.697788145,0.9998
+454,Disbursement of OLP rewards for epoch ended on 28 October 2024,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.698265873,0.9998
+466,Whitelist Talis deployer addresss,MsgAddCodeUploadParamsAddresses,PASSED,"4 days, 0 hours 0 minutes",0.699762401,0.9025
+474,Modify fee tier thresholds and discounts,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.700297466,0.9999
+476,Settle FTMUSDT PERP market,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.700412553,0.9999
+431,Whitelist Neptune Developer Address for Wasm Upload,MsgAddCodeUploadParamsAddresses,PASSED,"4 days, 0 hours 0 minutes",0.700684826,0.9999
+435,Disbursement of OLP rewards for epoch ended on 02 September 2024,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.70128909,0.974
+459,Adjust Binary Options Market Instant Listing Fee to 05 INJ,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.702385988,0.9997
+499,Disbursement of OLP rewards for epoch ended on 17 February 2025,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.703475063,0.9998
+484,B3XFundManagement,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.704348381,0.1053
+470,Whitelist Address for Wasm Upload Hydro Protocol,MsgAddCodeUploadParamsAddresses,PASSED,"4 days, 0 hours 0 minutes",0.705136999,0.9244
+491,Injective Gas Optimization,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.706306681,0.9999
+307,Update min price tick and min quantity tick for 4 markets on Injective Exchange dApps,MsgExecLegacyContent,PASSED,"4 days, 2 hours 41 minutes",0.706331174,0.9998
+306,Adjust funding rate limit for perpetual markets on Injective Exchange dApps,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.706492339,0.9909
+465,Disbursement of OLP rewards for epoch ended on 25 November 2024,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.706505158,0.9998
+422,Update minnotional for all spot and derivative markets with known quote assets,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.708155245,0.9999
+363,Upload Ninja Labs  Kira Lottery Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.709301095,0.5183
+418,Pause BTCwUSDM PERP market,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.711402715,0.9999
+489,Disbursement of OLP rewards for epoch ended on 20 January 2025,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.711607645,0.9998
+396,Gravedigger 12  feesplit,MsgStoreCode,PASSED,"4 days, 0 hours 5 minutes",0.711831782,0.9998
+451,Paradyze Mainnet Provider Oracle,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.713794159,0.8789
+377,Upload Ninja Labs  Pepe PvP Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.714741367,0.595
+485,B3XReferral,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.715383778,0.1533
+424,Injective Mainnet Upgrade v1132,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 0 minutes",0.716605209,0.9999
+397,Gravedigger 22  staking contract,MsgStoreCode,PASSED,"4 days, 0 hours 2 minutes",0.717230057,0.9998
+461,Settle CRVUSDT PERP market,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.717643991,0.9999
+460,Increase max trading leverage to 10x for XAUUSDT PERP and XAGUSDT PERP markets,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.717654926,0.9999
+308,Trade and Earn Epochs 112119 Rewards Pool Update for Injective Exchange dApps ,MsgExecLegacyContent,PASSED,"4 days, 2 hours 40 minutes",0.718103386,0.9995
+408,Upload ChainFactory Contract Wasm Code 12 Factory,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.718476038,0.5051
+364,Upload Ninja Labs  Ninja Coin Flip Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.720510466,0.6023
+425,Disbursement of OLP rewards for epoch ended on 05 August 2024,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.722582855,0.9999
+486,B3XStaking,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.723055988,0.2204
+487,B3XVault,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.723067485,0.2204
+447,Disbursement of OLP rewards for epoch ended on 30 September 2024,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.723239879,0.9999
+378,UPLOAD A5TOUND Playland Plaza Contract,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.724142593,0.3932
+502,B3XAI  AIIntegrated Vault Contract ,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.729079889,0.8242
+326,Trade  Earn Multiplier Updates on Injective Exchange dApps,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.729807318,0.9987
+432,Deploy injinterchainpersona Contract on Injective Mainnet,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.729832607,0.5294
+327,Upload Stax NFT and Splitter Contract Wasm Code,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.729923411,0.94
+443,INJ 30 Inflation Parameters Update 24Q3,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.730500888,0.9999
+512,Reduce Minimum Fees on Injective,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.730863027,0.9999
+391,Add wasm instantiate and execute ICA host allow messages,MsgExecLegacyContent,PASSED,"4 days, 0 hours 3 minutes",0.732418006,0.9998
+469,Store Auction DAO Smart Contract Code,MsgStoreCode,PASSED,"4 days, 0 hours 47 minutes",0.734303582,0.8697
+412,New Quant in Town,MsgExecLegacyContent,PASSED,"4 days, 0 hours 2 minutes",0.734322981,0.6092
+314,Injective Volan Mainnet Upgrade 1120,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 10 minutes",0.734338777,0.9997
+325,Disbursement of OLP rewards for epoch ended on 25 December 2023,MsgExecLegacyContent,PASSED,"4 days, 0 hours 1 minutes",0.736030747,0.9977
+417,Disbursement of OLP rewards for epoch ended on 8 July 2024,MsgExecLegacyContent,REJECTED,"4 days, 0 hours 0 minutes",0.737045961,0.8215
+516,DojoSwap Atomic Swap,MsgStoreCode,PASSED,"4 days, 0 hours 2 minutes",0.73711437,0.6745
+501,B3XAI  AIIntegrated Fund Management Contract,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.738311908,0.8241
+442,Increase max trading leverage to 20x for INJUSDT PERP BNBUSDT PERP and XRPUSDT PERP markets,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.740239392,0.9999
+441,Whitelist Ark Protocol Dev Wallet Address for Wasm Upload InterChain NFT Contracts,MsgAddCodeUploadParamsAddresses,PASSED,"4 days, 1 hours 55 minutes",0.740239625,0.9998
+511,Disbursement of OLP rewards for the epoch ended 17 March 2025,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.740675193,0.9999
+342,Adjust Trade and Earn Reward Points for Epoch Ended Jan 31 2024,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.742371271,0.9996
+427,Upload Injex Finance Staking Contract Wasm Code,MsgStoreCode,REJECTED,"4 days, 0 hours 0 minutes",0.743559394,0.338
+434,Disbursement of OLP rewards for epoch ended on 05 August 2024,MsgExecLegacyContent,REJECTED,"4 days, 0 hours 0 minutes",0.744154199,0.9682
+495,Recover IBC client for Kopi chain,MsgRecoverClient,PASSED,"4 days, 0 hours 30 minutes",0.747075021,0.8237
+496,Modify ticker for TRADFI PERP market,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.747087537,0.9999
+392,INJ 30 The Ultimate Injective Tokenomics Upgrade,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.747385954,0.9998
+346,Upload xNinjaTech Controller Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.751086406,0.9996
+343,xNinja  The first SocialFi 20 on Injective  Deployment Proposal to Deploy Contract,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.751867688,0.9997
+349,Adjust Trade and Earn Reward Points for Epoch Ended Feb 14 2024,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.75255001,0.9998
+493,Launch OnChain SP 500 Index,MsgExecLegacyContent,PASSED,"4 days, 0 hours 15 minutes",0.753671613,0.9999
+483,Injective Gas Optimization,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.754475704,0.9999
+494,Injective Nivara Mainnet Upgrade,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 0 minutes",0.754772041,0.9999
+336,Upload Exotic RFQ Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.758916263,0.673
+335,Upload Exotic Vanilla Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.75891929,0.6976
+444,FUNDING PROPOSAL Fund development of Apello,MsgCommunityPoolSpend,REJECTED,"4 days, 0 hours 0 minutes",0.759075503,0.9992
+445,Funding Proposal Support Development of Apello Corrected Proposal,MsgCommunityPoolSpend,REJECTED,"4 days, 0 hours 0 minutes",0.759086656,0.9989
+337,Upload Exotic Holding Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.759165442,0.6742
+350,Upload NFT Injstaking Contract,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.760074857,0.7916
+520,DojoSwap Upgraded CW404,MsgStoreCode,PASSED,"4 days, 0 hours 7 minutes",0.760861817,0.7259
+344,Moon App Staking  Upload staking contract,MsgStoreCode,PASSED,"4 days, 0 hours 2 minutes",0.764821968,0.9992
+439,Whitelist Black Panther Developer Address for Wasm Upload,MsgAddCodeUploadParamsAddresses,PASSED,"4 days, 0 hours 0 minutes",0.766254323,0.6321
+345,Pin Helix Grid Trading Strategy Code ID 462,MsgPinCodes,PASSED,"4 days, 0 hours 0 minutes",0.766835155,0.9995
+328,Disbursement of OLP rewards for epoch ended on 22 January 2024,MsgExecLegacyContent,PASSED,"4 days, 0 hours 17 minutes",0.768988803,0.998
+329,DOJOINJ Spot Market Launch,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.769310028,0.9998
+331,Parameter Updates for Markets on Injective Exchange dApps,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.769759062,0.9999
+332,Upload Stax Coinflip Contract Wasm Code,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.770507378,0.1747
+333,NinjaVault Deployment,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.770558109,0.2232
+339,Update JUPUSDT PERP Oracle on Injective Exchange dApps,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.770715859,0.9998
+347,iLend v13 smart contract upgrade for LST assets,MsgStoreCode,PASSED,"4 days, 0 hours 51 minutes",0.772997406,0.9996
+348,Trade  Earn Multiplier Updates on Injective Exchange dApps,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.773024344,0.9998
+407,Upload QTUM token contract,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.773324194,0.9996
+334,Launch OPUSDT PERP and ARBUSDT PERP Markets Relaunch OSMOUSDT PERP Market for Injective Exchange dApps,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.775317124,0.9998
+338,Upload Ninja Blaze NFT Contract,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.779971863,0.8374
+330,Upload Outapp Vouching System Contract Wasm Code,MsgStoreCode,PASSED,"4 days, 0 hours 0 minutes",0.783464747,0.9989
+429,INJ 30 Tokenomics Upgrade  August,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.788055801,0.9961
+440,Add ICONBalanced Network deployment wallet to Injective whitelist,MsgAddCodeUploadParamsAddresses,PASSED,"4 days, 0 hours 0 minutes",0.791139844,0.4663
+428,Enable instant derivative markets launch,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.792138095,0.9999
+406,Increase max trading leverage for GBPUSDT PERP and EURUSDT PERP Markets,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.797046921,0.9998
+437,Whitelist Ninja Blaze Developer Address for Wasm Upload,MsgAddCodeUploadParamsAddresses,PASSED,"4 days, 0 hours 0 minutes",0.806022255,0.8647
+438,Add MsgSubmitProposal to ICA host allow messages,MsgExecLegacyContent,PASSED,"4 days, 0 hours 2 minutes",0.806097785,0.9999
+420,Injective Altaris Mainnet Upgrade,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 0 minutes",0.869366038,0.9999

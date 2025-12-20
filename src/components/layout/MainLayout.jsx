@@ -1,45 +1,37 @@
 import React from 'react';
 
 const MainLayout = ({ leftSidebar, children }) => {
-  // 1920x1080 비율 유지 (16:9)
-  // 사이드바 너비: 고정 260px
-  // 오른쪽 콘텐츠: 나머지 영역 (1fr)
+  // 피그마 디자인처럼 전체 화면을 채우는 레이아웃으로 변경
   return (
-    <div className="w-screen h-screen bg-black flex items-center justify-center overflow-auto">
-      <div
-        className="grid bg-black overflow-hidden p-[60px]"
-        style={{
-          // ✨ 수정됨: 왼쪽 컬럼을 260px로 고정
-          gridTemplateColumns: '260px 1fr', 
-          width: '1920px',
-          height: '1080px',
-          maxWidth: '100vw',
-          maxHeight: '100vh',
-          aspectRatio: '16/9'
-        }}
+    <div className="flex w-full min-h-screen bg-black overflow-x-hidden">
+      
+      {/* 1. 왼쪽 사이드바 패널 */}
+      <aside
+        className="
+          w-[260px]        /* 너비 고정 */
+          h-screen         /* 높이 전체 */
+          sticky top-0     /* 스크롤 시 상단 고정 */
+          bg-[#111418]     /* 피그마 배경색 */
+          overflow-y-auto  /* 내용 많을 시 스크롤 */
+          flex-shrink-0    /* 너비 줄어들지 않음 */
+          z-50             /* 다른 요소 위에 표시 */
+        "
       >
+        {leftSidebar}
+      </aside>
 
-        {/* 1. 왼쪽 패널 (사이드바) */}
-        {/* ✨ 수정됨: 높이 제한(max-h-[900px]) 및 수직 중앙 정렬(self-center) 추가 */}
-        <aside 
-          className="
-            relative w-full h-full 
-            max-h-[900px] 
-            self-center 
-            border-r border-[#333] bg-[#0d0d0d] 
-            z-20 overflow-y-auto
-            rounded-2xl
-          "
-        >
-          {leftSidebar}
-        </aside>
+      {/* 2. 오른쪽 메인 콘텐츠 패널 */}
+      <main 
+        className="
+          flex-1           /* 남은 영역 모두 차지 */
+          min-w-0          /* flex 자식 요소 오버플로우 방지 */
+          bg-black         /* 배경색 */
 
-        {/* 2. 오른쪽 패널 */}
-        <main className="relative w-full h-full min-w-0 z-10 bg-black">
-          {children}
-        </main>
+        "
+      >
+        {children}
+      </main>
 
-      </div>
     </div>
   );
 };

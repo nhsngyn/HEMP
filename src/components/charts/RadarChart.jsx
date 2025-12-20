@@ -22,9 +22,9 @@ const CHART_CONFIG = {
 };
 
 const CHAIN_CONFIGS = [
-  { key: 'sub2', color: COLORS.SUB2, opacity: 0.1, strokeWidth: 1.5, strokeOpacity: 0.7 },
-  { key: 'sub1', color: COLORS.SUB1, opacity: 0.1, strokeWidth: 1.5, strokeOpacity: 0.7 },
-  { key: 'main', color: COLORS.MAIN, opacity: 0.1, strokeWidth: 2, strokeOpacity: 0.9 },
+  { key: 'sub2', color: COLORS.SUB2, opacity: 0.1, strokeWidth: 1.5, strokeOpacity: 0.6 },
+  { key: 'sub1', color: COLORS.SUB1, opacity: 0.1, strokeWidth: 1.5, strokeOpacity: 0.6 },
+  { key: 'main', color: COLORS.MAIN, opacity: 0.1, strokeWidth: 1.5, strokeOpacity: 0.6 },
 ];
 
 const RadarChart = () => {

@@ -1,0 +1,301 @@
+﻿id,title,type,status,ProcessingTime,Participation,Consensus
+17,Add ORDIUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.349417767,0.9984
+8,dYdX Foundation 30M Fundraising,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.351428262,0.9988
+51,Launch Incentives  Season 3 Distribution,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.352792045,0.9999
+184,Megavault Rebalance,MsgRetrieveFromVault,PASSED,"1 days, 0 hours 0 minutes",0.357627965,0.9999
+9,Launch Incentives  Season 1 Distribution,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.364783503,0.9997
+195,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.365313793,0.9946
+197,Wind down FTMUSD market,MsgUpdateClobPair,PASSED,"1 days, 0 hours 0 minutes",0.372855309,0.9999
+11,Add JUPUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.373115137,0.9999
+24,Add WOOUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.378453972,0.8461
+27,Add AGIXUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.38037699,0.9997
+29,Add STXUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.382145985,0.9998
+23,Add FETUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.387650328,0.9999
+16,Add JTOUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.388178754,0.9999
+220,Update default funding for isolated markets  Final Proposal,MsgUpdatePerpetualParams,PASSED,"4 days, 0 hours 0 minutes",0.389442804,0.9999
+22,Add STRKUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.390256879,0.9998
+32,Launch Incentives  Season 2 Distribution,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.391559054,0.9886
+45,Transition DOT to a Foundation,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.393001358,0.9998
+14,Addition of New Trustees to the DOT,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.393503292,0.9999
+55,Add WIFUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.3937849,0.9996
+18,Add EOSUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.396857362,0.9995
+25,Add PYTHUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.397752782,0.9998
+28,Add RNDRUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.398097921,0.9999
+34,Add ALGOUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.398257263,0.9999
+21,Add DYMUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.398305043,0.9999
+26,Add BONKUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.39874241,0.9997
+20,Add ICPUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.399560834,0.9998
+33,Add HBARUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.400812075,0.9999
+54,Launch Incentives Program Extension,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.408993189,0.9997
+49,dYdX Executable Community Staking Proposal,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 8 minutes",0.410883431,0.9816
+35,Add GRTUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.411589284,0.9881
+36,Add MANAUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.420995419,0.9998
+40,Add ASTRUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.422554037,0.9996
+315,Set defaultFundingRate1H to 0 for EIGENUSD ENAUSD HYPEUSD KAITOUSD MNTUSD MORPHOUSD MOVEUSD and ONDOUSD markets,MsgUpdatePerpetualParams,PASSED,"2 days, 0 hours 0 minutes",0.425449025,0.9999
+226,Upgrade below markets from ISOLATED to CROSS,MsgUpgradeIsolatedPerpetualToCross,PASSED,"4 days, 0 hours 0 minutes",0.426277074,0.9999
+48,dYdX ShortTerm Boost Program STBP,MsgSendFromModuleToAccount,REJECTED,"4 days, 0 hours 0 minutes",0.429227737,0.9681
+61,Wind Down FETUSD and AGIXUSD Markets,MsgUpdateClobPair,PASSED,"4 days, 0 hours 0 minutes",0.431469591,0.9999
+127,Add DMAILUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.43188019,0.9471
+235,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.432083924,0.9994
+227,Set nextblockdelay to 400ms,MsgUpdateSynchronyParams,PASSED,"4 days, 0 hours 0 minutes",0.43295369,0.9999
+77,Add NOTUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.4401815,0.83
+316,Set defaultFundingRate1H to 0 for PAXGUSD PENGUUSD POLUSD POPCATUSD PUMPUSD SPXUSD SUSD and SYRUPUSD markets,MsgUpdatePerpetualParams,PASSED,"2 days, 0 hours 0 minutes",0.44268023,0.9999
+305,Wind down AI16ZUSD and DODGERSWINUSD markets,MsgUpdateClobPair,PASSED,"1 days, 0 hours 0 minutes",0.442739183,1.0
+236,Chaos Labs Surge Incentives Proposal,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.444183627,0.9197
+218,Launch Incentives  Season 9 Distribution,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.444233146,0.9625
+72,Add ONDOUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.444552516,0.9999
+63,Decrease minpricechangeppm by 5x for longtail markets,MsgUpdateMarketParam,PASSED,"1 days, 0 hours 0 minutes",0.445181415,0.9997
+78,Add ENSUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.447714537,0.9999
+43,Update Equity Tier Limits,MsgUpdateEquityTierLimitConfiguration,PASSED,"4 days, 0 hours 0 minutes",0.448697542,0.9998
+44,dYdX Community Staking Proposal,MsgExecLegacyContent,PASSED,"4 days, 0 hours 2 minutes",0.45027838,0.9908
+82,Add SAFEUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.450335204,0.9999
+85,Add CAKEUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.45212593,0.9999
+86,Add BRETTUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.452128632,0.9359
+75,Add ARUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.454842321,0.9999
+87,Add SATSUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.454975966,0.9998
+47,dYdX Community Staking with pSTAKE Finance Proposal,Text,REJECTED,"4 days, 0 hours 0 minutes",0.457120135,0.293
+123,Add BICOUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.458782385,0.9982
+65,Add MOGUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.459029479,0.9076
+225,dYdX Treasury SubDAO DYDX Buyback Program Stage 1,MsgUpdateUnconditionalRevShareConfig,PASSED,"4 days, 0 hours 0 minutes",0.46061408,0.9999
+216,Update default funding for isolated markets  First Proposal,MsgUpdatePerpetualParams,PASSED,"4 days, 0 hours 0 minutes",0.461010969,0.9999
+121,Add TRBUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.461287002,0.7983
+71,Add TLOSUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.461400819,0.9505
+76,Add KASUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.462222954,0.9999
+74,Add IOUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.462223318,0.9999
+73,Add ENAUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.462231126,0.9999
+83,Add TAIKOUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.462362767,0.9999
+84,Add AKTUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.462363684,0.9999
+80,Add TAOUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.462364875,0.9999
+79,Add FLOKIUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.462366506,0.9994
+81,Add FTMUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.462374004,0.9999
+232,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.463625599,0.9999
+126,Update RNDR exchanges to only coinbase pro with RNDRUSD ticker and set min exchanges to 1,MsgUpdateMarketParam,PASSED,"1 days, 0 hours 0 minutes",0.464845408,0.9999
+228,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.465377281,0.9999
+204,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.466162666,0.9999
+111,Add AXSUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.466668103,0.9998
+113,Add MEWUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.467143529,0.8119
+168,Set Vault Quoting Params,MsgSetVaultQuotingParams,PASSED,"1 days, 0 hours 0 minutes",0.469606761,0.9999
+294,Surge Season 6 Incentive Distribution Proposal,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.469798843,0.9999
+224,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.471647073,0.9998
+138,Add FOXYUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.471908742,0.3986
+219,Update Liquidations Configuration,MsgUpdateLiquidationsConfig,PASSED,"4 days, 0 hours 0 minutes",0.472757582,0.9999
+109,Add PRIMEUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.472993895,0.9498
+110,Add GALAUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.472994103,0.9999
+108,Add POPCATUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.472997306,0.7859
+112,Add XAIUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.473468889,0.9999
+115,Add NEOUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.473471276,0.9996
+120,Add BOMEUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.473471503,0.8295
+117,Add ALTUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.47347161,0.9998
+116,Add EGLDUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.473472499,0.9999
+119,Add TURBOUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.473472581,0.8119
+114,Add BEAMUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.473475271,0.9999
+118,Add PIXELUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.473475736,0.9999
+105,Add COREUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.474381747,0.8857
+106,Add PEOPLEUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.474388761,0.9517
+319,Set liquiditytier to 2 for FARTCOINRAYDIUM9BB6NFECJBCTNNLFKO2FQVQBQ8HHM13KCYYCDQBGPUMPUSD,MsgUpdatePerpetualParams,PASSED,"2 days, 0 hours 0 minutes",0.474487879,1.0
+102,Add MNTUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.47667786,0.9999
+41,Add SNXUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.47701165,0.9999
+107,Add GMXUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.479479946,0.9999
+64,Add MOTHERUSD perpetual market,MsgCreateOracleMarket,PASSED,"1 days, 0 hours 0 minutes",0.481113893,0.9628
+122,Add ZENUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.485565667,0.9999
+234,Launch Incentives  Season 10 Distribution,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.485991104,0.9999
+223,Remove Skip signer as market authority to market map,MsgParams,PASSED,"4 days, 0 hours 0 minutes",0.486919733,0.9999
+153,Add TRYUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.488776148,0.9478
+136,Add MICHIUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.490577453,0.8223
+46,dYdX Chain Software Upgrade v400,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 4 minutes",0.493302987,0.9999
+62,Update Vault Spread to 30bps,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.494217149,0.9999
+104,Add JASMYUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.495893453,0.9605
+135,Add VRTXUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.499946221,0.9016
+295,CoinRoutes Order Router Rev Share Proposal,MsgSetOrderRouterRevShare,PASSED,"4 days, 0 hours 0 minutes",0.501371161,0.9998
+213,Delist FOXYUSD MAVIAUSD VRTXUSD SCRTUSD PAINUSD and disable them in the marketmap,MsgUpdateClobPair,PASSED,"4 days, 0 hours 0 minutes",0.502165974,0.999
+100,Add DEGENUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.50322021,0.9035
+98,Add ZRXUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.503354018,0.9506
+222,1st Tranche of Funding for 3rd Mandate of dYdX Ops subDAO,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.504206775,0.9999
+56,Add ETHFIUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.504425649,0.9725
+233,Add New IML Liquidity Tier,MsgSetLiquidityTier,PASSED,"4 days, 0 hours 0 minutes",0.505530747,1.0
+89,Add XMRUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.508430232,0.9999
+97,Add SUSHIUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.508433174,0.9516
+94,Add XTZUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.50955941,0.9542
+215,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.509642349,0.9999
+170,dYdX VIP Affiliate Tier Proposal to be managed by Kuyen Labs,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.510856568,0.9998
+91,Add ENJUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.511274944,0.9999
+137,Add AURORAUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.511622426,0.9999
+133,Add ZEROUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.512575442,0.9081
+142,ReLaunch Incentives after dYdX Unlimited upgrade with 20M over 6 Months administered by Chaos Labs,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.513473085,0.8831
+125,dYdX Chain Software Upgrade v510,MsgSoftwareUpgrade,PASSED,"4 days, 11 hours 55 minutes",0.514571998,0.9999
+92,Add 1INCHUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.515130174,0.9551
+96,Add CVXUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.515403985,0.9999
+95,Add UMAUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.515405943,0.9151
+103,Add MANTAUSD perpetual market,MsgCreateOracleMarket,FAILED,"4 days, 0 hours 0 minutes",0.515406863,0.9999
+101,Add AEROUSD perpetual market,MsgCreateOracleMarket,FAILED,"4 days, 0 hours 0 minutes",0.515417227,0.9496
+57,Add TONUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.516655625,0.9998
+191,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.518089348,0.9999
+196,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.518862926,0.9999
+317,Set defaultFundingRate1H to 0 for TAOUSD TRUMPUSD USUALUSD WLFIUSD XMRUSD XPLUSD ZECUSD and ZENUSD markets,MsgUpdatePerpetualParams,PASSED,"2 days, 0 hours 0 minutes",0.519231323,1.0
+217,Recall Stride Liquid Staking Program,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.519628293,0.9999
+90,Add THETAUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.520476754,0.9796
+88,Add BLASTUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.520478329,0.9999
+93,Add ZECUSD perpetual market,MsgCreateOracleMarket,FAILED,"4 days, 0 hours 0 minutes",0.520486396,0.9999
+99,Add PENDLEUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.520496681,0.9999
+230,dYdX Treasury SubDAO DYDX Buyback Program Stage 1,MsgUpdateUnconditionalRevShareConfig,REJECTED,"4 days, 0 hours 0 minutes",0.521691868,0.9993
+214,Delist DMAILUSD and disable them in the marketmap,MsgUpdateClobPair,PASSED,"4 days, 0 hours 0 minutes",0.524151335,0.9999
+70,Add ZKUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.524315954,0.9999
+249,Wind down DINNERUSD market,MsgUpdateClobPair,PASSED,"1 days, 0 hours 0 minutes",0.524597419,0.9999
+141,Add DRIFTUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.525417351,0.9996
+154,Add SUNDOGUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.525494907,0.7904
+263,Wind down TIBBIRUSD and DAKUUSD markets,MsgUpdateClobPair,PASSED,"1 days, 0 hours 0 minutes",0.527930485,0.9995
+130,dYdX Chain Software Upgrade v520,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 0 minutes",0.528749971,0.9999
+124,Add OMUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.529328684,0.9999
+231,dYdX Treasury SubDAO DYDX Buyback Program Stage 2,MsgUpdateUnconditionalRevShareConfig,PASSED,"4 days, 0 hours 0 minutes",0.530425672,0.9999
+206,Launch Incentives  Season 8 Distribution,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.530574083,0.9999
+67,Add TREMPUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.530656256,0.9233
+68,Add BODENUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.530656451,0.9235
+171,Disable AGIXUSD FETUSD and MATICUSD in market map,MsgUpdateMarkets,PASSED,"1 days, 0 hours 0 minutes",0.530800754,0.9996
+150,Add NEIROUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.533433437,0.9014
+69,Add ZROUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.534542105,0.9999
+318,Set defaultFundingRate1H to 0 for FARTCOINRAYDIUM9BB6NFECJBCTNNLFKO2FQVQBQ8HHM13KCYYCDQBGPUMPUSD and ZORAUSD markets,MsgUpdatePerpetualParams,PASSED,"2 days, 0 hours 0 minutes",0.536463111,0.9999
+252,Surge Season 2 Incentive Distribution Proposal,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.539773295,1.0
+247,Delist EOS BTRUMP and SKITTEN markets,MsgUpdateClobPair,PASSED,"1 days, 0 hours 0 minutes",0.54223564,0.9999
+151,Add HNTUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.545137025,0.9999
+166,Add CETUSUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.546496442,0.9998
+208,Add dYdX Operations subDAO signer as market authority to market map and remove revenue share,MsgParams,PASSED,"4 days, 0 hours 0 minutes",0.547599632,0.9998
+185,Megavault Rebalance 20,MsgRetrieveFromVault,PASSED,"1 days, 0 hours 0 minutes",0.547891446,0.9999
+205,Wind down OCEANUSD EURCUSD WBTCUSD and AMPLUSD and disable them in the marketmap and disable already delisted markets in the marketmap,MsgUpdateClobPair,PASSED,"4 days, 0 hours 0 minutes",0.548134531,0.9997
+203,Update impact notional amount on dYdX,MsgSetLiquidityTier,PASSED,"4 days, 0 hours 0 minutes",0.548290244,0.9999
+207,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.548476783,0.9996
+293,Upgrade 2ZUSD and ZECUSD markets from ISOLATED to CROSS andor change liquidity tiers,MsgUpgradeIsolatedPerpetualToCross,PASSED,"4 days, 0 hours 0 minutes",0.548706251,0.9999
+149,Add OSMOUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.548804967,0.9999
+212,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.550168918,0.9999
+181,Add PERPUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.552544625,0.8448
+198,Wind down low activity markets on dYdX,MsgUpdateClobPair,PASSED,"4 days, 0 hours 0 minutes",0.553164552,0.9995
+140,Add GMEUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.553672468,0.8965
+201,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.553716941,0.9999
+163,Add Skips signer as a market authority and sets 10 revenue share on new markets,MsgParams,PASSED,"1 days, 0 hours 0 minutes",0.554071976,0.9999
+131,Add MAVIAUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.554748991,0.958
+139,Add PAXGUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.555419329,0.9999
+179,Add ONTUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.555780003,0.9998
+202,Winddown CIGUSD market and disable it in the market map,MsgUpdateClobPair,PASSED,"4 days, 0 hours 0 minutes",0.556101247,0.9999
+209,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.556660341,0.9995
+250,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.56009087,0.9999
+176,Incentives Relaunch Revised Proposal,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.561456421,0.8923
+177,Wind Down the TRUMPWINUSD Market,MsgUpdateClobPair,PASSED,"4 days, 0 hours 0 minutes",0.562004083,0.9996
+210,Revive Dydx to Sifchain IBC Client,MsgRecoverClient,REJECTED,"4 days, 0 hours 0 minutes",0.562770553,0.9411
+194,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.563020786,0.9999
+178,Add QTUMUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.564011365,0.9999
+180,Add RENUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.564059349,0.9999
+145,Add DAIUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.567395557,0.9999
+167,Add ZBCNUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.570800909,0.9583
+148,Add new liquidity tiers update liquidity tiers for SOL and for isolated markets,MsgSetLiquidityTier,PASSED,"4 days, 0 hours 0 minutes",0.571027887,0.9999
+251,Reduce the active validator set to 50,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.572749056,0.9429
+200,dYdX Chain Software Upgrade v80,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 0 minutes",0.572836839,0.9998
+146,Update EURC exchanges to add Coinbase Pro as a source,MsgUpdateMarketParam,PASSED,"4 days, 0 hours 0 minutes",0.573742307,0.9999
+190,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.575957681,0.9997
+188,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.5772595,0.9999
+162,Update largecap liquidity tier parameter,MsgSetLiquidityTier,PASSED,"4 days, 0 hours 0 minutes",0.578855539,0.9999
+152,Launch Incentives  Season 6 Distribution,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.579223268,0.9901
+241,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.580604364,0.9977
+273,Surge Season 5 Incentive Distribution Proposal,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.581933476,0.9999
+253,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.582729039,0.9999
+199,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.585592265,0.9999
+147,Wind down MATICUSD market,MsgUpdateClobPair,PASSED,"4 days, 0 hours 0 minutes",0.58723636,0.9999
+186,Set Megavault Operator Params,MsgUpdateOperatorParams,PASSED,"1 days, 0 hours 0 minutes",0.587835214,0.9999
+237,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.58832929,0.9999
+211,Recall Stride Liquid Staking Program,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.589182061,0.9996
+66,Add TRUMPUSD perpetual market,MsgCreateOracleMarket,REJECTED,"4 days, 0 hours 0 minutes",0.589302877,0.97
+193,Launch Incentives  Season 7 Distribution,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.589369658,0.9999
+189,Cease Support for the wethDYDX Smart Contract the Bridge by June 2025,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.589982015,0.9999
+52,Add CHZUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.591234402,0.9998
+285,Reappoint Designated Proposer Set after v91 Upgrade,MsgSetProposers,PASSED,"4 days, 0 hours 0 minutes",0.592804634,0.9999
+308,Surge Season 7 Incentive Distribution Proposal,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.593859214,0.9999
+309,Reduce regular voting period to 48 hours and expedited to 18 hours,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.593889626,0.9039
+303,dYdX Chain Software Upgrade v94,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 0 minutes",0.594515124,1.0
+58,Add WUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.594730771,0.9999
+192,dYdX Ecosystem Development Program  Funding Allocation Proposal,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.598485725,0.9969
+254,Cease Support for the wethDYDX Smart Contract the Bridge,MsgUpdateSafetyParams,PASSED,"4 days, 0 hours 0 minutes",0.598667371,0.9999
+292,Set NextBlockDelay to 02 seconds,MsgUpdateSynchronyParams,PASSED,"4 days, 0 hours 0 minutes",0.603214359,0.9999
+143,Add EURCUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.60389379,0.9999
+187,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"5 days, 2 hours 56 minutes",0.604601942,0.9999
+244,Increase equity tier ratelimit on dYdX,MsgUpdateEquityTierLimitConfiguration,PASSED,"4 days, 0 hours 0 minutes",0.60553047,0.9999
+320,Fee Holiday for BTC  SOL markets  December 2025,MsgSetMarketFeeDiscountParams,PASSED,"2 days, 0 hours 0 minutes",0.607365503,0.9999
+144,Add RETARDIOUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.607951765,0.8261
+165,Add TRUMPWINUSD perpetual market,MsgCreateOracleMarket,PASSED,"4 days, 0 hours 0 minutes",0.609656096,0.8233
+242,IBC light client update for Injective,MsgRecoverClient,PASSED,"4 days, 0 hours 0 minutes",0.614292569,0.9999
+297,Reduce the active validator set to 42,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.616532729,0.9998
+245,Increase equity tier ratelimit on dYdX for shortterm orders,MsgUpdateEquityTierLimitConfiguration,PASSED,"4 days, 0 hours 0 minutes",0.616684545,0.9999
+53,dYdX Chain Software Upgrade v410,MsgSoftwareUpgrade,PASSED,"4 days, 3 hours 5 minutes",0.61913647,0.9999
+275,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.622537356,0.9999
+276,Appoint Designated Proposer Set,MsgSetProposers,PASSED,"4 days, 0 hours 0 minutes",0.622814762,0.9999
+288,Wind down OMNIUSD markets,MsgUpdateClobPair,PASSED,"1 days, 2 hours 52 minutes",0.624409289,0.9999
+314,Set defaultFundingRate1H to 0 for 2ZUSD ASTERUSD ATHUSD AVNTUSD BEAMUSD BERAUSD CROUSD and DRIFTUSD markets,MsgUpdatePerpetualParams,PASSED,"2 days, 0 hours 0 minutes",0.624748628,0.9912
+240,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.625144542,0.9998
+312,Upgrade FARTCOINUSD market from ISOLATED to CROSS andor change liquidity tier,MsgUpgradeIsolatedPerpetualToCross,PASSED,"2 days, 0 hours 0 minutes",0.626627614,0.6186
+238,dYdX Treasury SubDAO AdHoc Update  Proposal 1,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.62713124,0.9999
+296,dYdX Chain Software Upgrade v93,MsgSoftwareUpgrade,PASSED,"1 days, 0 hours 0 minutes",0.627170145,1.0
+310,Set staking tiers,MsgSetStakingTiers,PASSED,"4 days, 0 hours 0 minutes",0.629131663,0.9999
+311,Add order router rev share for CCXT,MsgSetOrderRouterRevShare,PASSED,"4 days, 0 hours 0 minutes",0.629131986,1.0
+256,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.630958398,0.9999
+248,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.633787298,0.9999
+286,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.634102147,0.9999
+289,Upgrade ASTERUSD market from ISOLATED to CROSS andor change liquiditytiers,MsgUpgradeIsolatedPerpetualToCross,PASSED,"4 days, 0 hours 0 minutes",0.635052254,0.9999
+246,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.635746036,0.9999
+239,dYdX Treasury SubDAO AdHoc Update  Proposal 2,MsgExecLegacyContent,PASSED,"4 days, 0 hours 0 minutes",0.637218323,0.9999
+243,Surge Season 1 Incentive Distribution Proposal,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.638648403,0.9999
+270,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.639618037,0.9995
+221,Set unbonding period to 21 days,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.642409002,0.9999
+321,Liquidation Rebate Pilot Program,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.643620497,0.9361
+128,Launch Incentives  Season 5 Distribution,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.644170704,0.9976
+183,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.648123468,0.9998
+313,Adjust Protocol Revenue Sharing,MsgUpdateUnconditionalRevShareConfig,PASSED,"2 days, 0 hours 0 minutes",0.649781454,0.6106
+282,Adjust Fee Tiers on dYdX,MsgUpdatePerpetualFeeParams,PASSED,"4 days, 0 hours 0 minutes",0.650670263,0.9997
+60,Launch Incentives  Season 4 Distribution,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.651233303,0.9998
+257,dYdX Chain Software Upgrade v810,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 0 minutes",0.655586945,0.9999
+298,Update Affiliate Whitelist,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.65648264,0.9999
+281,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.660843985,0.9997
+280,Set NextBlockDelay to 03 seconds,MsgUpdateSynchronyParams,PASSED,"4 days, 0 hours 0 minutes",0.66229859,0.9998
+290,Reduce Voting Period on dYdX Chain,MsgUpdateParams,FAILED,"4 days, 0 hours 0 minutes",0.665487011,0.9998
+255,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.665578952,0.9997
+291,Wind down GOONERUSD market,MsgUpdateClobPair,PASSED,"4 days, 0 hours 0 minutes",0.665605693,0.9999
+264,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.666109887,0.9993
+299,Seed DODGERSWINUSD Market Insurance Fund,MsgSendFromModuleToAccount,PASSED,"1 days, 0 hours 0 minutes",0.674629754,0.9996
+274,Wind down MKRUSD markets,MsgUpdateClobPair,PASSED,"4 days, 0 hours 0 minutes",0.679405289,0.9999
+265,Surge Season 4 Incentive Distribution Proposal,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.681308473,0.9996
+278,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.68305399,0.9999
+272,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.68511691,0.9999
+284,Set Rewards C Constant to 0,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.685407047,0.9997
+266,Upgrade ZORAUSD and BONKUSD markets from ISOLATED to CROSS andor change liquiditytiers,MsgUpgradeIsolatedPerpetualToCross,PASSED,"4 days, 0 hours 0 minutes",0.686197541,0.9998
+301,Compensate impacted Oct 10 incident users from Insurance Fund,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.68719927,0.9994
+302,Reenable Support for the wethDYDX Smart Contract the Bridge on the dYdX Chain side for 12 months,Text,REJECTED,"4 days, 0 hours 13 minutes",0.689407397,0.6267
+307,Fee Holiday for BTC  SOL Markets  November 2025,MsgSetMarketFeeDiscountParams,PASSED,"1 days, 0 hours 0 minutes",0.69008156,1.0
+268,dYdX Foundation Grants Proposal,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.694273574,0.9996
+269,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.695763849,0.9995
+267,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.702809953,0.9995
+279,Upgrade TAOUSD MNTUSD POPCATUSD PAXGUSD TRUMPUSD SPXUSD BERAUSD KAITOUSD HYPEUSD and SYRUPUSD markets from ISOLATED to CROSS andor change liquiditytiers,MsgUpgradeIsolatedPerpetualToCross,PASSED,"4 days, 0 hours 0 minutes",0.703591591,1.0
+306,Surge Season 7 Incentive Distribution Proposal,MsgSendFromModuleToAccount,REJECTED,"4 days, 0 hours 0 minutes",0.707135048,0.6819
+59,dYdX Chain Software Upgrade v500,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 0 minutes",0.712705649,0.9999
+304,3 months of trial to allocate 80 of fees to buybacks,Text,PASSED,"4 days, 0 hours 0 minutes",0.72598488,0.8877
+271,dYdX Chain Software Upgrade v90,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 0 minutes",0.726044124,0.9999
+300,dYdX Trading Leagues Pilot Program,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.738293676,0.9362
+182,50 revenue sharing to MegaVault and 10 to Treasury SubDAO,MsgUpdateUnconditionalRevShareConfig,PASSED,"1 days, 0 hours 0 minutes",0.753701419,0.9332
+132,Update min price change ppm double rate limit,MsgUpdateMarketParam,PASSED,"4 days, 0 hours 0 minutes",0.766008496,0.9999
+134,Update RNDR ticker to RENDER add Bybit and Okx and increase minexchanges to 3,MsgUpdateMarketParam,PASSED,"4 days, 0 hours 0 minutes",0.766257075,0.9999
+129,Update RNDR exchanges to add Binance and Gate with ticker RENDER rename Coinbase ticker to RENDER and increase minexchanges to 2,MsgUpdateMarketParam,PASSED,"4 days, 0 hours 0 minutes",0.780599769,0.9999
+283,dYdX Chain Software Upgrade v91,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 0 minutes",0.789923089,1.0
+175,Reduce Trading Rewards by 44 Decrease Trading Rewards Constant from 09 to 05,MsgUpdateParams,PASSED,"4 days, 0 hours 0 minutes",0.791445846,0.9421
+174,dYdX Treasury SubDAO Ratification  Funding,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.79348144,0.9996
+229,Update slashing params Reduce SignedBlocksWindow from 8192 to 4096,MsgUpdateParams,REJECTED,"4 days, 0 hours 0 minutes",0.794275767,0.285
+277,Expedited Proposal Designate all validators as block proposers,MsgSetProposers,PASSED,"1 days, 0 hours 0 minutes",0.796389842,0.9999
+160,dYdX Chain Software Upgrade v604,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 10 minutes",0.79712259,0.9999
+169,Add SPXUSD perpetual market,MsgCreateOracleMarket,REJECTED,"4 days, 0 hours 0 minutes",0.800532146,0.9464
+173,dYdX Chain Software Upgrade v700,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 0 minutes",0.801198226,0.9999
+258,Surge Season 3 Incentive Distribution Proposal,MsgSendFromModuleToAccount,PASSED,"4 days, 0 hours 0 minutes",0.834545059,0.9996
+159,dYdX Chain Software Upgrade v604,MsgSoftwareUpgrade,REJECTED,"4 days, 0 hours 27 minutes",0.834840536,0.9959
+172,dYdX Chain Software Upgrade v700,MsgSoftwareUpgrade,REJECTED,"4 days, 0 hours 0 minutes",0.838943887,0.9621
+156,dYdX Treasury Subdao Proposal  Steakhouse,Text,PASSED,"4 days, 0 hours 0 minutes",0.845560179,0.2962
+261,dYdX Chain Software Upgrade v82,MsgSoftwareUpgrade,PASSED,"4 days, 0 hours 0 minutes",0.846079893,1.0
+262,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.846080303,0.9999
+155,dYdX Chain Software Upgrade v603,MsgSoftwareUpgrade,REJECTED,"4 days, 0 hours 0 minutes",0.864829559,0.9368
+157,dYdX Treasury Subdao Proposal  Karpatkey,Text,PASSED,"4 days, 0 hours 0 minutes",0.868337727,0.6042
+260,Kuyen Labs  VIP Affiliate Whitelist Proposal,MsgUpdateAffiliateWhitelist,PASSED,"4 days, 0 hours 0 minutes",0.869843084,0.9999
+259,Final Cessation of Support for the wethDYDX Smart Contract the Bridge,MsgUpdateSafetyParams,PASSED,"4 days, 0 hours 0 minutes",0.869866972,0.9999
+161,dYdX Ops subDAO 30,Text,PASSED,"4 days, 0 hours 0 minutes",0.880208196,0.965
+164,Add CETUSUSD perpetual market,MsgCreateOracleMarket,REJECTED,"4 days, 0 hours 0 minutes",0.89358429,0.8505

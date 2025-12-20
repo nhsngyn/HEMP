@@ -59,10 +59,10 @@ const MainLayout = ({ leftSidebar, children }) => {
   }, []);
 
   return (
-    <div className="w-screen h-screen bg-black flex overflow-hidden" ref={wrapperRef}>
+    <div className="w-screen h-screen bg-#101217 flex overflow-hidden" ref={wrapperRef}>
       {/* 좌측 사이드바 - sticky */}
       <aside
-        className="sticky top-0 border-[#29303A] bg-[#111418] z-20 overflow-y-auto"
+        className="sticky top-0 border-[#29303A] bg-[#ffffff05] z-20 overflow-y-auto"
         style={{
           width: `${sidebarWidth}px`,
           height: '100vh',
@@ -75,7 +75,7 @@ const MainLayout = ({ leftSidebar, children }) => {
       {/* 우측 메인 콘텐츠 영역 - 16:10 캔버스 */}
       <div
         id="main-scroll-container"
-        className="overflow-y-auto overflow-x-hidden bg-black"
+        className="overflow-y-auto overflow-x-hidden bg-#101217"
         style={{
           width: `${contentWidth}px`,
           height: '100vh',

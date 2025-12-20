@@ -360,6 +360,7 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
           .attr('fill', '#ef4444')
           .attr('font-size', '20px')
           .attr('font-weight', 'bold')
+          .attr('font-family', 'SUIT')
           .attr('y', -20)
           .text(title);
 
@@ -367,6 +368,7 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
           .attr('text-anchor', 'middle')
           .attr('fill', '#fca5a5')
           .attr('font-size', '14px')
+          .attr('font-family', 'SUIT')
           .attr('y', 10)
           .text(`Reason: ${reason}`);
 
@@ -375,6 +377,7 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
             .attr('text-anchor', 'middle')
             .attr('fill', '#9ca3af')
             .attr('font-size', '12px')
+            .attr('font-family', 'SUIT')
             .attr('y', 30)
             .text(detail);
         }
@@ -387,6 +390,7 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
           .attr('text-anchor', 'middle')
           .attr('fill', '#9ca3af')
           .attr('font-size', '18px')
+          .attr('font-family', 'SUIT')
           .text('Select a MAIN CHAIN to view Sankey diagram');
         return;
       }
@@ -790,8 +794,8 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
         .attr('dy', '0.35em')
         .attr('text-anchor', (d) => d.column === maxColumn ? 'end' : 'start')
         .attr('font-size', '12px')
-        .attr('font-weight', (d) => isNodeSelected(d) ? '700' : '400')
-        .attr('fill', '#FFFFFF')
+        .attr('font-weight', (d) => isNodeSelected(d) ? '800' : '600')
+        .attr('fill', (d) => isNodeSelected(d) ? '#FFFFFF' : '#9CA3AE')
         .attr('pointer-events', 'none')
         .attr('font-family', 'SUIT')
         .text((d) => d.name);
@@ -822,6 +826,7 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
             .attr('fill', '#6D7380')
             .attr('font-size', '13px')
             .attr('font-weight', '600')
+            .attr('font-family', 'SUIT')
             .attr('pointer-events', 'none');
 
           textGroup.append('tspan')
@@ -841,6 +846,7 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
             .attr('fill', '#6D7380')
             .attr('font-size', '13px')
             .attr('font-weight', '600')
+            .attr('font-family', 'SUIT')
             .attr('pointer-events', 'none')
             .text(labelText);
         }

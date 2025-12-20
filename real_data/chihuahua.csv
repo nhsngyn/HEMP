@@ -1,0 +1,82 @@
+﻿id,title,type,status,ProcessingTime,Participation,Consensus
+78,Revamping Chihuahua Communications,MsgCommunityPoolSpend,REJECTED,"5 days, 0 hours 0 minutes",0.958228952,0.608
+61,ValueAccrual Projects for HUAHUA within the Alliance Module,Text,REJECTED,"5 days, 0 hours 0 minutes",0.91992571,0.3418
+88,Upgrade v902,MsgSoftwareUpgrade,REJECTED,"5 days, 0 hours 0 minutes",0.810595313,0.9329
+63,CORRECTED ValueAccrual Projects for HUAHUA within the Alliance Module,Text,REJECTED,"5 days, 0 hours 0 minutes",0.752650632,0.8674
+91,ATOM Airdrop   New Airdrop ,Text,REJECTED,"5 days, 0 hours 0 minutes",0.599602508,0.9997
+21,Lower Unbonding Time to 21 days,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.434475101,0.7382
+12,CommunityPool Spend Proposal,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.421436421,0.4259
+17,Delegation grant to Another Software,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.415794757,0.8972
+16,Signaling proposal  Incentivize third party devs,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.385857629,0.7662
+54,Upgrade v503,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",1.0,0.9998
+46,Q2 2023 Inflation Update Proposal,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",1.0,0.9951
+51,Upgrade v500,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",1.0,1.0
+45,Upgrade v421,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",1.0,0.9999
+52,Upgrade v501,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",1.0,0.9909
+50,Sail with the Whale,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",1.0,0.9736
+40,Upgrade v400  burn mech,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",1.0,0.9992
+77,Upgrade v701,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",1.0,0.9794
+39,Upgrade v310  revert tombstone,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",1.0,0.9319
+80,Upgrade v800,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",1.0,0.9997
+44,Upgrade v420,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.996787812,0.9999
+53,Upgrade v502,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.993622112,0.9999
+48,Signaling Proposal Increase Fees to 100 HUAHUA,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.991303676,0.8118
+41,Upgrade v410  burn parameter,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.985060001,0.9999
+75,Upgrade v7,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.976551172,0.9999
+43,Community Spend Proposal Chihuahua NFT Marketplace,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.970752261,0.9354
+49,Q3 2023 Inflation Update Proposal,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.968259061,0.9996
+76,Create Alliance ampGash,MsgExecLegacyContent,PASSED,"5 days, 1 hours 1 minutes",0.962542066,0.9833
+42,EOY 2022 Inflation Update Proposal,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.935272905,0.9531
+62,CORRECTED ValueAccrual Projects for HUAHUA within the Alliance Module,Text,PASSED,"5 days, 0 hours 0 minutes",0.934101712,0.994
+64,Integration of Kado Direct Fiat OnOffRamp Services into Chihuahua Chain Ecosystem,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",0.915379443,0.8659
+35,Upgrade v210  authz,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.910512104,0.9565
+79,CORRECTED  Revamping Chihuahua Communications,MsgCommunityPoolSpend,PASSED,"5 days, 9 hours 58 minutes",0.90870698,0.745
+74,Reduce min inflation to 0 and max inflation to 420,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",0.904413769,0.9645
+55,Q4 2023 Inflation Update Proposal,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",0.892843316,0.9995
+47,Chihuahua CommunityDAO Extension Usage of Excess Funds Introduction,MsgExecLegacyContent,PASSED,"5 days, 0 hours 7 minutes",0.888956325,0.9842
+85,Upgrade v901,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.881593041,1.0
+57,The Meme Hub  Memecoins support within Alliance Module,Text,PASSED,"5 days, 1 hours 5 minutes",0.868008365,0.9996
+81,Upgrade v802,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.861464087,0.9999
+69,Paws and Prosper Enhancing the Chihuahua Chain Community Pool for Meme Mastery,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 4 minutes",0.856161323,0.9391
+36,Q4 2022 Inflation Update Proposal,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.852218953,0.9533
+84,Upgrade v900,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.845194836,0.9999
+92,Upgrade v904,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.843510128,0.9994
+66,Upgrade v6,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.839660135,0.9703
+65,Revive ChihuahuaComdex IBC client,MsgExecLegacyContent,PASSED,"5 days, 13 hours 39 minutes",0.838885294,0.9978
+71,Community Spend for Coinhall Integration,MsgCommunityPoolSpend,PASSED,"6 days, 15 hours 21 minutes",0.835426538,0.9141
+72,Integrate HUAHUA into Cosmos Pay,MsgCommunityPoolSpend,PASSED,"5 days, 1 hours 29 minutes",0.832276725,0.9999
+86,Decrease Validators Set from 125 to 93,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",0.828256346,0.9765
+38,Upgrade v221  burnmech,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.825159117,0.9484
+87,Set Expedite Proposal Deposit to 10M HUAHUA and Fix Denomination,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",0.822465329,0.9999
+68,Revive SecretChihuahua IBC client II,MsgExecLegacyContent,PASSED,"6 days, 0 hours 9 minutes",0.814383611,0.9999
+83,Revive Expired Axelar IBC Channel,MsgRecoverClient,PASSED,"5 days, 0 hours 0 minutes",0.813818566,1.0
+93,Upgrade v905,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.813637711,1.0
+96,Upgrade v906,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",0.795038158,1.0
+89,EXPEDITED Upgrade v902,MsgSoftwareUpgrade,PASSED,"1 days, 0 hours 2 minutes",0.786212584,0.9974
+34,Phase 2  Airdrop Fund Burning,MsgExecLegacyContent,PASSED,"5 days, 0 hours 30 minutes",0.775027994,0.9919
+95,Updating TokenFactory Params,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",0.765460456,0.9999
+94,Updating Liquidity Pools Params,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",0.765436871,0.9999
+33,Increase Minimum Gas Price,MsgExecLegacyContent,PASSED,"5 days, 0 hours 30 minutes",0.762372687,0.9772
+37,Chihuahua Community DAO Extension,MsgExecLegacyContent,PASSED,"5 days, 0 hours 14 minutes",0.752472032,0.9874
+60,ValueAccrual Projects for HUAHUA within the Alliance Module,Text,PASSED,"5 days, 0 hours 0 minutes",0.752001653,0.3696
+82,Renewal of the Chihuahua Communications Program,MsgCommunityPoolSpend,PASSED,"5 days, 15 hours 20 minutes",0.729485109,0.9627
+90,Decrease Validators Set from 93 to 80,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",0.72552388,0.8259
+32,Upgrade v202  minpropdeposit,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.692049351,0.9808
+25,Increase Mininum Deposit for Governance Proposals,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",0.659430247,0.9976
+30,Revision of CommunityDAO compensation  funding proposal edited,MsgExecLegacyContent,PASSED,"5 days, 0 hours 9 minutes",0.658356649,0.9922
+28,rHUAHUA integration with Stafi Hub,MsgExecLegacyContent,PASSED,"5 days, 0 hours 6 minutes",0.632656162,0.8942
+24,Phase 1  Airdrop Fund Burning,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.621687059,0.9955
+23,Upgrade v201  Chiwawasm,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",0.578531967,0.9998
+19,Lowering inflation part 1,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.509305275,0.9837
+20,Lowering inflation part 2,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.505074419,0.9821
+7,Make Coney Daddy an Official AdHUAisor to Chihuahua,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.466926806,0.9897
+18,PreCosmWasm max gas per block,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",0.461867296,0.9995
+11,Q2 2022 Inflation Update Proposal,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",0.445472353,0.9959
+15,Increase Mininum Deposit for Governance Proposals,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.427099031,0.9867
+8,Passage x Chihuahua Proposal,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.424546311,0.9776
+9,Signaling Proposal AWSM x HUAHU,MsgExecLegacyContent,PASSED,"6 days, 0 hours 26 minutes",0.42404764,0.9787
+22,Corrected Lower Unbonding Time to 21 days,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.408848851,0.9139
+13,Chihuahua Community DAO,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.397076526,0.9927
+10,Signaling proposal for Chihuahua incentivized pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 22 minutes",0.370084799,0.9904
+5,Update Max Validators,MsgExecLegacyContent,PASSED,"7 days, 23 hours 10 minutes",0.343434682,0.1904
+67,Revive SecretChihuahua IBC client,MsgExecLegacyContent,FAILED,"5 days, 1 hours 17 minutes",0.682903802,0.9998

@@ -4,8 +4,6 @@ import useChainStore from "../../store/useChainStore";
 
 const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText }) => {
   const { setNodeRef, isOver } = useDroppable({ id });
-const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
-  const { setNodeRef } = useDroppable({ id });
   const { allChains } = useChainStore(); 
 
   const selectedChain = allChains.find((c) => c.id === selectedChainId);
@@ -73,7 +71,7 @@ const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
                   </span>
               </div>
               
-              {/* ▼▼▼ [수정됨] 삭제 버튼을 아이콘 이미지로 변경 ▼▼▼ */}
+              {/* 삭제 버튼 (이미지 아이콘) */}
               <button
                   onClick={handleClear}
                   className="
@@ -87,11 +85,9 @@ const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
                   <img 
                     src="/Icons/icn_delete_20.png" 
                     alt="delete" 
-                    className="w-5 h-5" // 20px 크기 지정
+                    className="w-5 h-5"
                   />
               </button>
-              {/* ▲▲▲ -------------------------------------- ▲▲▲ */}
-
           </div>
         ) : (
           /* [상태 2] 빈 슬롯일 때 */
@@ -109,5 +105,5 @@ const DroppableSlot = ({ id, title, color, selectedChainId, onClear }) => {
     </div>
   );
 };
-}
+
 export default DroppableSlot;

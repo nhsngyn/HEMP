@@ -12,8 +12,8 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
   const logoUrl = selectedChain?.logoUrl || "/logos/chainImg.png"; 
   const chainName = selectedChain?.name;
 
-  // 스타일 상수 (사용자분 기존 코드 값 유지)
-  const LOGO_SIZE = '24px'; // 로고 크기 살짝 조정 (박스 높이에 맞춤)
+  // 스타일 상수
+  const LOGO_SIZE = '24px'; 
   const INNER_PADDING_LEFT = '13.017px';
   const INNER_PADDING_RIGHT = '11.158px'; 
 
@@ -23,7 +23,6 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
   };
   
   return (
-    // Title은 부모에서 처리하므로 여기선 제거
     <div
       ref={setNodeRef}
       className={`
@@ -35,12 +34,11 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
         ${isOver ? "ring-1 ring-gray-500 bg-gray-800/50" : ""}
       `}
       style={{
-        // 선택되면 투명 테두리(혹은 스타일링), 아니면 점선 테두리
         border: isSelected ? '1px solid #29303A' : `1px dashed #29303A`, 
         backgroundColor: isSelected ? '#191C23' : 'transparent',
       }}
     >
-      {/* 1. 하이라이트 선 (Left Edge Bar - 기존 디자인 유지) */}
+      {/* 1. 하이라이트 선 (Left Edge Bar) */}
       <div 
         className="flex-shrink-0 self-stretch"
         style={{ 
@@ -50,7 +48,7 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
         }}
       ></div>
 
-      {/* 2. 슬롯 내부 콘텐츠 (Inner Content Area) */}
+      {/* 2. 슬롯 내부 콘텐츠 */}
       <div 
         className="flex items-center flex-1 self-stretch relative h-full"
         style={{ 
@@ -72,15 +70,29 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
                       {chainName}
                   </span>
               </div>
+              
+              {/* ▼▼▼ [수정됨] 삭제 버튼을 아이콘 이미지로 변경 ▼▼▼ */}
               <button
                   onClick={handleClear}
-                  className="text-gray-400 hover:text-white text-sm z-10 flex-shrink-0"
+                  className="
+                    flex items-center justify-center 
+                    z-10 flex-shrink-0 
+                    opacity-60 hover:opacity-100 
+                    transition-opacity
+                  "
+                  title="Remove"
               >
-                  ✕
+                  <img 
+                    src="/Icons/icn_delete_20.png" 
+                    alt="delete" 
+                    className="w-5 h-5" // 20px 크기 지정
+                  />
               </button>
+              {/* ▲▲▲ -------------------------------------- ▲▲▲ */}
+
           </div>
         ) : (
-          /* [상태 2] 빈 슬롯일 때 (Placeholder 추가) */
+          /* [상태 2] 빈 슬롯일 때 */
           <div className="flex items-center gap-2 w-full opacity-40">
              <div 
                 className="rounded-full bg-gray-600 flex-shrink-0"

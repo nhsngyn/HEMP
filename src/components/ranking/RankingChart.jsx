@@ -76,23 +76,53 @@ const RankingChart = () => {
         {/* TITLE */}
         <h2 className="text-[18px] font-semibold mb-[29.9px] shrink-0">HEMP Rank</h2>
 
-        {/* FILTER BUTTONS */}
-        <div className="flex items-center gap-4 mb-4 shrink-0">
-          <button className="flex items-center gap-1" onClick={() => setSortType("name")}>
-            <span className={sortType === "name" ? "text-white text-xs font-semibold leading-tight" : "text-gray-400 text-xs font-semibold leading-tight"}>
+{/* FILTER BUTTONS */}
+        <div 
+          className="
+            flex items-center gap-4 
+            mb-4         
+            pb-3         
+            shrink-0 
+            border-b 
+            border-[#29303A]
+            w-full       
+          "
+        >
+          {/* Chain 정렬 */}
+          <button
+            className="flex items-center gap-1"
+            onClick={() => setSortType("name")}
+          >
+            <span
+              className={
+                sortType === "name"
+                  ? "text-white text-xs font-semibold leading-tight"
+                  : "text-gray-400 text-xs font-semibold leading-tight"
+              }
+            >
               Chain
             </span>
             <img src="/Icons/icn_sort_24.png" className="w-6 h-6" alt="filter" />
           </button>
 
-          <button className="flex items-center gap-1" onClick={() => setSortType("score")}>
-            <span className={sortType === "score" ? "text-white text-xs font-semibold leading-tight" : "text-gray-400 text-xs font-semibold leading-tight"}>
+          {/* Score 정렬 */}
+          <button
+            className="flex items-center gap-1"
+            onClick={() => setSortType("score")}
+          >
+            <span
+              className={
+                sortType === "score"
+                  ? "text-white text-xs font-semibold leading-tight"
+                  : "text-gray-400 text-xs font-semibold leading-tight"
+              }
+            >
               HEMP Score
             </span>
             <img src="/Icons/icn_sort_24.png" className="w-6 h-6" alt="filter" />
           </button>
         </div>
-
+        
         {/* LIST AREA */}
         <div className="flex-1 min-h-0 overflow-y-auto mb-4">
           <DroppableListArea>

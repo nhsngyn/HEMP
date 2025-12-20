@@ -1,5 +1,3 @@
-// src/components/layout/Sidebar.jsx
-
 import React from "react";
 import RankingChart from "../ranking/RankingChart";
 
@@ -7,15 +5,14 @@ const Sidebar = () => {
   return (
     <aside
       className="
-        w-[260px]
-        h-screen
-        sticky top-0
+        w-full
+        h-full
         bg-[#111418]
         text-white
         flex flex-col
         px-6
         py-[60px]
-        flex-shrink-0
+        /* ✨ 수정됨: sticky, top-0, h-screen, w-[260px] 제거 -> 부모(MainLayout)의 제어를 따름 */
       "
     >
       {/* 상단 타이틀 */}

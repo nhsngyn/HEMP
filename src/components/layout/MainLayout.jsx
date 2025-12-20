@@ -5,6 +5,8 @@ const MainLayout = ({ leftSidebar, children }) => {
   const [scale, setScale] = useState(1);
   const [sidebarWidth, setSidebarWidth] = useState(0);
   const [contentWidth, setContentWidth] = useState(0);
+  const [scaledContentWidth, setScaledContentWidth] = useState(0);
+  const [scaledContentHeight, setScaledContentHeight] = useState(0);
 
   // 16:10 비율 기준 (1680×1050) - 가로 확장
   const CANVAS_WIDTH = 1680;
@@ -51,6 +53,8 @@ const MainLayout = ({ leftSidebar, children }) => {
       setScale(newScale);
       setSidebarWidth(newSidebarWidth);
       setContentWidth(availableContentWidth);
+      setScaledContentWidth(scaledContentWidth);
+      setScaledContentHeight(scaledContentHeight);
     };
 
     updateScale();
@@ -85,14 +89,25 @@ const MainLayout = ({ leftSidebar, children }) => {
       >
         <div
           style={{
-            width: `${CANVAS_WIDTH * CONTENT_RATIO}px`,
-            height: `${CANVAS_HEIGHT}px`,
-            transform: `scale(${scale})`,
-            transformOrigin: 'top left',
-            position: 'relative'
+            minHeight: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '20px 0'
           }}
         >
-          {children}
+          <div
+            style={{
+              width: `${CANVAS_WIDTH * CONTENT_RATIO}px`,
+              height: `${CANVAS_HEIGHT}px`,
+              transform: `scale(${scale})`,
+              transformOrigin: 'center center',
+              position: 'relative',
+              flexShrink: 0
+            }}
+          >
+            {children}
+          </div>
         </div>
       </div>
     </div>

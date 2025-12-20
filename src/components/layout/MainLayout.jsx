@@ -12,15 +12,17 @@ const MainLayout = ({ leftSidebar, children }) => {
           sticky top-0 
           flex-shrink-0 
           z-50
-          bg-[#111418]
         "
+        style={{
+          background: 'var(--bg-2, rgba(255, 255, 255, 0.08))',
+        }}
       >
-        {/* 여기에 Sidebar 컴포넌트가 들어옵니다 */}
         {leftSidebar}
       </aside>
 
-      {/* 2. 오른쪽 콘텐츠 영역 (유동적) */}
-      <main className="flex-1 min-w-0 bg-black">
+      <main className="flex-1 min-w-0"style={{
+          background: 'background: var(--gray900, #101217)',
+        }}>
         {children}
       </main>
     </div>

@@ -4,19 +4,18 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
   const isSelected = !!selectionInfo;
   const highlightColor = selectionInfo?.color;
 
-  // Score 100 → 120px 막대로 계산
   const maxBarLength = 120;
-  const barWidth = Math.min(chain.score * (maxBarLength / 100), maxBarLength);
+  const barWidth = Math.min(chain.score * 1.2, maxBarLength);
 
   return (
     <div
       className={`
         flex items-center 
-        w-full
-        h-[44px] // height: 44px
-        px-2 // padding: 0 8px
-        gap-2 // gap: 8px
-        self-stretch // align-self: stretch
+        w-[206px]
+        h-[44px] 
+        px-2 
+        gap-2 
+        self-stretch
         rounded-[7.4px]
         transition-all 
         ${isSelected ? "" : "hover:shadow-[0_0_8px_rgba(255,255,255,0.02)]"}
@@ -30,9 +29,10 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
           isSelected && !isOverlay && !isDragging
             ? `0 0 12px ${highlightColor}66`
             : "none",
+        position: 'relative', 
       }}
     >
-      {/* 이름 */}
+      {/* 1. 이름 영역*/}
       <div
         className="
           flex-shrink-0 
@@ -43,13 +43,13 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
           tracking-tight 
           truncate
         "
-        style={{ flex: '264 0 0' }}
+        style={{ width: '88px' }} 
       >
         {chain.name}
       </div>
 
-      {/* 막대 + 점수 컨테이너 */}
-      <div className="flex items-center gap-2" style={{ flex: '56 0 0' }}>
+      {/* 2. 막대 + 점수 컨테이너 */}
+      <div className="flex items-center gap-2 flex-1 min-w-0">
 
         {/* 막대바 배경 */}
         <div className="
@@ -58,23 +58,17 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
           rounded-[3.59px]
           relative overflow-hidden
         ">
+          {/* 실제 점수 바 */}
           <div
             className="h-full rounded-[3.59px]"
             style={{
-              // width는 계산된 barWidth (max 120px) 사용
-              width: `${barWidth}px`,
-              backgroundColor: isSelected ? highlightColor : "#29303A",
+              width: `${barWidth}px`, // 100점 -> 120px
+              backgroundColor: isSelected ? highlightColor : "#4B5563",
             }}
           />
         </div>
       </div>
 
-      {/* 메인/서브 표시 */}
-      {isSelected && (
-        <div
-          style={{ backgroundColor: highlightColor }}
-        ></div>
-      )}
     </div>
   );
 };

@@ -66,35 +66,23 @@ const generateSankeyData = (mainChain, mockPropositions) => {
   const typeCounts = new Map();
   propositions.forEach(prop => {
     const propType = prop.type || 'Other';
-    typeCounts.set(propType, (typeCounts.get(propType) || 0) + 1);
+    // 실제 데이터에 있는 type만 카운트 (NODE_CATEGORIES에 있는 것만)
+    if (types.includes(propType)) {
+      typeCounts.set(propType, (typeCounts.get(propType) || 0) + 1);
+    } else {
+      // NODE_CATEGORIES에 없는 type은 'Other'로 처리
+      typeCounts.set('Other', (typeCounts.get('Other') || 0) + 1);
+    }
   });
 
-  // Sort types by proposal count (descending)
-  const sortedTypes = [...types].sort((a, b) => {
-    const countA = typeCounts.get(a) || 0;
-    const countB = typeCounts.get(b) || 0;
-    return countB - countA;
-  });
-
-  // Define sort orders for each column
-  const sortOrders = {
-    0: sortedTypes, // Type: sorted by proposal count
-    1: ['Passed', 'Rejected', 'Failed'], // Result
-    2: ['High', 'Mid', 'Low'], // Participation
-    3: ['Consensus', 'Contested', 'Polarized'], // Vote Composition
-    4: ['Fast', 'Normal', 'Slow'] // Processing Speed
-  };
-
-  // Create nodes for all columns with proper ordering
-  const nodes = [
-    ...sortOrders[0].map(name => ({ name, column: 0, type: name })),
-    ...sortOrders[1].map(name => ({ name, column: 1, type: null })),
-    ...sortOrders[2].map(name => ({ name, column: 2, type: null })),
-    ...sortOrders[3].map(name => ({ name, column: 3, type: null })),
-    ...sortOrders[4].map(name => ({ name, column: 4, type: null }))
-  ];
-
-  const getNodeIndex = (name, column) => nodes.findIndex(n => n.name === name && n.column === column);
+  // 실제 데이터에 있는 type만 사용 (카운트가 0인 것은 제외)
+  const sortedTypes = [...types]
+    .filter(type => (typeCounts.get(type) || 0) > 0)
+    .sort((a, b) => {
+      const countA = typeCounts.get(a) || 0;
+      const countB = typeCounts.get(b) || 0;
+      return countB - countA;
+    });
 
   // 링크들은 모두 "같은 속성을 갖는 프로포절들을 묶어서" 집계된 형태로 생성
   const links = [];
@@ -106,7 +94,12 @@ const generateSankeyData = (mainChain, mockPropositions) => {
   const participationVoteCounts = new Map();
   const voteSpeedCounts = new Map();
   propositions.forEach(prop => {
-    const propType = prop.type || 'Other';
+    // Type이 NODE_CATEGORIES에 없으면 'Other'로 변환
+    let propType = prop.type || 'Other';
+    if (!types.includes(propType)) {
+      propType = 'Other';
+    }
+
     const participationLevel = prop.participationLevel || 'Mid';
     const voteComposition = prop.voteComposition || 'Consensus';
     const result = prop.result || 'Passed';
@@ -135,16 +128,14 @@ const generateSankeyData = (mainChain, mockPropositions) => {
       const key = `type-${type}|result-${result}`;
       const count = typeResultCounts.get(key) || 0;
       if (count > 0) {
-        const sourceIdx = getNodeIndex(type, 0);
-        const targetIdx = getNodeIndex(result, 1);
-        if (sourceIdx !== -1 && targetIdx !== -1) {
-          links.push({
-            source: sourceIdx,
-            target: targetIdx,
-            value: count,
-            type
-          });
-        }
+        links.push({
+          source: type,
+          sourceColumn: 0,
+          target: result,
+          targetColumn: 1,
+          value: count,
+          type
+        });
       }
     });
   });
@@ -155,16 +146,14 @@ const generateSankeyData = (mainChain, mockPropositions) => {
       const key = `result-${result}|participation-${level}`;
       const count = resultParticipationCounts.get(key) || 0;
       if (count > 0) {
-        const sourceIdx = getNodeIndex(result, 1);
-        const targetIdx = getNodeIndex(level, 2);
-        if (sourceIdx !== -1 && targetIdx !== -1) {
-          links.push({
-            source: sourceIdx,
-            target: targetIdx,
-            value: count,
-            type: null
-          });
-        }
+        links.push({
+          source: result,
+          sourceColumn: 1,
+          target: level,
+          targetColumn: 2,
+          value: count,
+          type: null
+        });
       }
     });
   });
@@ -175,16 +164,14 @@ const generateSankeyData = (mainChain, mockPropositions) => {
       const key = `participation-${level}|vote-${vote}`;
       const count = participationVoteCounts.get(key) || 0;
       if (count > 0) {
-        const sourceIdx = getNodeIndex(level, 2);
-        const targetIdx = getNodeIndex(vote, 3);
-        if (sourceIdx !== -1 && targetIdx !== -1) {
-          links.push({
-            source: sourceIdx,
-            target: targetIdx,
-            value: count,
-            type: null
-          });
-        }
+        links.push({
+          source: level,
+          sourceColumn: 2,
+          target: vote,
+          targetColumn: 3,
+          value: count,
+          type: null
+        });
       }
     });
   });
@@ -195,24 +182,105 @@ const generateSankeyData = (mainChain, mockPropositions) => {
       const key = `vote-${vote}|speed-${speed}`;
       const count = voteSpeedCounts.get(key) || 0;
       if (count > 0) {
-        const sourceIdx = getNodeIndex(vote, 3);
-        const targetIdx = getNodeIndex(speed, 4);
-        if (sourceIdx !== -1 && targetIdx !== -1) {
-          links.push({
-            source: sourceIdx,
-            target: targetIdx,
-            value: count,
-            type: null
-          });
-        }
+        links.push({
+          source: vote,
+          sourceColumn: 3,
+          target: speed,
+          targetColumn: 4,
+          value: count,
+          type: null
+        });
       }
     });
   });
 
+  // 링크에서 실제로 사용되는 노드만 추출
+  const usedNodes = new Set();
+  links.forEach(link => {
+    usedNodes.add(`${link.source}-${link.sourceColumn}`);
+    usedNodes.add(`${link.target}-${link.targetColumn}`);
+  });
+
+  // 실제로 사용되는 노드만 생성
+  const nodes = [];
+  links.forEach(link => {
+    // Source 노드 추가
+    const sourceKey = `${link.source}-${link.sourceColumn}`;
+    if (!nodes.find(n => `${n.name}-${n.column}` === sourceKey)) {
+      nodes.push({
+        name: link.source,
+        column: link.sourceColumn,
+        type: link.sourceColumn === 0 ? link.source : null
+      });
+    }
+    // Target 노드 추가
+    const targetKey = `${link.target}-${link.targetColumn}`;
+    if (!nodes.find(n => `${n.name}-${n.column}` === targetKey)) {
+      nodes.push({
+        name: link.target,
+        column: link.targetColumn,
+        type: link.targetColumn === 0 ? link.target : null
+      });
+    }
+  });
+
+  // 노드를 컬럼별로 정렬
+  const nodesByColumn = {};
+  nodes.forEach(node => {
+    if (!nodesByColumn[node.column]) nodesByColumn[node.column] = [];
+    nodesByColumn[node.column].push(node);
+  });
+
+  // 각 컬럼 내에서 정렬
+  const sortOrders = {
+    0: sortedTypes, // Type: 이미 정렬됨
+    1: ['Passed', 'Rejected', 'Failed'], // Result
+    2: ['High', 'Mid', 'Low'], // Participation
+    3: ['Consensus', 'Contested', 'Polarized'], // Vote Composition
+    4: ['Fast', 'Normal', 'Slow'] // Processing Speed
+  };
+
+  const sortedNodes = [];
+  for (let col = 0; col <= 4; col++) {
+    if (nodesByColumn[col]) {
+      const colNodes = nodesByColumn[col];
+      const sortOrder = sortOrders[col] || [];
+      // 정렬 순서에 따라 정렬
+      const sorted = colNodes.sort((a, b) => {
+        const idxA = sortOrder.indexOf(a.name);
+        const idxB = sortOrder.indexOf(b.name);
+        if (idxA === -1 && idxB === -1) return 0;
+        if (idxA === -1) return 1;
+        if (idxB === -1) return -1;
+        return idxA - idxB;
+      });
+      sortedNodes.push(...sorted);
+    }
+  }
+
+  const getNodeIndex = (name, column) => sortedNodes.findIndex(n => n.name === name && n.column === column);
+
+  // 링크의 source/target을 인덱스로 변환
+  const finalLinks = links.map(link => {
+    const sourceIdx = getNodeIndex(link.source, link.sourceColumn);
+    const targetIdx = getNodeIndex(link.target, link.targetColumn);
+    if (sourceIdx !== -1 && targetIdx !== -1) {
+      return {
+        source: sourceIdx,
+        target: targetIdx,
+        value: link.value,
+        type: link.type
+      };
+    }
+    return null;
+  }).filter(link => link !== null);
+
+  return { nodes: sortedNodes, links: finalLinks };
+
   return { nodes, links };
 };
 
-const SankeyChart = ({ width = 1400, height = 500 }) => {
+const SankeyChart = ({ width = 1400, height = 700 }) => {
   const svgRef = useRef(null);
   const containerRef = useRef(null);
   const propositionInfoRef = useRef(null);
@@ -292,6 +360,7 @@ const SankeyChart = ({ width = 1400, height = 500 }) => {
           .attr('fill', '#ef4444')
           .attr('font-size', '20px')
           .attr('font-weight', 'bold')
+          .attr('font-family', 'SUIT')
           .attr('y', -20)
           .text(title);
 
@@ -299,6 +368,7 @@ const SankeyChart = ({ width = 1400, height = 500 }) => {
           .attr('text-anchor', 'middle')
           .attr('fill', '#fca5a5')
           .attr('font-size', '14px')
+          .attr('font-family', 'SUIT')
           .attr('y', 10)
           .text(`Reason: ${reason}`);
 
@@ -307,6 +377,7 @@ const SankeyChart = ({ width = 1400, height = 500 }) => {
             .attr('text-anchor', 'middle')
             .attr('fill', '#9ca3af')
             .attr('font-size', '12px')
+            .attr('font-family', 'SUIT')
             .attr('y', 30)
             .text(detail);
         }
@@ -319,6 +390,7 @@ const SankeyChart = ({ width = 1400, height = 500 }) => {
           .attr('text-anchor', 'middle')
           .attr('fill', '#9ca3af')
           .attr('font-size', '18px')
+          .attr('font-family', 'SUIT')
           .text('Select a MAIN CHAIN to view Sankey diagram');
         return;
       }
@@ -408,29 +480,45 @@ const SankeyChart = ({ width = 1400, height = 500 }) => {
       const nodesByColumnForSpacing = groupNodesByColumn(nodes);
       const columnCount = Object.keys(nodesByColumnForSpacing).length;
 
+      // 5개 컬럼이 모두 있는지 확인 (0, 1, 2, 3, 4)
+      const expectedColumns = [0, 1, 2, 3, 4];
+      const missingColumns = expectedColumns.filter(col => !nodesByColumnForSpacing[col] || nodesByColumnForSpacing[col].length === 0);
+
+      if (missingColumns.length > 0) {
+        console.warn('⚠️ 누락된 컬럼:', missingColumns);
+      }
+
       if (columnCount > 1) {
         const columnPositions = {};
-        Object.keys(nodesByColumnForSpacing).forEach(colIdx => {
-          const colNodes = nodesByColumnForSpacing[colIdx];
-          columnPositions[colIdx] = colNodes.reduce((sum, n) => sum + (n.x0 + n.x1) / 2, 0) / colNodes.length;
+        // 모든 예상 컬럼에 대해 위치 계산 (없어도 계산)
+        expectedColumns.forEach(colIdx => {
+          const colNodes = nodesByColumnForSpacing[colIdx] || [];
+          if (colNodes.length > 0) {
+            columnPositions[colIdx] = colNodes.reduce((sum, n) => sum + (n.x0 + n.x1) / 2, 0) / colNodes.length;
+          }
         });
 
-        const sortedColumns = Object.keys(columnPositions).sort((a, b) => columnPositions[a] - columnPositions[b]);
+        const sortedColumns = Object.keys(columnPositions)
+          .map(Number)
+          .sort((a, b) => a - b); // 숫자로 정렬
+
         const minX = padding.left;
         const maxX = padding.left + chartWidth;
         const totalWidth = maxX - minX;
-        const spacingBetweenColumns = (totalWidth - (NODE_WIDTH * columnCount)) / (columnCount - 1);
+        const spacingBetweenColumns = (totalWidth - (NODE_WIDTH * sortedColumns.length)) / (sortedColumns.length - 1);
 
         sortedColumns.forEach((colIdx, idx) => {
           const newX = minX + idx * (NODE_WIDTH + spacingBetweenColumns);
-          const colNodes = nodesByColumnForSpacing[colIdx];
-          const currentCenterX = columnPositions[colIdx];
-          const offset = newX - currentCenterX;
+          const colNodes = nodesByColumnForSpacing[colIdx] || [];
+          if (colNodes.length > 0) {
+            const currentCenterX = columnPositions[colIdx];
+            const offset = newX - currentCenterX;
 
-          colNodes.forEach(node => {
-            node.x0 += offset;
-            node.x1 += offset;
-          });
+            colNodes.forEach(node => {
+              node.x0 += offset;
+              node.x1 += offset;
+            });
+          }
         });
       }
 
@@ -706,8 +794,8 @@ const SankeyChart = ({ width = 1400, height = 500 }) => {
         .attr('dy', '0.35em')
         .attr('text-anchor', (d) => d.column === maxColumn ? 'end' : 'start')
         .attr('font-size', '12px')
-        .attr('font-weight', (d) => isNodeSelected(d) ? '700' : '400')
-        .attr('fill', '#FFFFFF')
+        .attr('font-weight', (d) => isNodeSelected(d) ? '800' : '600')
+        .attr('fill', (d) => isNodeSelected(d) ? '#FFFFFF' : '#9CA3AE')
         .attr('pointer-events', 'none')
         .attr('font-family', 'SUIT')
         .text((d) => d.name);
@@ -738,6 +826,7 @@ const SankeyChart = ({ width = 1400, height = 500 }) => {
             .attr('fill', '#6D7380')
             .attr('font-size', '13px')
             .attr('font-weight', '600')
+            .attr('font-family', 'SUIT')
             .attr('pointer-events', 'none');
 
           textGroup.append('tspan')
@@ -757,6 +846,7 @@ const SankeyChart = ({ width = 1400, height = 500 }) => {
             .attr('fill', '#6D7380')
             .attr('font-size', '13px')
             .attr('font-weight', '600')
+            .attr('font-family', 'SUIT')
             .attr('pointer-events', 'none')
             .text(labelText);
         }
@@ -799,17 +889,16 @@ const SankeyChart = ({ width = 1400, height = 500 }) => {
           style={{
             width: '24px',
             height: '24px',
-            backgroundColor: '#ffffff15',
-            color: '#D1D5DB',
+            backgroundColor: '#4C5564',
+            color: '#9CA3AF',
             fontSize: '12px',
-            fontWeight: '700'
-
+            fontWeight: '900'
           }}
         >
           3
         </div>
         <h2
-          className="text-white font-bold text-lg"
+          className="text-gray-100 font-extrabold text-lg"
         >
           Proposal Configuration Flow
         </h2>

@@ -10,8 +10,8 @@ const HempMap = () => {
   // 선택된 체인 정보 및 핸들러 가져오기
   const { 
     selectChain,
-    getSelectionInfo, 
-    selectedMainId, selectedSubId1, selectedSubId2 
+    getSelectionInfo,
+    selectedMainId, selectedSubId1, selectedSubId2
   } = useChainSelection();
 
   // 툴팁용 데이터 매핑 (체인 이름 -> 체인 객체)
@@ -59,7 +59,7 @@ const HempMap = () => {
     const seriesData = allChains.map((chain) => {
       const selection = getSelectionInfo(chain.id);
       const isSelected = !!selection;
-      
+
       const size = calculateBubbleSize(chain.proposals, isSelected);
       const logoUrl = chain.logoUrl || "";
 

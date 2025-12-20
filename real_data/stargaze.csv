@@ -1,0 +1,296 @@
+﻿id,title,type,status,ProcessingTime,Participation,Consensus
+16,Minter Contract,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.249516742,0.4541
+17,Whitelist Contract,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.251016003,0.4051
+15,SG721 Contract,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.272642394,0.5385
+35,Development Proposal,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.329571539,0.0963
+142,Ethereum Airdrop,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.355057064,0.9529
+11,Increase MaxValidators100 to MaxValidators125,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 46 minutes",0.358193057,0.5996
+39,Marketplace Contract v1,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.360988744,0.9056
+311,Stargaze Airdrop  Get Airdrop ,Text,REJECTED,"3 days, 0 hours 0 minutes",0.366909447,0.628
+123,ATOM Airdrop for COSMOS stakers,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.380480386,0.9974
+323,STARGAZE Airdrop  Last Chance,Text,REJECTED,"3 days, 0 hours 0 minutes",0.386317466,0.9999
+113,Stargaze Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.388454084,0.9849
+124,Stargaze Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.396974512,0.9989
+125, Stargaze Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.397538285,0.9987
+312,Feeling Lucky   Get Airdrop   STARGAZE,Text,REJECTED,"3 days, 0 hours 0 minutes",0.401719345,0.6585
+116,Stargaze Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.405596378,0.9961
+119,Stargaze 20  VOTE YES ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.408146397,0.9975
+118,APTOS Airdrop for COSMOS stakers,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 9 minutes",0.408296451,0.9945
+117,Stargaze Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.410636993,0.997
+315,Get Airdrop   STARGAZE,Text,REJECTED,"3 days, 0 hours 0 minutes",0.411158626,0.9998
+324,STARGAZE Airdrop   Last Chance,Text,REJECTED,"3 days, 0 hours 0 minutes",0.41253328,0.9999
+120,APTOS Airdrop for COSMOS stakers,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 21 minutes",0.414474883,0.9968
+320,STARGAZE Airdrop ,Text,REJECTED,"3 days, 0 hours 0 minutes",0.418157698,0.9998
+327,Borrow ATOM   buy Stargaze ,Text,REJECTED,"3 days, 0 hours 0 minutes",0.42304634,0.9993
+173,Stargaze NFT Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.424109196,0.9948
+318,Feeling Lucky   Get Airdrop ,Text,REJECTED,"3 days, 0 hours 0 minutes",0.426151485,0.9997
+313,ATOM Airdrop ,Text,REJECTED,"3 days, 0 hours 0 minutes",0.436055425,0.6874
+168,Stargaze Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.442751417,0.9958
+121,Atom Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.447745012,0.9982
+169,Layerzero airdrop,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.457215669,0.9995
+328,   New Version  Borrow Stargaze,Text,REJECTED,"3 days, 0 hours 0 minutes",0.457381638,1.0
+316,Feeling Lucky   Get Airdrop   STARGAZE,Text,REJECTED,"3 days, 0 hours 0 minutes",0.458815898,0.9997
+317,Get Airdrop   STARGAZE,Text,REJECTED,"3 days, 0 hours 0 minutes",0.469474189,0.9996
+314,Get Money Airdrop   Feeling Lucky  ,Text,REJECTED,"3 days, 0 hours 0 minutes",0.473844694,0.9997
+147,Funding for Confio developers of CosmWasm,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 17 minutes",0.478717834,0.9985
+326, Integration of Stargaze into Nebula7 for Quick CryptoBacked Loans,Text,REJECTED,"3 days, 0 hours 0 minutes",0.480141734,0.9317
+309,AtomONE Airdrop  New Airdrop ,Text,REJECTED,"3 days, 0 hours 0 minutes",0.493961131,0.9977
+322,STARGAZE Airdrop ,Text,REJECTED,"3 days, 0 hours 0 minutes",0.501095758,0.9999
+283,Bad Kids Airdrop   StarGaze Airdrop ,Text,REJECTED,"3 days, 0 hours 0 minutes",0.501281686,0.9992
+310,New NFT Game ,Text,REJECTED,"3 days, 0 hours 0 minutes",0.502424112,0.9972
+58,Ethereum Onboarding Platform,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.504254069,0.6725
+170,Stargaze Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.504776643,0.9968
+163,CronCat Factory,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.511524503,0.9593
+319,Feeling Lucky   Get Airdrop   STARGAZE,Text,REJECTED,"3 days, 0 hours 0 minutes",0.511554268,0.9997
+205,NFTHopxyz V1,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.514078439,0.794
+290,Stargaze Credit Card ,Text,REJECTED,"3 days, 0 hours 0 minutes",0.52463245,0.9283
+171,Layerzero x Cosmos airdrop,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.531069904,0.9936
+308,ATOM Airdrop  AtomONE Airdrop ,Text,REJECTED,"3 days, 0 hours 0 minutes",0.556089032,0.9993
+263,STARGAZE Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.575437433,0.9998
+216,Liquid Stake the OSMO in the Community Pool,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 3 minutes",0.588756244,0.9595
+297,Builder incentives on Stargaze,MsgCommunityPoolSpend,REJECTED,"3 days, 0 hours 0 minutes",0.616586416,0.7527
+225,Permissionless Smart Contract Deployment,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.623775141,0.9153
+213,Stargaze integration with Huddle01,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.624196011,0.8682
+270,Lottery Game Smart Contract,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.701213943,0.7266
+226,Permissionless Smart Contract Deployment,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.703688343,0.4967
+265,Stargaze Community Owned Liquid Staking with pSTAKE Finance,MsgCommunityPoolSpend,REJECTED,"3 days, 0 hours 0 minutes",0.763059437,0.6222
+244,Funding Proposal for PLStaking A SoftStaking Platform,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.801764842,0.802
+223,Bootstrapping the STARS pool on Cosmos Millions,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.803882278,0.2479
+267,stSTARS  STARS POL for Cosmos DeFi Applications,MsgCommunityPoolSpend,REJECTED,"3 days, 0 hours 0 minutes",0.815505754,0.2015
+10,Claim Airdrop Mission 3,MsgExecLegacyContent,PASSED,"3 days, 0 hours 5 minutes",0.233757015,0.999
+8,Claim Airdrop Mission 3,MsgExecLegacyContent,PASSED,"3 days, 0 hours 9 minutes",0.23895927,0.9988
+23,Extend Osmosis STARS incentives to boost liquidity and mitigate slippage,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.241813838,0.9451
+12,Claim Airdrop Mission 3,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.247000773,0.9989
+22,Allow Claim Contract Instance,MsgExecLegacyContent,PASSED,"3 days, 0 hours 1 minutes",0.247629561,0.9993
+6,Claim Airdrop Mission 3,MsgExecLegacyContent,PASSED,"3 days, 0 hours 14 minutes",0.248039035,0.9995
+25,Stargaze Carbon Neutrality through Purchasing and Retiring NCT,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.252155931,0.9195
+33,Increase MaxValidators100 to MaxValidators110,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.254302246,0.8632
+3,STARS on Osmosis Pool incentives to boost liquidity and mitigate slippage,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.263154307,0.9998
+28,Stargaze Claim Smart Contract v0150 Upload,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.273246604,0.9998
+4,Enable Airdrop,MsgExecLegacyContent,PASSED,"3 days, 0 hours 2 minutes",0.27436054,0.9942
+29,Stargaze Marketplace V1 Smart Contract Upload,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.274616077,0.9998
+7,Stargaze v2 Upgrade,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.280679746,0.9999
+5,Transfer Protocolowned Osmosis LP Tokens to Community Pool,MsgExecLegacyContent,PASSED,"3 days, 5 hours 5 minutes",0.285130158,0.9987
+18,SG721 Contract v080,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.29037348,0.9999
+19,Minter Contract v080,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.290402172,0.9999
+20,Whitelist Contract v080,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.290448772,0.9998
+26,Adjust blocks per year parameter to match block times,MsgExecLegacyContent,PASSED,"3 days, 0 hours 9 minutes",0.293042754,0.9995
+21,Claim MintNFT Airdrop Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.293130057,0.9998
+24,Stargaze V4 Upgrade,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.299804239,0.9999
+30,Allow Claim Contract Instance,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.306425751,0.9992
+32,Extend Airdrop Decay Start Time,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.312427587,0.9956
+31,Stargaze Marketplace V1 Instantiation,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.313164851,0.9999
+13,Stargaze V3 CosmWasm Upgrade,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.321123812,0.9999
+27,Stargaze V5 Upgrade,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.328891155,0.9998
+36,Increase MaxValidators110 to MaxValidators120,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.35972985,0.9154
+34,Stargaze V6 Upgrade,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.374051095,0.9999
+37,Parameter Change Proposal Increase MaxValidators from 110  120,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.389696782,0.9193
+273,Pin and Migrate  Marketplace Contract,MsgPinCodes,PASSED,"3 days, 0 hours 0 minutes",0.395796799,1.0
+41,Marketplace V1 Migration,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.396229214,0.9654
+153,Launchpad Vending Minter Contract v210,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.397461774,0.9892
+56,Extending Osmosis Pool Incentives,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.397981285,0.9929
+54,Pegasus P2P NFT trading contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.400045053,0.9194
+274,Update Consensus Params,MsgUpdateParams,PASSED,"3 days, 0 hours 0 minutes",0.411755486,0.9998
+57,Levana Rekt Dragons Aidrop Proposal,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.425215132,0.2359
+122,Increase Minimum Deposit for Governance Proposals,MsgExecLegacyContent,PASSED,"3 days, 0 hours 4 minutes",0.43362865,0.9993
+62,Launchpad v2  NFT Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.437482672,0.9999
+276,Implement CopyStaking for Strides Stargaze Delegations,Text,PASSED,"3 days, 0 hours 0 minutes",0.439988336,0.9226
+69,Increase Deposit for Proposals to 5000 STARS,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.440619103,0.8582
+63,Launchpad v2  Vending Minter,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.443902058,0.9999
+152,Launchpad Vending Factory Contract v210,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.443907378,0.9904
+154,Launchpad Whitelist Contract v210,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.444269088,0.9903
+40,Marketplace Contract v1,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.447267432,0.9998
+108,Extend Osmosis Pool Incentives,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.448278419,0.9783
+144,Stargaze Carbon Neutral Proposal,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.450349635,0.4651
+51,Marketplace v11 Migration,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.460614331,0.9694
+66,Launchpad v2  Vending Factory,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.462553939,0.9999
+128,Reduce Launchpad Fee to 5,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.462933086,0.4294
+94,Badges v11 Update  Badge Hub,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.469177831,0.6437
+158,Launchpad V2  Vending Minter Flex Contract 230,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.469440771,0.9999
+95,Badges v11 Update  Badge Nft,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.469915306,0.9999
+115,Dev Fund Update Use Splits for Weighted Developer Rewards,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.470404292,0.9915
+52,Badges  Hub contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.471661224,0.9997
+151,Launchpad V1 sg721 Updatable Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.473044262,1.0
+53,Badges  NFT contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.473450409,0.9997
+110,Services for a Governed ICS721 Infrastructure and Operations,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.47411117,0.965
+112,Splits Contract v0229,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.475752172,0.9999
+167,OnceUpon,MsgExecLegacyContent,PASSED,"3 days, 5 hours 44 minutes",0.476736493,0.9484
+157,Launchpad V2  Whitelist Flex Contract 230,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.477640982,0.9999
+150,Funding Request for Open Edition Minter Development,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.479519026,0.9997
+146,Make Stargaze the Sponsor of Game of NFTs Phase 2 Hackathon,MsgExecLegacyContent,PASSED,"3 days, 0 hours 9 minutes",0.482856007,0.9996
+46,Marketplace Contract v11,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.483284873,0.9999
+161,Marketplace v13 Migration,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.485026602,0.9999
+135,Base Minter Contract v0250,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.488088163,0.9999
+104,Incentivize STARSUSK farm on BOW for 3 months,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.488498972,0.1228
+137,SG721 Updatable Contract v0250,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.491891203,0.9999
+79,Launchpad v1  Minter Update,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.491968961,0.9993
+233,Rewarding reports of stolen collections,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.493217755,0.9995
+50,Increase the Stargaze active validator set from 120 to 130,MsgExecLegacyContent,PASSED,"3 days, 0 hours 2 minutes",0.495779427,0.067
+134,Vending Factory Contract v0250,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.496353438,0.9999
+75,Deploy the Stargaze Multi Snapshot Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.496473523,0.9999
+139,Immutable Whitelist Contract v0250,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.4965113,0.9998
+133,Base Factory Contract v0250,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.496538666,0.9999
+136,SG721 Base Contract v0250,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.498183326,1.0
+138,Whitelist Contract v0250,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.498554305,0.9998
+140,Ethereum Airdrop Contract v0250,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.498804552,0.9994
+72,Deprecate Launchpad v1 Contracts,MsgExecLegacyContent,PASSED,"3 days, 0 hours 2 minutes",0.499505225,0.9999
+148,Funding for Confio developers of CosmWasm,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.501863268,0.9652
+77,Badges v11 Update,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.503881117,0.9999
+156,Launchpad V2  Whitelist Flex Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.504578042,0.9999
+49,Imago  Finalizer Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.504835854,0.9998
+101,Appendable NFT Collection,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.506542778,0.5604
+155,Marketplace v130 Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.508712458,1.0
+91,Marketplace v12 Migration,MsgExecLegacyContent,PASSED,"3 days, 0 hours 2 minutes",0.510071754,0.9999
+132,Extend Osmosis Pool Incentives,MsgExecLegacyContent,PASSED,"3 days, 2 hours 36 minutes",0.511660727,0.9652
+149,Upload Cosmos Coin Flip game smart contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.512264079,0.9998
+67,Launchpad v2  Whitelist Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.51432039,0.9999
+224,Upload a free to use smartcontract to distribute native tokens to NFT owners of an NFT collection,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.514536427,0.9997
+81,Fund Deployment of Lunar Assistant,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.515213429,0.6741
+204,Stargaze Live Auction v101,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.519648222,0.9999
+160,CosmWasm Fixed Multisig Contract v101,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.519830314,0.9999
+93,Prop 57 Funds Reallocation,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.519838006,0.9899
+59,Raise voting deposit requirement in STARS to 50K,MsgExecLegacyContent,PASSED,"3 days, 0 hours 3 minutes",0.520066109,0.4518
+47,Imago  SG721 Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.521637415,0.9998
+70,Badges Make the Badge Hub contract upgradable,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.523067907,0.9998
+127,Launchpad v21  Vending Minter,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.52383678,1.0
+126,Launchpad v21  SG721 Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.523944058,0.9999
+107,Update Marketplace Listing Fee,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.524358142,0.9988
+48,Imago  Minter Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.527103802,0.9996
+176,Increase Deposit for Proposals to 50000 STARS,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.532781045,0.9998
+159,Developer Royalties Update,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.533268609,0.9984
+164,Deploy PixelWizards cwwager contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.533912989,0.9999
+71,Badges Make the Badge NFT contract upgradable,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.536601398,0.9997
+143,Stargaze v9 upgrade,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.539236583,0.9999
+88,Splits Contract v0211,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.545353351,0.9999
+87,CosmWasm cw4group Contract v0160,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.54554077,0.9998
+106,Update Collection Creation Fee,MsgExecLegacyContent,PASSED,"3 days, 0 hours 13 minutes",0.550503584,0.9956
+220,Reduce Auctions Extend Duration,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.551479933,0.9998
+44,Stargaze V7 Upgrade,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.553733935,0.9999
+329,Recover IBC Expired Client from AtomeOne,MsgRecoverClient,PASSED,"3 days, 0 hours 0 minutes",0.556443091,0.9999
+191,ICS721 Super Team,MsgExecLegacyContent,PASSED,"3 days, 14 hours 51 minutes",0.561175537,0.9999
+291,Incentivize STARS  USDC Pool on Stardex,MsgCommunityPoolSpend,PASSED,"3 days, 0 hours 0 minutes",0.564628099,0.9209
+89,Marketplace Marketplace Contract v120,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.566502029,0.9999
+215,Upgrade OnceUpon to v0130,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.570877433,0.9999
+182,CronCat Agents,MsgExecLegacyContent,PASSED,"3 days, 18 hours 7 minutes",0.573222838,0.9999
+196,Stargaze Live Auction v100,MsgExecLegacyContent,PASSED,"3 days, 0 hours 4 minutes",0.581399627,0.9999
+192,Marketplace v15 Migration,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.581567796,0.9999
+166,Sg721 Updatable Contract v231,MsgExecLegacyContent,PASSED,"3 days, 19 hours 35 minutes",0.583221352,0.9999
+197,Nois  Store the noisproxy contract,MsgExecLegacyContent,PASSED,"3 days, 3 hours 50 minutes",0.583413887,0.9999
+185,CronCat Mod DAO,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.584453293,0.9999
+184,CronCat Mod Balances,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.584480047,0.9999
+186,CronCat Mod Generic,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.584514535,0.9999
+195,Stargaze Fair Burn v104,MsgExecLegacyContent,PASSED,"3 days, 0 hours 8 minutes",0.585329482,0.9999
+187,CronCat Mod NFT,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.585617481,0.9999
+84,Stargaze Names Name Collection Contract v0200,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.587424351,0.9999
+97,Stargaze Names Name Collection Contract v111,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.587876632,0.9999
+80,Extend Osmosis Pool Incentives,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.58921488,0.9963
+300,Establish STARSBTC Pool from Marketplace Revenue,MsgCommunityPoolSpend,PASSED,"3 days, 0 hours 0 minutes",0.590809327,1.0
+83,Stargaze Names Name Minter Contract v0200,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.591183977,0.9999
+272,Joint liquidity provisioning for the STARS and NTRN tokens on Astroport on Neutron,MsgCommunityPoolSpend,PASSED,"3 days, 0 hours 1 minutes",0.592416287,0.7932
+174,CronCat Factory,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.593658337,0.9859
+85,Stargaze Names Updatable Whitelist Contract v0200,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.597520683,0.9993
+181,CronCat Tasks,MsgExecLegacyContent,PASSED,"3 days, 18 hours 9 minutes",0.598483238,0.9999
+285,Recover Carbon IBC transfer channel,MsgExecLegacyContent,PASSED,"3 days, 2 hours 3 minutes",0.60069427,0.9999
+82,Stargaze Names Name Marketplace Contract v0200,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.600798474,0.9999
+109,Marketplace Listing Fee Update,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.602182536,0.9884
+214,Add Stargaze team to the uploaders list,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.606638222,0.9999
+98,Stargaze Names Name Minter Contract v111,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.607957411,0.9999
+199,Stargaze Live Auction v101,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.608194332,0.9999
+217,Liquid Stake the OSMO in the Community Pool,MsgExecLegacyContent,PASSED,"3 days, 0 hours 3 minutes",0.608198889,0.9981
+321,Reduce Validator Set to 75,MsgUpdateParams,PASSED,"3 days, 0 hours 0 minutes",0.609073441,0.7636
+180,CronCat Manager,MsgExecLegacyContent,PASSED,"3 days, 18 hours 12 minutes",0.61050077,0.9999
+305,Revised Reactivate expired IBC client for Injective,MsgRecoverClient,PASSED,"3 days, 16 hours 47 minutes",0.610719796,0.9999
+189,Launchpad V2  SG721 Updatable 240,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.611161492,0.9999
+228,BugFix OnceUpon to v0132,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.611498227,1.0
+96,Stargaze Names Updatable Whitelist Contract v111,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.611617134,0.9999
+178,Launchpad v3  Open Edition Minter,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.611770464,0.9999
+177,Launchpad v3  Open Edition Factory,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.611870992,0.9999
+179,Launchpad v3  SG721,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.612958417,0.9999
+296,Whitelist Ark Protocols Dev Wallet for Uploading InterChain NFT Contracts,MsgAddCodeUploadParamsAddresses,PASSED,"3 days, 0 hours 0 minutes",0.615017016,0.9999
+286,Correction Add cosmwasmwasmv1MsgExecuteContract to allowed ICA Messages,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.61533869,0.9999
+200,MantaDAO  Stargaze token swap,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.616318934,0.733
+198,Cron Promote Live Auctions Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.621469432,0.9999
+99,Stargaze Names Name Marketplace Contract v111,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.621599415,0.9999
+292,LimitedTime Token Exchange Between Stargaze and GATA HUB to Boost Decentralization and Liquidity for StarDex,MsgCommunityPoolSpend,PASSED,"3 days, 0 hours 24 minutes",0.621739108,0.9064
+275,Whitelist address for Andromeda Protocol Deployment,MsgUpdateParams,PASSED,"3 days, 0 hours 0 minutes",0.62187319,0.9546
+325,v17 Upgrade,MsgSoftwareUpgrade,PASSED,"3 days, 0 hours 0 minutes",0.623114925,1.0
+232,BugFix OnceUpon to v0142,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.624800397,0.9999
+202,Launchpad v31  SG721,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.624849993,1.0
+194,Upload Generic Multicaller Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 6 minutes",0.624971884,0.9999
+172,Stargaze v10 upgrade,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.627395772,0.9443
+203,Launchpad v31  SG721 Updatable,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.6274575,0.9999
+183,Marketplace v150 Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.628600343,0.9999
+165,Stargaze Tokenomics Update 20,MsgExecLegacyContent,PASSED,"3 days, 1 hours 17 minutes",0.628691901,0.9999
+206,Marketplace v16 Migration,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.629123373,0.9999
+295,Authorize Wasm Upload Discover Decentralization DAO,MsgAddCodeUploadParamsAddresses,PASSED,"10 days, 1 hours 56 minutes",0.630044041,0.7306
+201,Marketplace v160 Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.630926363,0.9999
+193,NoPixels v2,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.631654159,0.9999
+235,Proposal for Introducing the InterChain Gift Card Minter on Stargaze,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.632102679,0.7778
+301,Whitelist Kromsten dev address,MsgAddCodeUploadParamsAddresses,PASSED,"3 days, 0 hours 0 minutes",0.633701917,0.8275
+284,Add cosmwasmwasmv1beta1MsgExecuteContract to allowed ICA Messages,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.635122466,0.9999
+289,Whitelist Deployment Address for Skip,MsgAddCodeUploadParamsAddresses,PASSED,"3 days, 0 hours 0 minutes",0.637705849,0.9997
+307,Whitelist Kaka Labs Dev Address ,MsgAddCodeUploadParamsAddresses,PASSED,"3 days, 0 hours 0 minutes",0.641870385,0.9133
+306,v16 Upgrade,MsgSoftwareUpgrade,PASSED,"3 days, 0 hours 0 minutes",0.642285536,1.0
+229,Nois  Store the Randdrop Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.643428964,0.9999
+234,Discontinue the Pablo Dex Incentives,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.643944452,0.9998
+282,Adding the CryptoGopniks team address to load contracts WL,MsgAddCodeUploadParamsAddresses,PASSED,"3 days, 0 hours 0 minutes",0.644373136,0.9675
+100,Stargaze v8 upgrade,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.646911855,0.9999
+218,BugFix OnceUpon to v0131,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.655809022,1.0
+207,Launchpad v311  SG721 Updatable,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.657353638,0.9999
+262,Add Atlas DAO to Uploader Addresses,MsgAddCodeUploadParamsAddresses,PASSED,"3 days, 0 hours 0 minutes",0.658584478,0.9996
+288,Mint Revenue Distribution,Text,PASSED,"3 days, 0 hours 0 minutes",0.659209089,0.9891
+271,Signaling Prop Upload PreMint Auction Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 11 minutes",0.659619163,0.9999
+219,IBC Minter Fees,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.661704249,0.9994
+211,Recover NOIS IBC Expired Client,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.664189804,0.9999
+230,BugFix OnceUpon to v0133,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.665854428,0.9999
+210,Incentivizing DOTSTARS Pools on the Pablo DEX,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.667938374,0.1744
+188,Stargaze v11 Upgrade  Tokenomics update,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.670897199,0.9999
+304,Send STARSMNTA LP to Liquidity DAO,MsgCommunityPoolSpend,PASSED,"3 days, 0 hours 0 minutes",0.672187287,0.9889
+280,Community Pool separation for Interchain NFT incentives,MsgCommunityPoolSpend,PASSED,"3 days, 0 hours 1 minutes",0.674068043,0.953
+287,Filling GopLend liquidity with community pooling,MsgCommunityPoolSpend,PASSED,"3 days, 0 hours 0 minutes",0.676126207,0.9996
+212,Stargaze v12 Upgrade,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.677746003,0.9999
+231,BugFix OnceUpon to v0134,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.68256569,0.9999
+266,Create Stargazes GovernanceControlled Polytone Proxy Account on Neutron,MsgExecuteContract,PASSED,"3 days, 0 hours 0 minutes",0.683961605,0.9993
+237,CryptoGopniks NFT Staking Platform Staking Platform Contract v131,MsgExecLegacyContent,PASSED,"3 days, 0 hours 28 minutes",0.684336648,0.9997
+209,Allow DAO DAO and Polytone contract upload,MsgExecLegacyContent,PASSED,"3 days, 0 hours 2 minutes",0.685149732,0.9998
+239,Stargaze Thirdening Staking Supplement Funding,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.68653592,0.9443
+208,Store Ojo Oracle Contract Wasm Code,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.688829379,0.9999
+293,Proposal Reallocate Marketplace Fees for Platform Growth and Development,Text,PASSED,"3 days, 0 hours 0 minutes",0.689928933,0.9995
+227,Recover IBC Expired Client from Terra,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.694206829,0.9999
+240,Stargaze Thirdening Param Change Staking Supplement Amount,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.696094579,0.9466
+261,Move POL liquidity position in OSMO pool 604 to PCL pool,MsgCommunityPoolSpend,PASSED,"3 days, 0 hours 0 minutes",0.696598709,0.9911
+302,Proposal Sunset LiquidityDAO and Transition Liquidity Management to Marketplace DAO,Text,PASSED,"3 days, 0 hours 0 minutes",0.697461625,0.9999
+222,Marketplace Post Sale Hook Removal,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.697794525,0.9996
+269,Collection Creation Fee in USDC,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.697882232,0.9968
+221,Stargaze Proposal Deploying Interchain NFT Contracts aka Outgoing Proxy and ICS721 Contracts,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.699182867,0.9999
+281,Whitelist Deploydon Dev Wallet,MsgAddCodeUploadParamsAddresses,PASSED,"3 days, 0 hours 0 minutes",0.700113535,0.9904
+277,Punks NFT Cases Platform Store Platform Contract,MsgStoreCode,PASSED,"3 days, 0 hours 0 minutes",0.702257842,0.9999
+299,v15 Upgrade,MsgSoftwareUpgrade,PASSED,"3 days, 0 hours 0 minutes",0.716088463,0.9999
+236,Whitelist the Enterprise App,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.716940573,0.9999
+257,Stargaze Liquidity DAO  Request for stOSMO from Community Pool,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.723160593,0.998
+278,Punks NFT Cases Platform Store Treasure Contract,MsgStoreCode,PASSED,"3 days, 0 hours 0 minutes",0.728027426,0.9999
+238,Add Gelotto developer wallet to the uploaders list,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.729512302,0.9661
+243,Stargaze Names Renewal Update,MsgExecLegacyContent,PASSED,"3 days, 1 hours 33 minutes",0.72983445,0.9998
+249,Stargaze LiquidityDAO Proposal,MsgExecLegacyContent,PASSED,"3 days, 12 hours 26 minutes",0.731620781,0.9968
+256,Store Wasm Code NonCustodial NFT Loans,MsgExecLegacyContent,PASSED,"3 days, 2 hours 39 minutes",0.732511155,0.9997
+246,Publicworksart generative NFT SG721 v020,MsgExecLegacyContent,PASSED,"3 days, 2 hours 35 minutes",0.734348209,0.9997
+247,Publicworksart generative NFT Minter v020,MsgExecLegacyContent,PASSED,"3 days, 2 hours 29 minutes",0.734492844,0.9997
+268,WL Racoon Supply dev address for contract uploads,MsgAddCodeUploadParamsAddresses,PASSED,"3 days, 0 hours 0 minutes",0.737931722,0.9996
+242,STARS Incentives to bootstrap stSTARS Lending And Collateral on Demex,MsgExecLegacyContent,PASSED,"3 days, 7 hours 1 minutes",0.752179246,0.3763
+258,Live Auctions Whitelist Denoms,MsgExecLegacyContent,PASSED,"3 days, 0 hours 14 minutes",0.754410127,0.9998
+294,Remove CryptoGopniks team address from load contracts WL,MsgRemoveCodeUploadParamsAddresses,PASSED,"3 days, 0 hours 0 minutes",0.754412814,0.9531
+264,Update Stargaze Uploader Address,MsgAddCodeUploadParamsAddresses,PASSED,"3 days, 0 hours 0 minutes",0.758246473,0.9983
+259,Token Allocation for NFT Minters focused on Hedgies holders,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.761875594,0.9755
+241,CryptoGopniks NFT Staking Platform Minter Contract v111,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.763044351,0.9998
+255,Store Wasm Code OnChain Raffles,MsgExecLegacyContent,PASSED,"3 days, 0 hours 14 minutes",0.767161717,0.9997
+250,Collection Creation Fee Update,MsgExecLegacyContent,PASSED,"3 days, 0 hours 3 minutes",0.774752811,0.9992
+254,Stargaze Fair Burn v110,MsgExecLegacyContent,PASSED,"3 days, 0 hours 55 minutes",0.789486837,0.9998
+251,Upload Cosmos Coin Flip update contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.790815741,0.9998
+279,v14 Upgrade,MsgSoftwareUpgrade,PASSED,"3 days, 0 hours 0 minutes",0.792226034,0.9999
+245,Funding Proposal for PLStaking A SoftStaking Platform,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.804529509,0.998
+253,Stargaze Live Auction v102,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.807487686,0.9998
+248,Governance Fee Update,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.80839424,0.8634
+260,Stargaze v13 Upgrade,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.814488801,0.9999
+252,A new public RPC experience for Stargaze,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.820998885,0.9261
+298,Whitelist OM for use in Live Auctions,MsgSudoContract,FAILED,"3 days, 2 hours 13 minutes",0.603400995,0.9639
+303,Reactivate expired IBC client for Injective,MsgRecoverClient,FAILED,"3 days, 0 hours 9 minutes",0.703566715,0.9999

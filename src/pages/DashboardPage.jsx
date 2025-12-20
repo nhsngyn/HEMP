@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import HempMap from '../components/charts/HempMap';
 import RadarChart from '../components/charts/RadarChart';
 import SankeyChart from '../components/charts/SankeyChart';
-import ProposalsTable from '../components/charts/ProposalsTable'; // 테이블도 있다면 유지
+import ProposalsTable from '../components/charts/ProposalsTable';
 import useChainStore from '../store/useChainStore';
 
 const DashboardPage = () => {
@@ -12,7 +12,7 @@ const DashboardPage = () => {
     return allChains.find(c => c.id === selectedMainId);
   }, [allChains, selectedMainId]);
 
-  // ✨ 여기에 공통 스타일을 정의합니다.
+  // ✨ 공통 스타일 (사용자 코드 기준)
   const cardStyle = {
     borderRadius: '15px',
     background: 'var(--bg-2, rgba(255, 255, 255, 0.08))'
@@ -48,7 +48,7 @@ const DashboardPage = () => {
           {/* 1. HempMap (Bubble) */}
           <div 
             className="h-full relative overflow-hidden shadow-lg" 
-            style={{ ...cardStyle, width: '52%' }} // ✨ cardStyle 적용
+            style={{ ...cardStyle, width: '52%' }} 
           >
             <HempMap />
           </div>
@@ -65,13 +65,13 @@ const DashboardPage = () => {
         {/* 3. SankeyChart */}
         <div 
           className="w-full h-[400px] relative overflow-hidden shadow-lg min-h-0" 
-          style={cardStyle} // ✨ cardStyle 적용
+          style={cardStyle}
         >
           <SankeyChart />
         </div>
       </section>
 
-      {/* 하단 테이블 섹션 (필요하다면 유지) */}
+      {/* 하단 테이블 섹션 */}
       <section
         id="proposals-section"
         className="w-full"

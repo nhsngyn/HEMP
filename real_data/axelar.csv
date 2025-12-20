@@ -1,0 +1,263 @@
+﻿id,title,type,status,ProcessingTime,Participation,Consensus
+189,Update inflation rate for maintaining EVM chains,ParameterChangeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9997
+187,Increase voting period for governance proposal,ParameterChangeProposal,PASSED,"1 days, 0 hours 0 minutes",1.0,0.9999
+221,Axelar v10 Upgrade Proposal,SoftwareUpgradeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+196,Axelarators Community Owned Telegram Group and X Twitter Account Proposal,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.3504
+266,Upload Router v120,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+261,Upload Multisig v111,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+263,Upload MultisigProver v111,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+264,Upload Gateway v111,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+265,Upload Router v110,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9605
+262,Upload InterchainTokenService v100,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,1.0
+258,Update VotingVerifier Admin,UpdateAdminProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+259,Update Gateway Admin,UpdateAdminProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+260,Update MultisigProver Admin,UpdateAdminProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+269,Upload AxelarnetGateway v100,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+271,Upload ServiceRegistry v110,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+270,Upload Coordinator v110,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+238,Add 32 new verifiers to approved amplifier verifier set,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+198,Update inflation rate for maintaining EVM chains,ParameterChangeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+220,Building Organic Buzz for Axelar via CipherClout PR,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.3314
+267,Upload VotingVerifier v110,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+191,Axelar India Launch  202324  Phase 2,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+179,Axelar v034 Upgrade Proposal,SoftwareUpgradeProposal,PASSED,"1 days, 0 hours 0 minutes",1.0,1.0
+268,Upload Rewards v120,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,1.0
+184,Update inflation rate for maintaining EVM chains,ParameterChangeProposal,PASSED,"1 days, 0 hours 0 minutes",1.0,1.0
+185,Update Mantle EVM chain confirmation height,ParameterChangeProposal,PASSED,"1 days, 0 hours 0 minutes",1.0,1.0
+186,Update min deposit for governance proposals,ParameterChangeProposal,PASSED,"1 days, 0 hours 0 minutes",1.0,0.9783
+256,Nexus Params Update,ParameterChangeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+162,Axelar v033 Upgrade Proposal,SoftwareUpgradeProposal,PASSED,"1 days, 0 hours 0 minutes",1.0,1.0
+190,Axelar regional communities,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9993
+163,Update Filecoin confirmation height,ParameterChangeProposal,PASSED,"1 days, 0 hours 0 minutes",1.0,1.0
+257,Axelar v11 Upgrade Proposal,SoftwareUpgradeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+203,Update min deposit for governance proposals,ParameterChangeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+30,Increase validator active set to 70,ParameterChangeProposal,PASSED,"1 days, 0 hours 0 minutes",1.0,0.9999
+211,Axelarators Telegram Group and Ecosystem X Account 6Month Program Renewal Proposal,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9765
+210,Increase multisig keygen and signing grace periods,ParameterChangeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+193,Axelar regional communities Feb24Jul24,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+223,Axelar road to Blockchaincon Onboarding  Hackathon,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.1999
+215,Multichain Nation Podcast Grant Proposal,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.2912
+218,Final  Revised Proposal to Revamp and Improve Axelar Network Documentation,CommunityPoolSpendProposal,REJECTED,"3 days, 0 hours 0 minutes",1.0,0.2453
+253,Lava  Fast  Reliable Public RPC,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+164,Increase validator active set to 75,ParameterChangeProposal,PASSED,"1 days, 0 hours 0 minutes",1.0,0.9375
+165,Increase Avalanche block gas limit,ParameterChangeProposal,PASSED,"1 days, 0 hours 0 minutes",1.0,0.9994
+188,Locking up CAKE as veCAKE to incentivize axlUSDC pairs on PancakeSwap,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+41,Increase Minimum Deposit for Governance Proposals,ParameterChangeProposal,PASSED,"1 days, 0 hours 0 minutes",1.0,0.9999
+274,Register Axelarnet Gateway at Router,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+275,Register ITS contract on ITS Hub,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+273,Migrate Router to 110,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,1.0
+272,Update Nexus gateway to axelarnetgateway,ParameterChangeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+233,Store Amplifier MultisigProver v101,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+230,Store Amplifier Multisig v100,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+225,Store Amplifier Router v101,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+232,Store Amplifier Gateway v100,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+228,Store Amplifier Rewards v100,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+226,Store Amplifier Nexus Gateway v100,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+227,Store Amplifier Service Registry v100,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+229,Store Amplifier Coordinator v100,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+231,Store Amplifier Voting Verifier v100,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+283,Interlinked DAO Ecosystem X Proposal 5Month Renewal,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",1.0,0.2817
+28,Increase validator active set to 65,ParameterChangeProposal,PASSED,"1 days, 0 hours 0 minutes",1.0,0.9999
+183,Activate 7day timelock for Axelar Gateway Governance,CallContractsProposal,PASSED,"1 days, 0 hours 0 minutes",1.0,0.9999
+234,Store Amplifier Router v100,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.999732376,0.9999
+224,Adjust Block Parameters,ParameterChangeProposal,PASSED,"3 days, 0 hours 0 minutes",0.996136775,0.9999
+235,Store Amplifier MultisigProver v100,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.991174311,0.9999
+287,Register Gateway for stellar,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.990285413,0.9999
+290,Create pool for stellar in stellar voting verifier,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.990267966,1.0
+288,Register Multisig Prover for stellar,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.990266131,1.0
+289,Authorize Multisig Prover for stellar,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.990265714,0.9999
+291,Create pool for stellar in axelar multisig,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.990225386,1.0
+214,Update filecoin EVM chain confirmation height,ParameterChangeProposal,PASSED,"3 days, 0 hours 0 minutes",0.9842761,0.9999
+195,Axelar v035 Upgrade Proposal,SoftwareUpgradeProposal,PASSED,"3 days, 0 hours 0 minutes",0.977018593,0.9999
+200,Axelar Developer Group Proposal,CommunityPoolSpendProposal,REJECTED,"3 days, 0 hours 0 minutes",0.976163403,0.626
+280,Register Multisig Prover for sui upgrade,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.974069916,0.9999
+278,Register Gateway for sui,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.974066799,0.9999
+279,Authorize Multisig Prover for sui upgrade,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.97406611,0.9999
+244,Authorize Multisig Prover for flow,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.969104536,0.9236
+243,Authorize Multisig Prover for flow,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.969099049,0.9999
+282,Create reward pool for sui participants of axelar multisig,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.963412072,0.9999
+281,Create reward pool for sui voting verifiers,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.963410793,0.9999
+242,Register Gateway for flow,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.958325989,0.9999
+201,Interop Insights Podcast Proposal,CommunityPoolSpendProposal,REJECTED,"3 days, 0 hours 0 minutes",0.954721904,0.0213
+237,Registering Amplifier Service at ServiceRegistry,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.950009638,0.9999
+236,Set Amplifier Nexus Gateway in the Nexus module,ParameterChangeProposal,PASSED,"3 days, 0 hours 0 minutes",0.941441458,0.9999
+31,Axelar v031 Upgrade Proposal,SoftwareUpgradeProposal,PASSED,"1 days, 0 hours 0 minutes",0.938696905,1.0
+292,Register ITS for Sui chain,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.937246527,1.0
+240,Axelarate Series for Axelar Ecosystem,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",0.935226283,0.9998
+222,Revised Axelar Brazilian and Spanish Community  6 Month Continuity and Expansion Plan,CommunityPoolSpendProposal,REJECTED,"3 days, 0 hours 0 minutes",0.933467876,0.4811
+29,Fund MapOfZones to support operations,CommunityPoolSpendProposal,PASSED,"1 days, 0 hours 0 minutes",0.929683393,0.9999
+197,Test cosmwasm contract deployment,StoreAndInstantiateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.928507921,0.9601
+216,Axelarators Telegram Group and Ecosystem X Account 6Month Program Renewal Proposal,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",0.922512967,0.5283
+171,Lava Network  Decentralized Public RPC for Axelar,CommunityPoolSpendProposal,PASSED,"1 days, 0 hours 0 minutes",0.919354014,1.0
+192,Axelar regional communities Dec23Jan24,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",0.915464187,0.9998
+182,Test Interchain Governance Proposal,CallContractsProposal,PASSED,"1 days, 0 hours 0 minutes",0.90535492,0.9879
+204,Reliable and scalable public RPC  powered by Lava,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",0.90311519,0.9999
+284,Axelar v12 Upgrade Proposal,SoftwareUpgradeProposal,PASSED,"3 days, 0 hours 0 minutes",0.898788172,0.9996
+285,Upload InterchainTokenService contract v110,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.898645651,0.9999
+199,Highlighting the Axelar robot NFT,TextProposal,PASSED,"3 days, 0 hours 0 minutes",0.890109628,0.9993
+172,Liquidity Incentives for axlUSDCUSDT on BNB Chain PancakeSwap,CommunityPoolSpendProposal,PASSED,"1 days, 0 hours 0 minutes",0.880656753,0.9999
+293,Register stellar on ITS Hub,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.877103994,1.0
+241,Regional Moderators Proposal  Axelar Brazilian Portuguese Community October 2024  March 2025,CommunityPoolSpendProposal,REJECTED,"3 days, 0 hours 0 minutes",0.869614185,0.579
+245,Register Multisig Prover for flow,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.86769127,0.9999
+255,Update multisig reward pool epoch duration and rewards per epoch for Flow EVM,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.865216684,0.9999
+254,Update voting verifier reward pool epoch duration and rewards per epoch for Flow EVM,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.865200707,0.9999
+249,Remove verifier addresses for QuantNode,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.852858666,0.9999
+212,KYVE Network Public Good Funding,TextProposal,PASSED,"3 days, 0 hours 0 minutes",0.850749508,0.8358
+206,Interlinked DAO Ecosystem X Proposal,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",0.850437466,0.6222
+194,Axelar Latam in ETH LATAM,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",0.850192266,0.9991
+250,Add replacement verifier addresses for QuantNode,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.845193891,0.9999
+246,Store Amplifier Rewards v110,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.840630634,0.9999
+207,BonusBlock Axelar Explorers Program Grant Proposal,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",0.839668402,0.9999
+170,Axelar India Launch  2023,CommunityPoolSpendProposal,PASSED,"1 days, 0 hours 0 minutes",0.80971345,0.9999
+298,Update Jackal IBC Client,ClientUpdateProposal,PASSED,"3 days, 0 hours 0 minutes",0.80766257,0.9999
+276,Reopen Axelar IBC Channels to Terra,TextProposal,PASSED,"3 days, 0 hours 0 minutes",0.80352291,0.9999
+277,Grant Proposal Any Inu AI,TextProposal,REJECTED,"3 days, 0 hours 0 minutes",0.801293776,0.9996
+209,Proposal to Revamp and Improve Axelar Network Documentation,CommunityPoolSpendProposal,REJECTED,"3 days, 0 hours 0 minutes",0.79860957,0.7346
+351,Register Gateway for hedera,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.795524943,0.9999
+352,Register Multisig Prover for hedera,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.795524548,0.9999
+353,Authorize Multisig Prover for hedera,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.795524016,0.9999
+348,Create pool for berachain in berachain voting verifier,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.795499808,0.9999
+350,Register berachain on ITS Hub,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.79549899,0.9999
+349,Create pool for berachain in axelar multisig,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.795498774,0.9999
+239,Regional Moderators Proposal  Axelar Spanish Community October 2024  March 2025,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",0.793500441,0.4634
+174,Axelar Latam Community,CommunityPoolSpendProposal,PASSED,"1 days, 0 hours 0 minutes",0.790624137,0.9999
+297,Update Celo confirmation height,ParameterChangeProposal,PASSED,"3 days, 0 hours 0 minutes",0.789430646,0.9729
+248,Add replacement verifier addresses for Whispernode Encapsulate Cosmostation,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.787813828,0.9999
+247,Remove verifier addresses for Whispernode Encapsulate Cosmostation,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.787809364,0.9999
+355,Create pool for hedera in axelar multisig,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.778383289,0.9999
+354,Create pool for hedera in hedera voting verifier,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.778382175,0.9999
+303,Register Gateway for xrpl,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.777818658,1.0
+305,Authorize Multisig Prover for xrpl,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.777815141,0.9999
+304,Register Multisig Prover for XRPL,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.777449447,1.0
+330,Create pool for xrpl Voting Verifier,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.775148759,0.9999
+294,Update inflation rate on the network,ParameterChangeProposal,PASSED,"3 days, 0 hours 0 minutes",0.771468163,0.9999
+323,Upload XRPLVotingVerifier contract v130,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.764276929,0.9999
+324,Upload XRPLGateway contract v130,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.764274756,0.9999
+341,Authorize Multisig Prover for berachain,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.76375429,0.9999
+339,Register Gateway for berachain,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.763738757,0.9999
+340,Register Multisig Prover for berachain,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.763732447,0.9999
+334,Create pool for xrpl Voting Verifier,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.760320861,0.9999
+333,Authorize Multisig Prover for xrpl,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.760303308,0.9999
+331,Upgrade Gateway for xrpl,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.760303249,0.9999
+332,Update Multisig Prover v141 for XRPL,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.760303024,0.9999
+25,Axelar v029 Upgrade Proposal,SoftwareUpgradeProposal,PASSED,"1 days, 0 hours 0 minutes",0.758461416,0.9999
+313,Create pool for xrplevm in axelar multisig,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.757018729,0.9999
+312,Create pool for xrplevm in voting verifier,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.757012433,0.9999
+314,Register xrplevm on ITS Hub,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.756988674,0.9999
+319,Migrate Multisig to v120,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.753899923,0.999
+169,Bringing MetaMask to Axelar  The Rest of the Cosmos,CommunityPoolSpendProposal,REJECTED,"1 days, 0 hours 0 minutes",0.74849602,0.1604
+311,Authorize Multisig Prover for xrplevm,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.747204162,0.9999
+318,Upload Multisig contract v121,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.74658933,0.999
+251,Migrate rewards contract to v11,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.746469981,0.9999
+328,Authorize Multisig Prover upgrade to v141 for xrpl,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.74405311,0.9999
+326,Upgrade Gateway for xrpl,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.744049382,1.0
+327,Update Multisig Prover v141 for XRPL,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.744048263,1.0
+301,Upload XRPLGateway contract v112,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.743500591,0.999
+302,Upload XRPLVotingVerifier contract v112,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.742854059,0.9989
+27,Increase validator active set to 60,ParameterChangeProposal,PASSED,"1 days, 0 hours 0 minutes",0.741355775,0.9999
+317,Migrate InterchainTokenService to v121,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.739057446,0.9999
+310,Register Multisig Prover for xrplevm,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.736944651,0.9999
+309,Register Gateway for xrplevm,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.736916869,1.0
+167,Liquidity Incentives for axlUSDCUSDT and AXLUSDT on BSC PancakeSwap,CommunityPoolSpendProposal,PASSED,"1 days, 0 hours 0 minutes",0.736503125,0.9999
+26,Update inflation rate on the network,ParameterChangeProposal,PASSED,"1 days, 0 hours 0 minutes",0.733949397,0.9999
+307,Create pool for xrpl in Axelar Multisig,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.733922099,0.9999
+306,Create pool for xrpl Voting Verifier,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.733844349,0.9999
+300,Upload XRPLMultisigProver contract v112,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.732590206,0.9974
+213,Axelar Ai Bot  The way to onboarding more users and developers,CommunityPoolSpendProposal,REJECTED,"3 days, 0 hours 0 minutes",0.732264539,0.8708
+329,Migrate Multisig to v210,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.731631546,0.9999
+296,Axelar Robot NFTs Season 2 Strengthening Interchain Culture,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",0.730585959,0.9997
+345,Create pool for plume in plume voting verifier,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.729638045,1.0
+346,Create pool for plume in axelar multisig,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.729632825,1.0
+320,Upload Multisig contract v200,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.72627801,0.9989
+325,Upload XRPLMultisigProver contract v141,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.725944616,1.0
+308,Register xrpl on ITS Hub,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.720947042,0.9999
+32,APTOS Airdrop for COSMOS holders ,TextProposal,REJECTED,"1 days, 0 hours 0 minutes",0.720792661,0.9996
+24,Axelar v029 Upgrade Proposal,SoftwareUpgradeProposal,REJECTED,"1 days, 0 hours 0 minutes",0.720662014,0.7557
+344,Authorize Multisig Prover for plume,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.720209935,0.9999
+343,Register Multisig Prover for plume,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.720209118,0.9999
+342,Register Gateway for plume,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.720208687,1.0
+286,Axelar regional communities Feb25Apr25,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",0.719775835,0.8528
+347,Register plume on ITS Hub,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.715636458,1.0
+178,Liquidity Incentives for Kyberswap axlUSDC and axlwstETH pools,CommunityPoolSpendProposal,PASSED,"1 days, 0 hours 0 minutes",0.709092097,0.9999
+22,Axelar v028 Upgrade Proposal,SoftwareUpgradeProposal,PASSED,"1 days, 0 hours 0 minutes",0.706394853,1.0
+21,Revive IBC Client to Terra Classic,ClientUpdateProposal,PASSED,"1 days, 0 hours 0 minutes",0.703016927,0.9452
+219,Axelar regional communities Aug24Jan25,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",0.699769168,0.9496
+295,Upload XRPLVotingVerifier contract v100 on xrpl,StoreCodeProposal,REJECTED,"3 days, 0 hours 0 minutes",0.698272601,0.5688
+23,Increase validator active set to 55,ParameterChangeProposal,PASSED,"1 days, 0 hours 0 minutes",0.692238657,0.9999
+386,Migrate Multisig v231,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.682891213,0.9999
+359,Register Gateway for hyperliquid,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.681007338,1.0
+361,Authorize Multisig Prover for hyperliquid,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.671183784,0.9999
+360,Register Multisig Prover for hyperliquid,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.671183563,0.9999
+316,Upload Multisig contract v120,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.665030713,0.9999
+315,Upload InterchainTokenService contract v121,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.665028079,0.9999
+34,Axelar Airdrop ,TextProposal,REJECTED,"1 days, 0 hours 0 minutes",0.662587499,0.9996
+385,Migrate Router to v130,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.660410686,0.9999
+217,Axelar Brazilian and Spanish Community  1 Year Continuity and Expansion Plan,CommunityPoolSpendProposal,REJECTED,"3 days, 0 hours 0 minutes",0.658413643,0.6449
+357,Axelar regional communities final month  May 2025,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",0.655680914,0.999
+367,InterlinkedDAO Proposal Axelarators Telegram Group  6Month Renewal July to December 2025,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",0.654486435,0.9974
+19,Update inflation rate on the network,ParameterChangeProposal,PASSED,"1 days, 0 hours 0 minutes",0.651093454,0.9999
+368,Register hyperliquid on ITS Hub,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.628098911,0.9999
+366,Instantiate ItsAbiTranslator contract v200,InstantiateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.626371806,0.998
+369,Multichain Nation Podcast Season 2 Grant Proposal,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",0.614824356,0.9968
+408,Update rewardsperepoch for Monad Multisig pool,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.613884336,0.9999
+409,Update rewardsperepoch for Monad VotingVerifier pool,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.613883793,0.9999
+208,Axelar Latam Community  Continuity Plan,CommunityPoolSpendProposal,PASSED,"3 days, 0 hours 0 minutes",0.608301038,0.9999
+358,Migrate XRPLMultisigProver to v142,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.602553225,1.0
+168,Incentives for axlUSDC pools,CommunityPoolSpendProposal,PASSED,"1 days, 0 hours 0 minutes",0.601059521,0.9999
+321,Migrate Multisig to v200,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.591450331,1.0
+337,Authorize Multisig Prover for xrpl,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.587078831,0.9999
+336,Update Multisig Prover for XRPL,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.587074694,0.9999
+335,Upgrade Gateway for xrpl,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.58707467,0.9999
+338,Update pool for xrpl Voting Verifier,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.58707402,0.9999
+379,Create pool for monad in monad voting verifier,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.584419612,0.9999
+322,Upload Multisig contract v210,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.584154146,1.0
+380,Create pool for monad in axelar multisig,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.584045168,0.9999
+364,Upload InterchainTokenService contract v130,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.58230319,0.9999
+365,Upload ItsAbiTranslator contract v200,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.582289922,1.0
+299,Update minimum verifier set size,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.575349098,1.0
+363,Create pool for hyperliquid in axelar multisig,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.574085615,0.9999
+362,Create pool for hyperliquid in hyperliquid voting verifier,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.574055574,0.9999
+391,Upload Multisig contract v232,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.557228423,0.9999
+393,Migrate Multisig to v232,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.555874338,0.9999
+392,Migrate Coordinator to v213,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.555873812,0.9999
+396,Store XRPL Voting Verifier contract v200,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.549090677,1.0
+394,Store Multisig contract v240,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.549072646,0.9999
+395,Store Voting Verifier contract v200,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.549072437,0.9999
+387,Migrate Coordinator v211,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.544842838,1.0
+370,Migrate InterchainTokenService to v130,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.543800967,0.9999
+40,ATOM  USDC Airdrop ,TextProposal,REJECTED,"1 days, 0 hours 0 minutes",0.543262381,0.9999
+383,Upload Multisig contract v231,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.540662815,0.9999
+382,Upload Router contract v140,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.540662532,0.9999
+381,Upload Router contract v130,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.540662105,0.9999
+390,Upload Coordinator contract v213,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.539904336,0.9999
+389,Register monad on ITS Hub,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.527641092,0.9999
+384,Upload Coordinator contract v211,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.52746185,0.9999
+407,Migrate Voting Verifier to v200 for chain monad,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.51404306,1.0
+397,Migrate Multisig to v240,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.514042704,0.9999
+405,Migrate Voting Verifier to v200 for chain berachain,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.514042163,0.9999
+406,Migrate Voting Verifier to v200 for chain hyperliquid,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.514041948,0.9999
+356,Upload XRPLMultisigProver contract v142,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.51243653,0.9999
+404,Migrate Voting Verifier to v200 for chain hedera,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.505856046,1.0
+373,Migrate Service Registry to v120,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.505777271,0.9999
+398,Migrate Voting Verifier to v200 for chain flow,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.499603244,0.9999
+400,Migrate Voting Verifier to v200 for chain stellar,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.499602669,0.9999
+399,Migrate Voting Verifier to v200 for chain sui,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.499602291,0.9999
+401,Migrate Voting Verifier to v200 for chain xrplevm,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.499602249,0.9999
+402,Migrate Voting Verifier to v200 for chain xrpl,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.499602086,0.9999
+403,Migrate Voting Verifier to v200 for chain plume,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.499537137,0.9999
+166,Liquidity Incentives for axlUSDCUSDT and AXLUSDT on BSC PancakeSwap,CommunityPoolSpendProposal,REJECTED,"1 days, 0 hours 0 minutes",0.467565995,0.9998
+388,Migrate Router to v140,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.457737391,1.0
+39,ATOM Airdrop for COSMOS holders ,TextProposal,REJECTED,"1 days, 0 hours 0 minutes",0.449342185,0.9998
+43,ATOM Airdrop for COSMOS holders ,TextProposal,REJECTED,"1 days, 0 hours 0 minutes",0.444422893,0.9994
+372,Register hedera on ITS Hub,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.444260699,0.9999
+38,ATOM  USDC Airdrop ,TextProposal,REJECTED,"1 days, 0 hours 0 minutes",0.436014632,0.9998
+18,Staking Param Change,ParameterChangeProposal,REJECTED,"1 days, 0 hours 0 minutes",0.4253663,0.9735
+374,Upload XRPLGateway contract v132,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.410956892,1.0
+42,USDC Airdrop Proposal ,TextProposal,REJECTED,"1 days, 0 hours 0 minutes",0.408505952,0.8847
+371,Upload Service Registry contract v120,StoreCodeProposal,PASSED,"3 days, 0 hours 0 minutes",0.379027911,1.0
+375,Migrate XRPLGateway to v132,MigrateContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.356414098,1.0
+378,Authorize Multisig Prover for monad,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.354024902,0.9999
+36,MARS Airdrop for COSMOS holders ,TextProposal,REJECTED,"1 days, 0 hours 0 minutes",0.352987588,0.9997
+37,Axelar New Features ,TextProposal,REJECTED,"1 days, 0 hours 0 minutes",0.349428239,0.9999
+377,Register Multisig Prover for monad,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.341429358,0.9999
+376,Register Gateway for monad,ExecuteContractProposal,PASSED,"3 days, 0 hours 0 minutes",0.341428608,0.9999

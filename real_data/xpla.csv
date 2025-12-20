@@ -1,0 +1,31 @@
+﻿id,title,type,status,ProcessingTime,Participation,Consensus
+58,A node upgrade proposal for Upgrade,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.536636402,0.9999
+73,ATOM Airdrop ,Text,REJECTED,"7 days, 0 hours 0 minutes",0.499144074,0.9996
+72,ATOM Airdrop ,Text,REJECTED,"7 days, 0 hours 0 minutes",0.499144074,0.9999
+93,Proposal for Increasing Deposit and Activating Expedited Governance Features,Text,REJECTED,"7 days, 0 hours 0 minutes",0.428843489,0.5534
+69,MAKE 5K PER DAY ,Text,REJECTED,"7 days, 0 hours 0 minutes",0.402374837,0.9999
+88,Feeling Lucky   Get Airdrop   XPLA,Text,REJECTED,"7 days, 0 hours 0 minutes",0.400351257,0.9999
+70,Reducing transaction fees to enhance network experience and competitiveness,MsgUpdateParams,PASSED,"7 days, 0 hours 14 minutes",0.878983504,0.9968
+71,Proposal Make XPLA Great Again Phase 2  Transaction Activation Program,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.751728998,0.9999
+66,xpla v160 upgrade,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.735408473,0.9999
+102,Recover Expired IBC Client to XPLA Chain,MsgRecoverClient,PASSED,"3 days, 0 hours 0 minutes",0.675790904,1.0
+98,XPLA v180 Upgrade Proposal,MsgSoftwareUpgrade,PASSED,"7 days, 0 hours 0 minutes",0.665930207,1.0
+105,Proposal Transition of XPLA Token Name and Symbol to CONX,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.665583359,0.9999
+97,Proposal Make XPLA Great Again  Phase3 Validator Settlement 21,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.654871909,1.0
+65,A node upgrade proposal for v15,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.645375696,0.9991
+68,Proposal XPLA  Aethir Join Grant Program,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.609935303,1.0
+59,modify A node upgrade proposal for Upgrade,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.599360907,1.0
+57,Register Google Cloud Volunteer validator proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.599022585,1.0
+75,xpla v170 upgrade,MsgSoftwareUpgrade,PASSED,"7 days, 0 hours 0 minutes",0.541084764,1.0
+4,A node upgrade proposal for EVM compatibility,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.514145836,1.0
+3,Proposal for Relief Fund Support,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.508786416,1.0
+56,A node upgrade proposal for volunteer validator,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.499824902,1.0
+7,XPLA proposes to use 70000 XPLA tokens from the Community Pool to provide liquidity on Osmosis DEX,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.475709626,1.0
+52,Parameter change for fee pool rate to increase the reward of validators by Validation Settlements,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.454191989,0.9999
+53,Validation Settlement,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.449768165,0.9999
+101,Recover Expired IBC Client to Axelar Network,MsgRecoverClient,PASSED,"7 days, 0 hours 0 minutes",0.441614309,1.0
+99,Recover Expired IBC Client to Archway Network,MsgRecoverClient,PASSED,"7 days, 0 hours 0 minutes",0.441612829,0.9999
+100,Recover Expired IBC Client to Cosmos,MsgRecoverClient,PASSED,"7 days, 0 hours 0 minutes",0.441612829,1.0
+13,Increase minimum deposit to protect XPLA network from SPAM,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.434700813,1.0
+95,Modified Proposal for Increasing Deposit and Activating Expedited Governance Features,MsgUpdateParams,PASSED,"7 days, 0 hours 18 minutes",0.432063322,1.0
+6,Parameter change for participation of more validators from 50 to 80,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.410437733,1.0

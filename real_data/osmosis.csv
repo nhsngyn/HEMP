@@ -1,0 +1,792 @@
+﻿id,title,type,status,ProcessingTime,Participation,Consensus
+172,Enable Superfluid Staking on OSMOUST and OSMOLUNA,MsgExecLegacyContent,PASSED,"3 days, 0 hours 32 minutes",20.11498935,0.9879
+159,Signaling Proposal Add DEC Incentivized Pools ATOM  OSMO,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",20.67127624,0.2025
+183,Increase Voting Period to 5 days,MsgExecLegacyContent,PASSED,"3 days, 0 hours 36 minutes",20.67914196,0.9605
+166,Signaling proposal to match DARC external incentives,MsgExecLegacyContent,PASSED,"3 days, 11 hours 56 minutes",22.69966038,0.7324
+170,Signaling Proposal for GRAV Incentivized Pools,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",22.70081092,0.8384
+120,Signaling Proposal Ion DAO  Treasury,MsgExecLegacyContent,PASSED,"4 days, 7 hours 44 minutes",22.78950049,0.6621
+220, Match PSTAKE External Incentives for Pools 648,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",22.98287492,0.8171
+174,SemiAutomatic Incentive Adjustments for 03132022,MsgExecLegacyContent,PASSED,"3 days, 10 hours 48 minutes",23.10524718,0.9965
+173,Match External Incentives for PSTAKEOSMO 648,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",23.76647917,0.8644
+489,Set token creation fee to zero introduce an alternative spamprevention mechanism,MsgExecLegacyContent,PASSED,"2 days, 9 hours 32 minutes",23.93865476,0.9635
+162,Allocate 125k Osmo from the OCP to give SupportMarketing access to guidance on business matters related to Defi DAOs and structuring,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 14 minutes",24.06145615,0.2571
+178,Match External Incentives for SWTHOSMO,MsgExecLegacyContent,PASSED,"3 days, 0 hours 1 minutes",24.31462516,0.4071
+161,SemiAutomatic Incentive Adjustments for 02282022,MsgExecLegacyContent,PASSED,"3 days, 8 hours 53 minutes",24.40742536,0.998
+164,SemiAutomatic Incentive Adjustments for 03062022,MsgExecLegacyContent,PASSED,"3 days, 11 hours 55 minutes",24.72130201,0.8073
+260,Regular Incentive adjustment for 20220620,MsgExecLegacyContent,PASSED,"5 days, 0 hours 7 minutes",24.78757376,0.9978
+169,Match External Incentives for CMDXOSMO and CMDXATOM pairs,MsgExecLegacyContent,PASSED,"3 days, 0 hours 21 minutes",25.00646378,0.7838
+165,Signaling Proposal Add BAND Incentivized Pool,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",25.25501957,0.7
+175,SemiAutomatic Incentive Adjustments for 03142022 hotfix for CMDX matching,MsgExecLegacyContent,PASSED,"3 days, 0 hours 3 minutes",25.29839882,0.9938
+230,Reallocate Incentives Removed From Terra Pools To Community Pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",27.14534844,0.994
+676,Raise Minimum Gas Price to 0025 uOSMO,MsgExecLegacyContent,PASSED,"5 days, 0 hours 8 minutes",27.29926844,0.994
+184,SemiAutomatic Incentive Adjustments for 03282022,MsgExecLegacyContent,PASSED,"3 days, 8 hours 28 minutes",27.32693439,0.9963
+673,Expedited Establish Superfluid Staking for TIA and redirect a portion of Incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",27.35295978,0.9994
+200,Onboard HOPEOSMO 653 for Osmosis Incentives,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",27.39061531,0.6743
+201,Enable Superfluid Staking on OSMOCMDX,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",27.57770417,0.9792
+182,Establish Carbon Market on Osmosis,MsgExecLegacyContent,PASSED,"3 days, 0 hours 6 minutes",27.58437516,0.9935
+229,WBTC Incentivised pool with Minimum Incentives of 5,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",27.58511049,0.9957
+219,Make Osmosis the CoLead Sponsor of Cosmoverse 2022,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",27.63149154,0.9289
+195,Match External Incentives for PSTAKEOSMO 648,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",27.71950486,0.859
+176,Osmosis Carbon Neutrality through Purchasing and Retiring NCT,MsgExecLegacyContent,PASSED,"3 days, 0 hours 4 minutes",27.90743089,0.9392
+186,Launch the Osmosis Grants Program,MsgExecLegacyContent,PASSED,"9 days, 16 hours 43 minutes",28.36164597,0.9972
+157,Osmosis v7 Carbon Upgrade,MsgExecLegacyContent,PASSED,"3 days, 0 hours 12 minutes",28.46794342,0.9996
+180,Signalling proposal for MARBLEOSMO649 incentivized pool,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",29.12831518,0.0891
+185,Enable Superfluid Staking on OSMOSTARS OSMOSCRT and OSMOCRO,MsgExecLegacyContent,PASSED,"3 days, 0 hours 16 minutes",29.15453087,0.9859
+194,Match External Incentives for UMEEOSMO and ATOMUMEE,MsgExecLegacyContent,PASSED,"5 days, 23 hours 52 minutes",29.42352988,0.9349
+303,Upload CW3 Fixed Multisig,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",29.86633406,0.9977
+187,Multihop Discount on Osmosis Pools,MsgExecLegacyContent,PASSED,"5 days, 7 hours 28 minutes",29.87094177,0.9982
+232,Reduction of Voting Period to 2 Days,MsgExecLegacyContent,REJECTED,"7 days, 14 hours 16 minutes",29.93383421,0.8941
+218,Signalling Proposal for Incentivized Canonical USDC pool,MsgExecLegacyContent,PASSED,"5 days, 7 hours 6 minutes",30.11524763,0.9922
+179,SemiAutomatic Incentive Adjustments for 03202022,MsgExecLegacyContent,PASSED,"3 days, 9 hours 40 minutes",30.30385714,0.9975
+196,Increase Validator Set Size to 135,MsgExecLegacyContent,PASSED,"5 days, 13 hours 49 minutes",30.49249097,0.8396
+261,Signalling proposal for MEME incentivized pools,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",30.56180312,0.8816
+236,Match External Incentives on OSMOAKT 3,MsgExecLegacyContent,PASSED,"5 days, 11 hours 21 minutes",30.87991909,0.9882
+231,Enable Superfluid Staking on OSMOJUNO,MsgExecLegacyContent,PASSED,"5 days, 1 hours 12 minutes",30.88856221,0.9933
+221,SemiAutomatic Incentive Adjustments for 05082022,MsgExecLegacyContent,PASSED,"5 days, 9 hours 1 minutes",30.92623089,0.9887
+306,ION DAO Store DAO contracts code,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",30.93725508,0.8849
+190,Signalling Proposal for SWTHOSMO651 Incentivized Pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",31.11160587,0.0231
+233,Incentives  Repo Process and Category Model,MsgExecLegacyContent,PASSED,"5 days, 13 hours 57 minutes",31.32629773,0.9989
+242, Match XPRT External Incentives for XPRTUSDC pool 719,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",31.40589382,0.7321
+191,Allocate a flat portion of staking rewards per validator,MsgExecLegacyContent,REJECTED,"5 days, 5 hours 0 minutes",31.4666673,0.6913
+241,Enable Superfluid for XPRTOSMO pool 15,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",31.50308862,0.7934
+243,Enable Superfluid for XPRTOSMO pool 15,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",31.52754674,0.8892
+202,SemiAutomatic Incentive Adjustments for 04172022,MsgExecLegacyContent,PASSED,"5 days, 14 hours 25 minutes",31.73796846,0.9986
+238,Regular Incentive adjustment for 20220522,MsgExecLegacyContent,PASSED,"5 days, 12 hours 14 minutes",31.83044808,0.9988
+192,Match External Incentives to extended STARSOSMO and ATOMSTARS pairs,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",31.8391274,0.7978
+197,SemiAutomatic Incentive Adjustments for 04102022,MsgExecLegacyContent,PASSED,"5 days, 10 hours 30 minutes",32.20686962,0.9979
+235,Enable Superfluid Staking on OSMODAI 674 OSMOUSDC 678 and OSMOETH 704,MsgExecLegacyContent,PASSED,"6 days, 6 hours 2 minutes",32.2447688,0.9933
+305,ION DAO Store staking contracts code,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",32.33679279,0.8892
+524,Layerzero airdrop,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",32.48618047,0.9934
+266,Regular Incentive adjustment for 20220627,MsgExecLegacyContent,PASSED,"5 days, 0 hours 10 minutes",32.5191188,0.9991
+234,Remove Superfluid Staking from OSMOUST 560 and OSMOLUNA 561 ,MsgExecLegacyContent,PASSED,"5 days, 6 hours 36 minutes",32.52792737,0.9982
+199,Formalize usage of commonwealth for governance,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",32.54848671,0.5999
+240,EVMOS Incentivized pool with starting Incentives of 05,MsgExecLegacyContent,PASSED,"5 days, 0 hours 11 minutes",32.5637861,0.9983
+227,Remove Incentives from all Terra pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",32.92242909,0.9891
+257,Udate Bostrom client on Osmosis,MsgExecLegacyContent,PASSED,"5 days, 17 hours 17 minutes",32.93810152,0.9986
+217,SemiAutomatic Incentive Adjustments for 05012022,MsgExecLegacyContent,PASSED,"5 days, 19 hours 28 minutes",32.96838688,0.9983
+214,Reduce OSMOATOM Pool Swap fee to 02,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",33.09456601,0.9946
+264,External Incentive Matching reduction within nonOSMO categories,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",33.33522325,0.9902
+239,Enable Superfluid Staking on OSMOWBTC,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",33.94097953,0.9952
+216,Signalling Proposal for AssetMantle Incentivised pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 20 minutes",33.95073888,0.5415
+244,Major Incentives Category Rebalance,MsgExecLegacyContent,PASSED,"5 days, 0 hours 6 minutes",34.11755837,0.9944
+212,SemiAutomatic Incentive Adjustments for 04242022,MsgExecLegacyContent,PASSED,"5 days, 15 hours 42 minutes",34.12432777,0.9974
+189,SemiAutomatic Incentive Adjustments for 04032022,MsgExecLegacyContent,PASSED,"5 days, 10 hours 36 minutes",34.17663879,0.9986
+259,Update Shentu Client on Osmosis,MsgExecLegacyContent,PASSED,"5 days, 0 hours 11 minutes",34.18023371,0.999
+281,Signalling Proposal for OSMOKAVA730 incentivised pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 13 minutes",34.21715388,0.8978
+237,Signalling proposal for incentivized osmoglx pool,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",34.31806012,0.7096
+262,Match external incentives on OSMO LIKE Pool 553,MsgExecLegacyContent,REJECTED,"6 days, 0 hours 11 minutes",34.40559983,0.6339
+271,Manual Incentive Adjustment  resubmission,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",34.54070415,0.3708
+256,Fix IBC transfers between Lum Network and Osmosis,MsgExecLegacyContent,FAILED,"5 days, 0 hours 29 minutes",34.54178403,0.1063
+258,Fix IBC transfers between Lum Network and Osmosis,MsgExecLegacyContent,PASSED,"5 days, 2 hours 36 minutes",34.5496649,0.8792
+211,Signalling Proposal for Fetchai Incentivised pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",34.61976133,0.6721
+205,Canonical Ethereum Bridge Provider Approval Voting Procedures  Reciprocal Expectations for Bridge Provision,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",34.67474939,0.9941
+282,Enable Superfluid Staking on OSMOEEUR,MsgExecLegacyContent,PASSED,"5 days, 0 hours 6 minutes",34.75816072,0.9895
+204,Signaling proposal to add Cerberus CRBRUS pool 662 to the Osmosis incentives program,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",34.82185388,0.6749
+611,Expedited Repair migration for already approved CL pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",35.17362104,0.9999
+245,Osmosis Support Lab Funding Round June  August 2022,MsgExecLegacyContent,PASSED,"5 days, 0 hours 31 minutes",35.19077173,0.925
+310,Regular Incentive adjustment for 20220815,MsgExecLegacyContent,PASSED,"5 days, 0 hours 12 minutes",35.28597695,0.9994
+272,Regular Incentive adjustment for 20220704,MsgExecLegacyContent,PASSED,"5 days, 0 hours 13 minutes",35.36445931,0.9912
+279,Match External Incentives on OSMOEVMOS 722,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",35.42162073,0.9799
+274,Reduce emissions to less strategically important pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",35.59266143,0.9512
+203,Enable Superfluid Staking on OSMOAKT,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",36.06459267,0.9919
+188,Remove incentives from all xki pools,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",36.0721749,0.5245
+252,Osmosis v9 Nitrogen Upgrade,MsgExecLegacyContent,PASSED,"5 days, 0 hours 23 minutes",36.33533749,0.9998
+470,ARBITRUM ARB Airdrop claim,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",36.39574015,0.9964
+251,Osmosis Ministry of Marketing Funding Round June  November 2022,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",36.52424926,0.6913
+213,Update Evmos Client on Osmosis,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",36.56421795,0.9993
+269,Enable Superfluid Staking on OSMOEVMOS,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",36.68690036,0.9871
+265,Signaling proposal Create a osmosis bug bounty,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",36.739852,0.9995
+462,OSMO Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",36.81442906,0.9972
+273,Phase out Incentives on smaller Other Category pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",37.28009338,0.7675
+268,Continued reduction of emissions to Liquidity Pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 19 minutes",37.42350207,0.9719
+206,Adopt Axelar as the Canonical Ethereum Bridge Service Provider,MsgExecLegacyContent,PASSED,"5 days, 3 hours 9 minutes",37.90006521,0.6382
+222,Reallocate half of the Incentives on OSMOUST 560 to OSMOUSDC 678,MsgExecLegacyContent,PASSED,"5 days, 0 hours 6 minutes",38.00777363,0.996
+207,Adopt Gravity as the Canonical Ethereum Bridge Service Provider,MsgExecLegacyContent,PASSED,"5 days, 2 hours 57 minutes",38.07483954,0.0378
+209,Adopt Wormhole as the Canonical Ethereum Bridge Service Provider,MsgExecLegacyContent,REJECTED,"5 days, 2 hours 56 minutes",38.20094087,0.6224
+210,Do Not Adopt a Canonical Ethereum Bridge Service Provider,MsgExecLegacyContent,REJECTED,"5 days, 2 hours 56 minutes",38.20716255,0.8465
+267,Manual Incentive Adjustment  Completely remove incentives for various pools,MsgExecLegacyContent,REJECTED,"5 days, 1 hours 29 minutes",38.2499544,0.7354
+208,Adopt Nomad as the Canonical Ethereum Bridge Service Provider,MsgExecLegacyContent,PASSED,"5 days, 2 hours 57 minutes",38.25622451,0.0262
+224,Reallocate half of the Incentives on LUNAUST 562 to OSMODAI 674  approve the pool for Osmosis incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",38.28042243,0.9905
+223,Reallocate half of the Incentives on OSMOLUNA 561 to OSMOETH 704  approve the pool for Osmosis incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",38.33710999,0.9939
+674,Expedited Add TIA as Fee Token,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",38.68350398,0.9997
+246,Additional Funding for the Osmosis Grants Program,MsgExecLegacyContent,PASSED,"5 days, 12 hours 42 minutes",38.71151994,0.9901
+276, Match XPRT External Incentives for Pools XPRTUSDC719  XPRTOSMO15,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",38.77618953,0.6538
+226,Add functionality to allow depooling of UST pools via emergency upgrade hard fork in proposal 225,MsgExecLegacyContent,PASSED,"5 days, 0 hours 23 minutes",38.94033904,0.9673
+278,Governance Module Upgrade Expedited Proposals,MsgExecLegacyContent,PASSED,"5 days, 0 hours 11 minutes",39.03717842,0.9779
+468,Revive IBC Client to Dig,MsgExecLegacyContent,PASSED,"5 days, 13 hours 41 minutes",39.05729841,0.9995
+270,Match External Incentives on OSMOMNTL 690,MsgExecLegacyContent,PASSED,"5 days, 0 hours 16 minutes",39.08246379,0.3588
+225,Use Hardfork to Accelerate Proposals 222 223 and 224,MsgExecLegacyContent,PASSED,"5 days, 1 hours 36 minutes",39.15225837,0.98
+394,Enable Superfluid Staking on OSMOHUAHUA,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",39.26055333,0.9568
+249,Approve Axelar via Moonbeam as the Canonical Polkadot Bridge,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",39.30579856,0.9979
+577,Signaling Proposal for WHALEOSMO External Incentive Match Extension,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",39.31407211,0.9554
+248,Regular Incentive adjustment for 20220530,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",39.52037015,0.9991
+280,Regular Incentive adjustment for 20220718,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",39.67418862,0.9947
+323,Signalling Proposal Removal of incentives from pool 690 MNTLOSMO,MsgExecLegacyContent,PASSED,"7 days, 2 hours 5 minutes",39.73862763,0.956
+387,Regular Incentive adjustment for 20221219,MsgExecLegacyContent,PASSED,"5 days, 0 hours 8 minutes",39.75485221,0.9904
+228,Action Required Signalling Proposal for Emergency v8 Upgrade at 4402000,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",39.85388923,0.9987
+442,Signaling Proposal  Recognise CMST as a Stablecoin asset,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",39.87637142,0.9821
+381,Upload ICNS Contracts Namenft Contract Part 1,MsgExecLegacyContent,PASSED,"5 days, 2 hours 35 minutes",39.92024573,0.9499
+526,Allow Squid contracts to be uploaded,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",39.97579776,0.9819
+277,Gift to Osmosis stakeholders,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",40.01439493,0.9239
+389,Remove NonOSMO pool incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 22 minutes",40.04591552,0.9517
+390,Reduce incentives on established Major and Stable category pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 12 minutes",40.10882841,0.9796
+309,Signaling Proposal for GLTOOSMO 778 incentivized pool,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",40.13099393,0.9318
+275,Regular Incentive adjustment for 20220711,MsgExecLegacyContent,PASSED,"5 days, 0 hours 44 minutes",40.18000548,0.9972
+250,Enable Superfluid Staking on OSMOREGEN,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",40.19412091,0.9891
+406,Regular Incentive adjustment for 20230123,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 50 minutes",40.7451898,0.023
+393,Regular Incentive adjustment for 20221226,MsgExecLegacyContent,PASSED,"5 days, 0 hours 13 minutes",40.7533896,0.9961
+369,Signaling Proposal for stOSMOOSMO 833 Incentivised Pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 24 minutes",40.81818139,0.9564
+337,Increase the Osmosis Active Validator Set to 150 Validators from 135,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",40.91503339,0.9589
+477,Unfreeze IBC client to MediBloc,MsgExecLegacyContent,PASSED,"5 days, 0 hours 11 minutes",40.98000477,0.9978
+444,Composability Incentives Category,MsgExecLegacyContent,PASSED,"5 days, 0 hours 7 minutes",41.41694408,0.9741
+522,Liquid Staked Token Incentive Category,MsgExecLegacyContent,PASSED,"5 days, 0 hours 14 minutes",41.50712054,0.9907
+431,Signaling Proposal  Define New Stable Asset IST and incentivize stable swap pool DAI  CMST  IST with OSMO rewards,MsgExecLegacyContent,PASSED,"6 days, 18 hours 15 minutes",41.56674223,0.6465
+410,AVAX Bootstrapping liquidity incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",41.60047394,0.9875
+515,Allow Calculated Finance contracts to be uploaded,MsgExecLegacyContent,PASSED,"5 days, 0 hours 8 minutes",41.62903461,0.9825
+411,Upload SwapRouter Contract,MsgExecLegacyContent,PASSED,"7 days, 18 hours 56 minutes",41.76633705,0.9994
+295,Signalling Proposal for OSMOLINK731 incentivised pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",41.97527843,0.8608
+382,Upload ICNS Contracts Resolver Contract Part 2,MsgExecLegacyContent,PASSED,"5 days, 2 hours 10 minutes",42.10412643,0.9525
+383,Upload ICNS Contracts Registrar Contract Part 3,MsgExecLegacyContent,PASSED,"5 days, 2 hours 6 minutes",42.11505252,0.9525
+413,Reactivate expired IBC client 07tendermint1,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",42.26436089,0.9994
+294,Signalling Proposal for OSMOINJ 725 incentivised pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",42.31086697,0.5136
+316,ION DAO Store DAO contracts code,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",42.40568,0.9897
+352,Signalling Proposal for LIKEOSMO External Incentive Match,MsgExecLegacyContent,PASSED,"5 days, 23 hours 1 minutes",42.42150798,0.5791
+443,Enable Superfluid Staking on OSMOAVAX,MsgExecLegacyContent,PASSED,"5 days, 0 hours 12 minutes",42.55070099,0.9962
+388,Community consent Cosmos Pay supporting OSMO,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 6 minutes",42.56663729,0.2642
+478,Whitelist Apollo Vaults for OSMOWBTC and OSMOETH,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",42.57832648,0.9982
+511,Update Lambda IBC Client on Osmosis,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",42.7590957,0.9999
+409,Add AVAX to the list of Major category assets,MsgExecLegacyContent,PASSED,"5 days, 0 hours 10 minutes",42.84817196,0.9939
+408,Signalling Proposal for OSMOAVAX 899 incentivised pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 13 minutes",42.86434509,0.9891
+479,Upload CrossChain Swap Contract v2,MsgExecLegacyContent,PASSED,"5 days, 0 hours 12 minutes",42.89679268,0.9983
+527,Upload Suitdrop Redeem Contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",42.93540886,0.9508
+423,Regular Incentive adjustment for 20230206,MsgExecLegacyContent,PASSED,"5 days, 0 hours 18 minutes",43.00871107,0.9964
+997,Update Developer Vesting Addresses,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",43.00996304,0.9997
+304,Increase Deposit for Proposals to 1600 OSMO,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",43.04645426,0.9749
+299,Regular Incentive adjustment for 20220801,MsgExecLegacyContent,PASSED,"5 days, 0 hours 22 minutes",43.12309557,0.9995
+395,Regular Incentive adjustment for 20230102,MsgExecLegacyContent,PASSED,"5 days, 0 hours 19 minutes",43.23859242,0.9958
+421,ProtoRev Revenue Allocation,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",43.28572269,0.9078
+287,Add Polkadot DOT to the list of Major category assets,MsgExecLegacyContent,PASSED,"5 days, 0 hours 9 minutes",43.367889,0.9915
+440,Phase out incentives for BUSD,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",43.54316675,0.9938
+425,Signalling Proposal for OSMOBUSD 899 incentivised pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",43.67081161,0.9855
+427,Signalling Proposal for Initial IBC Rate Limits,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",43.69946022,0.9991
+441,Upgrade stOSMO stJUNO and stSTARS Pools to Stableswap,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",43.76997277,0.9993
+339,Upload Apollo Liquid Staking Contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 51 minutes",43.84180127,0.6166
+430,Signaling Proposal for ISTOSMO External Incentive Match,MsgExecLegacyContent,PASSED,"6 days, 18 hours 49 minutes",43.84458092,0.7437
+405,Enable Superfluid Staking on OSMOWBNB,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",43.84751354,0.9923
+426,BUSD bootstrapping liquidity incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 15 minutes",43.89495089,0.9834
+366,Regular Incentive adjustment for 20221121,MsgExecLegacyContent,PASSED,"5 days, 0 hours 7 minutes",43.97765449,0.9994
+422,Update IBC Client for Cerberus  2nd time,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",43.99172968,0.9532
+424,Signaling Proposal for ATOMstkATOM Stableswap Pool External Incentive Match,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",44.03741825,0.5515
+351,Regular Incentive adjustment for 20221024,MsgExecLegacyContent,PASSED,"5 days, 0 hours 22 minutes",44.04927455,0.9998
+353,Regular Incentive adjustment for 20221031,MsgExecLegacyContent,PASSED,"5 days, 0 hours 44 minutes",44.11080649,0.9997
+419,Enable Superfluid Staking on OSMOSTRD,MsgExecLegacyContent,PASSED,"5 days, 13 hours 6 minutes",44.13008895,0.9891
+396,Regular Incentive adjustment for 20230109,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",44.15676068,0.9994
+407,Regular Incentive adjustment for 20230123,MsgExecLegacyContent,PASSED,"5 days, 0 hours 45 minutes",44.17190527,0.9954
+508,Upload Pyth contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 17 minutes",44.21900819,0.9998
+523,Signaling Proposal for WHALEOSMO External Incentive Match Extension ,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",44.27146579,0.229
+288,Polkadot DOT Bootstrapping liquidity incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 7 minutes",44.30338699,0.9734
+286,Signalling Proposal for OSMODOT 773 incentivised pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 27 minutes",44.38224871,0.9882
+412,Update the Impacthub3 client with Ixo4 client to recover channel between Osmosis and Ixo,MsgExecLegacyContent,PASSED,"7 days, 14 hours 54 minutes",44.39464467,0.9998
+307,Match external ECH incentives on ECHOSMO 747,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 6 minutes",44.40832909,0.9007
+293,Regular Incentive adjustment for 20220725,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",44.40863331,0.999
+599,IBC Client Update Expired Client to Starname Chain,MsgExecLegacyContent,PASSED,"7 days, 1 hours 19 minutes",44.43941431,1.0
+377,Stableswap Incentive structure,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",44.52390965,0.9978
+509,Upload Wormhole core contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 6 minutes",44.58134133,0.9998
+429,Remove Exit Fee option from pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",44.71481621,0.9926
+645,Reduce Maximum Block Size,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",44.86776489,0.1382
+476,Regular Incentive adjustment for 20230403,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",45.10589298,0.9934
+436,Whitelist Apollo Vaults for USDC and ATOM,MsgExecLegacyContent,PASSED,"5 days, 0 hours 56 minutes",45.18420723,0.9976
+415,Bootstrapping liquidity for Mars Protocol through Spend of Redirected Incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 6 minutes",45.25614226,0.9905
+434,Add FTM to the list of Major category assets,MsgExecLegacyContent,PASSED,"5 days, 0 hours 20 minutes",45.40244317,0.9667
+457,Signalling Proposal for OSMOCMST incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",45.43868921,0.9447
+414,Allow Mars Outpost Contracts to be Uploaded to Osmosis,MsgExecLegacyContent,PASSED,"5 days, 0 hours 9 minutes",45.51534456,0.9981
+433,Signalling Proposal for OSMOFTM incentivised pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 23 minutes",45.61052594,0.9929
+368,Regular Incentive adjustment for 20221128,MsgExecLegacyContent,PASSED,"5 days, 0 hours 12 minutes",45.62283077,0.9963
+992,Update stJUNOJUNO Scaling Factor Controller to Auto Update Contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",45.73196646,0.9999
+376,Phase out Incentives on Low Revenue Pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",45.89473834,0.8199
+565,Regular Incentive adjustment for 20230717,MsgExecLegacyContent,PASSED,"5 days, 0 hours 8 minutes",45.90778166,0.9946
+474,Upload Autonomy Network Registry Stake Contract V2,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",45.96078511,0.9647
+507,Add FIL to the list of Major category assets,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",46.02990197,0.983
+985,Whitelist The Honorais Deployment Address to Upload new smart contracts,MsgAddCodeUploadParamsAddresses,PASSED,"6 days, 13 hours 59 minutes",46.06778055,0.7475
+400,Phase out 1 and 7 day liquidity bonds,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",46.11800387,0.7994
+428,Regular Incentive adjustment for 20230213,MsgExecLegacyContent,PASSED,"5 days, 0 hours 11 minutes",46.12227403,0.9955
+399,Regular Incentive adjustment for 20230116,MsgExecLegacyContent,PASSED,"5 days, 0 hours 28 minutes",46.12756532,0.9996
+528,Decide Whats Shown on the Main Osmosis Website,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",46.14322284,0.591
+988,Update stEVMOSEVMOS Scaling Factor Controller to Auto Update Contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",46.15106586,0.9993
+308,Regular Incentive adjustment for 20220808,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",46.29158876,0.9946
+519,Alternative Signalling Proposal for use of ProtoRev Funds,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 1 minutes",46.3050063,0.6686
+367,Revive IBC Client to Dig,MsgExecLegacyContent,PASSED,"5 days, 4 hours 37 minutes",46.30728284,0.9719
+325,Regular Incentive adjustment for 20220829,MsgExecLegacyContent,PASSED,"5 days, 1 hours 24 minutes",46.30870866,0.999
+501,Regular Incentive adjustment for 20230508,MsgExecLegacyContent,PASSED,"5 days, 0 hours 29 minutes",46.35158,0.9965
+506,Add LINK to the list of Major category assets,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",46.36797697,0.9888
+439,Regular Incentive adjustment for 20230220,MsgExecLegacyContent,PASSED,"5 days, 0 hours 30 minutes",46.42095987,0.9954
+996,Increase Staking Rewards Smoothing Factor to 14,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",46.45198797,0.9999
+475,Upload Autonomy Network LimitsStops Wrapper Contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",46.48260275,0.9653
+438,Osmosis Proposal Standards,MsgExecLegacyContent,PASSED,"5 days, 0 hours 14 minutes",46.61214143,0.9997
+378,Osmosis Support Lab Funding Round December 2022  February 2023,MsgExecLegacyContent,PASSED,"5 days, 0 hours 12 minutes",46.62715167,0.8231
+598, ATOM Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",46.78435081,0.9959
+564,Add PICAOSMO to External Incentive Matching Program,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",46.80759174,0.787
+296,Osmosis v11 Upgrade,MsgExecLegacyContent,PASSED,"5 days, 0 hours 10 minutes",46.81210281,0.9998
+320,Remove blockedgo from Osmosis,MsgExecLegacyContent,REJECTED,"6 days, 16 hours 7 minutes",46.81337557,0.7265
+435,FTM Bootstrapping liquidity incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 15 minutes",46.89617185,0.9864
+324,Osmosis Support Lab Funding Round September  November 2022,MsgExecLegacyContent,PASSED,"5 days, 0 hours 13 minutes",47.0364244,0.926
+561,Signalling proposal for adding LOREOSMO to External Incentive Matching program,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",47.09021715,0.9658
+384,Signalling Proposal for OSMOWMATIC789 incentivised pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 6 minutes",47.15673599,0.9825
+319,Upload Apollo Liquid Staking Contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 7 minutes",47.17753298,0.9916
+386,WMATIC bootstrapping liquidity incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 7 minutes",47.18380311,0.9654
+385,Add WMATIC to the list of Major category assets,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",47.22377162,0.9802
+562,Quasar Whitelisted Address for Deployment of CL Vaults,MsgExecLegacyContent,PASSED,"5 days, 7 hours 25 minutes",47.23061546,0.995
+563,Reduce Tokenfactory Denom Creation Gas,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",47.26789473,0.9998
+958,TopofBlock Auction Parameters Review,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",47.31800385,0.9993
+498,Signalling Proposal for OSMOFIL incentivised pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 39 minutes",47.47100811,0.9733
+497,Signalling Proposal for LIKEOSMO External Incentive Match Renewal,MsgExecLegacyContent,REJECTED,"8 days, 8 hours 8 minutes",47.51055339,0.3517
+496,Regular Incentive adjustment for 20230501,MsgExecLegacyContent,PASSED,"5 days, 0 hours 7 minutes",47.56440832,0.9688
+483,Upload StreamSwap Contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 28 minutes",47.61119502,0.9979
+972,Revive expired IBC client for LikeCoin,MsgRecoverClient,PASSED,"5 days, 0 hours 45 minutes",47.65208043,0.9984
+317,Signalling Proposal Removal of incentives on pools 600 ATOMCMDX  601 CMDXOSMO,MsgExecLegacyContent,PASSED,"5 days, 0 hours 52 minutes",47.66374253,0.8584
+512,Suitdrop Commonwealth Proposal,MsgExecLegacyContent,PASSED,"5 days, 0 hours 6 minutes",47.80324093,0.9247
+375,Proposal on Transferring ION to ION DAO Treasury,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",47.82032524,0.9559
+981,Reposition and Reallocate stOSMO Support Liquidity September 2025,MsgTransferPositions,PASSED,"5 days, 0 hours 0 minutes",47.89466622,0.999
+420,OSMOWYND Token Swap for Protocol Liquidity,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",47.90012957,0.7516
+318,Regular Incentive adjustment for 20220822,MsgExecLegacyContent,PASSED,"5 days, 0 hours 15 minutes",47.90772513,0.9993
+361,Enable Superfluid Staking on OSMONGM 463,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",47.9503577,0.9577
+482,Signalling Proposal for OSMONCT incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",47.95908472,0.984
+548,Allow Levana Contracts upload,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",47.96717566,0.656
+417,Allow Apollo DAO LP Vault Contracts to be Uploaded,MsgExecLegacyContent,PASSED,"5 days, 0 hours 45 minutes",47.96749777,0.9414
+453,Regular Incentive adjustment for 20230306,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",48.230581,0.9937
+330,Proposal for Community Enabled Analytics Program  Flipside Crypto,MsgExecLegacyContent,PASSED,"6 days, 19 hours 39 minutes",48.27427941,0.9823
+454,Upload CrossChain Swap Contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",48.27806291,0.9994
+500,ShapeShift Bounty Completion,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",48.38550496,0.8968
+516,Signaling Proposal for use of ProtoRev Funds,MsgExecLegacyContent,REJECTED,"5 days, 4 hours 0 minutes",48.39917008,0.8327
+340,Regular Incentive adjustment for 20221003,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",48.40188008,0.9997
+461,Osmosis Support Lab Funding Round March  August 2023,MsgExecLegacyContent,PASSED,"5 days, 0 hours 20 minutes",48.40729009,0.9499
+469,Allow USDC as transaction fees,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",48.44154265,0.9989
+505,ARB Bootstrapping liquidity incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",48.53815584,0.991
+404,Incentivise Core StableSwap pool USDCUSDTBUSD,MsgExecLegacyContent,PASSED,"5 days, 0 hours 31 minutes",48.54055341,0.9882
+494,Enable Superfluid Staking on ISTOSMO  BLDOSMO,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",48.56916514,0.9718
+504,Allow IBCX Contracts to be Uploaded,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",48.57112278,0.9999
+531,Reset Community Pool allocation to 0,MsgExecLegacyContent,PASSED,"5 days, 0 hours 54 minutes",48.58605619,0.9905
+989,Recover expired IBC client for channel95 to Bostrom,MsgRecoverClient,PASSED,"5 days, 0 hours 4 minutes",48.63431091,0.9946
+332,Proposal for Loan Swap of OSMO to Axelar,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",48.69152706,0.9698
+924,Expand Supercharged Quote Asset list,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",48.69984769,0.9995
+451,Whitelist Apollo Vaults for stATOMATOM,MsgExecLegacyContent,PASSED,"5 days, 5 hours 32 minutes",48.71053649,0.8228
+995,Allocate additional USDC to OSMO buyback and liquidity strategy November 2025,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",48.7154816,0.9998
+520,Upload Alpine Pay Core Contract,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",48.74796303,0.8036
+397,Phase out Incentives for EEUR,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",48.77105838,0.9991
+471,Enable Superfluid Staking on OSMOUSDT,MsgExecLegacyContent,PASSED,"5 days, 0 hours 15 minutes",48.77588954,0.9983
+991,Update stSTARSSTARS Scaling Factor Controller to Auto Update Contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",48.78791209,0.9998
+437,Babylon signalling and phase1 Integration ,MsgExecLegacyContent,PASSED,"5 days, 3 hours 38 minutes",48.80741409,0.9923
+402,Recognise USDT as a Stablecoin asset,MsgExecLegacyContent,PASSED,"5 days, 0 hours 8 minutes",48.83341166,0.9713
+403,Recognise BUSD as a Stablecoin asset,MsgExecLegacyContent,PASSED,"5 days, 0 hours 8 minutes",48.83979532,0.9844
+948,Rebalance Osmosis Treasury towards BTC 25,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",48.84932381,0.8123
+315,ION DAO Store staking contracts code,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",48.89986888,0.9899
+401,Osmosis v14 Neon Upgrade,MsgExecLegacyContent,PASSED,"5 days, 0 hours 6 minutes",48.92585976,0.9999
+379,Regular Incentive adjustment for 20221212,MsgExecLegacyContent,PASSED,"5 days, 0 hours 7 minutes",48.94285028,0.9951
+398,Enable Superfluid Staking on OSMOWMATIC,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",48.96919855,0.998
+331,Regular Incentive adjustment for 20220919,MsgExecLegacyContent,PASSED,"5 days, 0 hours 13 minutes",48.99207355,0.9997
+321,ION DAO Initialize,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",49.0191981,0.8646
+980,FixedRevive expired IBC client for dHealth,MsgRecoverClient,FAILED,"5 days, 0 hours 2 minutes",49.02055307,0.9994
+513,Allow CronCat contracts to be uploaded,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",49.23773093,0.9774
+532,Supercharged Liquidity Pools Rollout,MsgExecLegacyContent,PASSED,"5 days, 0 hours 6 minutes",49.28065204,0.9998
+533,Supercharged Incentives Model,MsgExecLegacyContent,PASSED,"5 days, 0 hours 6 minutes",49.29349706,0.9999
+418,Update Shentu IBC Client on Osmosis,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",49.29595386,0.9998
+530,Introduce a Protocol Taker Fee for Osmosis swaps,MsgExecLegacyContent,PASSED,"5 days, 0 hours 32 minutes",49.33293984,0.7029
+480,Signaling Proposal for WHALEOSMO External Incentive Match,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",49.38416522,0.9736
+534,Implement Halvening new Emission Ratios and Reduce Superfluid Discount rate,MsgExecLegacyContent,PASSED,"5 days, 0 hours 7 minutes",49.46917054,0.9998
+456,Establish new Core StableSwap pool USDCUSDT,MsgExecLegacyContent,PASSED,"5 days, 0 hours 39 minutes",49.50197222,0.9854
+372,Match External Incentives to extended STARSOSMO and ATOMSTARS pairs,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",49.50436106,0.7666
+502,Signaling Proposal for ARBOSMO incentivized pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 6 minutes",49.52798632,0.9979
+495,Enable Superfluid Staking on OSMOMARS,MsgExecLegacyContent,PASSED,"5 days, 0 hours 9 minutes",49.56892804,0.9944
+986,Monthly OSMO Taker Fee Burn September 2025,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",49.59078293,0.9997
+518,Match External Incentives for qOSMOOSMO pool 956,MsgExecLegacyContent,PASSED,"5 days, 0 hours 18 minutes",49.63352045,0.959
+933,ATOM Airdrop   New Version 2025 ,Text,REJECTED,"5 days, 0 hours 0 minutes",49.65651332,0.9986
+327,Regular Incentive adjustment for 20220905,MsgExecLegacyContent,PASSED,"5 days, 0 hours 14 minutes",49.74063938,0.9994
+517,Add Quicksilver qAssets to Osmosis,MsgExecLegacyContent,PASSED,"5 days, 0 hours 48 minutes",49.75167828,0.9998
+965,Community Pool Denom Whitelist Review,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",49.7666603,0.9993
+543,Signaling Proposal for stIBCXOSMO 1039 Incentivised Pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",49.78769127,0.9851
+450,Signalling Proposal for OSMOUSDT incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 15 minutes",49.8046311,0.9742
+336,Regular Incentive adjustment for 20220926,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",49.81204549,0.9998
+374,Replace LUNC IBC Client 07tendermint1549 with 07tendermint2369,MsgExecLegacyContent,PASSED,"5 days, 0 hours 18 minutes",49.82773651,0.9838
+544,Community Enabled Analytics Program Renewal July 2023  June 2024,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 4 minutes",49.9316963,0.6394
+472,Regular Incentive adjustment for 20230327,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",49.95600632,0.994
+473,Allow Kado Router Contracts to be Uploaded,MsgExecLegacyContent,PASSED,"5 days, 4 hours 19 minutes",49.95823102,0.9968
+460,Regular Incentive adjustment for 20230313,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",50.01606763,0.9941
+416,Regular Incentive adjustment for 20230130,MsgExecLegacyContent,PASSED,"5 days, 0 hours 9 minutes",50.04912782,0.9966
+503,Add ARB to the list of Major category assets,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",50.05099783,0.9936
+326,Signalling Proposal for OSMOBLD pool 795 incentivised pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",50.24393822,0.8926
+322,Revised  ION DAO initialize,MsgExecLegacyContent,PASSED,"5 days, 0 hours 20 minutes",50.25694651,0.9993
+583,Add MsgCreateBalancerPool into Approved ICA Messages list,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",50.28869824,0.9999
+576,Add NOMOSMO 882 to External Incentive Matching program,MsgExecLegacyContent,PASSED,"5 days, 0 hours 18 minutes",50.31940441,0.1584
+449,Reevaluation of NGMOSMO Incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 48 minutes",50.52976191,0.9892
+329,Signaling Proposal for ATOMstATOM 803 Incentivised Pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",50.54080497,0.9927
+987,Recover expired IBC client for channel95 to Bostrom,MsgRecoverClient,FAILED,"5 days, 2 hours 37 minutes",50.65345382,0.9988
+447,Upload CW721 Base Contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 29 minutes",50.67612326,0.8493
+584,Upload the new Pyth contract v130 to the Osmosis chain,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",50.81439261,0.9999
+373,Regular Incentive adjustment for 20221205,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",50.90728975,0.997
+601,Osmosis Support Lab Funding Round September 2023  March 2024,MsgExecLegacyContent,PASSED,"5 days, 0 hours 26 minutes",50.92570999,0.8934
+514,Regular Incentive adjustment for 20230522,MsgExecLegacyContent,PASSED,"5 days, 0 hours 10 minutes",50.96620597,0.996
+983,Remove OutofRange ETH Pair Liquidity Positions,MsgTransferPositions,PASSED,"5 days, 0 hours 0 minutes",51.05606123,0.9991
+559,Change Commonwealth Posting Requirement to Discourse,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",51.15105643,0.9942
+984,Allocate additional USDC to OSMO buyback and liquidity strategy,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",51.19640691,0.9993
+446,Regular Incentive adjustment for 20230227,MsgExecLegacyContent,PASSED,"5 days, 0 hours 15 minutes",51.22190838,0.9949
+445,Enable Superfluid Staking on OSMODOT,MsgExecLegacyContent,PASSED,"5 days, 0 hours 56 minutes",51.23369651,0.9979
+370,Osmosis v13 Fluorine upgrade proposal,MsgExecLegacyContent,PASSED,"5 days, 2 hours 27 minutes",51.26953721,0.9999
+554,Phase out Incentives on Low Revenue Pools Part 2,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",51.29621473,0.9996
+922,Unwind MNTAOSMO Liquidity Pair and Return Assets to MantaDAO,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",51.36354921,0.9992
+358,Signalling Proposal for OSMOWBNB incentivised pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",51.38434387,0.9956
+560,Alternative Transaction Fee Policy,MsgExecLegacyContent,PASSED,"5 days, 0 hours 8 minutes",51.42201785,0.9998
+448,Signalling Proposal for OSMOMARS incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 59 minutes",51.44149217,0.988
+488,Allow TFM Contracts to be Uploaded,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",51.56996103,0.9993
+572,Signaling Proposal Matching External QSR incentives to QSROSMO pool 1060 on Osmosis AMM,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",51.57315922,0.9182
+463,Enable ica lock and unlock,MsgExecLegacyContent,PASSED,"6 days, 2 hours 22 minutes",51.58480161,0.9997
+642,ATOM Airdrop  ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",51.61989866,0.9999
+487,Regular Incentive adjustment for 20230417,MsgExecLegacyContent,PASSED,"5 days, 0 hours 10 minutes",51.71731099,0.9956
+510,Regular Incentive adjustment for 20230515,MsgExecLegacyContent,PASSED,"5 days, 0 hours 41 minutes",51.87879886,0.994
+347,Gravity Incentivised Pools,MsgExecLegacyContent,PASSED,"5 days, 7 hours 58 minutes",51.89638834,0.9956
+481,Regular Incentive adjustment for 20230410,MsgExecLegacyContent,PASSED,"5 days, 0 hours 20 minutes",51.96462789,0.9971
+452,USDT Bootstrapping liquidity incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",52.00416313,0.9707
+493,Regular Incentive adjustment for 20230424,MsgExecLegacyContent,PASSED,"5 days, 0 hours 32 minutes",52.25758696,0.9969
+458,Osmosis v15 Sodium Upgrade,MsgExecLegacyContent,PASSED,"5 days, 0 hours 17 minutes",52.31421783,0.9899
+979,Revive expired IBC client for dHealth,MsgRecoverClient,PASSED,"5 days, 0 hours 2 minutes",52.36274531,0.9994
+602,Whitelist address to deploy Composable VM CW contracts,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",52.38246028,0.994
+485,Adjust the Ratio of Emissions,MsgExecLegacyContent,PASSED,"5 days, 0 hours 9 minutes",52.501413,0.9909
+618,Incentivise SUIUSDT Supercharged Pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",52.61672084,0.933
+465,Enable Superfluid Staking on OSMOFTM,MsgExecLegacyContent,PASSED,"5 days, 4 hours 28 minutes",52.62774069,0.9949
+966,Alloyed BTC Partial Reversion of Static Cap reduction for WBTC,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",52.63048287,0.9995
+976,Reduce Validator Set to 100,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",52.64106121,0.8833
+542,Enable Superfluid Staking on OSMOINJ,MsgExecLegacyContent,PASSED,"5 days, 0 hours 10 minutes",52.66736804,0.9994
+653,Cosmos x Celestia Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",52.72451683,0.9998
+974,Alloyed DOT Redeem Corrupted DOTpica,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",52.75818012,0.9986
+975,Withdraw and Convert Redemption Rate Vault Assets to BTC,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",52.76301644,0.9062
+617,Incentivise APTUSDT Supercharged Pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",52.85050285,0.9569
+535,Lengthen Thirdening and restore Thirdening impact,MsgExecLegacyContent,PASSED,"5 days, 0 hours 8 minutes",52.88591889,0.9988
+982,Update admin address on Vortex smart contract instances,MsgUpdateAdmin,PASSED,"5 days, 0 hours 0 minutes",53.02800146,0.9994
+492,Signalling Proposal for JKLOSMO Incentivized Liquidity Pool ,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",53.0434148,0.1358
+359,Add WBNB to the list of Major category assets,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",53.07286278,0.9758
+939,OSMOSIS Airdrop   Feeling Lucky  internet Money,Text,REJECTED,"5 days, 0 hours 0 minutes",53.18005958,0.9992
+491,Add Strides LSTs to Osmosis Frontend,MsgExecLegacyContent,PASSED,"5 days, 1 hours 38 minutes",53.1955209,0.9974
+949,Deploy BTCUSDC to wide range Magma vault,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",53.2143318,0.9989
+667,Celestia  ATOM Airdrop   Try New Feature,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",53.22332276,0.9997
+662,Celestia Airdrop on Osmosis   48 hours left,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",53.24165169,0.9998
+356,Regular Incentive adjustment for 20221107,MsgExecLegacyContent,PASSED,"5 days, 0 hours 11 minutes",53.24683903,0.9998
+357,Update IBC Client for Cerberus,MsgExecLegacyContent,PASSED,"5 days, 19 hours 41 minutes",53.28110209,0.999
+994,FixedRevive expired IBC client for dHealth,MsgRecoverClient,PASSED,"5 days, 0 hours 1 minutes",53.2993741,0.9993
+575,Enable the Creation of USDT Supercharged Pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",53.34220301,0.9996
+328,Regular Incentive adjustment for 20220912,MsgExecLegacyContent,PASSED,"5 days, 0 hours 6 minutes",53.37596226,0.9996
+947,Alloyed SOL Add SOLint3,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",53.37718014,0.9899
+545,Enable Superfluid Staking on OSMOFET,MsgExecLegacyContent,PASSED,"5 days, 0 hours 24 minutes",53.43586445,0.9988
+586,Osmosis v17 Aluminium Upgrade,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",53.47028632,0.9999
+467,Regular Incentive adjustment for 20230320,MsgExecLegacyContent,PASSED,"5 days, 0 hours 12 minutes",53.49927548,0.996
+546,Enable Superfluid Staking on OSMOKAVA,MsgExecLegacyContent,PASSED,"5 days, 0 hours 17 minutes",53.54548162,0.9517
+973,Revive expired IBC client for Synternet,MsgRecoverClient,PASSED,"11 days, 21 hours 1 minutes",53.56560951,0.9993
+959,Alloyed Assets Raise Static caps on Eureka assets,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",53.59907492,0.9949
+346,Match External Incentives on OSMOEVMOS 722,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",53.74438942,0.9915
+944,Monthly OSMO Taker Fee Burn May 2025,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",53.7880352,0.9995
+945,Monthly BTC Purchase May 2025,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",53.79783778,0.9997
+529,Regular Incentive adjustment for 20230612,MsgExecLegacyContent,PASSED,"5 days, 0 hours 9 minutes",53.83754042,0.9955
+574,Recognising USDT Canonical status for Osmosis,MsgExecLegacyContent,PASSED,"5 days, 0 hours 13 minutes",53.85057629,0.9971
+360,WBNB bootstrapping liquidity incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",53.89764129,0.9689
+464,Match External Incentives to extended STARSOSMO pair,MsgExecLegacyContent,PASSED,"6 days, 1 hours 14 minutes",53.93035071,0.8534
+954,Remove Liquidity Incentives from Inflation,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",53.94152973,0.9823
+333,Signalling Proposal for OSMOAXL incentivised pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",53.95507723,0.9974
+585,Signaling Proposal Approve the Stride Delegation Process Osmosis Advisory Council,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",53.96418709,0.9999
+553,Launching ERIS Protocol on Osmosis,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",53.99569018,0.9943
+603,Upload Affiliate Swap Contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",54.01168793,0.9998
+570,Allow Bonded Positions to convert to Staked Positions,MsgExecLegacyContent,PASSED,"5 days, 0 hours 9 minutes",54.11986804,0.9919
+605,Signaling Proposal Remove Unverified Status from Gelotto GLTO Token,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",54.16207756,0.5744
+946,Whitelist CryptoGopniks Address to Upload Contracts,MsgAddCodeUploadParamsAddresses,PASSED,"5 days, 0 hours 0 minutes",54.1783861,0.5296
+525,Regular Incentive adjustment for 20230605,MsgExecLegacyContent,PASSED,"5 days, 0 hours 46 minutes",54.17952933,0.9955
+657, Celestia is coming to Osmosis ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",54.23297424,0.9998
+550,Regular Incentive adjustment for 20230703,MsgExecLegacyContent,PASSED,"5 days, 0 hours 8 minutes",54.23585521,0.9948
+549,Protocol Taker Fee  Distribution of Fees paid in OSMO,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",54.25666869,0.996
+955,Prioritize Burn over Accumulation from Taker Fees,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",54.38542423,0.9993
+538,Migrate OSMO Incentives from IONOSMO Pool 2 to IONOSMO Pool 1013,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",54.41733224,0.9958
+604,Upload WBTC Contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",54.47177236,0.9998
+541,Enable Superfluid Staking on stOSMOOSMO,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",54.53604587,0.9407
+616,Incentivise SOLUSDT Supercharged Pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 6 minutes",54.57427706,0.9581
+938,Feeling Lucky   Get Airdrop   OSMOSIS,Text,REJECTED,"5 days, 0 hours 0 minutes",54.60105898,0.9714
+569,Signaling Proposal for WHALEOSMO into Regular Incentive Program on Osmosis,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",54.60785871,0.5883
+993,Monthly OSMO Taker Fee Burn October 2025,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",54.62622378,0.9998
+355,Enable Superfluid Staking on OSMOAXL,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",54.65900692,0.9985
+484,Lengthen OSMO Emission Schedule,MsgExecLegacyContent,PASSED,"5 days, 0 hours 9 minutes",54.66695609,0.993
+571,Signalling Proposal for Supercharged Pools Creation,MsgExecLegacyContent,PASSED,"5 days, 0 hours 8 minutes",54.72075364,0.9999
+661, New OSMO version  48 Hours Left ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",54.72102371,0.9989
+593,Community Spend Match Kava Rise Rewards for three months,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",54.74455988,0.9604
+354,Implement A Minimum Gas Price of 00025 uOSMO on Osmosis,MsgExecLegacyContent,PASSED,"5 days, 0 hours 7 minutes",54.76581776,0.9939
+578,Signaling Proposal for Incentives Program Update,MsgExecLegacyContent,PASSED,"5 days, 2 hours 16 minutes",54.92724219,0.9605
+568,Create Supercharged Pools for CRO MATIC and BNB,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 4 minutes",54.98982788,0.4269
+663,ATOM Airdrop   New version ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",55.04830892,0.9998
+597,Create Supercharged Pools for ATOM ETH USDC and stATOM,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",55.07022567,0.969
+935,ATOM Airdrop    AtomONE Airdrop  ,Text,REJECTED,"5 days, 0 hours 0 minutes",55.16974345,0.9991
+937,Feeling Lucky   Get Airdrop   OSMOSIS ,Text,REJECTED,"5 days, 0 hours 0 minutes",55.26185353,0.9903
+486,Decrease the Superfluid Risk Factor to 25,MsgExecLegacyContent,PASSED,"5 days, 0 hours 9 minutes",55.2898696,0.9751
+567,Disposition of ProtoRev Collected Revenues,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 10 minutes",55.41530681,0.4553
+335,Osmosis v12 Oxygen Upgrade,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",55.49489933,0.9999
+990,Osmosis v31 Software Upgrade,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",55.68955647,0.9995
+350,Match External Incentives for GRAV incentivised pairs,MsgExecLegacyContent,PASSED,"6 days, 21 hours 44 minutes",55.71912585,0.4459
+342,Upload Autonomy Network Regsitry Stake Contract,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",55.95434869,0.4861
+365,Signaling Proposal for ISTOSMO External Incentive Match,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",56.02032102,0.9391
+600,Upload Transmuter Contract v1,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",56.02093998,0.9797
+590,Migration of Incentives from OSMOaxlUSDT to OSMOUSDT,MsgExecLegacyContent,PASSED,"5 days, 3 hours 44 minutes",56.05339039,0.9999
+591,Migration of Incentives from USDCaxlUSDT to USDCUSDT and StableSwap expansion,MsgExecLegacyContent,PASSED,"5 days, 3 hours 44 minutes",56.12232654,0.971
+592,Add ATOMUSDT pairings to the Osmosis Incentives Program,MsgExecLegacyContent,PASSED,"5 days, 3 hours 43 minutes",56.14394472,0.9987
+536,Enable Superfluid Staking on OSMOARB,MsgExecLegacyContent,PASSED,"5 days, 0 hours 13 minutes",56.15528059,0.9978
+499,Enable Superfluid Staking on SOMMOSMO,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",56.45335512,0.9952
+923,Whitelist Unions Deployment Address to Upload Contracts,MsgAddCodeUploadParamsAddresses,PASSED,"5 days, 0 hours 0 minutes",56.5067163,0.9808
+343,Upload Autonomy Network StopsLimits Wrapper Contract,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",56.68723889,0.4693
+582,Add Wormhole as a Canonical Bridge Service Provider,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",56.70041965,0.9995
+364,Further Reduction of Liquidity Emissions,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",56.77419292,0.9759
+612,Implement Composables Centauri bridge as the canonical route to the Polkadot and Kusama ecosystem,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",56.82118451,0.9999
+579,Create USDT Supercharged Pools,MsgExecLegacyContent,PASSED,"5 days, 1 hours 14 minutes",56.96433,0.9998
+363,Regular Incentive adjustment for 20221114,MsgExecLegacyContent,PASSED,"5 days, 0 hours 9 minutes",57.13506665,0.9997
+521,Regular Incentive adjustment for 20230529,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",57.30173705,0.9945
+345,Signaling Proposal for STRDOSMO 806 Incentivised Pool,MsgExecLegacyContent,PASSED,"5 days, 2 hours 12 minutes",57.39011368,0.987
+827,Add EVM to Osmosis,Text,PASSED,"5 days, 0 hours 0 minutes",57.39264048,0.9995
+580,Add ETH and WBTC as Quote Assets,MsgExecLegacyContent,PASSED,"5 days, 1 hours 13 minutes",57.39389103,0.9999
+349,Remove Incentives from OSMOROWAN 629,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",57.44189614,0.9568
+971,Add MsgExec to Allowed ICA Messages List,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",57.59157509,0.9993
+961,Osmosis v30 Software Upgrade,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",57.65653857,0.9996
+547,Regular Incentive adjustment for 20230626,MsgExecLegacyContent,PASSED,"5 days, 0 hours 16 minutes",57.66420443,0.9955
+341,Signaling Proposal for Skip to Develop the ProtoRev Module,MsgExecLegacyContent,PASSED,"5 days, 2 hours 41 minutes",57.70250967,0.9758
+649,Update Quasar Whitelisted Address for CL Vault Deployment,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",57.73418635,0.9938
+362,Osmosis Grants Program OGP Renewal,MsgExecLegacyContent,PASSED,"5 days, 14 hours 0 minutes",57.73897517,0.4801
+940,Increase Deposit for Proposals to 6000 OSMO,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",57.84360233,0.993
+925,Remove Picasso Assets from Alloyed Pools,Text,PASSED,"5 days, 0 hours 0 minutes",58.22658432,0.9995
+960,Top of Block Revenue Usage as OSMO Liquidity and Buyback,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",58.22960886,0.9997
+977,Monthly OSMO Taker Fee Burn August 2025,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",58.23279799,0.9994
+566,Regular Incentive adjustment for 20230724,MsgExecLegacyContent,PASSED,"5 days, 0 hours 8 minutes",58.31067052,0.9619
+620,Upload Alpine Pay Core contract,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",58.39683845,0.7954
+555,Allow Skip API Contract upload,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",58.43254399,0.9891
+348,Regular Incentive adjustment for 20221017,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",58.4845021,0.9999
+659,Upload Transmuter v2  Alloyed Assets,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",58.50065393,0.9999
+344,Regular Incentive adjustment for 20221010,MsgExecLegacyContent,PASSED,"5 days, 0 hours 8 minutes",58.52108409,0.9981
+621,Enable superfluid staking on newly created OSMOUSDC OSMOETH and OSMOATOM supercharged liquidity pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",58.53094168,0.9998
+622,Create Supercharged Pools USDT pairing equivalents,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",58.5656031,0.9743
+929,Alloyed ETH Add ETHatom,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",58.57709712,0.9996
+930,Alloyed USDT Add USDTethatom,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",58.57981068,0.9996
+552,Resubmission Lengthen Thirdening and restore Thirdening impact,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",58.75037764,0.9999
+558,Regular Incentive adjustment for 20230710,MsgExecLegacyContent,PASSED,"5 days, 0 hours 15 minutes",58.77066429,0.995
+623,Create Supercharged Pools Community Request Resubmission,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",58.85122075,0.9692
+551,Osmosis Max Supply Restoration through Excess OSMO Burn,MsgExecLegacyContent,PASSED,"5 days, 0 hours 9 minutes",58.89171316,0.9896
+943,Alloyed DOGE Add ckDOGE,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",59.15716864,0.9706
+699,Change Pool Creation Fee to 100 USDC,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",59.16931604,0.9893
+557,Allow DAO DAO and Polytone Contract upload,MsgExecLegacyContent,PASSED,"5 days, 17 hours 42 minutes",59.17286464,0.9531
+942,Bitfrost Revenue Share,MsgSetTakerFeeShareAgreementForDenom,PASSED,"5 days, 0 hours 0 minutes",59.29383305,0.9992
+941,Alloyed XRP Add XRPint3,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",59.33448781,0.9994
+931,Alloyed BTC Add WBTCethatom,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",59.50264865,0.9996
+928,Add Eureka as a Canonical Bridge Service Provider,Text,PASSED,"5 days, 0 hours 0 minutes",59.5213645,0.9992
+936,Bootstrap XRP Liquidity on Osmosis,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",59.60343384,0.9568
+952,Change Community pool default revenue token to BTC,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",59.85807337,0.9909
+632,Upload Crosschain Swaps Contract V2,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",59.87486004,0.9999
+626,Recognising wstETH Canonical Token status for Osmosis,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",59.98210734,0.9833
+648,Migration of Incentives from USDCaxl pools to USDC pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",60.04076672,0.9987
+951,Monthly BTC Purchase June 2025,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",60.08785614,0.9976
+647,Routine Incentive Adjustment for October 2023,MsgExecLegacyContent,PASSED,"5 days, 0 hours 8 minutes",60.09047852,0.9988
+672,OSMO Airdrop    CELESTIA TESTNET ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",60.18573345,0.9997
+587,Create SEI Supercharged Pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",60.23430198,0.9723
+953,Alloyed XRP Add XRPxrplevm,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",60.28307613,0.9995
+962,Alloyed BTC Add BTCint3,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",60.30220319,0.9995
+678,Routine Incentive Adjustment for November 2023,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",60.31936671,0.9999
+650,Deploy 2M OSMO to an ampOSMO Supercharged Pool,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",60.32602321,0.648
+666,Margined Protocol Whitelisted Address for Deployment of Power Perpetuals Contracts,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",60.47155647,0.9935
+537,Regular Incentive adjustment for 20230619,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",60.52287652,0.9931
+540,Enable Superfluid Staking on IONOSMO Pool 1013,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",60.54277169,0.9928
+589,Create Initial Wormhole Supercharged Pools,MsgExecLegacyContent,PASSED,"5 days, 15 hours 34 minutes",60.76369866,0.9998
+615,Whitelist Transmuter Contract and CW Pool module,MsgExecLegacyContent,PASSED,"5 days, 0 hours 19 minutes",60.76558443,0.9999
+957,Halve Staking Inflation to Reduce the Revenue Subsidy 3x to 15x,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",60.84506017,0.9499
+628,USDC Quote Asset Resubmission,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",60.8461269,0.9999
+556,Osmosis v16 Magnesium Upgrade,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",60.9106487,0.9999
+808,Clean up CWPool Whitelist,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",60.97373436,0.9993
+633,Upload Swaprouter Contract V2,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",60.99531816,0.9999
+950,Monthly OSMO Taker Fee Burn June 2025,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",60.99773872,0.9993
+934,Whitelist Hydro Deployment Address to Upload Contracts,MsgAddCodeUploadParamsAddresses,PASSED,"5 days, 0 hours 0 minutes",61.09496874,0.9995
+658,Osmosis v20 Software Upgrade,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",61.27405002,0.9999
+641,Deploy 20M OSMO to the stOSMO Pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",61.40993443,0.0147
+631,Upload CrossChain Registry Contract V1,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",61.43026282,0.9999
+652,Update medasdigital1 07tendermint2372 client,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",61.52462425,0.992
+573,Regular Incentive adjustment for 20230731,MsgExecLegacyContent,PASSED,"5 days, 0 hours 8 minutes",61.57150795,0.9943
+660,DYDX Incentive Spend,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",61.9549989,0.9807
+646,Add PoolManager Messages into Allowed ICA Messages List,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",62.01961448,0.9992
+881,Osmosis taker fees to acquire more BTC for liquidity provisioning,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",62.18255617,0.9924
+963,Alloyed BTC Adjust Static Caps for WBTC Variants,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",62.26742759,0.9995
+581,Regular Incentive adjustment for 20230807,MsgExecLegacyContent,PASSED,"5 days, 0 hours 18 minutes",62.32166574,0.9948
+894,Get OSMO Airdrop   New Version 2025 ,Text,REJECTED,"5 days, 0 hours 0 minutes",62.34040008,0.9996
+681,Remove second stage of USDC incentive migration,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",62.36896006,0.9901
+913,Whitelist AllInGaming contract deployment address,MsgAddCodeUploadParamsAddresses,PASSED,"5 days, 0 hours 0 minutes",62.4325217,0.562
+765,Namada x Cosmos airdrop,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",62.60642416,0.9995
+905,Reduce Validator Set to 120,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",62.66084785,0.7436
+665,Celestia Incentive Spend,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",62.80636033,0.9784
+664,Upload Ojo Oracle Contract Wasm Code,MsgExecLegacyContent,PASSED,"5 days, 22 hours 40 minutes",62.92582359,0.9999
+964,Monthly OSMO Taker Fee Burn July 2025,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",62.99189672,0.9995
+956,Remove Superfluid Staking and Deprecate the xsuperfluid Module,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",62.99866366,0.9992
+634,Enable Permissionless Creation of Supercharged Pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",63.08458889,0.9997
+900,Bootstrap DOGE Liquidity on Osmosis,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",63.09361069,0.9965
+627,Migrate Superfluid Supercharged positions to a Wider Range,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",63.10248666,0.9999
+644,Reduce Maximum Block Size,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",63.10784994,0.9738
+828,Migrate incentives to new VSGs,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",63.1779497,0.9995
+643,Partial refund  pools created postv19,MsgExecLegacyContent,PASSED,"5 days, 7 hours 53 minutes",63.21293137,0.981
+897,Recover IBC client for Kopi chain,MsgRecoverClient,FAILED,"5 days, 0 hours 5 minutes",63.23560004,0.997
+677,Allow cwhyperlane contracts to be uploaded,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",63.31063225,0.9999
+788,Whitelist Gelotto Address for PampIT  Games,MsgAddCodeUploadParamsAddresses,PASSED,"5 days, 0 hours 0 minutes",63.32463237,0.8253
+831,Alloyed USDT Add USDTethinj,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",63.33127997,0.9997
+830,Alloyed USDT Add USDTrt,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",63.33137357,0.9997
+895,Get OSMO Airdrop   New Version 2025 ,Text,REJECTED,"5 days, 0 hours 0 minutes",63.37231404,0.9996
+968,Community Pool Cleanup and End of Manual BTC Purchases,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",63.38194614,0.9997
+832,Expand BTC Volume Splitting Group to USDT 001 pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",63.39118298,0.9997
+680,Change Community pool default revenue token to USDC via Noble,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",63.4126423,0.9992
+890,Reposition and Reallocate stOSMO Support Liquidity,MsgTransferPositions,PASSED,"5 days, 0 hours 0 minutes",63.47368854,0.994
+654,Replace WBTC used as Quote Asset,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",63.50594032,0.9999
+682,Set OsmosisSpecific costs to USDC equivalents,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",63.53355329,0.9993
+629,Delegate the setting of nondefault taker fees to a Protocol Fee subDAO,MsgExecLegacyContent,PASSED,"5 days, 0 hours 8 minutes",63.57375111,0.9999
+898,PinUnpin Mars contracts,MsgPinCodes,PASSED,"5 days, 0 hours 0 minutes",63.74494875,0.9997
+707,Allocate 7m OSMO to the OGP Multisig to Fund Market Making Operations for 12 Months,MsgCommunityPoolSpend,FAILED,"5 days, 0 hours 8 minutes",63.79916796,0.2438
+630,Allow Swing CrossChain Swaps Contracts to be Uploaded,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",63.96130132,0.9999
+899,Alloyed BTC Increase static limits,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",63.97345345,0.9997
+822,Whitelist StreamSwap DAO Deployment Address to Upload Contracts,MsgAddCodeUploadParamsAddresses,PASSED,"5 days, 0 hours 4 minutes",64.02406418,0.9158
+614,Create Supercharged Pools Community Requests,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",64.09997871,0.9995
+689,Transfer Incentives to Created Volume Splitting Gauges,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",64.47615691,0.9999
+806,IBC Rate Limit Review  July 2024,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",64.54566904,0.9997
+655,Deposit 350K OSMO to the Levana Osmo Liquidity Pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",64.80278842,0.6638
+823,Upload Transmuter v32 as Cosmwasm Pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",64.83722806,0.9997
+635,Signaling proposal to match external XPLA incentives to XPLAOSMO pool 1173 on Osmosis AMM,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",64.87945831,0.3725
+624,Recognizing USDC Canonical Status and Quote Asset,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",64.88735188,0.9998
+869,Deploy Contingency Liquidity for USDT Stability,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",64.8987739,0.9994
+656,Reactivate expired IBC client 07tendermint2229,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",64.92756553,0.9999
+825,Increase scope of Protocol Fee Controller subDAO and endorse 02 ATOMOSMO protocol fee,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",64.96157429,0.9992
+824,Remove OSMO Pairing Incentives except OSMOSTABLE,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",65.05043539,0.9933
+932,Renew the OGP Market Making Initiative for One Year,Text,PASSED,"5 days, 0 hours 0 minutes",65.10255982,0.9956
+805,Whitelist Deploydon Address for Contract Uploads ,MsgAddCodeUploadParamsAddresses,PASSED,"5 days, 23 hours 32 minutes",65.15815498,0.8729
+695,Allow Migration of the Admin Address of Membrane Contracts,MsgExecLegacyContent,PASSED,"5 days, 16 hours 53 minutes",65.178977,0.9997
+914,Recover OsmosisDungeon Client,MsgRecoverClient,FAILED,"5 days, 0 hours 32 minutes",65.1971582,0.9993
+693,Nois  Store the Nois Proxy Contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",65.2257117,0.9997
+819,Remove Quote Asset whitelisting requirement for Supercharged Pools,Text,PASSED,"5 days, 0 hours 0 minutes",65.25773432,0.9996
+882,BTC Liquidity Deployment into Locust Vault,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",65.31870635,0.9985
+864,Recover expired IBC client for channel95 to Bostrom,MsgRecoverClient,PASSED,"10 days, 7 hours 57 minutes",65.33421439,0.9996
+690,Modification of TIA incentive allocation,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",65.41701584,0.9996
+817,Alloyed ETH Create Volume Splitting Group,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",65.44573816,0.9996
+816,Alloyed ETH Canonicalization and Claim Admin,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",65.44709126,0.9997
+818,Alloyed ETH Quote asset,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",65.45312785,0.9996
+807,Restrict Superfluid pools to a core set of pairings,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",65.52296141,0.9837
+688,Signaling Proposal Verify TORI Token as a Verified Asset on Osmosis,MsgExecLegacyContent,PASSED,"7 days, 10 hours 46 minutes",65.65309347,0.8167
+926,Monthly OSMO Taker Fee Burn April 2025,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",65.70519335,0.9915
+766,Whitelist BIG Labs Deployment Address to Upload Contract,MsgAddCodeUploadParamsAddresses,PASSED,"5 days, 0 hours 0 minutes",65.75655364,0.8291
+701,Create Volume Splitting Gauges for Celestia Pairings,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",65.85735444,0.9995
+466,Enable icq messages,MsgExecLegacyContent,PASSED,"1 days, 1 hours 51 minutes",65.88243845,0.9928
+698,Add Celestia TIA as a Quote asset,MsgExecLegacyContent,PASSED,"5 days, 1 hours 26 minutes",65.92933644,0.9995
+927,Monthly BTC Purchase April 2025,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",65.95823847,0.9994
+640,Allow Genie contracts to be uploaded,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",65.97402367,0.4566
+829,Migrate Alloyed Assets to Transmuter v32,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",66.02095891,0.9997
+802,Bootstrapping of ERC20 Markets using Protocol Liquidity,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",66.04948736,0.9739
+892,Get OSMO Airdrop  New Version 2025 ,Text,REJECTED,"5 days, 0 hours 0 minutes",66.10727253,0.9995
+771,Reevaluation of Liquid Staked OSMO held by the Community Pool stkOSMO Liquidity,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",66.14664128,0.8106
+639,Mutual token swap between Osmosis and MantaDAO,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",66.15948502,0.4404
+770,Reevaluation of Liquid Staked OSMO held by the Community Pool qOSMO Liquidity,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",66.41478169,0.7715
+821,Send ampOSMO and boneOSMO liquidity to custodial multisig,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",66.44550528,0.9968
+679,Abstract CosmWasm Upload Key Governance Proposal,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",66.63514318,0.9906
+796,Enable Smart Accounts,MsgSetActiveState,PASSED,"5 days, 0 hours 0 minutes",66.64992363,0.9995
+798,Deployment of stOSMO liquidity from stableswap into Locust vault,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",66.69236478,0.9343
+606,Osmosis v19 Software Upgrade,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",66.80018388,0.9999
+970,Revive expired IBC client for Bluzelle,MsgRecoverClient,PASSED,"5 days, 0 hours 0 minutes",66.8775264,0.9997
+772,Demand return of IonDAO funding,Text,PASSED,"5 days, 0 hours 0 minutes",66.90823263,0.9949
+967,Reduce Staking Subsidy to below Taker Fee Burn Rate,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",67.01262524,0.8574
+858,CosmWasm Pinning Update  November 2024,MsgPinCodes,PASSED,"5 days, 0 hours 0 minutes",67.11103036,0.9996
+870,Alloyed BTC Add cbBTCaxl,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",67.19337003,0.9996
+797,Incentives Adjustment for allUSDT,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",67.2390749,0.9965
+684,Create Stable Agnostic Volume Splitting Gauges,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",67.26685635,0.9999
+675,Allow Custom Creation subDAO to create Supercharged pools without Quote asset requirements,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",67.325673,0.9945
+826,Alloyed Assets Generic specification approval,Text,PASSED,"5 days, 0 hours 0 minutes",67.4431963,0.9996
+801,Whitelist OBridge Deployments Address to Upload Contract,MsgAddCodeUploadParamsAddresses,PASSED,"5 days, 0 hours 0 minutes",67.51387953,0.83
+800,Grant Router Protocol the Ability to Deploy Contracts on Osmosis,MsgAddCodeUploadParamsAddresses,PASSED,"5 days, 0 hours 0 minutes",67.5322273,0.8906
+756,Deploy Protocol Owned Liquidity of AXLOSMO via Astroport PCL,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",67.59278813,0.9152
+820,Migrate Incentives to Alloyed BTC and ETH VSGs,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",67.65782811,0.9997
+851,Return LAB from SAIL agreement to origin,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",67.92079843,0.9996
+769,Reevaluation of Liquid Staked OSMO held by the Community Pool stOSMO concentration,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",67.94625514,0.8877
+608,Upload stToken Scaling Factor Autoupdate Contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",67.97241935,0.9999
+911,Redeploy ampOSMO and bOSMO liquidity on White Whale to Margined Strategies,Text,PASSED,"5 days, 0 hours 0 minutes",68.00809581,0.9989
+867,Alloyed BTC Increase nBTC static limit to 10,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",68.03540801,0.9996
+669,Decrease Pool Creation fee to 400 OSMO,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",68.09387158,0.9507
+757,Increase Uptime Incentives default to one minute,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",68.16151395,0.9994
+912,Whitelist Architects Deployment Address to Upload Contracts,MsgAddCodeUploadParamsAddresses,PASSED,"5 days, 0 hours 0 minutes",68.26485676,0.83
+607,Upload Stride Redemption Rate Oracle Contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",68.30768765,0.9999
+768,Migrate Persistence LiquidStakeRate Contract,MsgStoreAndMigrateContract,PASSED,"5 days, 0 hours 0 minutes",68.38498211,0.9991
+857,Alloyed USDT Add USDTematicaxl,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",68.42230543,0.9995
+871,Alloyed USDT Increase USDTinj static limit to 40,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",68.54532013,0.9995
+855,IBC Rate Limiting v2  Delegate management to a subDAO,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",68.61159413,0.9995
+872,Alloyed USDT Increase USDTsolpica static limit to 40,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",68.63408869,0.9994
+873,Alloyed USDT Increase USDTethwh static limit to 40,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",68.6413364,0.9994
+863,Activate Protocol fee share agreement for nBTC,MsgSetRegisteredAlloyedPool,PASSED,"5 days, 0 hours 0 minutes",68.66290287,0.9996
+850,Whitelist Ark Protocol Developer Wallets for InterChain NFT Contracts,MsgAddCodeUploadParamsAddresses,PASSED,"5 days, 0 hours 5 minutes",68.73729348,0.7259
+668,Update stOSMOOSMO Scaling Factor Controller to Auto Update Contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",68.74199323,0.9998
+874,Expand Supercharged Quote Asset list,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",68.74254465,0.9994
+683,Create Volume Splitting Gauges for Pairings,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",68.91111511,0.9998
+868,Revive expired IBC client for Konstellation,MsgRecoverClient,FAILED,"5 days, 0 hours 0 minutes",68.94037569,0.9995
+889,Try MESSI New Feature  by Osmosis,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",68.95717181,0.9997
+854,Alloyed USDT Add USDT variants from ETH L2s via Axelar to Alloyed USDT,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",69.00444665,0.9996
+803,Add USDTsolanapica to Alloyed USDT,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",69.03008219,0.9992
+866,Recover Osmosis IBC Client on dHealth,MsgRecoverClient,PASSED,"5 days, 0 hours 2 minutes",69.09361338,0.9995
+755,Add authz as ICA host allowed message,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",69.13705081,0.8992
+754,Astroport Incentive Spend for TIAOSMO,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",69.21897503,0.9939
+856,Substitute IBC client for Int3face,MsgRecoverClient,PASSED,"5 days, 0 hours 0 minutes",69.25387866,0.9995
+753,Remove Incentives from stIBCX pairings,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",69.25598527,0.9993
+609,HUAHUA Recovery from wrong pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",69.286325,0.9925
+685,FortyTwo Autocompounder Whitelisted Address for Deployment,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",69.30196766,0.9998
+875,fixed Revive expired IBC client for Konstellation,MsgRecoverClient,PASSED,"5 days, 0 hours 0 minutes",69.30390971,0.9994
+834,Update Incentives in line with inflation reduction,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",69.34112102,0.5821
+651,Turn on Taker Fees at 01,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",69.36872434,0.9926
+910,Monthly BTC Purchase February 2025,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",69.37090554,0.9993
+896,IBC Rate Limiting v21  Upgrade contract,MsgStoreAndMigrateContract,PASSED,"5 days, 0 hours 0 minutes",69.38602905,0.9963
+891,Unwind OSMO paired liquidity pools for lower cap assets,MsgTransferPositions,PASSED,"5 days, 0 hours 0 minutes",69.46811238,0.9995
+636,Add superfluid messages into allowed ICA messages list,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",69.55901369,0.9997
+752,Merge Volume Splitting Groups by shared asset,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",69.79455121,0.9993
+859,Rebalance Osmosis Treasury towards BTC,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",69.79590779,0.9983
+637,Membrane Whitelisted Address for Deployment of Stablecoin Protocol contracts,MsgExecLegacyContent,PASSED,"5 days, 1 hours 19 minutes",69.89088126,0.9996
+745,ODIN IBC Channel Transition,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",69.89967616,0.9994
+686,MilkyWay Whitelist Address for Deployment of Liquid Staking Contracts,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",69.92175619,0.9725
+860,Deploy BTCUSDC liquidity position,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",70.01915816,0.998
+909,Monthly OSMO Taker Fee Burn February 2025,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",70.0323501,0.9992
+706,Osmosis Grants Program v3 Renewal,MsgCommunityPoolSpend,FAILED,"5 days, 0 hours 13 minutes",70.03654205,0.8271
+893,Alloyed BTC Increase nBTC static limit to 20,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",70.06024405,0.9998
+610,Expedited Repair migration for already approved CL pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",70.21493739,0.0692
+786,Matching incentives for Frax assets on Osmosis with Picasso,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",70.30211706,0.5774
+741,Whitelist Address for Banana Vaults Deployment,MsgUpdateParams,PASSED,"5 days, 0 hours 7 minutes",70.31224337,0.4541
+638,Remove Incentives from NonStrategic Pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",70.45998348,0.845
+908,Osmosis Support Lab Funding Round 20252026,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",70.54243975,0.9869
+691,Nois  Store the Randdrop Contract,MsgExecLegacyContent,PASSED,"5 days, 5 hours 15 minutes",70.68089535,0.9997
+862,Alloyed BTC Increase ckBTC static limit to 20,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",70.92830143,0.9996
+697,Whitelist the Enterprise App,MsgExecLegacyContent,PASSED,"5 days, 0 hours 55 minutes",71.16971004,0.9958
+833,Osmosis Inflation Reduction proposal,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",71.52177483,0.615
+886,Adjust Set of Superfluid Pools  Additions,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",71.52661007,0.9995
+865,Recover Osmosis IBC Client on Shentu,MsgRecoverClient,FAILED,"5 days, 0 hours 0 minutes",71.53254668,0.9993
+718,Add 001 and 0 fee pools to the ATOMOSMO volume splitting gauges,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",71.60375368,0.9981
+861,Osmosis v27 Software Upgrade,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",71.61164547,0.9997
+814,Alloyed BTC Create Volume Splitting Group,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",71.73906153,0.9995
+815,Alloyed BTC Initial Static Rate Limits,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",71.74063436,0.9996
+742,Fix whitewhaleosmosis cosmwasm pool interface,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",71.91475108,0.754
+613,Routine Incentive Adjustment for September 2023,MsgExecLegacyContent,PASSED,"5 days, 0 hours 17 minutes",71.93438287,0.9996
+785,Whitelist Address for Mad Pots Game Deployment,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",72.22291972,0.7905
+919,Osmosis to Become a Bitcoin Secured Network,Text,PASSED,"5 days, 0 hours 0 minutes",72.25157264,0.9993
+969,Return excess profit from ProtoRev in exchange for 20 bounty,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",72.34720745,0.9065
+696,Osmosis v21 Software Upgrade,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",72.47335488,0.9998
+705,Raise Maximum Gas to 300M and Lower Max Bytes to 5MB,Text,PASSED,"5 days, 0 hours 0 minutes",72.48254868,0.9954
+776,Remove 7 and 14 day Uptime Authorizations,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",72.53826372,0.9909
+885,Adjust Set of Superfluid Pools  Removals,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",72.59279542,0.9981
+799,Upload Transmuter v31,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",72.60323232,0.9997
+767,Reduce Pool Creation Fee to 20 USDC,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",72.62710342,0.8057
+813,Alloyed BTC Canonicalization and Quote asset,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",72.6681452,0.9996
+903,Burn 50 of OSMO denominated Taker Fees,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",73.07270271,0.9811
+787,Incentives Adjustment for June 2024,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",73.14966946,0.9997
+853,IBC Rate Limiting v2  Upgrade contract,MsgStoreAndMigrateContract,PASSED,"5 days, 0 hours 0 minutes",73.19798717,0.9996
+843,OSMO LST Support Reevaluation September 2024 stOSMO Reupload,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",73.50139439,0.9994
+804,Upload Orderbook v2 as CW Pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",73.51358044,0.9997
+789,Whitelist Lion DAO Deployment Address to Upload Contracts,MsgAddCodeUploadParamsAddresses,PASSED,"5 days, 0 hours 0 minutes",73.65323629,0.8016
+901,Monthly BTC Purchase January 2025,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",73.69746356,0.9992
+888,Reduce incentives on ETH grouping,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",73.71698201,0.9972
+704,Incentives Adjustment for January 2024,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",73.86755346,0.9985
+839,Scroll airdrop for osmosis users,Text,REJECTED,"5 days, 0 hours 0 minutes",73.92071156,0.9506
+883,Alloyed USDT Increase USDTinj static limit to 75,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",74.04852601,0.9994
+539,Expedited Proposal Thirdening Implementation,MsgExecLegacyContent,PASSED,"1 days, 0 hours 0 minutes",74.06069324,0.9999
+917,Whitelist Valence Deployment Address to Upload Contracts,MsgRemoveCodeUploadParamsAddresses,REJECTED,"5 days, 0 hours 0 minutes",74.32193043,0.816
+916,Monthly BTC Purchase March 2025,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",74.47159333,0.9996
+763,Osmosis v24 Software Upgrade,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",74.50514164,0.9997
+877,Deploy ATOM to Margined Redemption Rate Arbitrage Strategy,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",74.54600664,0.9944
+751,Fix SpotPrice query on WhiteWhale Pool interface contracts to fix UI,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",74.55687222,0.9993
+778,IBC Rate Limit Review,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",74.59137883,0.9963
+762,Fix SpotPrice query on Astroport pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",74.60983891,0.9997
+878,Deploy TIA to Margined Redemption Rate Arbitrage Strategy,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",74.64761486,0.9946
+918,CORRECTED Whitelist Valences Deployment Address to Upload Contracts,MsgAddCodeUploadParamsAddresses,PASSED,"5 days, 0 hours 23 minutes",74.67420621,0.8675
+784,Review Downtime Jailing Parameters,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",74.76587399,0.8509
+920,Osmosis v29 Software Upgrade,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",74.77574517,0.9999
+750,Incentives Adjustment for March 2024,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",74.79865263,0.9993
+670,Preapprove Incentives for Quote Asset Pairings,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",74.81580878,0.9999
+887,Deploy protocol ETHBTC Liquidity,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",74.8162976,0.9985
+876,Whitelist Magma Vaults dev wallet to deploy automatic liquidity managment solution contracts,MsgAddCodeUploadParamsAddresses,PASSED,"5 days, 0 hours 0 minutes",74.85710639,0.9996
+764,proposal 0,MsgExecLegacyContent,REJECTED,"5 days, 1 hours 1 minutes",74.86085777,0.9816
+884,Alloyed USDT Increase USDTethwh static limit to 75,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",74.90502377,0.9995
+795,nBTC Revenue Share Proposal,Text,PASSED,"5 days, 0 hours 0 minutes",74.93211334,0.9805
+671,Automatic Staking of Osmosis Incentive Rewards,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",75.05077558,0.9996
+906,Osmosis Support Lab Funding Round 20252026,MsgCommunityPoolSpend,REJECTED,"5 days, 5 hours 1 minutes",75.10988483,0.6385
+747,Osmosis Support Lab Funding Round 20242025,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 20 minutes",75.11880133,0.9983
+915,Monthly OSMO Taker Fee Burn March 2025,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",75.13247225,0.9932
+852,Rate Limit adjustment Remove CUDOS limits,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",75.16226674,0.9996
+773,Upload Persistence OsmosisPoolRatesync Contract for autoupdating sclaing factor,MsgStoreCode,PASSED,"5 days, 0 hours 0 minutes",75.167422,0.9996
+743,Create Volume Splitting Group for LSTs of Quote Assets,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",75.33700396,0.9993
+758,Upload Persistence LiquidStakeRate Contract,MsgStoreCode,PASSED,"5 days, 0 hours 0 minutes",75.40322136,0.9995
+844,OSMO LST Support Reevaluation September 2024 Close stkOSMO position,MsgTransferPositions,PASSED,"5 days, 0 hours 0 minutes",75.41157094,0.9995
+849,Alloyed BTC Add ckBTC,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",75.50973293,0.9998
+746,Deploy Warp Protocol on Osmosis,Text,PASSED,"5 days, 0 hours 0 minutes",75.56137315,0.9995
+748,Migrate the OsmosisWhiteWhale Pool interface contracts to complete integration,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",75.56586646,0.9992
+727,Substitute IBC light client for ODIN,MsgExecLegacyContent,PASSED,"5 days, 0 hours 36 minutes",75.62349967,0.9991
+904,Revive expired IBC client for Onomy,MsgRecoverClient,PASSED,"5 days, 0 hours 0 minutes",75.76243371,0.9998
+848,Add Quote denoms to the permissioned list,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",75.82139545,0.9998
+907,Alloyed TON Add TONint3,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",75.99548412,0.9996
+779,Fix SpotPrice query on Astroport PCL pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",76.07448436,0.9995
+721,Add 001 fee CL pool to WBTCOSMO volume splitting gauges,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",76.17394902,0.9946
+880,Osmosis Grants Program v4 Renewal,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",76.29269196,0.9726
+921,OSMO LST Support Pryzm,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",76.43013296,0.9993
+840,OSMO airdrop for osmosis users ,Text,REJECTED,"5 days, 0 hours 0 minutes",76.4673148,0.9971
+744,Substitute IBC light client for GenesisL1,MsgExecLegacyContent,PASSED,"5 days, 16 hours 9 minutes",76.57341168,0.9994
+845,OSMO LST Support Reevaluation September 2024 Transfer qOSMO backing liquidity to Locust,Text,PASSED,"5 days, 0 hours 0 minutes",76.77589712,0.9946
+846,OSMO LST Support Reevaluation September 2024 Provide backing liquidity to bOSMO via Locust,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",76.79437372,0.9943
+847,OSMO LST Support Reevaluation September 2024 Provide backing liquidity to ampOSMO via Locust,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",76.8005182,0.9942
+780,Implement CopyStaking for Strides Osmosis Delegations,Text,PASSED,"5 days, 0 hours 0 minutes",76.96310079,0.8759
+774,Remove Classic Pools from Volume Splitting Groups,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",76.97623304,0.9994
+775,Whitelist Osmosis Foundation Address to Upload Contracts,MsgAddCodeUploadParamsAddresses,PASSED,"5 days, 0 hours 0 minutes",77.03521624,0.9994
+702,Sail DAO,MsgCommunityPoolSpend,FAILED,"5 days, 0 hours 0 minutes",77.14442108,0.9949
+835,Increase Static Cap of WBTCaxl to 75,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",77.49794572,0.9995
+692,Routine Incentives Adjustment for December 2023,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",77.52158078,0.9999
+726,Add DYM to Transaction Fee Whitelist,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",77.61371889,0.9994
+879,Osmosis v28 Software Upgrade,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",77.69010022,0.9997
+725,Incentives Adjustment for February 2024,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",77.69243109,0.9993
+902,Recover IBC client for Kopi chain,MsgRecoverClient,PASSED,"5 days, 0 hours 0 minutes",78.02121618,0.9957
+739,Increase Tapering Factor on Incentives system,Text,PASSED,"5 days, 0 hours 0 minutes",78.12658837,0.9987
+761,Incentives Adjustment for April 2024,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",78.20299477,0.9918
+740,Add 001 fee pools to Volume Splitting Groups  OSMOETH TIAUSDC OSMOUSDC OSMOUSDT,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",78.2099932,0.9906
+759,Add 1 and 25 fee options for Supercharged Pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",78.29237265,0.9992
+837,Osmosis v26 Software Upgrade,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",78.37902093,0.9996
+724,Create Volume Splitting Gauges for Native WBTC pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",78.89328848,0.9987
+723,Upload OsmosisWhiteWhale interface,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",79.00525576,0.9993
+777,Incentives Adjustment for May 2024,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",79.14777748,0.9992
+783,Upload Transmuter v3,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",79.4921273,0.9997
+728,Pin high usage Codes IDs,MsgPinCodes,PASSED,"5 days, 0 hours 0 minutes",80.02671774,0.9993
+791,Remove decimals from Astroport PCL pool queries,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",80.0540314,0.9273
+794,Create Volume Splitting Groups for Alloyed USDT pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",80.07092004,0.9997
+810,Approve allASI as Migration Mechanic,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",80.09037552,0.9992
+811,Proposal to Grant Omnity Network the Ability to Deploy Contracts on Osmosis,MsgAddCodeUploadParamsAddresses,PASSED,"5 days, 0 hours 0 minutes",80.36220543,0.977
+790,Upload Orderbook as CW Pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",80.59330406,0.9997
+709,ProtoRev usage Send nonOSMO revenue to Community Pool,Text,PASSED,"5 days, 0 hours 0 minutes",80.60001505,0.962
+710,ProtoRev usage OSMO revenue as Burn Mechanism,Text,PASSED,"5 days, 0 hours 0 minutes",81.02972094,0.7835
+734,Whitelist Address for Astroport deployment,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",81.16524335,0.999
+729,Migrate Incentives from WBTCaxl to WBTC pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",81.53932054,0.999
+792,Recognize Alloyed USDT as the Canonical USDT on Osmosis,MsgExecuteContract,PASSED,"5 days, 0 hours 0 minutes",81.57603727,0.9997
+793,Replace USDT used as Quote asset,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",81.58468655,0.9995
+812,Claw Back SAIL DAO Funding,MsgExec,PASSED,"5 days, 0 hours 0 minutes",81.91547654,0.8117
+708,Sail it Back Sail DAO,MsgCommunityPoolSpend,PASSED,"5 days, 2 hours 18 minutes",81.92139683,0.9868
+836,Shade Protocol Revenue Share Proposal with Fee Abstraction Module Modification ,Text,PASSED,"5 days, 0 hours 0 minutes",81.97748291,0.9993
+700,Neutron  Osmosis Alignment,MsgCommunityPoolSpend,PASSED,"18 days, 0 hours 44 minutes",82.03350913,0.0578
+738,Allow Cancellation of Autonomy Limit Orders,MsgStoreAndMigrateContract,PASSED,"5 days, 4 hours 1 minutes",82.50468194,0.999
+749,Allow Astroport PCL as wasmpool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",82.84768861,0.9993
+694,Sail with the Whale,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",83.09582607,0.1322
+736,Enable Superfluid Staking in Lower Fee equivalent pools of existing approvals,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",83.2291171,0.9991
+735,Enable Superfluid Staking for WBTC pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",83.23906682,0.999
+782,Osmosis v25 Software Upgrade,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",83.30749881,0.9998
+733,Limit Epoch Calculations for small distributions,Text,PASSED,"5 days, 0 hours 0 minutes",83.30952351,0.9993
+737,Authorize Uptime Incentives Parameters list,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",83.33097033,0.9991
+712,Allocate 7m OSMO to the OGP Multisig to Fund Market Making Operations for 12 Months,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 3 minutes",83.34094775,0.6747
+722,Substitute IBC light client for doravota,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",83.55662095,0.9991
+842,OSMO LST Support Reevaluation September 2024 stOSMO,MsgCommunityPoolSpend,FAILED,"5 days, 0 hours 0 minutes",83.63062969,0.9995
+711,Osmosis Grants Program v3 Renewal,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 8 minutes",83.88217321,0.973
+781,Update ATOMstkATOM Scaling Factor Controller to Osmosis Pool Ratesync Contract,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",84.18825764,0.9997
+760,Stargaze Whitelist Address for ICS721 Contracts InterchainNFTs,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",84.5209382,0.9996
+713,Add Noble USDC as fee denom,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",85.108576,0.9993
+809,CosmWasm Pinning Update  July 2024,MsgPinCodes,PASSED,"5 days, 0 hours 0 minutes",85.24104086,0.9995
+841,Osmosis Representation at Crypto Summit del Caribe II,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",87.29044351,0.2887
+717,Update Transaction Fee Whitelist,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",88.0890199,0.9985
+716,Whitelist Addresses for SAIL DAO deployments,MsgUpdateParams,PASSED,"5 days, 0 hours 0 minutes",88.38631543,0.9992
+715,Deploy Protocol Owned Liquidity of stSTARSSTARS,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 0 minutes",88.54704033,0.9993
+714,Osmosis v22 Software Upgrade,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 5 minutes",89.17425023,0.9998
+731,Enable Superfluid Staking for USDC pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",89.83089816,0.9994
+732,Enable Superfluid Staking for USDT pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",89.83991664,0.9992
+719,Add WBTCaxl as a Quote Asset for Supercharged pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",91.25523278,0.9894
+720,Create new Volume Splitting Gauge for OSMOATOM Action Proposal 718,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",91.27442416,0.9994
+588,Expedited Proposal Osmosis v18 Software Upgrade,MsgExecLegacyContent,PASSED,"1 days, 0 hours 0 minutes",91.30793933,0.9999
+730,Osmosis v23 Software Upgrade,MsgSoftwareUpgrade,PASSED,"5 days, 0 hours 0 minutes",92.99249018,0.9996

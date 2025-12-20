@@ -6,11 +6,12 @@ const MainLayout = ({ leftSidebar, children }) => {
   const [sidebarWidth, setSidebarWidth] = useState(0);
   const [contentWidth, setContentWidth] = useState(0);
 
-  // 16:9 비율 기준 (1920×1080)
-  const CANVAS_WIDTH = 1920;
-  const CANVAS_HEIGHT = 1080;
-  const SIDEBAR_RATIO = 0.218; // 21.8%
-  const CONTENT_RATIO = 0.782; // 78.2%
+  // 16:10 비율 기준 (1680×1050) - 가로 확장
+  const CANVAS_WIDTH = 1680;
+  const CANVAS_HEIGHT = 750;
+  const SIDEBAR_RATIO = 0.18; // 20%
+  const CONTENT_RATIO = 0.8; // 80%
+  const minSidebarWidth = 240; // 최소 사이드바 너비
 
   useEffect(() => {
     const updateScale = () => {
@@ -19,19 +20,25 @@ const MainLayout = ({ leftSidebar, children }) => {
       const viewportWidth = window.innerWidth;
       const viewportHeight = window.innerHeight;
 
-      // 사이드바 너비 계산 (고정 비율)
-      const newSidebarWidth = viewportWidth * SIDEBAR_RATIO;
+      // 사이드바 너비 계산 (최소 너비 보장)
+      const calculatedSidebarWidth = viewportWidth * SIDEBAR_RATIO;
+      const newSidebarWidth = Math.max(calculatedSidebarWidth, minSidebarWidth);
       const availableContentWidth = viewportWidth - newSidebarWidth;
       const availableContentHeight = viewportHeight;
 
-      // 16:9 비율을 유지하면서 화면을 최대한 채우는 스케일 계산
+      // 16:10 비율을 유지하면서 화면을 최대한 채우는 스케일 계산
       const targetContentWidth = CANVAS_WIDTH * CONTENT_RATIO;
       const targetContentHeight = CANVAS_HEIGHT;
 
       // 가로/세로 비율에 맞춰 스케일 계산 (더 작은 값 선택하여 비율 유지)
       const scaleX = availableContentWidth / targetContentWidth;
       const scaleY = availableContentHeight / targetContentHeight;
-      const newScale = Math.min(scaleX, scaleY);
+      let newScale = Math.min(scaleX, scaleY);
+
+      // Retina 디스플레이 고려한 스케일 제한 (최소 0.5, 최대 1.2)
+      const minScale = 0.5;
+      const maxScale = 1.2;
+      newScale = Math.max(minScale, Math.min(maxScale, newScale));
 
       // 실제 스케일된 크기
       const scaledContentWidth = targetContentWidth * newScale;
@@ -55,7 +62,7 @@ const MainLayout = ({ leftSidebar, children }) => {
     <div className="w-screen h-screen bg-black flex overflow-hidden" ref={wrapperRef}>
       {/* 좌측 사이드바 - sticky */}
       <aside
-        className="sticky top-0 border-r border-[#333] bg-[#0d0d0d] z-20 overflow-y-auto"
+        className="sticky top-0 border-[#29303A] bg-[#FFFFFF20] z-20 overflow-y-auto"
         style={{
           width: `${sidebarWidth}px`,
           height: '100vh',
@@ -65,9 +72,9 @@ const MainLayout = ({ leftSidebar, children }) => {
         {leftSidebar}
       </aside>
 
-      {/* 우측 메인 콘텐츠 영역 - 16:9 캔버스 */}
+      {/* 우측 메인 콘텐츠 영역 - 16:10 캔버스 */}
       <div
-        className="overflow-y-auto"
+        className="overflow-y-auto overflow-x-hidden bg-[#101217]"
         style={{
           width: `${contentWidth}px`,
           height: '100vh',

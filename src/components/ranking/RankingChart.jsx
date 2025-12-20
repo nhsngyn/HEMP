@@ -9,16 +9,14 @@ import {
 import { createPortal } from "react-dom";
 
 import useChainStore from "../../store/useChainStore";
-// useChainSelection 훅을 가져오기
 import useChainSelection from "../../hooks/useChainSelection";
 import { COLORS } from "../../constants/colors";
 
 import DraggableChain from "./DraggableChain";
-import DroppableSlot from "./DroppableSlot";
+import DroppableSlot from "./DroppableSlot"; // 아래 2번 코드로 저장된 파일
 import DroppableListArea from "./DroppableListArea";
 
 const RankingChart = () => {
-  // DND 처리에 필요한 함수만 useChainStore에서 가져오기
   const {
     allChains,
     applySelection,
@@ -26,7 +24,6 @@ const RankingChart = () => {
     removeChainById,
   } = useChainStore();
 
-  // 선택 로직 관련 모든 상태와 함수는 useChainSelection에서 가져오기
   const {
     selectChain,
     getSelectionInfo,
@@ -51,7 +48,6 @@ const RankingChart = () => {
   );
 
   const activeChain = allChains.find((c) => c.id === activeId);
-
   const selectedIds = [selectedMainId, selectedSubId1, selectedSubId2].filter(id => id !== null);
 
   const handleDragEnd = (event) => {
@@ -62,13 +58,10 @@ const RankingChart = () => {
     const chainId = active.id;
     const target = over.id;
 
-    // 리스트 영역으로 드롭 → 슬롯 해제
     if (target === "ranking-list") {
       removeChainById(chainId);
       return;
     }
-
-    // 슬롯(main/sub1/sub2)으로 드롭
     applySelection(chainId, target);
   };
 
@@ -85,44 +78,23 @@ const RankingChart = () => {
 
         {/* FILTER BUTTONS */}
         <div className="flex items-center gap-4 mb-4 shrink-0">
-          {/* Chain 정렬 */}
-          <button
-            className="flex items-center gap-1"
-            onClick={() => setSortType("name")}
-          >
-            <span
-              className={
-                sortType === "name"
-                  ? "text-white text-xs font-semibold leading-tight"
-                  : "text-gray-400 text-xs font-semibold leading-tight"
-              }
-            >
+          <button className="flex items-center gap-1" onClick={() => setSortType("name")}>
+            <span className={sortType === "name" ? "text-white text-xs font-semibold leading-tight" : "text-gray-400 text-xs font-semibold leading-tight"}>
               Chain
             </span>
-            <img src="/Icons/filter.png" className="w-4 h-4 opacity-70" alt="filter" />
+            <img src="/Icons/icn_sort_24.png" className="w-6 h-6" alt="filter" />
           </button>
 
-          {/* Score 정렬 */}
-          <button
-            className="flex items-center gap-1"
-            onClick={() => setSortType("score")}
-          >
-            <span
-
-              className={
-                sortType === "score"
-                  ? "text-white text-xs font-semibold leading-tight"
-                  : "text-gray-400 text-xs font-semibold leading-tight"
-              }
-            >
+          <button className="flex items-center gap-1" onClick={() => setSortType("score")}>
+            <span className={sortType === "score" ? "text-white text-xs font-semibold leading-tight" : "text-gray-400 text-xs font-semibold leading-tight"}>
               HEMP Score
             </span>
-            <img src="/Icons/filter.png" className="w-4 h-4 opacity-70" alt="filter" />
+            <img src="/Icons/icn_sort_24.png" className="w-6 h-6" alt="filter" />
           </button>
         </div>
 
         {/* LIST AREA */}
-        <div className="flex-1 min-h-0 overflow-y-auto">
+        <div className="flex-1 min-h-0 overflow-y-auto mb-4">
           <DroppableListArea>
             {sortedChains.map((chain) => {
               const isSelected = selectedIds.includes(chain.id);
@@ -132,8 +104,6 @@ const RankingChart = () => {
                   chain={chain}
                   selectionInfo={getSelectionInfo(chain.id)}
                   isSelected={isSelected}
-                  // onClick에 selectChain 함수를 사용합니다.
-                  // selectChain 함수가 useChainStore의 applySelection(null)을 호출하여 스마트 셀렉션을 실행합니다.
                   onClick={() => selectChain(chain.id)}
                 />
               );
@@ -141,30 +111,48 @@ const RankingChart = () => {
           </DroppableListArea>
         </div>
 
-        {/* SLOT AREA */}
-        <div className="mt-6 flex flex-col justify-between shrink-0">
-          <DroppableSlot
-            id="main"
-            title="MAIN CHAIN"
-            color={COLORS.MAIN}
-            selectedChainId={selectedMainId}
-            onClear={() => clearSlot("main")}
-          />
-          <DroppableSlot
-            id="sub1"
-            title="SUB 1"
-            color={COLORS.SUB1}
-            selectedChainId={selectedSubId1}
-            onClear={() => clearSlot("sub1")}
-          />
-          <DroppableSlot
-            id="sub2"
-            title="SUB 2"
-            color={COLORS.SUB2}
-            selectedChainId={selectedSubId2}
-            onClear={() => clearSlot("sub2")}
-          />
+        {/* ========== SLOT AREA (수정됨) ========== */}
+        <div className="shrink-0 flex flex-col gap-6 pt-2 border-t border-white/5">
+          
+          {/* 1. Main Section */}
+          <div>
+            <h3 className="text-gray-500 text-xs font-medium mb-2 pl-1">
+              Main
+            </h3>
+            <DroppableSlot
+              id="main"
+              color={COLORS.MAIN}
+              placeholderText="Main Chain"
+              selectedChainId={selectedMainId}
+              onClear={() => clearSlot("main")}
+            />
+          </div>
+
+          {/* 2. Comparison Section */}
+          <div>
+            <h3 className="text-gray-500 text-xs font-medium mb-2 pl-1">
+              Comparison
+            </h3>
+            <div className="flex flex-col gap-3">
+              <DroppableSlot
+                id="sub1"
+                color={COLORS.SUB1}
+                placeholderText="Chain1"
+                selectedChainId={selectedSubId1}
+                onClear={() => clearSlot("sub1")}
+              />
+              <DroppableSlot
+                id="sub2"
+                color={COLORS.SUB2}
+                placeholderText="Chain2"
+                selectedChainId={selectedSubId2}
+                onClear={() => clearSlot("sub2")}
+              />
+            </div>
+          </div>
         </div>
+        {/* ======================================= */}
+
       </div>
 
       {/* DRAG OVERLAY */}

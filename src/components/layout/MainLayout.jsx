@@ -62,7 +62,7 @@ const MainLayout = ({ leftSidebar, children }) => {
     <div className="w-screen h-screen bg-#101217 flex overflow-hidden" ref={wrapperRef}>
       {/* 좌측 사이드바 - sticky */}
       <aside
-        className="sticky top-0 border-[#29303A] bg-[#ffffff06] z-20 overflow-y-auto"
+        className="sticky top-0 border-[#29303A] bg-[#ffffff05] z-20 overflow-y-auto"
         style={{
           width: `${sidebarWidth}px`,
           height: '100vh',

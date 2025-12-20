@@ -3,11 +3,15 @@ const path = require('path');
 const XLSX = require('xlsx');
 
 // 경로 설정
-const excelFilePath = path.join(__dirname, '../hemp_data.xlsx');
+// 실제 데이터 파일 우선 사용, 없으면 기본 파일 사용
+const realDataPath = path.join(__dirname, '../real_data/_HEMP_processed_data.xlsx');
+const defaultDataPath = path.join(__dirname, '../hemp_data.xlsx');
+const excelFilePath = fs.existsSync(realDataPath) ? realDataPath : defaultDataPath;
 const outputFilePath = path.join(__dirname, '../src/data/mockData.js');
 
 try {
   console.log('📂 엑셀 데이터 로드 중...');
+  console.log(`📄 파일 경로: ${excelFilePath}`);
   
   const workbook = XLSX.readFile(excelFilePath);
   const sheet = workbook.Sheets[workbook.SheetNames[0]];

@@ -79,21 +79,21 @@ function App() {
           <div className="flex w-full min-h-0" style={{ gap: 'calc(16px * var(--scale))', flex: '2.9 0 0' }}>
 
             {/* 1-1. 버블 차트 (76/140 ≈ 54.3%) */}
-            <div className="h-full bg-[#ffffff06] rounded-2xl relative overflow-hidden shadow-lg" style={{ width: '52%' }}>
+            <div className="h-full bg-[#ffffff05] rounded-2xl relative overflow-hidden shadow-lg" style={{ width: '52%' }}>
               <div className="absolute inset-0 w-full h-full">
                 <HempMap />
               </div>
             </div>
 
             {/* 1-2. 레이더 차트 (64/140 ≈ 45.7%) */}
-            <div className="h-full bg-[#ffffff06] rounded-2xl relative overflow-hidden shadow-lg shrink-0 my-auto" style={{ width: '48%' }}>
+            <div className="h-full bg-[#ffffff05] rounded-2xl relative overflow-hidden shadow-lg shrink-0 my-auto" style={{ width: '48%' }}>
               <RadarChart />
             </div>
 
           </div>
 
           {/* 2. 하단 영역 (Sankey) - 60% */}
-          <div className="w-full bg-[#ffffff06] rounded-2xl relative overflow-hidden shadow-lg min-h-0" style={{ flex: '6.0 0 0' }}>
+          <div className="w-full bg-[#ffffff05] rounded-2xl relative overflow-hidden shadow-lg min-h-0" style={{ flex: '6.0 0 0' }}>
             <SankeyChart />
           </div>
         </section>

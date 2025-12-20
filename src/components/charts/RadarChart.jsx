@@ -220,8 +220,8 @@ const RadarChart = () => {
         const points = METRICS.map((metric, i) => {
           let distance;
           if (useCenterPoint) {
-            // 각 축의 중앙에 배치 (0.5, 즉 50%)
-            distance = radius * 0.5;
+            // 각 축의 중앙~약간 위에 배치 (0.6, 즉 60%)
+            distance = radius * 0.6;
           } else if (useDefaultValue) {
             // 기본값 15 사용 (각 지표 만점 대비 비율로 정규화)
             const normalized = 15 / metric.maxValue; // 0~1

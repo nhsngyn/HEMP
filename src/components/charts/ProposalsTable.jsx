@@ -20,7 +20,7 @@ const ProposalsTable = ({ mainChain }) => {
 
   const filteredPropositions = useMemo(() => {
     let result = propositions;
-    
+
     if (sankeyFilter && propositions.length > 0) {
       const { sourceColumn, targetColumn, sourceName, targetName, type } = sankeyFilter;
 
@@ -54,7 +54,7 @@ const ProposalsTable = ({ mainChain }) => {
         return true;
       });
     }
-    
+
     // ID 순서로 정렬 (오름차순)
     return result.sort((a, b) => {
       const idA = a.id || 0;
@@ -180,7 +180,7 @@ const ProposalsTable = ({ mainChain }) => {
               /* Proposals Table */
               <tr
                 key={index}
-                className={`border-b border-gray-800 hover:bg-gray-900/50 transition-colors ${index % 2 === 0 ? 'bg-[#191C23]' : 'bg-[#101217]'
+                className={` border-gray-800 hover:bg-gray-900/50 transition-colors ${index % 2 === 0 ? 'bg-[#191C23]' : 'bg-[#101217]'
                   }`}
               >
 

@@ -71,7 +71,7 @@ const RankingChart = () => {
       onDragStart={(e) => setActiveId(e.active.id)}
       onDragEnd={handleDragEnd}
     >
-      <div className="flex flex-col h-full w-full select-none p-6">
+      <div className="flex flex-col h-full w-full select-none">
 
         {/* TITLE */}
         <h2 className="text-[18px] font-semibold mb-[29.9px] shrink-0">HEMP Rank</h2>

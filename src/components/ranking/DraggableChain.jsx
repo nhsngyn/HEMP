@@ -2,7 +2,7 @@
 import React from "react";
 import { useDraggable } from "@dnd-kit/core";
 import ChainCard from "./ChainCard";
-import { DRAG_CLICK_THRESHOLD } from "../../constants/dnd"; // 🔹 상수 import
+import { DRAG_CLICK_THRESHOLD } from "../../constants/dnd";
 
 const DraggableChain = ({ chain, selectionInfo, onClick, isOverlay = false, isSelected = false }) => {
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({

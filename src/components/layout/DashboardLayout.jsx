@@ -12,10 +12,9 @@ const DashboardPage = () => {
     return allChains.find(c => c.id === selectedMainId);
   }, [allChains, selectedMainId]);
 
-  // ✨ 배경색을 #111216으로 통일
   const cardStyle = {
     borderRadius: '15px',
-    background: '#111216' 
+    background: '#15171C'
   };
 
   return (
@@ -45,7 +44,7 @@ const DashboardPage = () => {
         {/* 상단 차트 영역 */}
         <div className="flex w-full min-h-0 h-[360px]" style={{ gap: 'calc(16px * var(--scale))' }}>
           
-          {/* 1. HempMap (Bubble) */}
+          {/* 1. HempMap */}
           <div 
             className="h-full relative overflow-hidden shadow-lg" 
             style={{ ...cardStyle, width: '52%' }} 

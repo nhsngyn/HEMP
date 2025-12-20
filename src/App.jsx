@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef } from 'react';
 import MainLayout from './components/layout/MainLayout';
-import RankingChart from './components/ranking/RankingChart';
+import Sidebar from './components/layout/Sidebar';
 import HempMap from './components/charts/HempMap';
 import SankeyChart from './components/charts/SankeyChart';
 import RadarChart from './components/charts/RadarChart';
@@ -10,7 +10,6 @@ import useChainStore from './store/useChainStore';
 function App() {
   const { allChains, selectedMainId, selectedSubId1, selectedSubId2 } = useChainStore();
 
-  // 메인 체인 데이터
   const mainChain = useMemo(() => {
     return allChains.find(c => c.id === selectedMainId);
   }, [allChains, selectedMainId]);
@@ -44,9 +43,9 @@ function App() {
   }, [hasAnySelection]);
 
   return (
-    <MainLayout leftSidebar={<RankingChart />}>
+    <MainLayout leftSidebar={<Sidebar />}>
       <>
-        {/* Section 1: Main Sankey Visualization (16:10 slide) */}
+        {/* Section 1: 차트 대시보드 */}
         <section
           className="w-full flex flex-col"
           style={{
@@ -54,13 +53,10 @@ function App() {
             paddingLeft: 'calc(20px * var(--scale))',
             paddingRight: 'calc(12px * var(--scale) + 5px)',
             gap: 'calc(16px * var(--scale))',
-            scrollSnapAlign: 'start',
-            scrollSnapStop: 'always',
-            height: '1000px',
             boxSizing: 'border-box'
           }}
         >
-          {/* Title */}
+          {/* 헤더 */}
           <header
             id="dashboard-header"
             className="shrink-0 flex flex-col"
@@ -74,31 +70,23 @@ function App() {
             </h1>
           </header>
 
-          {/* 1. 상단 영역 (HEMP Radar) - 40% */}
-          {/* Bubble : Radar = 76 : 64 */}
-          <div className="flex w-full min-h-0" style={{ gap: 'calc(16px * var(--scale))', flex: '2.9 0 0' }}>
-
-            {/* 1-1. 버블 차트 (76/140 ≈ 54.3%) */}
-            <div className="h-full bg-[#ffffff05] rounded-2xl relative overflow-hidden shadow-lg" style={{ width: '52%' }}>
-              <div className="absolute inset-0 w-full h-full">
-                <HempMap />
-              </div>
+          {/* 상단: Bubble + Radar 차트 */}
+          <div className="flex w-full min-h-0 h-[360px]" style={{ gap: 'calc(16px * var(--scale))' }}>
+            <div className="h-full bg-[#ffffff06] rounded-2xl relative overflow-hidden shadow-lg" style={{ width: '52%' }}>
+              <HempMap />
             </div>
-
-            {/* 1-2. 레이더 차트 (64/140 ≈ 45.7%) */}
-            <div className="h-full bg-[#ffffff05] rounded-2xl relative overflow-hidden shadow-lg shrink-0 my-auto" style={{ width: '48%' }}>
+            <div className="h-full bg-[#ffffff06] rounded-2xl relative overflow-hidden shadow-lg shrink-0" style={{ width: '48%' }}>
               <RadarChart />
             </div>
-
           </div>
 
-          {/* 2. 하단 영역 (Sankey) - 60% */}
-          <div className="w-full bg-[#ffffff05] rounded-2xl relative overflow-hidden shadow-lg min-h-0" style={{ flex: '6.0 0 0' }}>
+          {/* 하단: Sankey 차트 */}
+          <div className="w-full h-[400px] bg-[#ffffff06] rounded-2xl relative overflow-hidden shadow-lg min-h-0">
             <SankeyChart />
           </div>
         </section>
 
-        {/* Section 2: Proposals Table */}
+        {/* Section 2: 테이블 */}
         <section
           id="proposals-section"
           className="w-full"
@@ -106,9 +94,8 @@ function App() {
             padding: 'calc(12px * var(--scale))',
             paddingLeft: 'calc(20px * var(--scale))',
             paddingRight: 'calc(12px * var(--scale) + 5px)',
-            scrollSnapAlign: 'start',
-            scrollSnapStop: 'always',
             minHeight: 'auto',
+            marginBottom: '40px',
             boxSizing: 'border-box',
           }}
         >

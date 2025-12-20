@@ -1,9 +1,9 @@
 // 스타일 가이드 기반 컬러 시스템 정의
 export const COLORS = {
 
-  MAIN: '#93E729',   // GREEN
-  SUB1: '#BBB143',   // YELLOW
-  SUB2: '#3CA7C4',   // SKYBLUE
+  MAIN: '#93E729',
+  SUB1: '#3CA7C4',  
+  SUB2: '#BBB143',   
 
   WHITE: '#FFFFFF',
   GRAY100: '#E8EAED',

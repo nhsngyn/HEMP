@@ -1,31 +1,21 @@
-// src/components/layout/Sidebar.jsx
-
 import React from "react";
 import RankingChart from "../ranking/RankingChart";
 
 const Sidebar = () => {
   return (
-    <aside
-      className="
-        w-[260px]
-        h-screen
-        sticky top-0
-        bg-[#111418]
-        text-white
-        flex flex-col
-        px-6
-        py-[60px]
-        flex-shrink-0
-      "
-    >
-      {/* 상단 타이틀 */}
-      <h1 className="text-[28px] font-bold">HEMP</h1>
+    <div className="flex flex-col w-full h-full text-white">
+      
+      {/* 상단 HEMP 타이틀 (RankingChart 내부 패딩과 라인 맞춤) */}
+      <h1 className="text-[28px] font-bold px-6 pt-[60px] shrink-0">
+        HEMP
+      </h1>
 
-      {/* RankingChart */}
-      <div className="mt-[43px] flex-1 min-h-0">
+      {/* 랭킹 차트 리스트 */}
+      <div className="flex-1 min-h-0 overflow-y-auto custom-scrollbar">
+        {/* RankingChart 내부에도 p-6 패딩이 있어서 자연스럽게 정렬됨 */}
         <RankingChart />
       </div>
-    </aside>
+    </div>
   );
 };
 

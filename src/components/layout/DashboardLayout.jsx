@@ -1,5 +1,4 @@
 import React from "react";
-// Sidebar를 여기서 import하여 레이아웃을 분리합니다.
 import Sidebar from "./Sidebar"; 
 
 // DashboardLayout은 이제 앱의 메인 컨테이너 역할을 합니다.

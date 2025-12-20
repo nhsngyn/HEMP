@@ -4,7 +4,7 @@ const MainLayout = ({ leftSidebar, children }) => {
   return (
     <div className="flex w-full min-h-screen bg-black overflow-x-hidden">
       
-      {/* 1. 왼쪽 사이드바 영역 (고정) */}
+      {/* 1. 왼쪽 사이드바 영역 */}
       <aside 
         className="
           w-[260px] 

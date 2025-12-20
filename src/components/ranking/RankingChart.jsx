@@ -71,7 +71,6 @@ const RankingChart = () => {
       onDragStart={(e) => setActiveId(e.active.id)}
       onDragEnd={handleDragEnd}
     >
-      {/* ✨ 수정됨: p-6 제거 (Sidebar의 px-6를 따름) */}
       <div className="flex flex-col h-full w-full select-none">
 
         {/* TITLE */}

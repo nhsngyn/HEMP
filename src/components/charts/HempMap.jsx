@@ -116,6 +116,9 @@ const chainMap = useMemo(() => {
 
     return {
       backgroundColor: 'transparent',
+      textStyle: {
+        fontFamily: 'SUIT'
+      },
       grid: {
         top: '20%', right: '8%', bottom: '12%', left: '8%',
         containLabel: true
@@ -124,7 +127,7 @@ const chainMap = useMemo(() => {
         trigger: 'item',
         backgroundColor: 'rgba(26, 27, 32, 0.95)',
         borderColor: '#4B5563',
-        textStyle: { color: '#fff' },
+        textStyle: { color: '#fff', fontFamily: 'SUIT' },
         formatter: (params) => {
           const chainData = chainMap[params.name]; 
           

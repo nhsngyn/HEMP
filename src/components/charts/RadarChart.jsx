@@ -332,7 +332,7 @@ const RadarChart = () => {
           2
         </div>
         <h2
-          className="text-white font-extrabold text-lg"
+          className="text-white font-bold text-lg"
         >
           HEMP Comparison Radar Chart
         </h2>

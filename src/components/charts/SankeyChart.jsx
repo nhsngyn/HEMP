@@ -212,7 +212,7 @@ const generateSankeyData = (mainChain, mockPropositions) => {
   return { nodes, links };
 };
 
-const SankeyChart = ({ width = 1400, height = 700 }) => {
+const SankeyChart = ({ width = 1400, height = 500 }) => {
   const svgRef = useRef(null);
   const containerRef = useRef(null);
   const propositionInfoRef = useRef(null);
@@ -799,16 +799,17 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
           style={{
             width: '24px',
             height: '24px',
-            backgroundColor: '#4C5564',
-            color: '#9CA3AF',
+            backgroundColor: '#ffffff15',
+            color: '#D1D5DB',
             fontSize: '12px',
-            fontWeight: '900'
+            fontWeight: '700'
+
           }}
         >
           3
         </div>
         <h2
-          className="text-gray-100 font-extrabold text-lg"
+          className="text-white font-bold text-lg"
         >
           Proposal Configuration Flow
         </h2>

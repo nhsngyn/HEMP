@@ -10,7 +10,7 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
   const selectedChain = allChains.find((c) => c.id === selectedChainId);
   const isSelected = !!selectedChain;
 
-  const logoUrl = selectedChain?.logoUrl || "/logos/chainImg.png"; 
+  const logoUrl = selectedChain?.logoUrl || ""; 
   const chainName = selectedChain?.name;
 
   // 스타일 상수
@@ -65,7 +65,11 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
                       src={logoUrl} 
                       alt={`${chainName} logo`}
                       className="rounded-full flex-shrink-0 bg-white"
-                      style={{ width: LOGO_SIZE, height: LOGO_SIZE }}
+                      style={{ 
+                        width: LOGO_SIZE, 
+                        height: LOGO_SIZE,
+                        objectFit: 'cover'
+                      }}
                   />
                   <span className="text-[15px] font-semibold">
                       {chainName}

@@ -62,9 +62,9 @@ const HempMap = () => {
           rich: {
             logo: {
               backgroundColor: { image: logoUrl },
-              width: size * 0.9,
-              height: size * 0.9,
-              borderRadius: (size * 0.9) / 2,
+              width: size,
+              height: size,
+              borderRadius: size / 2,
             }
           }
         },
@@ -118,6 +118,8 @@ const HempMap = () => {
         axisPointer: {
           type: 'cross',
           snap: true,
+          show: true,
+          triggerOn: 'item',
           label: {
             show: true,
             backgroundColor: 'transparent',
@@ -170,7 +172,21 @@ const HempMap = () => {
         axisLabel: { show: false },
         axisTick: { show: false },
         axisLine: solidAxisLineStyle,
-        splitLine: { show: true, lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' } }
+        splitLine: { show: true, lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' } },
+        axisPointer: {
+          show: true,
+          triggerOn: 'item',
+          snap: true,
+          label: {
+            show: true,
+            backgroundColor: 'transparent',
+            padding: 0,
+            fontFamily: 'SUIT',
+            fontSize: 14,
+            fontWeight: 600,
+            formatter: (params) => Math.round(params.value)
+          }
+        }
       },
 
       yAxis: {
@@ -188,7 +204,21 @@ const HempMap = () => {
         axisLabel: { show: false },
         axisTick: { show: false },
         axisLine: solidAxisLineStyle,
-        splitLine: { show: true, lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' } }
+        splitLine: { show: true, lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' } },
+        axisPointer: {
+          show: true,
+          triggerOn: 'item',
+          snap: true,
+          label: {
+            show: true,
+            backgroundColor: 'transparent',
+            padding: 0,
+            fontFamily: 'SUIT',
+            fontSize: 14,
+            fontWeight: 600,
+            formatter: (params) => Math.round(params.value)
+          }
+        }
       },
 
       series: [

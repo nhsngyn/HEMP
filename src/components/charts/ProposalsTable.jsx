@@ -256,11 +256,12 @@ const ProposalsTable = ({ mainChain }) => {
                     padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
                     fontSize: 'calc(1rem * var(--scale))',
                     fontFamily: 'SUIT',
-                    width: '180px'
+                    width: '180px',
+                    lineHeight: '22px'
                   }}
                 >
                   <span
-                    className="inline-flex items-center justify-center rounded-sm font-extrabold"
+                    className="inline-flex items-center justify-center rounded-sm font-extrabold transition-transform cursor-pointer"
                     style={{
                       fontFamily: 'SUIT',
                       fontSize: '12px',
@@ -273,7 +274,16 @@ const ProposalsTable = ({ mainChain }) => {
                       verticalAlign: 'middle',
                       boxSizing: 'border-box',
                       backgroundColor: '#29303A',
-                      color: '#D1D5DB'
+                      color: '#D1D5DB',
+                      transformOrigin: 'center',
+                      margin: 0,
+                      lineHeight: '22px'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'scale(1.1)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'scale(1)';
                     }}
                   >
                     <span style={{

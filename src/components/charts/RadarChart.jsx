@@ -380,7 +380,7 @@ const RadarChart = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-r border-gray-700 my-auto" style={{ height: '90%' }}></div>
+        <div className="border-r border-gray-700 my-auto" style={{ height: '99%' }}></div>
 
         {/* 오른쪽: 점수 정보 (40%) */}
         <div
@@ -539,7 +539,11 @@ const RadarChart = () => {
                   </span>
                   <div
                     className="flex items-baseline shrink-0"
-                    style={{ gap: 'clamp(1px, 0.12vw, 2px)' }}
+                    style={{
+                      gap: 'clamp(1px, 0.12vw, 2px)',
+                      minWidth: '60px',
+                      justifyContent: 'flex-end'
+                    }}
                   >
                     <span
                       className="text-white font-semibold shrink-0"
@@ -547,7 +551,9 @@ const RadarChart = () => {
                         fontSize: 'clamp(18px, 0.7vw, 12px)',
                         lineHeight: 'clamp(1.2, 1.3vh, 1.4)',
                         whiteSpace: 'nowrap',
-                        paddingRight: 'clamp(3px, 0.1vh, 2px)',
+                        textAlign: 'right',
+                        display: 'inline-block',
+                        minWidth: '20px'
                       }}
                     >
                       {Math.round(value)}
@@ -557,8 +563,7 @@ const RadarChart = () => {
                       style={{
                         fontSize: 'clamp(16px, 0.7vw, 14px)',
                         lineHeight: 'clamp(1.40, 1.3vh, 1.4)',
-                        whiteSpace: 'nowrap',
-                        paddingRight: 'clamp(3px, 0.1vh, 2px)'
+                        whiteSpace: 'nowrap'
                       }}
                     >
                       /{metric.maxValue}

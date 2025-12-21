@@ -1,0 +1,197 @@
+﻿id,title,type,status,ProcessingTime,Participation,Consensus
+119,Add CMST Metadata to Gravity Bridge,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 22 minutes",1.0,0.4158
+118,Add CMDX Metadata to Gravity Bridge,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 25 minutes",1.0,0.4192
+120,Setup Comdex IBC AutoForwarding,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 4 minutes",1.0,0.4215
+70,Pleiades Upgrade  Phase I,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",1.0,0.5092
+97,Setup USTC IBC AutoForwarding,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.999175938,0.246
+130,USDC Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.938701974,0.8954
+132,USDC Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.919369985,0.8031
+98,Setup LUNC IBC AutoForwarding,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.916550693,0.238
+127,USDC Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.873467548,0.9919
+135,APTOS Airdrop for COSMOS stakers,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.864945002,0.9922
+69,Pleiades Upgrade  Phase I,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 4 minutes",0.829627093,0.9013
+137,Atom Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.822614839,0.9998
+211,The Apollo Upgrade,MsgExecLegacyContent,REJECTED,"6 days, 23 hours 41 minutes",0.822484975,0.9988
+138,ATOM Airdrop for COSMOS stakers,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.818843536,0.9997
+143,ATOM Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.809252038,0.9999
+145,USDC Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.807882359,0.9999
+144,decrease minimum proposal deposit to 900 GRAV ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.80296935,0.9979
+136,Gravity Bridge 20  VOTE YES ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.798435549,0.9968
+94,Setup ISLM IBC AutoForwarding,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.796022482,0.6349
+146,ATOM Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.794025295,0.9999
+214,Add ARCH token to Gravity Bridge,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 7 minutes",0.784968457,0.4939
+151,ATOM Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.77850449,0.9997
+150,ATOM Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.770463454,0.9998
+147,ATOM Airdrop for COSMOS stakers,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.769852535,0.9999
+149,ATOM Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.768558432,0.9999
+148,ATOM Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.768538787,0.9999
+181,Compensation to cosmos holders,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.756587679,0.8173
+228,Explore DeFi on Cosmos,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.706438568,0.9986
+209, Gravity Airdrop  ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.692304531,0.9981
+184,USDC Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.679391928,0.9997
+175,Gravity Airdrop ,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.668168779,0.9942
+213,Atom Airdrop   New Lightning Network,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.665285426,0.9999
+20,register HUAHUA token metadata,MsgExecLegacyContent,REJECTED,"2 days, 0 hours 0 minutes",0.594660603,0.1925
+246,Integration of Gravity Bridge into Nebula7 for Quick CryptoBacked Loans,MsgExecLegacyContent,REJECTED,"5 days, 0 hours 0 minutes",0.480614723,0.9999
+22,Balance out new validators helping the network,MsgExecLegacyContent,REJECTED,"2 days, 0 hours 0 minutes",0.455625412,0.8194
+23,Provide Liqudity,MsgExecLegacyContent,REJECTED,"2 days, 0 hours 8 minutes",0.428316254,0.7988
+250, New Gravity version   ,Text,REJECTED,"5 days, 0 hours 0 minutes",0.423333865,1.0
+77,Resume bridge operations starting 24 hours after the ETH merge,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",1.0,0.9993
+197,Add member to Hatsfinance Bug Bounty Committee,MsgExecLegacyContent,PASSED,"5 days, 1 hours 42 minutes",1.0,0.9998
+155,Curb Inflation Part 2  Set InflationMax back to 7,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",1.0,0.9998
+183,Antares Upgrade,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",1.0,0.9999
+180,Fund development of auction module,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",1.0,0.9973
+172,Orion Upgrade,MsgExecLegacyContent,PASSED,"5 days, 1 hours 21 minutes",1.0,0.9956
+131,Increase minimum proposal deposit,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",1.0,0.9999
+199,Increase Gravity Bridge fees to 4 basis points,MsgExecLegacyContent,PASSED,"5 days, 0 hours 1 minutes",1.0,0.9923
+154,Curb Inflation Part 1  Set InflationMax to 1,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",1.0,0.9999
+203,Set Minimum Bid Fee parameter to 3110 GRAV,MsgExecLegacyContent,PASSED,"5 days, 2 hours 28 minutes",1.0,0.9999
+201,Set Auction Length parameter to 85600,MsgExecLegacyContent,PASSED,"5 days, 2 hours 28 minutes",1.0,1.0
+200,Set NonAuctionable Tokens to ugraviton,MsgExecLegacyContent,PASSED,"5 days, 2 hours 40 minutes",1.0,1.0
+202,Set Burn Winning Bids parameter to true,MsgExecLegacyContent,PASSED,"5 days, 2 hours 28 minutes",1.0,1.0
+74,Pleiades Upgrade  Phase I,MsgExecLegacyContent,PASSED,"5 days, 0 hours 15 minutes",1.0,0.9886
+121,Recover user funds stuck in community pool,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",1.0,0.9999
+198,Reduce inflation from 10 to 85,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",1.0,0.9965
+212,The Apollo Upgrade,MsgExecLegacyContent,PASSED,"5 days, 2 hours 16 minutes",1.0,1.0
+195,Integrating NFT Bridging Module in a future network upgrade,MsgExecLegacyContent,PASSED,"6 days, 19 hours 47 minutes",1.0,0.9999
+204,Send 50 of Send To Eth fees to the Community Pool,MsgExecLegacyContent,PASSED,"5 days, 2 hours 28 minutes",1.0,0.9999
+86,Implement Gravity Bridge Fees,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",1.0,0.9999
+210,Gravity Bridge Bug Bounty 1,MsgExecLegacyContent,PASSED,"5 days, 4 hours 5 minutes",1.0,0.9869
+105,Pleiades Upgrade  Phase II,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",1.0,0.9999
+245,Aurora Upgrade,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",1.0,0.9866
+185,Increase minimum deposit for proposals,MsgExecLegacyContent,PASSED,"5 days, 0 hours 5 minutes",0.973999158,0.9999
+176,Add STRD Metadata to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 2 hours 1 minutes",0.966419548,1.0
+177,Add CANTO Metadata to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 1 hours 59 minutes",0.966383376,0.9999
+59,Setup Canto IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.96625511,0.9999
+179,Add stOsmo Metadata to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 1 hours 21 minutes",0.965745157,0.9999
+178,Add stAtom Metadata to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 1 hours 21 minutes",0.965714376,1.0
+122,Add CMST Metadata to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",0.963561802,0.9689
+123,Setup Comdex IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.963561557,0.9693
+111,Setup Kujira IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.951380499,0.9996
+113,Add USK Metadata to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.951371901,0.9999
+112,Add KUJI Metadata to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.951360694,0.9999
+126,Pool Incentives for GRAVUSK on Kujira,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.948406602,0.66
+108,Gravity Bridge to go Carbon Neutral,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.947385446,0.5304
+124,Unfreeze IBC Client for HAQQ TestEdge2,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.941961871,0.9666
+193,Enhancing Gravity Bridge through AlphaGrowth BD,MsgExecLegacyContent,PASSED,"5 days, 6 hours 1 minutes",0.938388301,0.1213
+236,Neutrino Upgrade,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.937016122,1.0
+76,Pause bridge operations starting 48 hours before ETH merge,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.935660976,0.9992
+116,Setup Planq IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.9309592,0.9999
+115,Add PLQ Metadata to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.93090263,1.0
+99,Setup Terra Classic IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.930271496,0.9622
+83,Setup FUND IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.926147887,0.9999
+82,Add FUND Metadata to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.926133807,0.9999
+63,Update Canto IBC AutoForwarding Channel,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",0.916431072,0.9999
+153,Gravity Bridge to go Carbon Neutral CosmosZERO Followon to Proposal 108,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.894754131,0.5875
+208,Decrease Gravity Bridge fees to 1 basis point,MsgExecLegacyContent,PASSED,"5 days, 0 hours 6 minutes",0.890163481,0.9929
+156,Proposal for external incentives to Cresecent DEX LP bCREGRAV,MsgExecLegacyContent,PASSED,"5 days, 19 hours 42 minutes",0.881078688,0.9999
+173,Bug Bounty Vault Proposal by Hats Finance,MsgExecLegacyContent,PASSED,"6 days, 12 hours 15 minutes",0.878281477,0.9927
+187,Enable Interchain Accounts Host module,MsgExecLegacyContent,PASSED,"5 days, 0 hours 6 minutes",0.878280043,1.0
+174,Proposal to Create New USDCgrvUSDTgrv Stableswap LP on Crescent DEX and add external incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.873818261,0.8838
+81,Reduce batch timeouts and update timeout parameters,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.872706105,0.9999
+92,Add ISLM Metadata to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",0.869713245,0.9999
+141,Add JUNO Metadata to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 0 hours 18 minutes",0.869010692,0.9098
+140,Setup Juno IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.868919325,0.9097
+157,Proposal for external incentives to Cresecent DEX new LP SHIBgrvbCRE,MsgExecLegacyContent,PASSED,"5 days, 19 hours 21 minutes",0.86857568,0.8491
+100,Setup Acrechain IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 9 minutes",0.868456916,0.9999
+226,Round2 Gravity Growth and Sustainability Grant,MsgExecLegacyContent,PASSED,"5 days, 1 hours 17 minutes",0.863090152,0.9999
+225,Reduce inflation from 55 to 4,MsgExecLegacyContent,PASSED,"5 days, 1 hours 29 minutes",0.861123554,0.9966
+222,Add Neutaro Metadata to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.857971594,0.9999
+44,Setup Iris IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.853604229,0.9999
+218,Reduce inflation from 7 to 55,MsgExecLegacyContent,PASSED,"6 days, 21 hours 20 minutes",0.838951172,0.954
+237,Revive GravityComdex IBC client,MsgExecLegacyContent,PASSED,"5 days, 2 hours 54 minutes",0.83832927,1.0
+101,Add LUNC Metadata to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 9 hours 3 minutes",0.837906748,0.953
+114,Unfreeze IBC transfers between HAQQ TestEdge2 and Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.837581569,0.9978
+170,Gravity Growth and Sustainability Grant,MsgExecLegacyContent,PASSED,"5 days, 0 hours 7 minutes",0.836666949,0.9595
+221,Add MEME Metadata to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 0 hours 12 minutes",0.836403907,0.9998
+84,Reactivate expired IBC client 07tendermint190 for FUND,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.836059868,1.0
+41,Setup Stargaze IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.835450492,0.9999
+42,Setup Chihuahua IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.835449446,0.9999
+194,Hatsfinance Bug Bounty Committee,MsgExecLegacyContent,PASSED,"5 days, 9 hours 49 minutes",0.830480322,0.995
+223,Setup Neutaro IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.829814036,0.9999
+142,Reduce minimum inflation and tune inflation parameters,MsgExecLegacyContent,PASSED,"5 days, 0 hours 10 minutes",0.826768832,0.979
+220,Auction Module MinBidFee Update,MsgExecLegacyContent,PASSED,"6 days, 7 hours 55 minutes",0.823288818,0.9999
+102,Add USTC Metadata to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",0.822340585,0.9206
+45,Setup Osmosis IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.821600542,0.9999
+78,Proposal for external incentives to Cresecent DEX LPs bCREGRAV and AtomUSDCgrv,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.819045981,0.9887
+46,Setup Cosmos Hub IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.818203605,0.9999
+224,Setup MEME IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.817373433,0.9999
+43,Setup Crescent IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.816921205,0.9999
+219,Auction Module MinBidFee Update,MsgExecLegacyContent,PASSED,"6 days, 23 hours 10 minutes",0.812990164,0.9999
+75,Setup Regen Network IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.808810148,0.982
+95,Setup ISLM IBC AutoForwarding correct,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.806650668,0.9999
+107,Reduce Inflation,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.80466419,0.846
+106,Increase minimum commission to 10,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.803491342,0.7125
+215,Setup Archway IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 15 hours 31 minutes",0.802447289,0.9999
+67,Gravity Growth Grant 3 Cross Dex Yield Finder,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",0.800541269,0.9998
+205,Reduce inflation from 85 to 7,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",0.79600975,0.9946
+58,Polaris Upgrade,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",0.792392941,0.9999
+216,Add ARCH token to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 5 hours 20 minutes",0.786872453,0.9999
+64,Advancing Ethermint GTM and Engineering Plan for the Ethermint Chain,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.782263511,0.9974
+60,Register MNTL token metadata,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.778832472,0.9999
+61,Setup MNTL IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.778157445,1.0
+217,COMMUNITY SPEND BOUNTY and INCENTIVES,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.77491094,0.9999
+17,Add ATOM metadata on Gravity Bridge,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.773647309,0.9999
+15,Part 2  ATOM Airdrop,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.77197203,0.9734
+80,HAQQ testnet token ISLMT  metadata,MsgExecLegacyContent,PASSED,"5 days, 0 hours 9 minutes",0.768777393,0.3439
+16,GRAV Airdrop Osmosis and ION holders,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.755371782,0.7263
+227,Recover user funds stuck in community pool,MsgExecLegacyContent,PASSED,"5 days, 5 hours 51 minutes",0.754803215,0.9998
+52,GRAV incentives for ATOM and OSMO gUSDC liquidity pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 14 minutes",0.752995264,0.9992
+166,Inflation Adjustment  Set InflationMin to 10 and InflationMax to 20,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.75182764,0.9855
+55,Reduce inflation bonding target,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.750968616,0.9983
+234,Gravity Bridge Chain Fee Increase,MsgExecLegacyContent,PASSED,"5 days, 0 hours 9 minutes",0.748747033,0.9999
+47,Kinesis AMM shared incentivesCommunity Spend to provide liquidity incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",0.74872634,0.9992
+40,Gravity Bridge Upgrade to fix IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 7 minutes",0.747948708,0.9999
+104,Updating frozenexpired client for gravitybridge3  comdex1,MsgExecLegacyContent,PASSED,"5 days, 2 hours 47 minutes",0.739666152,0.9999
+62,Setup Evmos IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.735372289,0.9999
+229,Add AQLA Metadata to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 0 hours 55 minutes",0.734945886,0.9751
+79,Setup Agoric IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.734279973,0.9954
+51,Update expired client between Gravity Bridge and Cheqd,MsgExecLegacyContent,PASSED,"5 days, 0 hours 57 minutes",0.709808843,0.9999
+56,Setup SCRT Network IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 9 minutes",0.706577618,0.9999
+49,Add GRAV Liquidity to Sifchain DEX Incentivized Pool and Provide GRAVROWN IBC Relayer Grant ,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.693835819,0.8193
+38,Renew Gravity liquidity incentives to GRAVOSMO Osmosis pool 625,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.684195501,0.9998
+53,Formation of ICS 721  NFT workgroup,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",0.683716341,0.9999
+230,Increase Gravity Bridge chain fee ,MsgExecLegacyContent,PASSED,"6 days, 8 hours 19 minutes",0.673898471,0.9999
+233,Add Althea L1 Metadata to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 0 hours 2 minutes",0.664046201,0.9999
+232,Setup Althea L1 IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 4 minutes",0.664046201,1.0
+248,Increase Proposal Deposit Requirement,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.659937682,1.0
+25,Proposal for external incentives for GRAV liquidity providers,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.658734974,0.9975
+39,PROPOSAL to fund Gravity Group 1 Community Management,MsgExecLegacyContent,PASSED,"5 days, 0 hours 31 minutes",0.652182805,0.9991
+249,Reigniting Gravity Bridge Grant proposal Resubmission,MsgCommunityPoolSpend,PASSED,"5 days, 0 hours 5 minutes",0.642377864,1.0
+19,Stargaze Gravity Denom Proposal,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.640475359,0.9555
+18,register CMDX token metadata,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.63914892,0.9999
+50,Setup Nyx IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.63701901,0.9999
+244,Update expired Gravitycomdex client ,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.634324124,1.0
+24,Governance proposal to recover IBC connection with BitCanna chain,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.628460975,0.8788
+238,Fix channel103 to Bostrom,MsgExecLegacyContent,PASSED,"5 days, 0 hours 3 minutes",0.626951416,1.0
+35,GRAV incentives for ATOM and OSMO gUSDC liquidity pools,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.62392681,0.9999
+14,Part 1  ATOM Airdrop,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.62140354,0.9686
+27,Gravity Bridge Mercury Upgrade,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.618393191,0.9991
+241,Community Pool Spend for Blockscape Leap wallet integration Part 1,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.615740449,0.9664
+36,Gravity Grants 1 awardee selected GUI,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.613614264,0.9998
+37,Gravity Grants 2 awardee selected RFP for Snapshot,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.613107611,0.9998
+243,Update expired Gravitycomdex client,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.610816294,1.0
+4,Signaling Proposal for upgrade to gravitybridge3,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.610656862,0.4903
+54,5M Grav spend for GRAVbCRE LP incentives,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.605673936,0.9989
+240,Add IXO IBC Metadata to Gravity Bridge,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.601222545,1.0
+242,Set up IXO IBC AutoForwarding,MsgExecLegacyContent,PASSED,"5 days, 1 hours 21 minutes",0.596057496,1.0
+12,NYM token metadata v3,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.595474619,1.0
+31,Increase length of voting period and minimum deposit,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.594249664,0.9644
+33,Matching GRAVIRIS incentives for Liquidity Pools on Coinswap,MsgExecLegacyContent,PASSED,"5 days, 0 hours 0 minutes",0.583289,0.9803
+34,Unfreeze IBC client,MsgExecLegacyContent,PASSED,"5 days, 3 hours 3 minutes",0.579511812,0.9998
+21,Correct denom for HUAHUA token metadata,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.578395458,1.0
+28,Proposal for Gravity Grant RFP 1 UIGUI,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.575568144,0.9999
+13,Increase max transaction gas and block size,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.57257007,1.0
+10,NYM testnet token metadata v2,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.560186263,1.0
+11,Add CTK Metadata in Gravity Bridge,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.52077682,1.0
+9,NYM token metadata v2,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.515447884,1.0
+32,Proposal for Gravity Grant RFP 1 UIGUI,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.51399735,0.9989
+30,Add Persistence to hrpibcrecord for ibcforwarding,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.5091466,0.9999
+26,Register CHEQ token metadata on Gravity Bridge,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.499248219,0.9851
+29,Proposal for Gravity Grant RFP 1 UIGUI,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.494634491,0.9517
+6,Gravity Bridge v130 Upgrade,MsgExecLegacyContent,PASSED,"2 days, 0 hours 3 minutes",0.467434803,1.0
+8,NYM token metadata,MsgExecLegacyContent,PASSED,"2 days, 0 hours 39 minutes",0.442583512,1.0
+5,Set bridgeethereumaddress,MsgExecLegacyContent,PASSED,"2 days, 0 hours 37 minutes",0.429163858,1.0
+7,NYMT testnet token metadata,MsgExecLegacyContent,PASSED,"2 days, 1 hours 7 minutes",0.423613563,1.0
+110,Unfreeze IBC transfers between HAQQ TestEdge2 and Gravity Bridge,MsgExecLegacyContent,FAILED,"5 days, 0 hours 0 minutes",0.854608999,0.9924
+247,Reigniting Gravity Bridge Grant proposal,MsgExecLegacyContent,FAILED,"5 days, 0 hours 17 minutes",0.607415699,1.0

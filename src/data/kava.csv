@@ -1,0 +1,201 @@
+﻿id,title,type,status,ProcessingTime,Participation,Consensus
+166,Supply Funds into Kava Mint,MsgExec,REJECTED,"7 days, 0 hours 0 minutes",0.631170872,0.5911
+80,Kava 10 Software Upgrade Proposal,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.575754029,0.8505
+96,EVM Infrastructure Funding Proposal,MsgExecLegacyContent,REJECTED,"7 days, 23 hours 12 minutes",0.566922836,0.4031
+120,Kava 12 Software Upgrade Proposal,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.51873538,0.7113
+100,Kava 11 Software Upgrade Proposal,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.504644772,0.8507
+121,Kava 12 Software Upgrade Proposal,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.486546014,0.7059
+10,Activate usdx incentive rewards,MsgExecLegacyContent,REJECTED,"14 days, 0 hours 9 minutes",0.474772716,0.7392
+149,Adds EIP712 allowed messages,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.437492445,0.3437
+71,Kava Swap incentivized testnet winner payouts,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.433746883,0.9487
+7,Kava 3 Upgrade Proposal,MsgExecLegacyContent,REJECTED,"14 days, 0 hours 1 minutes",0.415325215,0.6407
+11,Activate usdx incentive rewards,MsgExecLegacyContent,REJECTED,"14 days, 0 hours 0 minutes",0.415008699,0.7848
+154,Kava Rise payouts for July 2023,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.411187276,0.6168
+18,A USDX Incentives for BUSD,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.394346483,0.8916
+88,Adjust annual inflation for Kava stakers from 20 to 17,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.350881837,0.7941
+174, USD Airdrop   New Atom Liquidity ,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.348976094,0.9939
+184, Kava New Version  USDX Airdrop ,Text,REJECTED,"7 days, 0 hours 0 minutes",0.325224814,0.9992
+110,Revive IBC Client to Oppy Chain,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.30601839,0.9931
+92,Set validator minimum commission rate to 5,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 2 minutes",0.303378482,0.7611
+101,Ethermint Funding Proposal For Past Development Addressed from The Evmos Community to The Kava Community,MsgExecLegacyContent,REJECTED,"11 days, 3 hours 34 minutes",0.281163341,0.4763
+39,Kava 51 Upgrade Proposal,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.274940736,0.7275
+67,Increase Kava Lend debt limit for XRPB collateral,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.253954143,0.954
+116,Remove Community Pool Funds From Earn Vault,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.246287011,0.9734
+115,Kava Rise payouts for November 2022,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.243651364,0.9616
+82,Adjust UST in Kava Mint,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.226470661,0.7028
+168,Kava 15 Mainnet Upgrade,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.736659958,0.9999
+79,Enable delegators to withdraw to a different address,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.718969149,0.9937
+167,Kava Rise payouts for October 2023,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.690991321,0.998
+165,Injective USDt Adoption,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.670457687,0.996
+173,Kava Rise payouts for January 2024,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.666440456,0.9982
+176,Kava Rise payouts for February 2024,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.66584553,0.9962
+139,Kava 13 Mainnet Upgrade,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.661046246,0.9999
+175,WAGMIwKAVA LP Authorization,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.656432202,0.9943
+178,Kava 16 Mainnet Upgrade,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.643190559,0.9999
+179,Kava Rise payouts for April 2024,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.638658291,0.9953
+164,Kava Rise payouts for September 2023,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.637558553,0.9999
+138,Deposit Funds into Kava Lend,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.634758199,0.9543
+140,Kava Rise payouts for April 2023,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.633998871,0.9991
+136,Addition of Multichain USDCwBTCUSDT to Kava Lend,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.633849952,0.9999
+148,Kava Rise payouts for June 2023,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.631635472,0.979
+142,Deposit Funds into Kava Lend,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.622042863,0.9089
+141,Kava Horizon signaling proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.618359074,0.6134
+194,Kava 17 Mainnet Upgrade,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.61738893,0.9999
+144,Kava Rise payouts for May 2023,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.615737129,0.9999
+155,Kava Rise payouts for July 2023,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.610921023,0.9834
+172,WAGMI Pool Creation on Kinetix,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.607822346,0.9973
+197,Kava 18 Mainnet Upgrade,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.607298318,0.9999
+160,Abracadabra Joins Kava Ignition,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.603503493,0.9797
+147,Adds Tether USDt to kava lend and adjusts incentives,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.602133491,0.9796
+159,Kinetix Joins Kava Ignition,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.598483951,0.9813
+84,Kava 10 Software Upgrade Proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.598063115,0.9999
+188,Kava Rise Payouts August 2024,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.593793181,0.9986
+143,Adds Axelar WBTC to kava Lend and adjusts incentives,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.587850717,0.9969
+83,Remove UST from Kava Mint,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.587450823,0.9971
+150,Adds EIP712 allowed messages,MsgUpdateParams,PASSED,"7 days, 0 hours 0 minutes",0.585724638,0.9839
+156,Update Stability Committee Permissions to Include USDt in Lend and Mint,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.579783604,0.9826
+54,Decrease BUSDA CDP APY to 0,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.575790244,0.9995
+163,WAGMI Deploys on Kava,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.572737344,0.9956
+53,Add 30 minute TWAP pricefeed for USDX,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.571616588,0.9996
+16,Harvest Proposal,MsgExecLegacyContent,PASSED,"14 days, 0 hours 0 minutes",0.569616603,0.9999
+24,A USDX Incentives for XRP,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.569505421,0.9995
+59,Kava 8 Upgrade Signaling Proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.568749469,0.9987
+137,Add Kava Origin to Kava Infrastructure and Security Rewards,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.568727008,0.9075
+153,Increases USDt incentives removes various asset incentives in Kava Lend,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.564481864,0.9784
+25,Add KAVA to the list of allowed CDP collaterals,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.55936745,0.9999
+195,Kava Rise Payouts November 2024,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.555441876,0.9998
+162,Kava Rise payouts for August 2023,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.552181764,0.9765
+104,Adjusts Kava incentive rewards for Swap Lend and Boost and KAVA stakers Adds parameters for Multichain Dai USDT to earn module ,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.545568138,0.9335
+189,Extend incentive reward periods for Kava Earn and Kava Lend,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.544834134,0.9998
+103,Community pool deposit to Earn,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.542377824,0.9442
+193,Kava Rise Payouts October 2024,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.541839956,0.9998
+157,Kava Ignition Program,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.540909493,0.9808
+200,Kava Rise Payouts March 2025,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.539654005,0.9995
+126,Adjust incentive rewards and staking incentives,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.539419367,0.9384
+125,Launch the 1000000 AKT Akash Open Cloud Kava Validator Campaign,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.538091156,0.9993
+198,Kava Rise Payouts January 2025,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.538075181,0.9993
+152,Adds Tether USDt to Mint,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.536952639,0.9813
+1,Enable Transactions Param Change,MsgExecLegacyContent,PASSED,"16 days, 8 hours 17 minutes",0.53689948,1.0
+17,Kava 4 Upgrade Proposal,MsgExecLegacyContent,PASSED,"14 days, 0 hours 0 minutes",0.536429034,0.9998
+128,Support Decentralization and Security on the Kava Network,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.533367486,0.4173
+190,Kava Rise Payouts September 2024,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.532507029,0.9974
+109,Revive IBC Client to Terra,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.532202815,0.9956
+23,Add assets to hard protocol distribution,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.53167483,0.9999
+8,Kava 3 Upgrade Proposal B,MsgExecLegacyContent,PASSED,"14 days, 0 hours 2 minutes",0.529101477,0.7434
+161,Supply Funds into Kava Mint,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.528552433,0.9822
+106,Kava Rise October Payouts,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.52765807,0.9737
+108,Kava 11 Testnet Competition Winners Part 2,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.526121974,0.9657
+107,Kava 11 Testnet Competition Winners,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.525666181,0.9712
+105,Kava Rise September Payouts,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.525343067,0.9843
+21,A USDX Incentives for BTC,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.525164007,0.9985
+114,Adjust AKT and HARD lend markets,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.523075058,0.9858
+145,Increases ATOM incentives reduces multichain asset incentives in Kava Lend,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.522969256,0.9984
+132,Deposit Funds into Kava Lend,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.522196159,0.9406
+127,Deposit Funds into Kava Lend,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.519546224,0.9912
+130,Addition of ETH price feed ,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.517826705,0.9998
+171,cosmosauthzv1beta1MsgExec,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.516647424,0.9813
+97,Kava Infrastructure and Security Rewards Signaling Proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.516611584,0.9896
+102,Kava 11 Software Upgrade Proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.514984864,0.9372
+129,Kava Rise payouts for February 2023,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.513955897,0.9995
+91,Adjust annual inflation for Kava stakers from 135 to 10,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.513086641,0.9425
+119,BNB Earn Surge,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.51260257,0.9993
+78,Create Developer Incentives Fund via the community pool,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.512282959,0.8351
+99,Kava Pioneer Group 2 Payouts,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.511434948,0.9858
+113,Adjust incentive claim multipliers,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.511026854,0.9352
+202,Kava Rise Payouts May 2025,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.509913381,0.9997
+146,Kava 14 Mainnet Upgrade,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.509196406,0.9999
+2,Kava Incentives Proposal,MsgExecLegacyContent,PASSED,"17 days, 13 hours 7 minutes",0.509100843,1.0
+81,Adjust UST in Kava Mint,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.5081059,0.9947
+170,Kava Rise payouts for November 2023,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.506894604,0.9999
+133,Update stability committee permissions to include USDC Kava Lend market,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.506712055,0.9989
+134,Kava Rise payouts for March 2023,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.506428724,0.9964
+111,Adds BNB earn vault and adjusts incentives,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.50577677,0.999
+117,Revised Kava Rise payouts for November 2022,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.504627175,0.9998
+68,Kava9 Software Upgrade Proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.501788022,0.9999
+112,Incentive adjustments for bKAVA Kava Mint and Kava Swap,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.500519783,0.9205
+49,SAFU Fund Payouts for May 19th Liquidations,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.500170429,0.994
+4,BNB Collateral and USDX Minting Rewards,MsgExecLegacyContent,PASSED,"17 days, 2 hours 17 minutes",0.498437411,1.0
+158,Deposit Additional Funds into Kava Mint,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.498315849,0.9743
+151,Supply Funds into Kava Mint,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.496296184,0.8582
+50,Migrates Hard protocol to 30min TWAP pricefeeds,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.495703189,0.9998
+15,Activate usdx incentive rewards,MsgExecLegacyContent,PASSED,"14 days, 0 hours 0 minutes",0.493725093,0.9998
+131,Adds Axlear USDC erc20axelarusdc to Kava Lend and updates incentives allocation to include axlUSDC incentives in Kava Lend,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.493034892,0.9988
+89,Adjust annual inflation for Kava stakers from 17 to 135,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.492986358,0.929
+74,Proposal for 100000 AKT Stake drop,MsgExecLegacyContent,PASSED,"7 days, 0 hours 1 minutes",0.490225178,0.9876
+122,Kava Rise payouts for Dec 2022,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.488193243,0.9871
+3,Nominate Kava Oracle Providers,MsgExecLegacyContent,PASSED,"14 days, 6 hours 35 minutes",0.48778956,1.0
+118,Remove Community Pool Funds From Earn Vault,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.487400954,0.995
+123,Kava Rise payouts for January 2023,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.487294308,0.9987
+90,WKAVA competition payouts,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.487256049,0.9829
+85,Adjust annual inflation for Kava stakers from 20 to 17,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.485141539,0.9464
+124,Kava 12 Mainnet Upgrade,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.485015201,0.9999
+87,Kava Rise  Phase 1 incentives signaling proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.484394736,0.9831
+95,Kava Pioneer Group 1 Payouts,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.483921476,0.997
+93,Kava Rise June Payouts,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.483643703,0.985
+94,Kava Rise July Payouts,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.483516165,0.985
+98,Kava Rise August Payouts,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.479478737,0.9831
+86,Adjust liquidation penalty in Kava Mint to 25,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.477845775,0.983
+22,Update CDP debt limits,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.476852006,0.9999
+77,Increase BUSD debt limit to 200M USDX,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.470502493,0.993
+73,Kava LoanWars Payouts,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.465910274,0.9411
+135,Establish Kava Origin foundation,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.462448445,0.4323
+76,Add AKT to Kava Lend,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.460062166,0.9998
+169,WAGMI Token Transfer,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.459280108,0.6891
+75,Turn off AKT Stake drop,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.459166907,0.885
+70,Add UST to Kava Mint,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.458765802,0.9492
+6,Nominate Kava Safety Committee,MsgExecLegacyContent,PASSED,"17 days, 2 hours 3 minutes",0.456570691,0.9695
+69,Kava Anniversary Trading Competition winner payouts,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.455295902,0.9957
+207,Kava Rise Payouts July 2025,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.450625799,0.9734
+45,Create SAFU fund via the community pool,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.449078679,0.9718
+55,SAFU Fund Payouts for Missing Rewards from Kava7 Migration Part 1 of 4,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.448395028,0.9993
+58,SAFU Fund Payouts for Missing Rewards from Kava7 Migration Part 4 of 4,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.445610927,0.9993
+57,SAFU Fund Payouts for Missing Rewards from Kava7 Migration Part 3 of 4,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.445285732,0.9993
+56,SAFU Fund Payouts for Missing Rewards from Kava7 Migration Part 2 of 4,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.444686428,0.9994
+60,Kava8 Software Upgrade Proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.443482434,1.0
+72,Kava Swap SZN payouts,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.440376266,0.9982
+5,Nominate Kava Stability Committee,MsgExecLegacyContent,PASSED,"17 days, 2 hours 9 minutes",0.435827708,1.0
+41,Kava 7 Upgrade Proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.408759227,0.9998
+204,Ratification of the Kava Mature Network Policy 2025,Text,PASSED,"7 days, 0 hours 0 minutes",0.405387272,0.9998
+61,Kava Swap SWP 100000 Trading Competition,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.40261552,0.9707
+62,Kava Swap incentivized testnet winner payouts,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.397896148,0.9987
+187,Enable Committee MsgVote for EIP712,MsgUpdateParams,PASSED,"7 days, 0 hours 0 minutes",0.397399369,0.9977
+65,Add swpusdx TWAPS to pricefeed,MsgExecLegacyContent,PASSED,"7 days, 0 hours 2 minutes",0.390622525,1.0
+42,Increase Minimum Staking Inflation Param,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.387358256,0.8624
+66,Add SWP as a collateral for Kava Mint,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.385488742,0.999
+51,Decrease APYs for CDPS from 5 to 25,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.384938486,0.9959
+52,Adjust HARD protocol supply and borrow rewards,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.383405422,0.9986
+43,Decrease HARD rewards for KAVA delegators,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.383260096,0.9645
+186,Kava Rise Payouts July 2024,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.382185183,0.9997
+192,Adds HARD token to the Kava EVM CoChain,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.379402606,0.9852
+183,Kava Rise Payouts June 2024,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.378960111,0.9997
+32,Update USDX minting incentives,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.376037544,0.9986
+64,Kava Swap Trading Competition winner payouts,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.375719465,0.9696
+31,Adjust HARD incentives for liquidity providers,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.375248127,0.9982
+47,Removes KAVA rewards for USDX minters and redirects those rewards to Hard protocol,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.367826405,0.9968
+182,Adds WBTC to Kava Lend and adjusts incentives,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.367058042,0.9968
+191,Adds MerlinBTC to Kava Lend,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.366383862,0.9973
+28,Add HARD to the pricefeed,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.365712039,0.9999
+27,Add USDX Incentives for KAVA,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.36563603,0.9999
+26,Set BUSD interest rate to 5 APY,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.365589587,0.9986
+30,Reduce BUSD incentives by 50,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.364214238,0.9982
+29,Add HARD to the list of allowed CDP collaterals,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.364110319,0.9999
+48,Complete SAFU fund funding by reducing community pool and inflation,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.363083941,0.9999
+181,Revive expired IBC client for Aura Network,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.362581527,0.9999
+180,Kava Rise payouts for May 2024,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.361706225,0.9999
+20,A USDX Incentives for BUSD,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.360342761,0.9915
+185,Extend USDT deposit incentives for Kava Lend,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.354518744,0.9937
+177,Kava Rise payouts for March 2024,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.348912097,0.9924
+38,Add USDX incentives for HBTC update BTCB incentives,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.331485301,0.9997
+33,Add HBTC to Kava,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.326728371,0.9979
+196,Kava Rise Payouts December 2024,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.32481919,0.9926
+44,Add KAVA rewards for USDX suppliers to Hard protocol,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.323529447,0.997
+36,Increase Minimum Staking Inflation Param,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.322858842,0.9996
+35,Increase USDX debt limits,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.322775881,0.9999
+34,Add HBTC to the list of allowed CDP collaterals,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.321357784,0.9999
+199,Kava Rise Payouts February 2025,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.321111292,0.9764
+37,Kava 5 Upgrade Proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.31358495,0.9982
+46,Halves KAVA rewards for USDX minters and redirects those rewards to Hard protocol,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.305302461,0.9959
+201,Kava Rise Payouts April 2025,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.284824151,0.9721
+205,Mature Network Proposal 2  Custodial Realignment of Earmarked Community Assets Community Pool Spend,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.280366001,0.9995
+203,Recover IBC light client for Secret,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.261752351,0.9995
+206,Kava Rise Payouts June 2025,MsgExec,PASSED,"7 days, 0 hours 0 minutes",0.213852962,0.9539

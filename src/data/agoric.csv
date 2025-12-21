@@ -1,0 +1,80 @@
+﻿id,title,type,status,ProcessingTime,Participation,Consensus
+77,agoricupgrade17,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.750579717,0.4247
+73,Agoric Community Pool Spend,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.572543634,0.959
+46,Agoric Airdrop  ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.558085983,0.9933
+44,Agoric Governance Proposal  Elect the 2023 Economic Committee,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.555054488,0.9996
+33,ATOM Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.462476359,0.9992
+42, ATOM Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.43266711,0.9982
+105,Agoric Developer Toolkit Workshop Series,MsgCommunityPoolSpend,REJECTED,"3 days, 0 hours 0 minutes",0.415884577,0.7703
+35,Agoric Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.41374366,0.9983
+39,ATOM Airdrop  ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.395402497,0.9998
+38, ATOM Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.393725426,0.9819
+32,Signaling Proposal Update Inter Protocol by installing Vaults contracts during the Agoric Mainnet1b chain upgrade,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.678626896,0.9999
+45,Agoric Governance Proposal  Elect the 2023 Economic Committee,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.668910132,0.9892
+69,Enable stTIA vaults,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.667602342,0.9999
+72,Enable stkATOM vaults,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.657420728,0.9998
+88,Fast USDC Accelerating CrossChain USDC Transfers,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.648756405,0.9901
+76,Replace Auctioneer and Upgrade Vaults,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.636044883,0.9999
+80,80 Signaling proposal for new collateral dATOM collateral for Inter Protocol Vaults,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.629549376,0.8973
+49,Upgrade Smart Wallet to support NFTs,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.614338167,0.9999
+92,reset MintLimit to 500K IST in PSMs for USDC USDT,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.611980955,0.9999
+64,Deploy Crabble rc1,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.608857609,0.9999
+84,add dATOM as a vault asset,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.608404166,0.8198
+87,Fast USDC Beta Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.597421804,0.9899
+94,Fast USDC Beta support for EVM destinations,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.58917033,0.9875
+53,KREAdrc1 to Mainnet,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.58779556,0.9999
+50,Fund the 2023 Economic Committee  DCF proposal,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.576606878,0.9999
+79,79 Signaling Proposal for the election of the 2024 Economic Committee,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.57518487,0.8672
+43,This proposal if voted will upgrade the chain to agoricupgrade11,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.571632311,1.0
+68,Enable stOSMO vault,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.566620748,0.9998
+93,93 Signaling Proposal for the Strategic Sunsetting of Inter Protocol,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.54688326,0.9968
+89,Fast USDC Release Candidate 2,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.539351685,0.9876
+101,YMax Alpha 11 Unblock Proposal 100 Execution,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.526839241,0.9999
+104,YMax Alpha 13 Delegate Control of ymax0 Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.491725456,0.9999
+108,Recover IBC light client for Neutron,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.485238129,0.9999
+103,YMax Alpha 12 Additional Protocols for Alpha Testing,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.480854401,1.0
+102,Inter Protocol Sunset Invite DCF to liquidate the reserve,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.464432409,0.9997
+106,YMax Alpha 14 Improve Robustness for Control of ymax0 Contract,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.464103278,0.9091
+100,YMax Alpha 1 A Step Toward Seamless DeFi Control,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.462817378,0.9663
+111,Ymax Portfolio Contract Beta Deployment,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.45796754,1.0
+98,reset MintLimit to 1M IST in PSMs for USDC USDT,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.453301753,0.9999
+112,Inter Protocol Sunset Liquidate the reserve module account,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.404236444,0.9999
+99,Upgrade to agoricupgrade21,MsgExecLegacyContent,PASSED,"3 days, 0 hours 2 minutes",0.551497453,1.0
+109,Reduce Validator Set Size to 30 Updated,MsgUpdateParams,PASSED,"3 days, 0 hours 2 minutes",0.517753429,0.8651
+110,Upgrade to agoricupgrade22,MsgExecLegacyContent,PASSED,"3 days, 0 hours 2 minutes",0.408168951,1.0
+67,Signaling proposal for new collateral stkATOM for Inter Protocol PSMVaults,MsgExecLegacyContent,PASSED,"3 days, 0 hours 4 minutes",0.597155428,0.9208
+81,Upgrade network to agoricupgrade18,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 7 minutes",0.589177256,0.8924
+75,Upgrade to agoricupgrade16,MsgExecLegacyContent,PASSED,"3 days, 0 hours 7 minutes",0.717870742,0.9999
+95,Upgrade to agoricupgrade20,MsgExecLegacyContent,PASSED,"3 days, 0 hours 7 minutes",0.528169257,1.0
+83,Upgrade to agoricupgrade18mainnet,MsgExecLegacyContent,PASSED,"3 days, 0 hours 8 minutes",0.642100658,0.9999
+82,Upgrade to agoricupgrade18mainnet,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 8 minutes",0.568650558,0.7889
+74,Upgrade to agoricupgrade15,MsgExecLegacyContent,PASSED,"3 days, 0 hours 8 minutes",0.649612083,1.0
+57,Start USDT Kava PSM,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 9 minutes",0.639207075,0.8288
+56,Start USDC Noble PSM,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 9 minutes",0.640329006,0.8618
+59,Start USDC Noble PSM,MsgExecLegacyContent,PASSED,"3 days, 0 hours 10 minutes",0.59759197,0.9999
+55,Enable stATOM Vault,MsgExecLegacyContent,PASSED,"3 days, 0 hours 10 minutes",0.642429584,0.9999
+9,Upgrade to agoricupgrade6,MsgExecLegacyContent,PASSED,"3 days, 0 hours 10 minutes",0.389021078,0.9999
+63,Upgrade the chain to agoricupgrade12,MsgExecLegacyContent,PASSED,"3 days, 0 hours 11 minutes",0.667392693,0.9999
+17, Add DAI Parity Stability Modules on agoric3,MsgExecLegacyContent,PASSED,"3 days, 0 hours 16 minutes",0.55633647,0.9999
+60,Start USDT Kava PSM,MsgExecLegacyContent,PASSED,"3 days, 0 hours 18 minutes",0.600105324,0.9999
+86,Upgrade to agoricupgrade18a,MsgExecLegacyContent,PASSED,"3 days, 0 hours 20 minutes",0.691155583,0.9999
+28,Upgrade to agoricupgrade9,MsgExecLegacyContent,PASSED,"3 days, 0 hours 24 minutes",0.675996172,1.0
+16,Upgrade to agoricupgrade8,MsgExecLegacyContent,PASSED,"3 days, 0 hours 35 minutes",0.797488923,0.9999
+71,Upgrade to agoricupgrade14,MsgExecLegacyContent,PASSED,"3 days, 0 hours 36 minutes",0.666137038,0.9999
+12,Upgrade to agoricupgrade7,MsgExecLegacyContent,PASSED,"3 days, 0 hours 38 minutes",0.500925366,0.9999
+66,Signaling proposal for new collateral stOSMO collateral for Inter Protocol Vaults,MsgExecLegacyContent,PASSED,"3 days, 0 hours 40 minutes",0.708304421,0.9999
+13,Enable IBC,MsgExecLegacyContent,PASSED,"3 days, 0 hours 45 minutes",0.654453395,0.9995
+107,Reduce Validator Set Size to 30,MsgExecLegacyContent,PASSED,"3 days, 1 hours 2 minutes",0.603306442,0.8301
+14,Agoric Community Fund Policy,MsgExecLegacyContent,PASSED,"3 days, 1 hours 30 minutes",0.613823065,0.9998
+78,agoricupgrade17,MsgExecLegacyContent,PASSED,"3 days, 2 hours 46 minutes",0.672534178,1.0
+47,Increase governance proposal deposit from 500 BLD to 5000 BLD,MsgExecLegacyContent,PASSED,"3 days, 3 hours 32 minutes",0.636393381,0.9999
+65,Upgrade to agoricupgrade13,MsgExecLegacyContent,PASSED,"3 days, 4 hours 28 minutes",0.757064643,0.9999
+61,Lower Bundle Cost ,MsgExecLegacyContent,PASSED,"3 days, 4 hours 50 minutes",0.517899875,0.9999
+15,Establishing the Economic Committee and electing the initial Economic Committee members,MsgExecLegacyContent,PASSED,"3 days, 8 hours 15 minutes",0.494097882,0.9868
+91,Upgrade to agoricupgrade19mainnet,MsgExecLegacyContent,PASSED,"3 days, 13 hours 28 minutes",0.654491598,0.9999
+70,Revive Sei IBC client 07tendermint89,MsgExecLegacyContent,PASSED,"3 days, 22 hours 39 minutes",0.676890506,0.9999
+10,Increase Validator Set to 120,MsgExecLegacyContent,REJECTED,"4 days, 9 hours 3 minutes",0.361346001,0.7167
+34,Upgrade to agoricupgrade10,MsgExecLegacyContent,PASSED,"4 days, 13 hours 7 minutes",0.67034781,0.9999
+31,Revive SecretAgoric IBC client  Fix for IBC between chains and stuck users,MsgExecLegacyContent,PASSED,"4 days, 15 hours 9 minutes",0.610085519,0.9891
+21,Agoric Cosmos Zero Offset Agoric Validator Set Signaling proposal,MsgExecLegacyContent,REJECTED,"4 days, 16 hours 12 minutes",0.461532487,0.4309
+97,Denominate swingset fees in BLD,MsgExecLegacyContent,PASSED,"4 days, 20 hours 6 minutes",0.563800963,0.9999

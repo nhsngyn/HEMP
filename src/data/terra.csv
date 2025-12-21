@@ -1,0 +1,119 @@
+﻿id,title,type,status,ProcessingTime,Participation,Consensus
+4797,TFL Delegation Equal Amount Delegation for Fairness,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",1.0,0.4128
+870,Validator minimum commission update,MsgExecLegacyContent,REJECTED,"7 days, 1 hours 1 minutes",1.0,0.3499
+4812,Whitelisting ATOM  LUNA LP Token as an Alliance Asset,MsgCreateAlliance,REJECTED,"7 days, 0 hours 0 minutes",1.0,0.73
+874,Reduced validator minimum commission update 5 instead of 10,MsgExecLegacyContent,REJECTED,"7 days, 1 hours 11 minutes",1.0,0.1112
+4814,Sayve Protocol Community Grant,MsgCommunityPoolSpend,REJECTED,"7 days, 0 hours 0 minutes",1.0,0.8691
+4811,Whitelisting LUNA  USDT Liquidity Pool as an Alliance Asset VOTE ON THIS PROPOSAL IGNORE 4810,MsgCreateAlliance,REJECTED,"7 days, 0 hours 0 minutes",1.0,0.9167
+4810,Whitelisting LUNA  USDT Liquidity Pool as an Alliance Asset,MsgCreateAlliance,REJECTED,"7 days, 0 hours 0 minutes",1.0,0.9996
+1354,Terra Stablecoin Infrastructure Proposal by Stably,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.987763142,0.2943
+3460,ERIS Protocol Grant Proposal,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.959208106,0.1016
+4799,ATOM Airdrop   2024 New Version ,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.957281357,0.9998
+3533,KnowhereSoil Protocol Grant Prosposal,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.934351632,0.656
+4809, LUNA AIRDROP Funding Program ,Text,REJECTED,"7 days, 0 hours 0 minutes",0.911728412,0.9999
+1382,UST 20 in Progress ,MsgExecLegacyContent,REJECTED,"7 days, 13 hours 50 minutes",0.890926389,0.9998
+1120,LUNA Airdrop ,MsgExecLegacyContent,REJECTED,"7 days, 1 hours 35 minutes",0.868451545,0.9991
+1110,Airdrop LUNC,MsgExecLegacyContent,REJECTED,"7 days, 7 hours 39 minutes",0.847358311,0.9998
+4714,Revised Redacted Grant Proposal,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.844242875,0.6646
+1139,Luna Foundation Guard BURN UST and AIRDROP for the holders LUNALUNCUSTC,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.839167737,0.9994
+3186,Redacted Grant Proposal,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.831403293,0.5854
+1396,Terra Phoenix airdrop Claim from Sept 4th 2022 to Oct 4th 2022,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.819854694,0.9997
+3535,Get USDC  LUNA Airdrop ,MsgExecLegacyContent,REJECTED,"7 days, 6 hours 43 minutes",0.794041069,0.9999
+4833, Terra Refund in April 2025 Last chance  UST Collapse,Text,REJECTED,"7 days, 0 hours 0 minutes",0.788169782,0.9999
+4775,Orneio  Legal audit  Grant Proposal,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.768386472,0.4523
+4830,Reinstigate SWTHrSWTH in TLA for now and decentralize TLA pool whitelisting,Text,REJECTED,"7 days, 0 hours 0 minutes",0.767557684,0.7465
+4593,dUST Games Grant Proposal,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.749805749,0.9222
+883,Gift to Terra stakeholders,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.745705986,0.9988
+4787,Cosmos x Celestia Airdrop ,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.739751032,0.9999
+4591,Hermes Protocol  Community Grant for public goods development,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.737357682,0.6021
+929,Emergency Builder Allocation for Hurricane Protocol,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 49 minutes",0.725009804,0.9977
+4738,The Gate Contract,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.722418932,0.262
+3795,Terra Poker Grant Proposal Updated,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.717850045,0.8431
+4831, LUNA Airdrop  New Version  250k,Text,REJECTED,"7 days, 0 hours 0 minutes",0.717138716,0.9999
+4739,Deploy LUNA to the stLUNA liquidity pool,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 24 minutes",0.704256082,0.1253
+1437,Terra Phoenix airdrop Claim from Sept 4th 2022 to Oct 4th 2022 Final version,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.694589769,0.9999
+1419,Terra Phoenix airdrop Claim from Sept 4th 2022 to Oct 4th 2022,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.675786283,0.9999
+3794,Terra Poker  Grant Proposal,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.671851292,0.9516
+1415,Terra Phoenix airdrop Claim from Sept 4th 2022 to Oct 4th 2022 ,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.668516196,0.9999
+4706,io multiplayer 2D shooter Grant Proposal,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.654936221,0.883
+1438,New Features 20 ,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.646598826,0.9999
+1593, Genie New Luna Airdrop ,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.643749917,0.9999
+1550, Genie Rewards Distribution Platform Community Grant by Coinhall CLAIM NOW,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.643667655,0.9999
+1402,Terra 20 Airdrop ,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 16 minutes",0.612466204,0.9999
+1462, CLAIM NOW Terra Phoenix airdrop  ,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.608291611,0.9993
+1611,CLAIM NOW  Genie Rewards Distribution Platform Airdrop ,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.606558383,0.9999
+1467,Enable funding to Incentivise Devs by changing the reward weight of tax and channel 02 to the community pool,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.604252886,0.9999
+4735,Revitalizing Terra A Backbone Labs and Eris Protocol Collaboration Not a Grant,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.596697801,0.9978
+1612,Final versionCLAIM NOW  Genie Rewards Distribution Platform Airdrop ,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.584988429,0.9999
+1797,New Terra 30 Version   LUNA Airdrop ,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.583005685,0.9996
+1844, FINAL LAST TERRA PHOENIX AIRDROP   CLAIM NOW,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.580041183,0.9994
+4730,LUNA Airdrop ,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.576853371,0.9999
+1460,Terra Binance Airdrop,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.574057452,0.9998
+4836,TLA Optimization  Relocate nonLUNA Pools to SA  Elevate LUNA Pools from SA,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.565035597,0.2318
+4770,test,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.54192952,0.9739
+4820,USDC Airdrop  48 Hours Left LUNA Airdrop  ,Text,REJECTED,"7 days, 0 hours 0 minutes",0.540830959,0.9999
+4713,ARBITRUM ARB Airdrop claim,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.528242378,0.9993
+4837,New Airdrop  AtomONE ,Text,REJECTED,"7 days, 0 hours 0 minutes",0.513919978,0.9998
+2460,Enable the option to SWAP LUNA 20 to LUNC,MsgExecLegacyContent,REJECTED,"7 days, 0 hours 0 minutes",0.330309255,0.9995
+4798,Phoenix upgrade v291,MsgSoftwareUpgrade,PASSED,"7 days, 0 hours 5 minutes",1.0,0.9999
+4805,Phoenix upgrade to v2102,MsgSoftwareUpgrade,PASSED,"7 days, 0 hours 51 minutes",1.0,0.9999
+4801,ALLY Alliance Asset Proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 3 minutes",1.0,0.978
+4802,ampROAR Alliance Asset Proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 25 minutes",1.0,0.932
+4803,A 5 Global Minimum Commission for Validators,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",1.0,0.41
+4807,v2110,MsgSoftwareUpgrade,PASSED,"7 days, 0 hours 0 minutes",1.0,0.9999
+3619,Phoenix Software Upgrade 220,MsgExecLegacyContent,PASSED,"7 days, 0 hours 2 minutes",1.0,0.9999
+894,210,MsgExecLegacyContent,PASSED,"7 days, 0 hours 54 minutes",1.0,0.9999
+349,Upgrade Terra Classic To Reenable IBC,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",1.0,0.9941
+3612,TFM Grant Proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",1.0,0.8146
+2616,Capapult Grant Proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",1.0,0.0114
+4813,Terra Liquidity Alliance Proposal,MsgCommunityPoolSpend,PASSED,"7 days, 0 hours 0 minutes",1.0,0.9999
+4816,The Phoenix Directive  A Path Forward,MsgCommunityPoolSpend,PASSED,"7 days, 0 hours 0 minutes",0.970723086,0.5034
+446,Establish Emergency Allocation Distribution Method,MsgExecLegacyContent,PASSED,"7 days, 0 hours 8 minutes",0.963418114,0.9997
+3534,SCV  Terra Security Expansion Program Proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.949819927,0.9642
+902,MetricsDAO OnChain Data Curation Grant,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.939403931,0.8908
+4717,Phoenix Software Upgrade 230,MsgExecLegacyContent,PASSED,"7 days, 0 hours 7 minutes",0.934040605,0.9999
+986,Terra Phoenix Airdrop,MsgExecLegacyContent,PASSED,"7 days, 0 hours 7 minutes",0.927444655,0.9998
+880,Emergency Allocation for Momentum One  Hermes Protocol,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.916112757,0.7023
+3665,Contro Protocol Grant Proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.909804587,0.7916
+4834,v2150,MsgSoftwareUpgrade,PASSED,"7 days, 0 hours 0 minutes",0.903835374,1.0
+887,Executing the passed Prop 880,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.900822772,0.9496
+4832,Suspension of Single Asset LP Incentives for ampWHALEWHALE LP and boneWHALEWHALE LP,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.866076152,0.8521
+4744,YFoundry LUNA Integration into YFoundry Governance,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.848762811,0.778
+4824,Chain Upgrade  v213,MsgSoftwareUpgrade,PASSED,"7 days, 0 hours 0 minutes",0.845001543,0.9999
+3796,ERIS Protocol Revised Grant Proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.844475733,0.4636
+4828,v2140,MsgSoftwareUpgrade,PASSED,"7 days, 0 hours 0 minutes",0.836985428,0.9999
+979,Entropy Beacon Community Funding Grant,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.834588485,0.7863
+4742,Chainscope Grant,MsgExecLegacyContent,PASSED,"7 days, 0 hours 4 minutes",0.834475605,0.0693
+4743,Confio Funding Halt,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.809583584,0.6253
+4819,Phoenix Directive  Terra Recovery Proposal,MsgCommunityPoolSpend,PASSED,"7 days, 0 hours 0 minutes",0.807369208,0.9666
+4785,Phoenix Upgrade to 251,MsgExecLegacyContent,PASSED,"7 days, 0 hours 17 minutes",0.806436071,0.9999
+4829,Recover IBC client for Kopi chain,MsgExecLegacyContent,PASSED,"7 days, 0 hours 6 minutes",0.804910061,0.9568
+3547,Increase Terras Governance Quorum from 10 to 30,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.800814524,0.5239
+4715,Backbone Labs  Audit Request,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.795872788,0.9223
+4592,Cavern Protocol Audit,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.789976396,0.8266
+4716,Lion DAO Treasury Grant,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.780620799,0.9977
+4722,Community Funding for TerraSpaces,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.770781348,0.6664
+4818,Chain Upgrade v212,MsgSoftwareUpgrade,PASSED,"7 days, 0 hours 0 minutes",0.768960915,0.9999
+4790,TFL Community Grant,MsgCommunityPoolSpend,PASSED,"7 days, 2 hours 43 minutes",0.762728064,0.9995
+4822,Launching the Phoenix Directive Treasury,MsgCreateAlliance,PASSED,"7 days, 0 hours 0 minutes",0.761058177,0.9996
+1525,Genie Rewards Distribution Platform Community Grant by Coinhall,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.751426395,0.8832
+4838,Increase Minimum Deposit Amount for Terra Governance to 5000 LUNA,MsgUpdateParams,PASSED,"7 days, 0 hours 0 minutes",0.731691863,0.9999
+4737,Phoenix Software Upgrade v24,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.728333669,0.9644
+4845,v218,MsgSoftwareUpgrade,PASSED,"7 days, 0 hours 7 minutes",0.722540756,0.9999
+4765,Airdrop for Missed Protocols,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.721211215,0.837
+4726,Alliance Signaling Proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.719502786,0.9609
+4745,Alliance Followon Proposal Whitelist rSWTH bWHALE and ampWHALE as Virtual Alliance assets,MsgExecLegacyContent,PASSED,"7 days, 0 hours 31 minutes",0.710806838,0.9579
+4835,v2160,MsgSoftwareUpgrade,PASSED,"7 days, 0 hours 0 minutes",0.70939205,1.0
+4729,Reenable IBC Client to Kujira,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.705499127,0.9611
+4792,v260,MsgSoftwareUpgrade,PASSED,"7 days, 5 hours 20 minutes",0.702773794,0.9999
+4596,Incentivize the LUNAUSK Pool on Kujiras BOW,MsgExecLegacyContent,PASSED,"7 days, 0 hours 9 minutes",0.699433937,0.9454
+1502,Social KYC oracle TYC,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.697503083,0.4322
+4844,Phoenix Directive  Revenue Generating PoL Deployment,MsgCommunityPoolSpend,PASSED,"7 days, 1 hours 2 minutes",0.680142773,0.7883
+4817,Launching Terra Liquidity Alliance,MsgCreateAlliance,PASSED,"7 days, 0 hours 0 minutes",0.673141803,0.9999
+4842,v2173,MsgSoftwareUpgrade,PASSED,"7 days, 16 hours 13 minutes",0.668324598,0.9999
+4723,Terra  Confio CosmWasm Grant,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.660557239,0.7218
+4746,Alliance Followon Proposal Whitelist VT as an Alliance Asset,MsgExecLegacyContent,PASSED,"7 days, 0 hours 12 minutes",0.642401121,0.9546
+4736,OFFICIAL Revitalizing Terra A Backbone Labs and Eris Protocol Collaboration Not a Grant,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.641132043,0.6917
+4823,Phoenix Directive  Alliance Reform and Ecosystem Growth Initiative,MsgUpdateAlliance,PASSED,"7 days, 0 hours 0 minutes",0.640615323,0.6196
+4728,TERRANONE Grant Proposal,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.633058002,0.9534
+4725,Neptune Finance Audit Reimbursement,MsgExecLegacyContent,PASSED,"7 days, 0 hours 0 minutes",0.606888823,0.9248

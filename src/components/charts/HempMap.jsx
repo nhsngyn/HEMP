@@ -266,7 +266,8 @@ const HempMap = () => {
           1
         </div>
         <h2
-          className="text-white font-bold text-lg"
+          className="font-bold text-lg"
+          style={{ color: '#D1D5DB' }}
         >
           HEMP Map
         </h2>

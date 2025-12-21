@@ -43,22 +43,22 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
       </div>
 
     {/* 2. 막대 + 점수 컨테이너 */}
-<div className="flex items-center gap-2 flex-1 min-w-0">
+<div className="flex items-center gap-2 flex-1 min-w-0 justify-end">
 
   {/* 막대바 배경 */}
   <div
     className="
       relative
-      flex-1
       h-[20px]
       rounded-[3.59px]
       overflow-hidden
     "
+    style={{ width: '120px' }}
   >
     {/* 100점 기준 바 */}
     <div
       className="
-        absolute left-0 top-0
+        absolute right-0 top-0
         h-full
         rounded-[3.59px]
       "
@@ -71,7 +71,7 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
     {/* 실제 점수 바 */}
     <div
       className="
-        absolute left-0 top-0
+        absolute right-0 top-0
         h-full
         rounded-[3.59px]
       "

@@ -92,9 +92,9 @@ function App() {
           style={{
             padding: 'calc(20px * var(--scale))',
             paddingTop: 'calc(10px * var(--scale))',
-            paddingLeft: 'calc(20px * var(--scale))',
-            paddingRight: 'calc(12px * var(--scale) + 5px)',
-            gap: 'calc(10px * var(--scale))',
+            paddingLeft: '24px',
+            paddingRight: '24px',
+            gap: '24px',
             height: '1080px',
             boxSizing: 'border-box'
           }}
@@ -103,19 +103,17 @@ function App() {
           <header
             id="dashboard-header"
             className="shrink-0 flex flex-col"
-            style={{ gap: 'calc(1px * var(--scale))' }}
+            style={{ gap: 'calc(1px * var(--scale))', marginBottom: '24px' }}
           >
-            <p className="font-normal" style={{ fontSize: 'calc(1.2rem * var(--scale))', fontFamily: 'SUIT', fontWeight: 400, color: '#6D7380' }}>
-              Deeper Analysis on Blockchains
-            </p>
+
             <h1 className="text-white font-extrabold" style={{ fontSize: 'calc(1.5rem * var(--scale))', fontFamily: 'SUIT', fontWeight: 600 }}>
-              HEMP: Health Evaluation Metric using Proposals
+              Deeper Analysis on Blockchains
             </h1>
           </header>
 
           {/* 1. 상단 영역 (HEMP Radar) - 40% */}
           {/* Bubble : Radar = 76 : 64 */}
-          <div className="flex w-full min-h-0" style={{ gap: 'calc(16px * var(--scale))', flex: '2.8 0 0' }}>
+          <div className="flex w-full min-h-0" style={{ gap: '12px', flex: '2.8 0 0' }}>
 
             {/* 1-1. 버블 차트 (76/140 ≈ 54.3%) */}
             <div className="h-full bg-[#ffffff05] rounded-2xl relative overflow-hidden shadow-lg" style={{ width: '52%' }}>
@@ -143,8 +141,8 @@ function App() {
           className="w-full"
           style={{
             padding: 'calc(12px * var(--scale))',
-            paddingLeft: 'calc(2 0px * var(--scale))',
-            paddingRight: 'calc(12px * var(--scale) + 5px)',
+            paddingLeft: '24px',
+            paddingRight: '24px',
             minHeight: 'auto',
             boxSizing: 'border-box',
           }}

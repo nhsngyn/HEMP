@@ -122,7 +122,7 @@ const RadarChart = () => {
       const size = Math.min(containerWidth, containerHeight) - CHART_CONFIG.PADDING * 2;
       const centerX = containerWidth / 2 - 2;
       const centerY = containerHeight / 2 + 13;
-      const radius = size / 1.5;
+      const radius = size / 1.5 * 0.9;
       const numAxes = METRICS.length;
       const angleStep = (2 * Math.PI) / numAxes;
 
@@ -360,7 +360,8 @@ const RadarChart = () => {
           2
         </div>
         <h2
-          className="text-white font-bold text-lg"
+          className="font-bold text-lg"
+          style={{ color: '#D1D5DB' }}
         >
           HEMP Comparison Radar Chart
         </h2>

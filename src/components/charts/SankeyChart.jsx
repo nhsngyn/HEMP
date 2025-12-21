@@ -446,7 +446,7 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
         return;
       }
       // padding 값 조절 - 차트가 잘리지 않도록 여유 공간 확보 (라벨과 노드가 잘리지 않도록 충분한 여유)
-      const padding = { top: 35, right: 80, bottom: 70, left: 50 };
+      const padding = { top: 80, right: 80, bottom: 30, left: 50 };
       const chartWidth = containerWidth - padding.left - padding.right;
       const chartHeight = containerHeight - padding.top - padding.bottom;
 
@@ -991,7 +991,7 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
   return (
     <div ref={containerRef} className="w-full h-full absolute inset-0 flex flex-col" style={{ overflow: 'visible' }}>
       {/* Title with icon - absolute positioned */}
-      <div className="shrink-0 flex items-center gap-3 px-4 py-3">
+      <div className="absolute top-0 left-0 z-10 flex items-center gap-3 px-4 py-3">
 
         <div
           className="flex items-center justify-center rounded-full"
@@ -1007,7 +1007,8 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
           3
         </div>
         <h2
-          className="text-white font-bold text-lg"
+          className="font-bold text-lg"
+          style={{ color: '#D1D5DB' }}
         >
           Proposal Configuration Flow
         </h2>

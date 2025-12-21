@@ -125,8 +125,13 @@ const ProposalsTable = ({ mainChain }) => {
         style={{ marginBottom: 'calc(16px * var(--scale))' }}
       >
         <h2
-          className="text-white font-bold text-lg"
-          style={{ fontFamily: 'SUIT' }}
+          className="font-bold"
+          style={{
+            fontFamily: 'SUIT',
+            fontSize: '18px',
+            color: '#D1D5DB',
+            fontWeight: '700'
+          }}
         >
           All Proposals
         </h2> <span className="text-gray-500 font-semibold" style={{ fontSize: 'calc(1rem * var(--scale))', fontFamily: 'SUIT' }}> {filteredPropositions.length}</span>
@@ -140,9 +145,9 @@ const ProposalsTable = ({ mainChain }) => {
                 className="text-left text-gray-400 font-medium"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                  fontSize: 'calc(1rem * var(--scale))',
+                  fontSize: '12px',
                   fontFamily: 'SUIT',
-                  fontWeight: 800
+                  fontWeight: 600
                 }}
               >
                 ID
@@ -151,9 +156,9 @@ const ProposalsTable = ({ mainChain }) => {
                 className="text-left text-gray-400 font-medium"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                  fontSize: 'calc(1rem * var(--scale))',
+                  fontSize: '12px',
                   fontFamily: 'SUIT',
-                  fontWeight: 800
+                  fontWeight: 600
                 }}
               >
                 Title
@@ -162,10 +167,10 @@ const ProposalsTable = ({ mainChain }) => {
                 className="text-left text-gray-400 font-medium"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                  fontSize: 'calc(1rem * var(--scale))',
+                  fontSize: '12px',
                   fontFamily: 'SUIT',
                   width: '180px',
-                  fontWeight: 800
+                  fontWeight: 600
                 }}
               >
                 Type
@@ -174,9 +179,9 @@ const ProposalsTable = ({ mainChain }) => {
                 className="text-left text-gray-400 font-medium"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                  fontSize: 'calc(1rem * var(--scale))',
+                  fontSize: '12px',
                   fontFamily: 'SUIT',
-                  fontWeight: 800
+                  fontWeight: 600
                 }}
               >
                 Participation
@@ -185,10 +190,10 @@ const ProposalsTable = ({ mainChain }) => {
                 className="text-left text-gray-400 font-medium"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                  fontSize: 'calc(1rem * var(--scale))',
+                  fontSize: '12px',
                   fontFamily: 'SUIT',
                   maxWidth: '140px',
-                  fontWeight: 800
+                  fontWeight: 600
                 }}
               >
                 Status
@@ -197,9 +202,9 @@ const ProposalsTable = ({ mainChain }) => {
                 className="text-left text-gray-400 font-medium"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                  fontSize: 'calc(1rem * var(--scale))',
+                  fontSize: '12px',
                   fontFamily: 'SUIT',
-                  fontWeight: 800
+                  fontWeight: 600
                 }}
               >
                 Processing Time
@@ -211,8 +216,12 @@ const ProposalsTable = ({ mainChain }) => {
               /* Proposals Table */
               <tr
                 key={index}
-                className={` border-gray-800 hover:bg-gray-900/50 transition-colors ${index % 2 === 0 ? 'bg-transparent' : 'bg-[#29303A50]'
+                className={` border-gray-800 hover:bg-gray-900/50 transition-colors ${index % 2 === 0 ? 'bg-transparent' : ''
                   }`}
+                style={{
+                  height: '48px',
+                  backgroundColor: index % 2 === 1 ? '#191C23' : 'transparent'
+                }}
               >
 
                 {/* ID */}
@@ -220,7 +229,7 @@ const ProposalsTable = ({ mainChain }) => {
                   className="text-gray-400"
                   style={{
                     padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                    fontSize: 'calc(1rem * var(--scale))',
+                    fontSize: '14px',
                     fontFamily: 'SUIT'
                   }}
                 >
@@ -229,11 +238,13 @@ const ProposalsTable = ({ mainChain }) => {
 
                 {/* Title */}
                 <td
-                  className="text-gray-100 max-w-md truncate font-medium"
+                  className="max-w-md truncate"
                   style={{
                     padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
                     fontSize: 'calc(1.2rem * var(--scale))',
-                    fontFamily: 'SUIT'
+                    fontFamily: 'SUIT',
+                    color: '#E8EAED',
+                    fontWeight: '500'
                   }}
                 >
                   {prop.title || 'Proposal Title'}
@@ -249,22 +260,31 @@ const ProposalsTable = ({ mainChain }) => {
                   }}
                 >
                   <span
-                    className="inline-block items-center justify-center rounded-sm bg-[#29303A] font-extrabold text-gray-200"
+                    className="inline-flex items-center justify-center rounded-sm font-extrabold"
                     style={{
                       fontFamily: 'SUIT',
                       fontSize: '12px',
                       maxWidth: '180px',
                       height: '22px',
-                      padding: '3px 8px',
+                      padding: '3px 10px',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      verticalAlign: 'middle',
+                      boxSizing: 'border-box',
+                      backgroundColor: '#29303A',
+                      color: '#D1D5DB'
+                    }}
+                  >
+                    <span style={{
                       overflow: 'hidden',
                       textOverflow: 'ellipsis',
                       whiteSpace: 'nowrap',
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      verticalAlign: 'middle'
-                    }}
-                  >
-                    {formatTypeForDisplay(prop.originalType || prop.type || 'Other')}
+                      maxWidth: '100%',
+                      width: '100%'
+                    }}>
+                      {formatTypeForDisplay(prop.originalType || prop.type || 'Other')}
+                    </span>
                   </span>
                 </td>
 

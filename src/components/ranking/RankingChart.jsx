@@ -123,12 +123,17 @@ const RankingChart = () => {
       onDragStart={(e) => setActiveId(e.active.id)}
       onDragEnd={handleDragEnd}
     >
-      <div className="flex flex-col h-full w-full select-none">
+      <div className="flex flex-col h-full w-full select-none relative">
 
         {/* TITLE */}
-        <h2 className="text-gray-200 text-[18px] font-semibold mb-[30px]">
-          HEMP Rank
-        </h2>
+        <div className=" top-0 left-0 z-10 flex items-center gap-3 py-3">
+          <h2
+            className="font-bold text-lg"
+            style={{ color: '#D1D5DB' }}
+          >
+            HEMP Rank
+          </h2>
+        </div>
 
         {/* FILTER BUTTONS */}
         <div
@@ -136,9 +141,11 @@ const RankingChart = () => {
             flex items-center gap-4
             mb-1 pb-3 shrink-0 
             border-b w-full
-            pl-[9px]
           "
-          style={{ borderColor: COLORS.GRAY700 }}
+          style={{
+            borderColor: COLORS.GRAY700,
+            paddingTop: 'calc(12px * var(--scale))' // py-3 (12px) + text height
+          }}
         >
           {/* Name Sort */}
           <button

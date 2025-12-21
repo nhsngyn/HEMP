@@ -47,36 +47,27 @@ const HempMap = () => {
       const selection = getSelectionInfo(chain.id);
       const isSelected = !!selection;
       const size = calculateBubbleSize(chain.proposals, isSelected);
-      const logoUrl = chain.logoUrl || "";
+      const logoUrl = chain.logoUrl || '';
 
       return {
-        id: chain.id, 
+        id: chain.id,
         name: chain.name,
         value: [Number(chain.score) || 0, Number(chain.participation) || 0],
-        symbol: 'circle',
-        symbolSize: size,
-        label: {
-          show: true,
-          position: 'center',
-          formatter: logoUrl ? '{logo|}' : '',
-          rich: {
-            logo: {
-              backgroundColor: { image: logoUrl },
-              width: size * 0.9,
-              height: size * 0.9,
-              borderRadius: (size * 0.9) / 2,
-            }
-          }
-        },
+
+        // ✅ 로고 정렬 해결: symbol을 이미지로 사용
+        symbol: logoUrl ? `image://${logoUrl}` : 'circle',
+        symbolSize: size * 0.9,
+
+        // (기존 디자인 유지)
         itemStyle: {
           color: COLORS.GRAY100,
           opacity: hasAnySelection && !isSelected ? 0.1 : 1,
           borderColor: isSelected ? selection.color : 'transparent',
           borderWidth: isSelected ? 3 : 0,
           shadowBlur: isSelected ? 15 : 0,
-          shadowColor: isSelected ? selection.color : 'transparent'
+          shadowColor: isSelected ? selection.color : 'transparent',
         },
-        z: isSelected ? 100 : 10
+        z: isSelected ? 100 : 10,
       };
     });
 
@@ -86,12 +77,12 @@ const HempMap = () => {
       fontSize: 12,
       fontWeight: 500,
       lineHeight: 15.6,
-      letterSpacing: -0.24
+      letterSpacing: -0.24,
     };
 
     const solidAxisLineStyle = {
       show: true,
-      lineStyle: { color: COLORS.GRAY400, type: 'solid', width: 1 }
+      lineStyle: { color: COLORS.GRAY400, type: 'solid', width: 1 },
     };
 
     return {
@@ -100,13 +91,12 @@ const HempMap = () => {
       animation: true,
       animationDuration: 200,
 
-
       grid: {
-        left: 83, 
-        right: 24, 
-        top: 48, 
-        bottom: 28 ,
-        containLabel: false 
+        left: 83,
+        right: 24,
+        top: 48,
+        bottom: 28,
+        containLabel: false,
       },
 
       tooltip: {
@@ -117,7 +107,7 @@ const HempMap = () => {
         borderWidth: 0,
         axisPointer: {
           type: 'cross',
-          snap: true, 
+          snap: true,
           label: {
             show: true,
             backgroundColor: 'transparent',
@@ -125,15 +115,15 @@ const HempMap = () => {
             fontFamily: 'SUIT',
             fontSize: 14,
             fontWeight: 600,
-            formatter: (params) => Math.round(params.value)
+            formatter: (params) => Math.round(params.value),
           },
           crossStyle: {
             type: 'dashed',
-            width: 1
-          }
+            width: 1,
+          },
         },
         formatter: (params) => {
-          const chainData = chainMap[params.name]; 
+          const chainData = chainMap[params.name];
           if (!chainData) return '';
           return `
             <div style="
@@ -142,7 +132,7 @@ const HempMap = () => {
               align-items: center;
               gap: 8px;
               border-radius: 4px;
-              background: ${COLORS.GRAY700}; 
+              background: ${COLORS.GRAY700};
               font-family: 'SUIT';
               font-size: 12px;
               font-weight: 500;
@@ -153,42 +143,48 @@ const HempMap = () => {
               <span style="color: ${COLORS.WHITE};">${chainData.proposals || 0}</span>
             </div>
           `;
-        }
+        },
       },
 
       xAxis: {
         name: 'HEMP Score',
         nameLocation: 'end',
-        nameTextStyle: { 
-          ...axisTextStyle, 
-          align: 'right', 
-          verticalAlign: 'top', 
-          padding: [12, 16, 0, 0] // 6px 간격 유지
+        nameTextStyle: {
+          ...axisTextStyle,
+          align: 'right',
+          verticalAlign: 'top',
+          padding: [12, 16, 0, 0], // 6px 간격 유지
         },
         type: 'value',
         scale: true,
-        axisLabel: { show: false }, 
-        axisTick: { show: false }, 
+        axisLabel: { show: false },
+        axisTick: { show: false },
         axisLine: solidAxisLineStyle,
-        splitLine: { show: true, lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' } } 
+        splitLine: {
+          show: true,
+          lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' },
+        },
       },
 
       yAxis: {
         name: 'Participation',
         nameLocation: 'end',
         nameGap: 4,
-        nameTextStyle: { 
-          ...axisTextStyle, 
+        nameTextStyle: {
+          ...axisTextStyle,
           align: 'right',
-          verticalAlign: 'top', 
-          padding: [0, 8, 0, 0]
+          verticalAlign: 'top',
+          padding: [0, 8, 0, 0],
         },
         type: 'value',
         scale: true,
-        axisLabel: { show: false }, 
-        axisTick: { show: false }, 
+        axisLabel: { show: false },
+        axisTick: { show: false },
         axisLine: solidAxisLineStyle,
-        splitLine: { show: true, lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' } }
+        splitLine: {
+          show: true,
+          lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' },
+        },
       },
 
       series: [
@@ -197,15 +193,15 @@ const HempMap = () => {
           data: seriesData,
           cursor: 'pointer',
           large: false,
-        }
-      ]
+        },
+      ],
     };
   }, [allChains, selectedMainId, selectedSubId1, selectedSubId2, getSelectionInfo, chainMap]);
 
   const handleChartMouseOver = (params) => {
     if (params.componentType !== 'series') return;
     const hoveredId = params.data.id;
-    
+
     let lineColor = COLORS.GRAY300;
     let textColor = COLORS.WHITE;
 
@@ -226,15 +222,15 @@ const HempMap = () => {
         tooltip: {
           axisPointer: {
             crossStyle: { color: lineColor },
-            label: { color: textColor }
-          }
-        }
+            label: { color: textColor },
+          },
+        },
       });
     }
   };
 
   const onChartClick = (params) => {
-    const clickedChain = allChains.find(c => c.name === params.name);
+    const clickedChain = allChains.find((c) => c.name === params.name);
     if (clickedChain) {
       selectChain(clickedChain.id);
     }
@@ -250,42 +246,43 @@ const HempMap = () => {
 
   return (
     <div className="w-full h-full relative p-[12px]">
-
       <div className="absolute top-[20px] left-[12px] flex items-center gap-2 z-10 pointer-events-none">
         <img src="/Icons/icn_num1.png" alt="1" width="20" height="20" />
         <h3 className="text-white font-bold text-base font-suit">HEMP Map</h3>
       </div>
 
       <div className="absolute top-4 right-5 z-10 group">
-        <img 
-          src="/Icons/Frame 183.png" 
-          alt="Info" 
-          width="24" height="24"
+        <img
+          src="/Icons/Frame 183.png"
+          alt="Info"
+          width="24"
+          height="24"
           className="cursor-help opacity-70 hover:opacity-100 transition-opacity"
         />
-        <div 
+        <div
           className="absolute right-0 top-8 w-[280px] p-3 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50"
           style={{ backgroundColor: COLORS.GRAY700 }}
         >
-          <p 
+          <p
             className="font-suit text-[14px] font-medium leading-[140%] tracking-[-0.28px]"
             style={{ color: COLORS.GRAY300 }}
           >
-            Circle size reflects the volume of proposals.<br />
+            Circle size reflects the volume of proposals.
+            <br />
             Chains are categorized into four tiers based on their ranking.
           </p>
         </div>
       </div>
 
       {option && (
-        <ReactECharts 
+        <ReactECharts
           ref={chartRef}
-          option={option} 
-          style={{ height: '100%', width: '100%' }} 
+          option={option}
+          style={{ height: '100%', width: '100%' }}
           opts={{ renderer: 'svg' }}
           onEvents={{
             click: onChartClick,
-            mouseover: handleChartMouseOver
+            mouseover: handleChartMouseOver,
           }}
         />
       )}

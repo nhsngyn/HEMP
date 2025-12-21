@@ -10,8 +10,10 @@ const useChainStore = create((set) => ({
   selectedMainId: null,
   selectedSubId1: null,
   selectedSubId2: null,
-  // Sankey ↔ ProposalsTable 연동용 필터 (리본 선택 상태)
   sankeyFilter: null,
+  
+  setSankeyFilter: (filter) => set({ sankeyFilter: filter }),
+  clearSankeyFilter: () => set({ sankeyFilter: null }),
   
   clearSlot: (slotType) => set(() => {
     // slotType을 store key로 매핑
@@ -60,10 +62,6 @@ const useChainStore = create((set) => ({
     
     return updates;
   }),
-
-  // Sankey 리본 선택 시 설정되는 필터
-  setSankeyFilter: (filter) => set({ sankeyFilter: filter }),
-  clearSankeyFilter: () => set({ sankeyFilter: null }),
 
   resetAll: () => set({ selectedMainId: null, selectedSubId1: null, selectedSubId2: null }),
 }));

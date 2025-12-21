@@ -126,7 +126,7 @@ const RankingChart = () => {
       <div className="flex flex-col h-full w-full select-none">
 
         {/* TITLE */}
-        <h2 className="text-GRAY200 text-body2-b mb-[30px]">
+        <h2 className="text-gray-200 text-[18px] font-semibold mb-[30px]">
           HEMP Rank
         </h2>
 
@@ -148,8 +148,8 @@ const RankingChart = () => {
             <span
               className={
                 sortConfig.key === "name"
-                  ? "text-white text-caption1_sb"
-                  : "text-GRAY400 text-caption1_sb"
+                  ? "text-white text-xs font-semibold leading-tight"
+                  : "text-gray-400 text-xs font-semibold leading-tight"
               }
             >
               Name
@@ -169,8 +169,8 @@ const RankingChart = () => {
             <span
               className={
                 sortConfig.key === "score"
-                  ? "text-white text-caption1_sb"
-                  : "text-GRAY400 text-caption1_sb"
+                  ? "text-white text-xs font-semibold leading-tight"
+                  : "text-gray-400 text-xs font-semibold leading-tight"
               }
             >
               HEMP Score
@@ -206,7 +206,7 @@ const RankingChart = () => {
 
           {/* Main */}
           <div>
-            <h3 className="text-gray-500 text-body3-m mb-[8px]">
+            <h3 className="text-gray-500 text-xs font-medium mb-[8px]">
               Main
             </h3>
             <DroppableSlot
@@ -220,7 +220,7 @@ const RankingChart = () => {
 
           {/* Comparison */}
           <div>
-            <h3 className="text-gray-500 text-body3-m mb-[8px]">
+            <h3 className="text-gray-500 text-xs font-medium mb-[8px]">
               Comparison
             </h3>
             <div className="flex flex-col gap-[8px]">

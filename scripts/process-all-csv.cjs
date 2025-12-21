@@ -1,8 +1,102 @@
 const fs = require('fs');
 const path = require('path');
 
+// 타입명 포맷팅: "Msg" 제거 + 대문자 기준 띄어쓰기
+function formatTypeName(csvType) {
+  if (!csvType) return '';
+  
+  // "Msg"로 시작하지 않으면 원본 그대로 반환
+  if (!csvType.startsWith('Msg')) {
+    return csvType;
+  }
+  
+  // "Msg"로 시작하면 제거하고 대문자 기준으로 띄어쓰기 추가
+  let formatted = csvType.substring(3);
+  formatted = formatted.replace(/([A-Z])/g, ' $1').trim();
+  
+  return formatted;
+}
+
+// 모든 CSV 파일에서 타입 분포 분석하여 상위 6개 선택
+function analyzeTypeDistribution(csvDir) {
+  const typeCounts = new Map();
+  const chainIdMap = {
+    'agoric.csv': 'agoric',
+    'akash.csv': 'akash',
+    'axelar.csv': 'axelar',
+    'chihuahua.csv': 'chihuahua',
+    'cosmos.csv': 'cosmos',
+    'dydx.csv': 'dydx',
+    'gravity-bridge.csv': 'gravity-bridge',
+    'injective.csv': 'injective',
+    'kava.csv': 'kava',
+    'osmosis.csv': 'osmosis',
+    'persistence.csv': 'persistence',
+    'provenance.csv': 'provenance',
+    'secret.csv': 'secret',
+    'sei.csv': 'sei',
+    'stargaze.csv': 'stargaze',
+    'stride.csv': 'stride',
+    'terra.csv': 'terra',
+    'xpla.csv': 'xpla',
+  };
+  
+  // 모든 CSV 파일에서 타입 수집
+  for (const [filename, chainId] of Object.entries(chainIdMap)) {
+    const csvPath = path.join(csvDir, filename);
+    if (!fs.existsSync(csvPath)) continue;
+    
+    const csvContent = fs.readFileSync(csvPath, 'utf-8');
+    const lines = csvContent.trim().split('\n');
+    if (lines.length < 2) continue;
+    
+    const headers = lines[0].split(',').map(h => h.trim());
+    const typeIdx = headers.indexOf('type');
+    if (typeIdx === -1) continue;
+    
+    // CSV 파싱 헬퍼
+    function parseCSVLine(line) {
+      const values = [];
+      let current = '';
+      let inQuotes = false;
+      for (let j = 0; j < line.length; j++) {
+        const char = line[j];
+        if (char === '"') {
+          inQuotes = !inQuotes;
+        } else if (char === ',' && !inQuotes) {
+          values.push(current.trim());
+          current = '';
+        } else {
+          current += char;
+        }
+      }
+      values.push(current.trim());
+      return values;
+    }
+    
+    // 타입 카운트
+    for (let i = 1; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (!line) continue;
+      const values = parseCSVLine(line);
+      const csvType = values[typeIdx] || '';
+      if (csvType && csvType !== 'type') {
+        typeCounts.set(csvType, (typeCounts.get(csvType) || 0) + 1);
+      }
+    }
+  }
+  
+  // 상위 6개 타입 선택
+  const sortedTypes = Array.from(typeCounts.entries())
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 6)
+    .map(([type]) => type);
+  
+  return sortedTypes;
+}
+
 // CSV 파일을 읽어서 차트 데이터 형식으로 변환하는 함수
-function convertCSVToPropositions(csvFilePath) {
+function convertCSVToPropositions(csvFilePath, top6Types) {
   // CSV 파일 읽기
   const csvContent = fs.readFileSync(csvFilePath, 'utf-8');
   const lines = csvContent.trim().split('\n');
@@ -83,18 +177,17 @@ function convertCSVToPropositions(csvFilePath) {
     return 'FAILED';
   }
   
-  // type 매핑 (CSV의 type을 차트에서 사용하는 type으로 변환)
-  const typeMapping = {
-    'MsgExecLegacyContent': 'Software Upgrade',
-    'MsgCommunityPoolSpend': 'Governance',
-    'MsgUpdateParams': 'Parameter Change',
-    // 필요에 따라 추가 매핑
-  };
-  
+  // 타입 매핑: 상위 6개는 포맷팅된 이름으로, 나머지는 "Other"
   function mapType(csvType) {
     if (!csvType) return 'Other';
-    // 매핑에 있으면 사용, 없으면 원본 사용 (또는 'Other')
-    return typeMapping[csvType] || 'Other';
+    
+    // 상위 6개에 포함되어 있으면 포맷팅된 이름 사용
+    if (top6Types.includes(csvType)) {
+      return formatTypeName(csvType);
+    }
+    
+    // 나머지는 "Other"
+    return 'Other';
   }
   
   // 데이터 변환
@@ -136,6 +229,7 @@ function convertCSVToPropositions(csvFilePath) {
       id: id,
       title: title,
       type: mapType(csvType),
+      originalType: csvType || '', // 원본 타입 저장 (프로포절 테이블용)
       participationLevel: getParticipationLevel(participation),
       voteComposition: getVoteComposition(consensus),
       result: getResult(status),
@@ -171,12 +265,19 @@ function processAllCSVFiles(csvDir, outputPath) {
     'stargaze.csv': 'stargaze',
     'stride.csv': 'stride',
     'terra.csv': 'terra',
+    'xpla.csv': 'xpla',
   };
+  
+  // 1단계: 전체 타입 분포 분석하여 상위 6개 선택
+  console.log('📊 타입 분포 분석 중...');
+  const top6Types = analyzeTypeDistribution(csvDir);
+  console.log('✅ 상위 6개 타입:', top6Types.map(t => `${t} → ${formatTypeName(t)}`).join(', '));
+  console.log('');
   
   const result = {};
   let totalProcessed = 0;
   
-  // 각 CSV 파일 처리
+  // 2단계: 각 CSV 파일 처리
   for (const [filename, chainId] of Object.entries(chainIdMap)) {
     const csvPath = path.join(csvDir, filename);
     
@@ -186,7 +287,7 @@ function processAllCSVFiles(csvDir, outputPath) {
     }
     
     try {
-      const propositions = convertCSVToPropositions(csvPath);
+      const propositions = convertCSVToPropositions(csvPath, top6Types);
       result[chainId] = propositions;
       totalProcessed += propositions.length;
       console.log(`✅ ${chainId}: ${propositions.length}개 프로포절 처리됨`);

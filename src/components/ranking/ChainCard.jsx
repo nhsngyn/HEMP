@@ -33,7 +33,8 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
         className="
           flex-shrink-0 
           text-gray-200 
-          text-body2_m
+          text-base 
+          font-medium 
           truncate
         "
         style={{ width: '80px' }} 
@@ -60,10 +61,10 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
         absolute left-0 top-0
         h-full
         rounded-[3.59px]
-        bg-GRAY800
       "
       style={{
         width: '120px',
+        backgroundColor: COLORS.GRAY800,
       }}
     />
 

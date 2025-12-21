@@ -6,15 +6,19 @@ import { COLORS } from '../../constants/colors';
 import { sankeyMockPropositions, defaultDummyPropositions } from '../../data/sankeyMockData';
 
 // 상수 정의
-const TYPE_COLORS = {
-  'Parameter Change': '#FF6B6B',
-  'Software Upgrade': '#FF8E53',
-  'Text Proposal': '#FFD93D',
-  'Governance': '#6BCF7F',
-  'Tokenomics': '#4D96FF',
-  'Security': '#9B59B6',
-  'Other': '#9CA3AF'
-};
+// 타입별 색상 (기존 단색 방식)
+const TYPE_COLOR_PALETTE = [
+  '#FF6B6B', // 빨간색
+  '#FF8E53', // 주황색
+  '#FFD93D', // 노란색
+  '#6BCF7F', // 초록색
+  '#4D96FF', // 파란색
+  '#9B59B6', // 보라색
+];
+const OTHER_COLOR = '#9CA3AF'; // 회색 (Other용)
+
+// 타입별 색상 맵 (동적으로 생성됨)
+let TYPE_COLORS = {};
 
 const RESULT_TO_PARTICIPATION_COLORS = {
   'Passed': '#3B82494D',
@@ -29,7 +33,7 @@ const RESULT_TO_PARTICIPATION_ACTIVATED_COLORS = {
   'Failed': '#8590A2e6'
 };
 
-const COLUMN_LABELS = ['Type', 'Result', 'Participation', 'Vote Composition', 'Processing Speed'];
+const COLUMN_LABELS = ['Type', 'Status', 'Participation', 'Vote Composition', 'Processing Speed'];
 const NODE_COLOR = '#4C5564';
 const NODE_WIDTH = 12;
 const NODE_PADDING = 6;
@@ -39,9 +43,9 @@ const LINK_OPACITY = 0.6;
 const MIN_LINK_WIDTH = 4;
 const SANKEY_ITERATIONS = 32; // 렌더링 횟수
 
-// 노드 카테고리 정의
+// 노드 카테고리 정의 (types는 동적으로 추출됨)
 const NODE_CATEGORIES = {
-  types: ['Parameter Change', 'Software Upgrade', 'Text Proposal', 'Governance', 'Tokenomics', 'Security', 'Other'],
+  // types는 generateSankeyData에서 동적으로 추출
   results: ['Passed', 'Rejected', 'Failed'],
   participationLevels: ['High', 'Mid', 'Low'],
   voteCompositions: ['Consensus', 'Contested', 'Polarized'],
@@ -55,34 +59,58 @@ const generateSankeyData = (mainChain, mockPropositions) => {
     return { nodes: [], links: [] };
   }
 
-  const { types, results, participationLevels, voteCompositions, processingSpeeds } = NODE_CATEGORIES;
+  const { results, participationLevels, voteCompositions, processingSpeeds } = NODE_CATEGORIES;
 
   // Get propositions data (use mock data if not available)
   const propositions = (mainChain.propositions && Array.isArray(mainChain.propositions) && mainChain.propositions.length > 0)
     ? mainChain.propositions
     : (mockPropositions[mainChain.id] || mockPropositions['default'] || []);
 
-  // Calculate proposal counts for each type (for sorting)
+  // 동적으로 타입 추출 및 카운트 (각 체인별로 원본 타입 기준으로 카운트)
   const typeCounts = new Map();
   propositions.forEach(prop => {
-    const propType = prop.type || 'Other';
-    // 실제 데이터에 있는 type만 카운트 (NODE_CATEGORIES에 있는 것만)
-    if (types.includes(propType)) {
-      typeCounts.set(propType, (typeCounts.get(propType) || 0) + 1);
-    } else {
-      // NODE_CATEGORIES에 없는 type은 'Other'로 처리
-      typeCounts.set('Other', (typeCounts.get('Other') || 0) + 1);
+    // originalType이 있으면 원본 타입 사용, 없으면 변환된 type 사용
+    const originalType = prop.originalType || prop.type || '';
+    if (originalType && originalType !== 'Other') {
+      typeCounts.set(originalType, (typeCounts.get(originalType) || 0) + 1);
     }
   });
 
-  // 실제 데이터에 있는 type만 사용 (카운트가 0인 것은 제외)
-  const sortedTypes = [...types]
-    .filter(type => (typeCounts.get(type) || 0) > 0)
-    .sort((a, b) => {
-      const countA = typeCounts.get(a) || 0;
-      const countB = typeCounts.get(b) || 0;
-      return countB - countA;
-    });
+  // 타입들을 개수 순으로 정렬하여 최대 6개 선택
+  const topOriginalTypes = Array.from(typeCounts.entries())
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 6)
+    .map(([type]) => type);
+
+  // 원본 타입을 포맷팅된 타입으로 변환하는 함수
+  const formatTypeForDisplay = (originalType) => {
+    if (!originalType) return 'Other';
+    if (originalType.startsWith('Msg')) {
+      let formatted = originalType.substring(3);
+      formatted = formatted.replace(/([A-Z])/g, ' $1').trim();
+      return formatted;
+    }
+    return originalType;
+  };
+
+  // 최종 타입 배열: 상위 6개 원본 타입을 포맷팅 + "Other"
+  const sortedTypes = [...topOriginalTypes.map(formatTypeForDisplay), 'Other'];
+
+  // 원본 타입 -> 포맷팅된 타입 매핑 생성
+  const originalToFormattedMap = new Map();
+  topOriginalTypes.forEach(originalType => {
+    originalToFormattedMap.set(originalType, formatTypeForDisplay(originalType));
+  });
+
+  // 타입별 색상 맵 생성 (기존 단색 방식)
+  TYPE_COLORS = {};
+  sortedTypes.forEach((type, index) => {
+    if (type === 'Other') {
+      TYPE_COLORS[type] = OTHER_COLOR;
+    } else {
+      TYPE_COLORS[type] = TYPE_COLOR_PALETTE[index % TYPE_COLOR_PALETTE.length];
+    }
+  });
 
   // 링크들은 모두 "같은 속성을 갖는 프로포절들을 묶어서" 집계된 형태로 생성
   const links = [];
@@ -94,10 +122,18 @@ const generateSankeyData = (mainChain, mockPropositions) => {
   const participationVoteCounts = new Map();
   const voteSpeedCounts = new Map();
   propositions.forEach(prop => {
-    // Type이 NODE_CATEGORIES에 없으면 'Other'로 변환
-    let propType = prop.type || 'Other';
-    if (!types.includes(propType)) {
-      propType = 'Other';
+    // 원본 타입을 기준으로 포맷팅된 타입으로 변환
+    const originalType = prop.originalType || prop.type || '';
+    let propType = 'Other';
+
+    if (originalType && originalType !== 'Other') {
+      // 상위 6개에 포함된 원본 타입이면 포맷팅된 타입 사용
+      if (originalToFormattedMap.has(originalType)) {
+        propType = originalToFormattedMap.get(originalType);
+      } else {
+        // 상위 6개에 없으면 "Other"
+        propType = 'Other';
+      }
     }
 
     const participationLevel = prop.participationLevel || 'Mid';
@@ -409,8 +445,8 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
         showError('⚠️ No Data to Display', 'Proposition data exists but could not be processed.', 'Please check the proposition data structure.');
         return;
       }
-      // padding 값 조절
-      const padding = { top: 25, right: 60, bottom: 60, left: 50 };
+      // padding 값 조절 - 차트가 잘리지 않도록 여유 공간 확보 (라벨과 노드가 잘리지 않도록 충분한 여유)
+      const padding = { top: 35, right: 80, bottom: 70, left: 50 };
       const chartWidth = containerWidth - padding.left - padding.right;
       const chartHeight = containerHeight - padding.top - padding.bottom;
 
@@ -482,11 +518,8 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
 
       // 5개 컬럼이 모두 있는지 확인 (0, 1, 2, 3, 4)
       const expectedColumns = [0, 1, 2, 3, 4];
+      // 모든 예상 컬럼이 존재하는지 확인 (디버깅용)
       const missingColumns = expectedColumns.filter(col => !nodesByColumnForSpacing[col] || nodesByColumnForSpacing[col].length === 0);
-
-      if (missingColumns.length > 0) {
-        console.warn('⚠️ 누락된 컬럼:', missingColumns);
-      }
 
       if (columnCount > 1) {
         const columnPositions = {};
@@ -812,10 +845,10 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
         const colIdx = parseInt(columnIndex);
         const labelText = COLUMN_LABELS[colIdx] || '';
 
-        // Processing Speed는 2줄이므로 더 위로 올림
+        // 라벨이 차트 영역 안에 들어오도록 조정 - padding.top보다 위에 배치하지 않음
         const labelY = colIdx === 4 && labelText === 'Processing Speed'
-          ? Math.max(padding.top - 30, topNode.y0 - 25)
-          : Math.max(padding.top - 30, topNode.y0 - 15);
+          ? Math.max(padding.top - 25, topNode.y0 - 30)
+          : Math.max(padding.top - 15, topNode.y0 - 15);
 
         // Processing Speed는 2줄로 표시
         if (colIdx === 4 && labelText === 'Processing Speed') {
@@ -852,6 +885,81 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
         }
       });
 
+      // 차트가 컨테이너 영역을 벗어나지 않도록 확인 및 조정 (너비와 높이 모두 체크)
+      if (nodes.length > 0) {
+        const minY = Math.min(...nodes.map(n => n.y0));
+        const maxY = Math.max(...nodes.map(n => n.y1));
+        const minX = Math.min(...nodes.map(n => n.x0));
+        const maxX = Math.max(...nodes.map(n => n.x1));
+
+        const actualHeight = maxY - minY;
+        const actualWidth = maxX - minX;
+        const availableHeight = chartHeight;
+        const availableWidth = chartWidth;
+
+        // 높이와 너비 모두 체크하여 더 작은 스케일 적용
+        let scaleY = 1;
+        let scaleX = 1;
+
+        if (actualHeight > availableHeight && availableHeight > 0) {
+          scaleY = availableHeight / actualHeight;
+        }
+
+        if (actualWidth > availableWidth && availableWidth > 0) {
+          scaleX = availableWidth / actualWidth;
+        }
+
+        // 더 작은 스케일을 사용하여 양쪽 모두에 맞춤
+        const scale = Math.min(scaleY, scaleX);
+
+        if (scale < 1) {
+          const centerY = (minY + maxY) / 2;
+          const centerX = (minX + maxX) / 2;
+          const newCenterY = padding.top + chartHeight / 2;
+          const newCenterX = padding.left + chartWidth / 2;
+
+          // 노드 높이와 너비를 먼저 저장
+          nodes.forEach(node => {
+            node._height = node.y1 - node.y0;
+            node._width = node.x1 - node.x0;
+            node._centerY = (node.y0 + node.y1) / 2;
+            node._centerX = (node.x0 + node.x1) / 2;
+          });
+
+          // 스케일 조정 적용
+          nodes.forEach(node => {
+            const offsetY = node._centerY - centerY;
+            const offsetX = node._centerX - centerX;
+            const scaledOffsetY = offsetY * scale;
+            const scaledOffsetX = offsetX * scale;
+
+            node.y0 = newCenterY + scaledOffsetY - node._height / 2;
+            node.y1 = newCenterY + scaledOffsetY + node._height / 2;
+            node.x0 = newCenterX + scaledOffsetX - node._width / 2;
+            node.x1 = newCenterX + scaledOffsetX + node._width / 2;
+          });
+
+          links.forEach(link => {
+            if (link.y0 !== undefined) {
+              const offsetY = link.y0 - centerY;
+              link.y0 = newCenterY + offsetY * scale;
+            }
+            if (link.y1 !== undefined) {
+              const offsetY = link.y1 - centerY;
+              link.y1 = newCenterY + offsetY * scale;
+            }
+            if (link.x0 !== undefined) {
+              const offsetX = link.x0 - centerX;
+              link.x0 = newCenterX + offsetX * scale;
+            }
+            if (link.x1 !== undefined) {
+              const offsetX = link.x1 - centerX;
+              link.x1 = newCenterX + offsetX * scale;
+            }
+          });
+        }
+      }
+
     };
 
     // Initial render
@@ -882,30 +990,31 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
 
   return (
     <div ref={containerRef} className="w-full h-full absolute inset-0 flex flex-col" style={{ overflow: 'visible' }}>
-      {/* Title with icon */}
+      {/* Title with icon - absolute positioned */}
       <div className="shrink-0 flex items-center gap-3 px-4 py-3">
+
         <div
           className="flex items-center justify-center rounded-full"
           style={{
             width: '24px',
             height: '24px',
-            backgroundColor: '#4C5564',
-            color: '#9CA3AF',
+            backgroundColor: '#ffffff15',
+            color: '#D1D5DB',
             fontSize: '12px',
-            fontWeight: '900'
+            fontWeight: '700'
           }}
         >
           3
         </div>
         <h2
-          className="text-gray-100 font-extrabold text-lg"
+          className="text-white font-bold text-lg"
         >
           Proposal Configuration Flow
         </h2>
       </div>
       {/* Chart area */}
-      <div className="flex-1 min-h-0 relative" style={{ marginTop: '8px', paddingBottom: '20px' }}>
-        <svg ref={svgRef} className="w-full h-full " style={{ overflow: 'visible' }} />
+      <div className="flex-1 min-h-0 relative" style={{ marginTop: '4px', paddingBottom: '30px', overflow: 'hidden' }}>
+        <svg ref={svgRef} className="w-full h-full" style={{ overflow: 'visible' }} />
       </div>
 
     </div>

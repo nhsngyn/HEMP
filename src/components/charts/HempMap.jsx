@@ -50,7 +50,7 @@ const HempMap = () => {
       const logoUrl = chain.logoUrl || "";
 
       return {
-        id: chain.id, 
+        id: chain.id,
         name: chain.name,
         value: [Number(chain.score) || 0, Number(chain.participation) || 0],
         symbol: 'circle',
@@ -102,11 +102,11 @@ const HempMap = () => {
 
 
       grid: {
-        left: 83, 
-        right: 24, 
-        top: 48, 
-        bottom: 28 ,
-        containLabel: false 
+        left: 83,
+        right: 24,
+        top: 48,
+        bottom: 28,
+        containLabel: false
       },
 
       tooltip: {
@@ -117,7 +117,7 @@ const HempMap = () => {
         borderWidth: 0,
         axisPointer: {
           type: 'cross',
-          snap: true, 
+          snap: true,
           label: {
             show: true,
             backgroundColor: 'transparent',
@@ -133,7 +133,7 @@ const HempMap = () => {
           }
         },
         formatter: (params) => {
-          const chainData = chainMap[params.name]; 
+          const chainData = chainMap[params.name];
           if (!chainData) return '';
           return `
             <div style="
@@ -159,34 +159,34 @@ const HempMap = () => {
       xAxis: {
         name: 'HEMP Score',
         nameLocation: 'end',
-        nameTextStyle: { 
-          ...axisTextStyle, 
-          align: 'right', 
-          verticalAlign: 'top', 
+        nameTextStyle: {
+          ...axisTextStyle,
+          align: 'right',
+          verticalAlign: 'top',
           padding: [12, 16, 0, 0] // 6px 간격 유지
         },
         type: 'value',
         scale: true,
-        axisLabel: { show: false }, 
-        axisTick: { show: false }, 
+        axisLabel: { show: false },
+        axisTick: { show: false },
         axisLine: solidAxisLineStyle,
-        splitLine: { show: true, lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' } } 
+        splitLine: { show: true, lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' } }
       },
 
       yAxis: {
         name: 'Participation',
         nameLocation: 'end',
         nameGap: 4,
-        nameTextStyle: { 
-          ...axisTextStyle, 
+        nameTextStyle: {
+          ...axisTextStyle,
           align: 'right',
-          verticalAlign: 'top', 
+          verticalAlign: 'top',
           padding: [0, 8, 0, 0]
         },
         type: 'value',
         scale: true,
-        axisLabel: { show: false }, 
-        axisTick: { show: false }, 
+        axisLabel: { show: false },
+        axisTick: { show: false },
         axisLine: solidAxisLineStyle,
         splitLine: { show: true, lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' } }
       },
@@ -205,7 +205,7 @@ const HempMap = () => {
   const handleChartMouseOver = (params) => {
     if (params.componentType !== 'series') return;
     const hoveredId = params.data.id;
-    
+
     let lineColor = COLORS.GRAY300;
     let textColor = COLORS.WHITE;
 
@@ -251,23 +251,39 @@ const HempMap = () => {
   return (
     <div className="w-full h-full relative p-[12px]">
 
-      <div className="absolute top-[20px] left-[12px] flex items-center gap-2 z-10 pointer-events-none">
-        <img src="/Icons/icn_num1.png" alt="1" width="20" height="20" />
-        <h3 className="text-white font-bold text-base font-suit">HEMP Map</h3>
+      <div className="absolute top-0 left-0 z-10 flex items-center gap-3 px-4 py-3">
+        <div
+          className="flex items-center justify-center rounded-full"
+          style={{
+            width: '24px',
+            height: '24px',
+            backgroundColor: '#ffffff15',
+            color: '#D1D5DB',
+            fontSize: '12px',
+            fontWeight: '700'
+          }}
+        >
+          1
+        </div>
+        <h2
+          className="text-white font-bold text-lg"
+        >
+          HEMP Map
+        </h2>
       </div>
 
       <div className="absolute top-4 right-5 z-10 group">
-        <img 
-          src="/Icons/Frame 183.png" 
-          alt="Info" 
+        <img
+          src="/Icons/Frame 183.png"
+          alt="Info"
           width="24" height="24"
           className="cursor-help opacity-70 hover:opacity-100 transition-opacity"
         />
-        <div 
+        <div
           className="absolute right-0 top-8 w-[280px] p-3 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50"
           style={{ backgroundColor: COLORS.GRAY700 }}
         >
-          <p 
+          <p
             className="font-suit text-[14px] font-medium leading-[140%] tracking-[-0.28px]"
             style={{ color: COLORS.GRAY300 }}
           >
@@ -278,10 +294,10 @@ const HempMap = () => {
       </div>
 
       {option && (
-        <ReactECharts 
+        <ReactECharts
           ref={chartRef}
-          option={option} 
-          style={{ height: '100%', width: '100%' }} 
+          option={option}
+          style={{ height: '100%', width: '100%' }}
           opts={{ renderer: 'svg' }}
           onEvents={{
             click: onChartClick,

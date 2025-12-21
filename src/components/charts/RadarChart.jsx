@@ -494,8 +494,8 @@ const RadarChart = () => {
             </div>
             {/* Divider */}
             <div
-              className="border-t border-gray-700 shrink-0"
-              style={{ marginTop: 'clamp(10px, 1.5vh, 8px)' }}
+              className="border-t border-gray-700 shrink-0 "
+              style={{ marginTop: 'clamp(10px, 1.5vh, 8px)', marginRight: '1px' }}
             ></div>
           </div>
 

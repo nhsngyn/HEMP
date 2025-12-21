@@ -71,12 +71,12 @@ const HempMap = () => {
         itemStyle: {
           color: COLORS.GRAY100,
           opacity: hasAnySelection && !isSelected ? 0.1 : 1,
-          borderColor: isSelected ? selection.color : 'transparent',
-          borderWidth: isSelected ? 3 : 0,
+          borderColor: 'transparent',
+          borderWidth: 0,
           shadowBlur: isSelected ? 15 : 0,
           shadowColor: isSelected ? selection.color : 'transparent'
         },
-        z: isSelected ? 100 : 10
+        z: isSelected ? 200 : 100
       };
     });
 
@@ -91,7 +91,7 @@ const HempMap = () => {
 
     const solidAxisLineStyle = {
       show: true,
-      lineStyle: { color: COLORS.GRAY400, type: 'solid', width: 1 }
+      lineStyle: { color: COLORS.GRAY700, type: 'solid', width: 1 }
     };
 
     return {
@@ -227,6 +227,14 @@ const HempMap = () => {
           data: seriesData,
           cursor: 'pointer',
           large: false,
+          z: 150,
+          symbolSize: (data, params) => {
+            const chain = chainMap[params.name];
+            if (!chain) return 20;
+            const selection = getSelectionInfo(chain.id);
+            const isSelected = !!selection;
+            return calculateBubbleSize(chain.proposals, isSelected);
+          },
         }
       ]
     };

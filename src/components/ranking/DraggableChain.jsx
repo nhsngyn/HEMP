@@ -39,7 +39,13 @@ const DraggableChain = ({ chain, selectionInfo, onClick, isOverlay = false, isSe
       onPointerDown={handlePointerDown}
       onPointerUp={handlePointerUp}
       onKeyDown={listeners?.onKeyDown}
-      className="mb-4" 
+      className=""
+      style={{ 
+        cursor: (isOverlay || isSelected) ? "default" : "grab", 
+        opacity: isOverlay ? 0.8 : (isDragging ? 0.35 : 1), 
+        touchAction: "none",
+        marginBottom: '8px'
+      }} 
       
       style={{ 
         cursor: (isOverlay || isSelected) ? "default" : "grab", 

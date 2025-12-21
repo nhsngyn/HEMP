@@ -22,9 +22,9 @@ const CHART_CONFIG = {
 };
 
 const CHAIN_CONFIGS = [
-  { key: 'sub2', color: COLORS.SUB2, opacity: 0.1, strokeWidth: 1.5, strokeOpacity: 0.6 },
-  { key: 'sub1', color: COLORS.SUB1, opacity: 0.1, strokeWidth: 1.5, strokeOpacity: 0.6 },
-  { key: 'main', color: COLORS.MAIN, opacity: 0.1, strokeWidth: 1.5, strokeOpacity: 0.6 },
+  { key: 'sub2', color: COLORS.SUB2, opacity: 0.2, strokeWidth: 1.5, strokeOpacity: 0.6 },
+  { key: 'sub1', color: COLORS.SUB1, opacity: 0.2, strokeWidth: 1.5, strokeOpacity: 0.6 },
+  { key: 'main', color: COLORS.MAIN, opacity: 0.2, strokeWidth: 1.5, strokeOpacity: 0.6 },
 ];
 
 const RadarChart = () => {
@@ -121,8 +121,8 @@ const RadarChart = () => {
       // 차트 설정
       const size = Math.min(containerWidth, containerHeight) - CHART_CONFIG.PADDING * 2;
       const centerX = containerWidth / 2 - 2;
-      const centerY = containerHeight / 2;
-      const radius = size / 1.7;
+      const centerY = containerHeight / 2 + 13;
+      const radius = size / 1.5 * 0.9;
       const numAxes = METRICS.length;
       const angleStep = (2 * Math.PI) / numAxes;
 
@@ -173,8 +173,8 @@ const RadarChart = () => {
             .attr('opacity', 0.5);
 
           // 축 라벨
-          const labelX = centerX + Math.cos(angle) * (radius + CHART_CONFIG.LABEL_OFFSET + 5);
-          const labelY = centerY + 7 + Math.sin(angle) * (radius + CHART_CONFIG.LABEL_OFFSET - 5);
+          const labelX = centerX + Math.cos(angle) * (radius + CHART_CONFIG.LABEL_OFFSET + 3);
+          const labelY = centerY + Math.sin(angle) * (radius + CHART_CONFIG.LABEL_OFFSET - 10);
 
           if (metric.key === 'vib') {
             // VIB는 두 줄로 표시
@@ -185,7 +185,7 @@ const RadarChart = () => {
               .attr('dominant-baseline', 'middle')
               .attr('fill', '#9ca3af')
               .attr('font-family', 'SUIT')
-              .attr('font-size', 'var(--font-size-xs)')
+              .attr('font-size', '11px')
               .attr('font-weight', '700');
 
             textGroup.append('tspan')
@@ -206,7 +206,7 @@ const RadarChart = () => {
               .attr('dominant-baseline', 'middle')
               .attr('fill', '#9ca3af')
               .attr('font-family', 'SUIT')
-              .attr('font-size', 'var(--font-size-xs)')
+              .attr('font-size', '11px')
               .attr('font-weight', '700')
               .text(metric.label);
           }
@@ -248,10 +248,10 @@ const RadarChart = () => {
 
         // 중앙값 폴리곤을 항상 먼저 그리기 (배경 레이어)
         const hasSelectedChain = !!mainChain;
-        // 체인 선택 전: 중앙에 작은 점으로 표시, 체인 선택 후: 실제 median 값 반영
-        const medianPolygon = createPolygon(medianChain, !hasSelectedChain, false);
+        // 항상 실제 median 값 반영
+        const medianPolygon = createPolygon(medianChain, false, false);
         if (medianPolygon) {
-          const medianStrokeColor = hasSelectedChain ? COLORS.GRAY400 : COLORS.GRAY300;
+          const medianStrokeColor = hasSelectedChain ? COLORS.GRAY500 : COLORS.GRAY300;
           const medianStrokeWidth = hasSelectedChain ? 0.7 : 1;
 
           dataGroup.append('path')
@@ -360,7 +360,8 @@ const RadarChart = () => {
           2
         </div>
         <h2
-          className="text-white font-bold text-lg"
+          className="font-bold text-lg"
+          style={{ color: '#D1D5DB' }}
         >
           HEMP Comparison Radar Chart
         </h2>
@@ -379,7 +380,7 @@ const RadarChart = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-r border-gray-700 h-full mt-auto"></div>
+        <div className="border-r border-gray-700 my-auto" style={{ height: '99%' }}></div>
 
         {/* 오른쪽: 점수 정보 (40%) */}
         <div
@@ -538,7 +539,11 @@ const RadarChart = () => {
                   </span>
                   <div
                     className="flex items-baseline shrink-0"
-                    style={{ gap: 'clamp(1px, 0.12vw, 2px)' }}
+                    style={{
+                      gap: 'clamp(1px, 0.12vw, 2px)',
+                      minWidth: '60px',
+                      justifyContent: 'flex-end'
+                    }}
                   >
                     <span
                       className="text-white font-semibold shrink-0"
@@ -546,7 +551,9 @@ const RadarChart = () => {
                         fontSize: 'clamp(18px, 0.7vw, 12px)',
                         lineHeight: 'clamp(1.2, 1.3vh, 1.4)',
                         whiteSpace: 'nowrap',
-                        paddingRight: 'clamp(3px, 0.1vh, 2px)',
+                        textAlign: 'right',
+                        display: 'inline-block',
+                        minWidth: '20px'
                       }}
                     >
                       {Math.round(value)}
@@ -556,8 +563,7 @@ const RadarChart = () => {
                       style={{
                         fontSize: 'clamp(16px, 0.7vw, 14px)',
                         lineHeight: 'clamp(1.40, 1.3vh, 1.4)',
-                        whiteSpace: 'nowrap',
-                        paddingRight: 'clamp(3px, 0.1vh, 2px)'
+                        whiteSpace: 'nowrap'
                       }}
                     >
                       /{metric.maxValue}

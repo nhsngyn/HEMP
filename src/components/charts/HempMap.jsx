@@ -17,6 +17,7 @@ const HempMap = () => {
 
   const { selectChain, getSelectionInfo } = useChainSelection();
 
+  /* ---------------- resize ---------------- */
   useEffect(() => {
     const handleResize = () => {
       chartRef.current?.getEchartsInstance().resize();
@@ -65,16 +66,12 @@ const HempMap = () => {
         ],
         symbol: logoUrl ? `image://${logoUrl}` : 'circle',
         symbolSize: size,
-        
         itemStyle: {
-          // 🔥 [핵심] 호버 여부와 상관없이, 선택되면 1, 아니면 무조건 0.2
-          opacity: isSelected ? 1 : 0.2, 
-          
+          opacity: isSelected ? 1 : 0.2,
           shadowBlur: isSelected ? 20 : 0,
           shadowColor: isSelected ? selection.color : 'transparent',
           color: logoUrl ? undefined : COLORS.WHITE,
         },
-        
         z: isSelected ? 100 : 10,
       };
     });
@@ -84,7 +81,6 @@ const HempMap = () => {
       fontFamily: 'SUIT',
       fontSize: 12,
       fontWeight: 500,
-      lineHeight: 15.6,
       letterSpacing: -0.24,
     };
 
@@ -92,7 +88,6 @@ const HempMap = () => {
       show: true,
       lineStyle: {
         color: COLORS.GRAY700,
-        type: 'solid',
         width: 1,
       },
     };
@@ -111,15 +106,15 @@ const HempMap = () => {
       },
 
       tooltip: {
-        trigger: 'item', 
+        trigger: 'item',
         backgroundColor: 'transparent',
         padding: 0,
         borderWidth: 0,
 
         axisPointer: {
-          show: true,     
-          type: 'cross',  
-          snap: true,     
+          show: true,
+          type: 'cross',
+          snap: true,
           crossStyle: {
             type: 'dashed',
             width: 1,
@@ -147,10 +142,12 @@ const HempMap = () => {
               gap:8px;
               border-radius:4px;
               background:${COLORS.GRAY700};
-              margin-bottom: 8px;
+              margin-bottom:8px;
             ">
               <span style="color:${COLORS.GRAY200}; font-size:12px;">Proposals</span>
-              <span style="color:${COLORS.WHITE}; font-weight:600;">${chainData.proposals ?? 0}</span>
+              <span style="color:${COLORS.WHITE}; font-weight:600;">
+                ${chainData.proposals ?? 0}
+              </span>
             </div>
           `;
         },
@@ -162,7 +159,6 @@ const HempMap = () => {
         nameTextStyle: {
           ...axisTextStyle,
           align: 'right',
-          verticalAlign: 'top',
           padding: [12, 16, 0, 0],
         },
         type: 'value',
@@ -174,17 +170,15 @@ const HempMap = () => {
           show: true,
           lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' },
         },
-        axisPointer: { show: true, snap: true }
+        axisPointer: { show: true, snap: true },
       },
 
       yAxis: {
         name: 'Participation',
         nameLocation: 'end',
-        nameGap: 4,
         nameTextStyle: {
           ...axisTextStyle,
           align: 'right',
-          verticalAlign: 'top',
           padding: [0, 8, 0, 0],
         },
         type: 'value',
@@ -196,7 +190,7 @@ const HempMap = () => {
           show: true,
           lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' },
         },
-        axisPointer: { show: true, snap: true }
+        axisPointer: { show: true, snap: true },
       },
 
       series: [
@@ -206,29 +200,15 @@ const HempMap = () => {
           cursor: 'pointer',
           large: true,
           progressive: 500,
-
-          // 🔥 [핵심] 호버 시 자동 효과(사이즈 확대, 스타일 변경) 완전 차단
           emphasis: {
-            scale: false, // 호버 시 사이즈 커짐 방지
-            itemStyle: {
-              // 호버 시 스타일 변경 없음 (기존 itemStyle 유지)
-              // 명시적으로 설정하지 않으면 data의 itemStyle을 따름
-            }
-          }
+            scale: false,
+          },
         },
       ],
     };
-  }, [
-    allChains,
-    selectedMainId,
-    selectedSubId1,
-    selectedSubId2,
-    getSelectionInfo,
-    chainMap,
-  ]);
+  }, [allChains, selectedMainId, selectedSubId1, selectedSubId2, getSelectionInfo, chainMap]);
 
   /* ---------------- events ---------------- */
-  
   const handleChartMouseOver = (params) => {
     if (params.componentType !== 'series') return;
 
@@ -283,16 +263,29 @@ const HempMap = () => {
 
   return (
     <div className="w-full h-full relative p-[12px]">
-      <div className="absolute top-[20px] left-[12px] flex items-center gap-2 z-10 pointer-events-none">
+      <div className="absolute top-[20px] left-[12px] z-10 flex items-center gap-2 pointer-events-none">
         <img src="/Icons/icn_num1.png" alt="1" width="20" height="20" />
         <h3 className="text-white font-bold text-base font-suit">HEMP Map</h3>
       </div>
-      
+
       <div className="absolute top-4 right-5 z-10 group">
-         <img src="/Icons/Frame 183.png" alt="Info" width="24" height="24" className="cursor-help opacity-70 hover:opacity-100 transition-opacity" />
-         <div className="absolute right-0 top-8 w-[280px] p-3 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50" style={{ backgroundColor: COLORS.GRAY700 }}>
-          <p className="font-suit text-[14px] font-medium leading-[140%] tracking-[-0.28px]" style={{ color: COLORS.GRAY300 }}>
-            Circle size reflects the volume of proposals.<br />
+        <img
+          src="/Icons/Frame 183.png"
+          alt="Info"
+          width="24"
+          height="24"
+          className="cursor-help opacity-70 hover:opacity-100 transition-opacity"
+        />
+        <div
+          className="absolute right-0 top-8 w-[280px] p-3 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50"
+          style={{ backgroundColor: COLORS.GRAY700 }}
+        >
+          <p
+            className="font-suit text-[14px] font-medium leading-[140%] tracking-[-0.28px]"
+            style={{ color: COLORS.GRAY300 }}
+          >
+            Circle size reflects the volume of proposals.
+            <br />
             Chains are categorized into four tiers based on their ranking.
           </p>
         </div>

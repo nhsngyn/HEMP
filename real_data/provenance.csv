@@ -1,0 +1,35 @@
+﻿id,title,type,status,ProcessingTime,Participation,Consensus
+38,mango  v1111,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.335559644,1.0
+88,Figure Connect Market,MsgGovCreateMarketRequest,PASSED,"2 days, 0 hours 0 minutes",0.354136642,1.0
+53,Store Group Member Approval Smart Contract v102,MsgExecLegacyContent,PASSED,"2 days, 0 hours 2 minutes",0.354648502,0.9999
+71,provenanceexchangev1MsgGovCreateMarketRequest,MsgGovCreateMarketRequest,PASSED,"2 days, 13 hours 48 minutes",0.369087005,1.0
+81,Upgrade Asset Classification Smart Contract to v341,MsgStoreCode,PASSED,"2 days, 19 hours 17 minutes",0.369843543,1.0
+59,Upgrade rust for v1160,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.376248499,1.0
+74,provenancemarkerv1MsgUpdateForcedTransferRequest,MsgUpdateForcedTransferRequest,PASSED,"2 days, 0 hours 5 minutes",0.38027005,1.0
+58,Upgrade quicksilver for v1150,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.380502227,1.0
+69,Store Funding Trading Bridge Smart Contract,MsgExecLegacyContent,PASSED,"2 days, 0 hours 25 minutes",0.382071348,1.0
+57,Store DFS Subscription Smart Contract v220,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.382092786,1.0
+56,Store DFS Capital Raise Smart Contract v220,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.382092786,1.0
+87,Upgrade xenon for v1220,MsgSoftwareUpgrade,PASSED,"2 days, 0 hours 1 minutes",0.391458381,1.0
+86,Provenance Blockchain Tokenomics Upgrade,Text,PASSED,"2 days, 0 hours 0 minutes",0.393262702,0.9999
+96,Upgrade bouvardia for v1260,MsgSoftwareUpgrade,PASSED,"2 days, 0 hours 0 minutes",0.410783452,1.0
+68,Upgrade saffron for v1170,MsgExecLegacyContent,PASSED,"2 days, 0 hours 45 minutes",0.415037014,1.0
+90,Upgrade zomp for v1240,MsgSoftwareUpgrade,PASSED,"2 days, 0 hours 0 minutes",0.420423742,1.0
+91,Create Figure CBL Market,MsgGovCreateMarketRequest,PASSED,"2 days, 1 hours 2 minutes",0.42165202,1.0
+94,Remove added msg fee from MsgAddAttributeRequest,MsgRemoveMsgFeeProposalRequest,PASSED,"2 days, 0 hours 0 minutes",0.424912273,1.0
+67,Restricted Marker Transfer Smart Contract v200 Storage Proposal,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.425091341,1.0
+78,ATS Smart Contract Update v101,MsgStoreCode,PASSED,"2 days, 0 hours 0 minutes",0.427134564,1.0
+72,Store the Funding Trading Bridge Smart Contract v101 Code on Mainnet,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.430027969,0.9999
+82,Increase Validator Minimum and Maximum Commissions,Text,PASSED,"2 days, 0 hours 0 minutes",0.433830025,0.9999
+77,Forward Market Contract Update v100,MsgStoreCode,PASSED,"2 days, 0 hours 0 minutes",0.441142433,0.9999
+79,Upload Group Manager Approval Smart Contract v130,MsgStoreCode,PASSED,"2 days, 0 hours 10 minutes",0.446136269,1.0
+75,Upgrade umber for v1190,MsgExecLegacyContent,PASSED,"2 days, 0 hours 12 minutes",0.45211124,1.0
+93,Unlock hash account for retail proven holder,MsgUnlockVestingAccountsRequest,PASSED,"2 days, 0 hours 8 minutes",0.454611406,0.9825
+70,Upgrade tourmaline for v1180,MsgExecLegacyContent,PASSED,"2 days, 0 hours 0 minutes",0.491496995,1.0
+80,Upgrade viridian for v1201,MsgSoftwareUpgrade,PASSED,"2 days, 0 hours 1 minutes",0.496596408,1.0
+84,Securitization Smart Contract,MsgStoreCode,PASSED,"2 days, 0 hours 0 minutes",0.509323829,1.0
+83,Upgrade wisteria for v1210,MsgSoftwareUpgrade,PASSED,"2 days, 0 hours 24 minutes",0.520325155,1.0
+92,Upgrade alyssum for v1250,MsgSoftwareUpgrade,PASSED,"2 days, 0 hours 0 minutes",0.534222482,1.0
+95,Increase max mintable amount,MsgUpdateParamsRequest,PASSED,"1 days, 0 hours 0 minutes",0.648818939,1.0
+89,Upgrade yellow for v1230 with hash lockup,MsgSoftwareUpgrade,PASSED,"2 days, 0 hours 7 minutes",0.653236815,0.9938
+50,cosmwasmwasmv1MsgStoreCode,MsgStoreCode,FAILED,"2 days, 0 hours 14 minutes",0.345155266,1.0

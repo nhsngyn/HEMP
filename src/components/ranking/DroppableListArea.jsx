@@ -10,11 +10,9 @@ const DroppableListArea = ({ children }) => {
       className={`
         w-full
         h-full
-        overflow-y-auto 
-        pr-2 
+        overflow-y-auto  
         custom-scrollbar
-        rounded-lg 
-        p-1
+        rounded-lg
         ${isOver ? "bg-white/5" : ""}
       `}
     >

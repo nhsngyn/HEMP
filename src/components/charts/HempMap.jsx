@@ -1,20 +1,26 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect, useRef } from 'react';
 import ReactECharts from 'echarts-for-react';
 import useChainStore from '../../store/useChainStore';
 import useChainSelection from '../../hooks/useChainSelection';
 import { BUBBLE_CHART } from '../../constants/chart';
+import { COLORS } from '../../constants/colors';
 
 const HempMap = () => {
-  const { allChains } = useChainStore();
-  
-  // selectChain 가져오기
-  const { 
-    selectChain,
-    getSelectionInfo, 
-    selectedMainId, selectedSubId1, selectedSubId2 
-  } = useChainSelection();
+  const chartRef = useRef(null);
+  const { allChains, selectedMainId, selectedSubId1, selectedSubId2 } = useChainStore();
+  const { selectChain, getSelectionInfo } = useChainSelection();
 
-const chainMap = useMemo(() => {
+  // 창 크기 변경 시 차트 리사이즈 (반응형)
+  useEffect(() => {
+    const handleResize = () => {
+      chartRef.current?.getEchartsInstance().resize();
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const chainMap = useMemo(() => {
+    if (!allChains) return {};
     return allChains.reduce((acc, chain) => {
       acc[chain.name] = chain;
       return acc;
@@ -22,146 +28,284 @@ const chainMap = useMemo(() => {
   }, [allChains]);
 
   const option = useMemo(() => {
-    if (!allChains || allChains.length === 0) return {};
+    if (!allChains || allChains.length === 0) return null;
 
-    const hasAnySelection = selectedMainId || selectedSubId1 || selectedSubId2;
-
-   const { THRESHOLDS, SIZES } = BUBBLE_CHART;
+    const hasAnySelection = !!(selectedMainId || selectedSubId1 || selectedSubId2);
+    const { SIZES, THRESHOLDS } = BUBBLE_CHART;
 
     const calculateBubbleSize = (proposalCount, isSelected) => {
-      const count = proposalCount || 0;
+      const count = Number(proposalCount) || 0;
       let baseSize;
-      if (count >= THRESHOLDS.Q3) {
-        baseSize = SIZES.HUGE;
-      } 
-      else if (count >= THRESHOLDS.Q2) {
-        baseSize = SIZES.LARGE;
-      } 
-      else if (count >= THRESHOLDS.Q1) {
-        baseSize = SIZES.MEDIUM;
-      } 
-      else {
-        baseSize = SIZES.SMALL;
-      }
+      if (count >= THRESHOLDS.Q3) baseSize = SIZES.HUGE;
+      else if (count >= THRESHOLDS.Q2) baseSize = SIZES.LARGE;
+      else if (count >= THRESHOLDS.Q1) baseSize = SIZES.MEDIUM;
+      else baseSize = SIZES.SMALL;
       return isSelected ? baseSize + SIZES.SELECTED_OFFSET : baseSize;
     };
 
     const seriesData = allChains.map((chain) => {
       const selection = getSelectionInfo(chain.id);
       const isSelected = !!selection;
-      
       const size = calculateBubbleSize(chain.proposals, isSelected);
       const logoUrl = chain.logoUrl || "";
 
       return {
+        id: chain.id,
         name: chain.name,
-        value: [chain.score, chain.participation || 0],
+        value: [Number(chain.score) || 0, Number(chain.participation) || 0],
         symbol: 'circle',
-        symbolSize: size, 
+        symbolSize: size,
         label: {
           show: true,
-          position: 'inside',
-          formatter: '{logo|}',
+          position: 'center',
+          formatter: logoUrl ? '{logo|}' : '',
           rich: {
             logo: {
               backgroundColor: { image: logoUrl },
-              width: size,
-              height: size,
-              borderRadius: size / 2 
+              width: size * 0.9,
+              height: size * 0.9,
+              borderRadius: (size * 0.9) / 2,
             }
           }
         },
         itemStyle: {
-          color: 'transparent',
-          opacity: isSelected ? 1 : (hasAnySelection ? 0.3 : 0.85),
+          color: COLORS.GRAY100,
+          opacity: hasAnySelection && !isSelected ? 0.1 : 1,
           borderColor: isSelected ? selection.color : 'transparent',
           borderWidth: isSelected ? 3 : 0,
-          shadowBlur: isSelected ? 20 : 0,
+          shadowBlur: isSelected ? 15 : 0,
           shadowColor: isSelected ? selection.color : 'transparent'
         },
-        z: selection ? selection.z : 2
+        z: isSelected ? 100 : 10
       };
     });
 
+    const axisTextStyle = {
+      color: COLORS.GRAY400,
+      fontFamily: 'SUIT',
+      fontSize: 12,
+      fontWeight: 500,
+      lineHeight: 15.6,
+      letterSpacing: -0.24
+    };
+
+    const solidAxisLineStyle = {
+      show: true,
+      lineStyle: { color: COLORS.GRAY400, type: 'solid', width: 1 }
+    };
+
     return {
       backgroundColor: 'transparent',
-      grid: {
-        top: '20%', right: '8%', bottom: '12%', left: '8%',
-        containLabel: true
-      },
-     tooltip: {
-        trigger: 'item',
-        backgroundColor: 'rgba(26, 27, 32, 0.95)',
-        borderColor: '#4B5563',
-        textStyle: { color: '#fff' },
-        formatter: (params) => {
-          const chainData = chainMap[params.name]; 
-          
-          if (!chainData) return '';
+      textStyle: { fontFamily: 'SUIT' },
+      animation: true,
+      animationDuration: 200,
 
-          const logoImg = chainData.logoUrl 
-            ? `<img src="${chainData.logoUrl}" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;border-radius:50%;" />` 
-            : '';
-            
+
+      grid: {
+        left: 83,
+        right: 24,
+        top: 48,
+        bottom: 28,
+        containLabel: false
+      },
+
+      tooltip: {
+        trigger: 'item',
+        position: 'top',
+        backgroundColor: 'transparent',
+        padding: 0,
+        borderWidth: 0,
+        axisPointer: {
+          type: 'cross',
+          snap: true,
+          label: {
+            show: true,
+            backgroundColor: 'transparent',
+            padding: 0,
+            fontFamily: 'SUIT',
+            fontSize: 14,
+            fontWeight: 600,
+            formatter: (params) => Math.round(params.value)
+          },
+          crossStyle: {
+            type: 'dashed',
+            width: 1
+          }
+        },
+        formatter: (params) => {
+          const chainData = chainMap[params.name];
+          if (!chainData) return '';
           return `
-            <div style="font-weight:bold; margin-bottom:8px; font-size:15px; display:flex; align-items:center;">
-              ${logoImg} ${params.name}
+            <div style="
+              display: inline-flex;
+              padding: 4px 8px;
+              align-items: center;
+              gap: 8px;
+              border-radius: 4px;
+              background: ${COLORS.GRAY700}; 
+              font-family: 'SUIT';
+              font-size: 12px;
+              font-weight: 500;
+              box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+              margin-bottom: 8px;
+            ">
+              <span style="color: ${COLORS.GRAY300};">Proposals</span>
+              <span style="color: ${COLORS.WHITE};">${chainData.proposals || 0}</span>
             </div>
-            <div style="color:#bbb; margin-bottom:4px;">HEMP Score: <b style="color:white">${params.value[0]}</b></div>
-            <div style="color:#bbb; margin-bottom:4px;">Participation: <b style="color:white">${params.value[1]}%</b></div>
-            <div style="color:#bbb;">Proposals: <b style="color:#FCD34D">${chainData.proposals || 0}개</b></div>
           `;
         }
       },
+
       xAxis: {
         name: 'HEMP Score',
+        nameLocation: 'end',
+        nameTextStyle: {
+          ...axisTextStyle,
+          align: 'right',
+          verticalAlign: 'top',
+          padding: [12, 16, 0, 0] // 6px 간격 유지
+        },
         type: 'value',
         scale: true,
-        splitLine: { lineStyle: { color: '#2A2B30' } },
-        axisLabel: { color: '#9CA3AF' },
-        nameTextStyle: { color: '#9CA3AF', fontWeight: 'bold' }
+        axisLabel: { show: false },
+        axisTick: { show: false },
+        axisLine: solidAxisLineStyle,
+        splitLine: { show: true, lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' } }
       },
+
       yAxis: {
         name: 'Participation',
+        nameLocation: 'end',
+        nameGap: 4,
+        nameTextStyle: {
+          ...axisTextStyle,
+          align: 'right',
+          verticalAlign: 'top',
+          padding: [0, 8, 0, 0]
+        },
         type: 'value',
         scale: true,
-        splitLine: { lineStyle: { color: '#2A2B30' } },
-        axisLabel: { formatter: '{value}%', color: '#9CA3AF' },
-        nameTextStyle: { color: '#9CA3AF', fontWeight: 'bold' }
+        axisLabel: { show: false },
+        axisTick: { show: false },
+        axisLine: solidAxisLineStyle,
+        splitLine: { show: true, lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' } }
       },
+
       series: [
         {
           type: 'scatter',
           data: seriesData,
-          animationDurationUpdate: 500,
-          animationEasingUpdate: 'cubicOut'
+          cursor: 'pointer',
+          large: false,
         }
       ]
     };
-  }, [allChains, selectedMainId, selectedSubId1, selectedSubId2, getSelectionInfo]);
+  }, [allChains, selectedMainId, selectedSubId1, selectedSubId2, getSelectionInfo, chainMap]);
 
-  // 클릭 핸들러
+  const handleChartMouseOver = (params) => {
+    if (params.componentType !== 'series') return;
+    const hoveredId = params.data.id;
+
+    let lineColor = COLORS.GRAY300;
+    let textColor = COLORS.WHITE;
+
+    if (hoveredId === selectedMainId) {
+      lineColor = COLORS.MAIN;
+      textColor = COLORS.MAIN;
+    } else if (hoveredId === selectedSubId1) {
+      lineColor = COLORS.SUB1;
+      textColor = COLORS.SUB1;
+    } else if (hoveredId === selectedSubId2) {
+      lineColor = COLORS.SUB2;
+      textColor = COLORS.SUB2;
+    }
+
+    const instance = chartRef.current?.getEchartsInstance();
+    if (instance) {
+      instance.setOption({
+        tooltip: {
+          axisPointer: {
+            crossStyle: { color: lineColor },
+            label: { color: textColor }
+          }
+        }
+      });
+    }
+  };
+
   const onChartClick = (params) => {
     const clickedChain = allChains.find(c => c.name === params.name);
     if (clickedChain) {
-      // 클릭 시 자동 배치 (이미 선택된 체인이면 무시됨)
       selectChain(clickedChain.id);
     }
   };
 
+  if (!allChains || allChains.length === 0) {
+    return (
+      <div className="w-full h-full flex items-center justify-center text-gray-500">
+        <span className="animate-pulse">Loading Chart...</span>
+      </div>
+    );
+  }
+
   return (
-    <div className="w-full h-full relative">
-      <h3 className="absolute top-4 left-6 text-white font-bold text-lg z-10 pointer-events-none">
-        HEMP Map
-      </h3>
-      <ReactECharts 
-        option={option} 
-        style={{ height: '100%', width: '100%' }} 
-        opts={{ renderer: 'svg' }}
-        onEvents={{
-          click: onChartClick
-        }}
-      />
+    <div className="w-full h-full relative p-[12px]">
+
+      {/* Title with icon - absolute positioned */}
+      <div className="absolute top-0 left-0 z-10 flex items-center gap-3 px-4 py-3 pointer-events-none">
+        <div
+          className="flex items-center justify-center rounded-full"
+          style={{
+            width: '24px',
+            height: '24px',
+            backgroundColor: '#ffffff15',
+            color: '#D1D5DB',
+            fontSize: '12px',
+            fontWeight: '700'
+          }}
+        >
+          1
+        </div>
+        <h2
+          className="text-white font-bold text-lg"
+        >
+          HEMP Map
+        </h2>
+      </div>
+
+      <div className="absolute top-4 right-5 z-10 group">
+        <img
+          src="/Icons/Frame 183.png"
+          alt="Info"
+          width="24" height="24"
+          className="cursor-help opacity-70 hover:opacity-100 transition-opacity"
+        />
+        <div
+          className="absolute right-0 top-8 w-[280px] p-3 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50"
+          style={{ backgroundColor: COLORS.GRAY700 }}
+        >
+          <p
+            className="font-suit text-[14px] font-medium leading-[140%] tracking-[-0.28px]"
+            style={{ color: COLORS.GRAY300 }}
+          >
+            Circle size reflects the volume of proposals.<br />
+            Chains are categorized into four tiers based on their ranking.
+          </p>
+        </div>
+      </div>
+
+      {option && (
+        <ReactECharts
+          ref={chartRef}
+          option={option}
+          style={{ height: '100%', width: '100%' }}
+          opts={{ renderer: 'svg' }}
+          onEvents={{
+            click: onChartClick,
+            mouseover: handleChartMouseOver
+          }}
+        />
+      )}
     </div>
   );
 };

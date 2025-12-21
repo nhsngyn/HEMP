@@ -14,6 +14,8 @@ html, body, #root {
 /* 2. 기본 배경색 및 폰트 설정 */
 :root {
   font-family: 'SUIT', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --scale: 1;
+  --base-font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
 
@@ -25,15 +27,58 @@ html, body, #root {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
-  /* 반응형 폰트 크기 변수 (뷰포트 크기에 따라 자동 조정) */
-  /* 작은 화면(1280px) ~ 큰 화면(2560px)까지 적응형 */
-  --font-size-xs: clamp(0.5rem, 0.4vw + 0.3rem, 0.75rem);       /* 8px ~ 12px */
-  --font-size-sm: clamp(0.625rem, 0.6vw + 0.4rem, 0.875rem);    /* 10px ~ 14px */
-  --font-size-base: clamp(0.75rem, 0.8vw + 0.5rem, 1rem);      /* 12px ~ 16px */
-  --font-size-lg: clamp(0.875rem, 1vw + 0.5rem, 1.125rem);     /* 14px ~ 18px */
-  --font-size-xl: clamp(1rem, 1.2vw + 0.6rem, 1.25rem);        /* 16px ~ 20px */
-  --font-size-2xl: clamp(1.125rem, 1.5vw + 0.7rem, 1.5rem);    /* 18px ~ 24px */
+/* 전역 폰트 적용 - 모든 텍스트에 SUIT 폰트 강제 적용 */
+*,
+*::before,
+*::after {
+  font-family: 'SUIT', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+html,
+body,
+#root {
+  font-family: 'SUIT', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* macOS 스타일 스크롤바 (WebKit) */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.3);
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.5);
+}
+
+/* macOS 스타일 스크롤바 (Firefox) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.3) transparent;
+}
+
+/* Retina 디스플레이 최적화 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* 부드러운 스크롤 */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 a {
@@ -43,4 +88,30 @@ a {
 }
 a:hover {
   color: #535bf2;
+}
+
+@layer utilities {
+  /* 크롬, 사파리, 엣지 (WebKit) */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 1px;  /* 스크롤바 너비 */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent; /* 트랙(배경) 투명 */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #29303A; 
+    border-radius: 10px;      
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #374151; 
+  }
+
+  /* 파이어폭스 (Firefox) */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #29303A transparent;
+  }
 }

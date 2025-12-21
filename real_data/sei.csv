@@ -1,0 +1,66 @@
+﻿id,title,type,status,ProcessingTime,Participation,Consensus
+51,v370,SoftwareUpgradeProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999589
+50,Update Global Minimum Prices,ParameterChangeProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999997794
+54,v390,SoftwareUpgradeProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999228
+49,v361,SoftwareUpgradeProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999996752
+32,v311,SoftwareUpgradeProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,1.0
+58,iseipointer,AddERCNativePointerProposal,PASSED,"1 days, 0 hours 0 minutes",100.0,1.0
+57,usdcpointer,AddERCNativePointerProposal,PASSED,"1 days, 0 hours 0 minutes",100.0,1.0
+56,usdtpointer,AddERCNativePointerProposal,PASSED,"1 days, 0 hours 5 minutes",100.0,1.0
+42,v321,SoftwareUpgradeProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999964
+70,usdcarpointer,AddERCNativePointerProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999998982
+72,usdcpopointer,AddERCNativePointerProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999259
+68,wbtcpointer,AddERCNativePointerProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999998996
+67,usdtetpointer,AddERCNativePointerProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999104
+66,usdcetpointer,AddERCNativePointerProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999125
+71,wetharpointer,AddERCNativePointerProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999828
+24,v309,SoftwareUpgradeProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999999
+91,v602,SoftwareUpgradeProposal,PASSED,"1 days, 0 hours 0 minutes",100.0,1.0
+78,v555,SoftwareUpgradeProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999886
+76,usdtbspointer,AddERCNativePointerProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999666
+75,wethbspointer,AddERCNativePointerProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999824
+74,usdcbspointer,AddERCNativePointerProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.99999978
+73,usdcoppointer,AddERCNativePointerProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999775
+55,v552,SoftwareUpgradeProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999776
+61,atompointer,AddERCNativePointerProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999046
+60,osmopointer,AddERCNativePointerProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999411
+59,axlusdcpointer,AddERCNativePointerProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999998599
+46,v350,SoftwareUpgradeProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999993
+53,v380,SoftwareUpgradeProposal,PASSED,"1 days, 0 hours 25 minutes",100.0,0.999999743
+48,v361,SoftwareUpgradeProposal,REJECTED,"5 days, 0 hours 0 minutes",100.0,0.999946539
+45,v330,SoftwareUpgradeProposal,PASSED,"1 days, 0 hours 2 minutes",100.0,1.0
+64,usdcsopointer,AddERCNativePointerProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999105
+63,atomosmosispointer,AddERCNativePointerProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999113
+65,wethpointer,AddERCNativePointerProposal,PASSED,"5 days, 0 hours 0 minutes",100.0,0.999999083
+30,Increase validator set to 38,ParameterChangeProposal,PASSED,"1 days, 0 hours 0 minutes",97.93,1.0
+84,v580,SoftwareUpgradeProposal,PASSED,"1 days, 0 hours 1 minutes",96.31,1.0
+31,Change oracle whitelist,ParameterChangeProposal,PASSED,"1 days, 0 hours 0 minutes",94.76,1.0
+86,Decrease governance proposal vote time,ParameterChangeProposal,PASSED,"5 days, 0 hours 0 minutes",94.21,0.915913868
+80,v562,SoftwareUpgradeProposal,PASSED,"5 days, 0 hours 0 minutes",91.57,0.999999349
+85,v590,SoftwareUpgradeProposal,PASSED,"5 days, 0 hours 0 minutes",91.26,0.999998513
+82,v575,SoftwareUpgradeProposal,PASSED,"1 days, 0 hours 0 minutes",90.7,0.999999343
+83,Update EVM minimum gas price,ParameterChangeProposal,PASSED,"5 days, 0 hours 11 minutes",88.24,0.999999837
+102,v610,SoftwareUpgradeProposal,PASSED,"1 days, 0 hours 0 minutes",86.92,1.0
+98,Update Kava USDT name in pointer,AddERCNativePointerProposalV2,PASSED,"1 days, 0 hours 0 minutes",85.1,1.0
+93,EIP1559 Param Update,ParameterChangeProposal,PASSED,"3 days, 0 hours 3 minutes",84.9,1.0
+37,Increase validator set to 39,ParameterChangeProposal,PASSED,"5 days, 0 hours 0 minutes",84.42,0.999999962
+92,v603,SoftwareUpgradeProposal,PASSED,"3 days, 0 hours 0 minutes",79.7,1.0
+96,v605,SoftwareUpgradeProposal,PASSED,"3 days, 0 hours 0 minutes",79.39,1.0
+101,v606,SoftwareUpgradeProposal,PASSED,"3 days, 0 hours 0 minutes",79.2,1.0
+90,v601,SoftwareUpgradeProposal,PASSED,"3 days, 0 hours 0 minutes",78.25,0.955311298
+95,Increase validator set to 40,ParameterChangeProposal,PASSED,"3 days, 0 hours 0 minutes",77.12,1.0
+81,Reactivate expired IBC client for UX,ClientUpdateProposal,PASSED,"5 days, 1 hours 1 minutes",76.66,0.999999533
+104,v614,SoftwareUpgradeProposal,PASSED,"3 days, 0 hours 0 minutes",75.76,1.0
+103,Update Noble USDC name in pointer,AddERCNativePointerProposalV2,PASSED,"1 days, 0 hours 0 minutes",74.58,1.0
+19,Increase validator set to 36,ParameterChangeProposal,PASSED,"1 days, 0 hours 0 minutes",73.5,1.0
+89,zenrock,AddERCNativePointerProposalV2,PASSED,"3 days, 0 hours 0 minutes",72.88,0.999999471
+52,Revive Agoric IBC client 07tendermint44,ClientUpdateProposal,PASSED,"5 days, 22 hours 15 minutes",68.34,0.999998287
+105,v620,SoftwareUpgradeProposal,PASSED,"3 days, 0 hours 0 minutes",66.67,1.0
+94,Add Allo native pointer,AddERCNativePointerProposalV2,PASSED,"3 days, 0 hours 13 minutes",64.06,1.0
+99,Deprecating CosmWasm  Cosmos,TextProposal,PASSED,"3 days, 0 hours 0 minutes",63.82,0.95359713
+15,SEI  ATOM Airdrop ,TextProposal,REJECTED,"5 days, 0 hours 0 minutes",57.71,0.999996294
+17,Increase governance deposit parameters   ,TextProposal,REJECTED,"5 days, 0 hours 0 minutes",57.52,0.999996245
+107,Raise EVM gas target and minimum fee,ParameterChangeProposal,PASSED,"3 days, 0 hours 21 minutes",57.21,1.0
+97,Update MinTxsPerBlock,ParameterChangeProposal,PASSED,"3 days, 0 hours 0 minutes",55.0,0.999999991
+100,Recover IBC client 07tendermint135 for Zenrock,ClientUpdateProposal,PASSED,"3 days, 0 hours 37 minutes",54.71,1.0
+16,Increase governance deposit parameters,ParameterChangeProposal,PASSED,"5 days, 0 hours 0 minutes",49.41,0.999999809

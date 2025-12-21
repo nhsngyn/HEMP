@@ -10,6 +10,10 @@ const useChainStore = create((set) => ({
   selectedMainId: null,
   selectedSubId1: null,
   selectedSubId2: null,
+  sankeyFilter: null,
+  
+  setSankeyFilter: (filter) => set({ sankeyFilter: filter }),
+  clearSankeyFilter: () => set({ sankeyFilter: null }),
   
   clearSlot: (slotType) => set(() => {
     // slotType을 store key로 매핑

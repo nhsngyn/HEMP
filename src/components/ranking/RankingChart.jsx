@@ -4,7 +4,7 @@ import {
   DragOverlay,
   useSensor,
   useSensors,
-  PointerSensor
+  PointerSensor,
 } from "@dnd-kit/core";
 import { createPortal } from "react-dom";
 
@@ -13,7 +13,7 @@ import useChainSelection from "../../hooks/useChainSelection";
 import { COLORS } from "../../constants/colors";
 
 import DraggableChain from "./DraggableChain";
-import DroppableSlot from "./DroppableSlot"; 
+import DroppableSlot from "./DroppableSlot";
 import DroppableListArea from "./DroppableListArea";
 
 const RankingChart = () => {
@@ -29,27 +29,78 @@ const RankingChart = () => {
     getSelectionInfo,
     selectedMainId,
     selectedSubId1,
-    selectedSubId2
+    selectedSubId2,
   } = useChainSelection();
 
   const [activeId, setActiveId] = React.useState(null);
-  const [sortType, setSortType] = React.useState("score");
+
+  /* =========================
+   * SORT CONFIG
+   * ========================= */
+  const [sortConfig, setSortConfig] = React.useState({
+    key: "score", // 'name' | 'score'
+    order: "desc", // 'asc' | 'desc'
+  });
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
-      activationConstraint: {
-        distance: 5,
-      },
+      activationConstraint: { distance: 5 },
     })
   );
 
-  const sortedChains = [...allChains].sort((a, b) =>
-    sortType === "name" ? a.name.localeCompare(b.name) : b.score - a.score
-  );
+  /* =========================
+   * SORTED CHAINS
+   * ========================= */
+  const sortedChains = [...allChains].sort((a, b) => {
+    const { key, order } = sortConfig;
+
+    if (key === "name") {
+      const result = a.name.localeCompare(b.name);
+      return order === "asc" ? result : -result;
+    }
+
+    if (key === "score") {
+      const result = a.score - b.score;
+      return order === "asc" ? result : -result;
+    }
+
+    return 0;
+  });
 
   const activeChain = allChains.find((c) => c.id === activeId);
-  const selectedIds = [selectedMainId, selectedSubId1, selectedSubId2].filter(id => id !== null);
+  const selectedIds = [
+    selectedMainId,
+    selectedSubId1,
+    selectedSubId2,
+  ].filter((id) => id !== null);
 
+  /* =========================
+   * SORT HANDLERS
+   * ========================= */
+  const handleSortClick = (key) => {
+    setSortConfig((prev) => {
+      if (prev.key === key) {
+        return {
+          ...prev,
+          order: prev.order === "asc" ? "desc" : "asc",
+        };
+      }
+      return { key, order: "asc" };
+    });
+  };
+
+  const getSortIcon = (key) => {
+    if (sortConfig.key !== key) {
+      return "/Icons/icn_sort_default_24.svg";
+    }
+    return sortConfig.order === "asc"
+      ? "/Icons/icn_sort_up_24.svg"
+      : "/Icons/icn_sort_down_24.svg";
+  };
+
+  /* =========================
+   * DND HANDLERS
+   * ========================= */
   const handleDragEnd = (event) => {
     const { active, over } = event;
     setActiveId(null);
@@ -62,6 +113,7 @@ const RankingChart = () => {
       removeChainById(chainId);
       return;
     }
+
     applySelection(chainId, target);
   };
 
@@ -74,26 +126,59 @@ const RankingChart = () => {
       <div className="flex flex-col h-full w-full select-none">
 
         {/* TITLE */}
-        <h2 className="text-[18px] font-semibold mb-[29.9px] shrink-0">HEMP Rank</h2>
+        <h2 className="text-GRAY200 text-body2_sb mb-2">
+          HEMP Rank
+        </h2>
 
         {/* FILTER BUTTONS */}
-        <div className="
+        <div
+          className="
             flex items-center gap-4 
-            mb-4 pb-3 shrink-0 
-            border-b border-[#29303A] w-full
-        ">
-          <button className="flex items-center gap-1" onClick={() => setSortType("name")}>
-            <span className={sortType === "name" ? "text-white text-xs font-semibold leading-tight" : "text-gray-400 text-xs font-semibold leading-tight"}>
-              Chain
+            mb-1 pb-3 shrink-0 
+            border-b w-full
+          "
+          style={{ borderColor: COLORS.GRAY700 }}
+        >
+          {/* Name Sort */}
+          <button
+            className="flex items-center gap-1"
+            onClick={() => handleSortClick("name")}
+          >
+            <span
+              className={
+                sortConfig.key === "name"
+                  ? "text-white text-caption1_sb"
+                  : "text-GRAY400 text-caption1_sb"
+              }
+            >
+              Name
             </span>
-            <img src="/Icons/icn_sort_24.png" className="w-6 h-6" alt="filter" />
+            <img
+              src={getSortIcon("name")}
+              className="w-6 h-6"
+              alt="sort by name"
+            />
           </button>
 
-          <button className="flex items-center gap-1" onClick={() => setSortType("score")}>
-            <span className={sortType === "score" ? "text-white text-xs font-semibold leading-tight" : "text-gray-400 text-xs font-semibold leading-tight"}>
+          {/* Score Sort */}
+          <button
+            className="flex items-center gap-1"
+            onClick={() => handleSortClick("score")}
+          >
+            <span
+              className={
+                sortConfig.key === "score"
+                  ? "text-white text-caption1_sb"
+                  : "text-GRAY400 text-caption1_sb"
+              }
+            >
               HEMP Score
             </span>
-            <img src="/Icons/icn_sort_24.png" className="w-6 h-6" alt="filter" />
+            <img
+              src={getSortIcon("score")}
+              className="w-6 h-6"
+              alt="sort by score"
+            />
           </button>
         </div>
 
@@ -116,9 +201,9 @@ const RankingChart = () => {
         </div>
 
         {/* SLOT AREA */}
-        <div className="shrink-0 flex flex-col gap-6 pt-2 border-t border-white/5">
-          
-          {/* Main Section */}
+        <div className="shrink-0 flex flex-col gap-6 pt-2">
+
+          {/* Main */}
           <div>
             <h3 className="text-gray-500 text-xs font-medium mb-2 pl-1">
               Main
@@ -132,7 +217,7 @@ const RankingChart = () => {
             />
           </div>
 
-          {/* Comparison Section */}
+          {/* Comparison */}
           <div>
             <h3 className="text-gray-500 text-xs font-medium mb-2 pl-1">
               Comparison
@@ -155,7 +240,6 @@ const RankingChart = () => {
             </div>
           </div>
         </div>
-
       </div>
 
       {/* DRAG OVERLAY */}
@@ -164,7 +248,7 @@ const RankingChart = () => {
           {activeChain && (
             <DraggableChain
               chain={activeChain}
-              isOverlay={true}
+              isOverlay
             />
           )}
         </DragOverlay>,

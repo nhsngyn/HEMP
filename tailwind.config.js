@@ -1,3 +1,5 @@
+const { COLORS } = require('./src/constants/colors');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -5,6 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      /* =========================
+       * COLOR SYSTEM
+       * ========================= */
+      colors: {
+        ...COLORS,
+      },
+
+      /* =========================
+       * TYPOGRAPHY SYSTEM
+       * ========================= */
       fontSize: {
         // [fontSize, { lineHeight, letterSpacing, fontWeight }] 형식
         
@@ -24,7 +36,7 @@ module.exports = {
         'body1-m': ['18px', { lineHeight: '145%', letterSpacing: '-0.01em', fontWeight: '500' }],
         'body1-r': ['18px', { lineHeight: '145%', letterSpacing: '-0.01em', fontWeight: '400' }],
 
-        // Body 2 (Regular만 자간 -1%)
+        // Body 2
         'body2-b': ['16px', { lineHeight: '140%', letterSpacing: '-0.02em', fontWeight: '700' }],
         'body2-sb': ['16px', { lineHeight: '140%', letterSpacing: '-0.02em', fontWeight: '600' }],
         'body2-m': ['16px', { lineHeight: '140%', letterSpacing: '-0.02em', fontWeight: '500' }],
@@ -42,8 +54,8 @@ module.exports = {
         'caption1-sb': ['12px', { lineHeight: '130%', letterSpacing: '-0.02em', fontWeight: '600' }],
         'caption1-m': ['12px', { lineHeight: '130%', letterSpacing: '-0.02em', fontWeight: '500' }],
         'caption1-r': ['12px', { lineHeight: '130%', letterSpacing: '-0.02em', fontWeight: '400' }],
-      }
-    }
+      },
+    },
   },
   plugins: [],
-}
+};

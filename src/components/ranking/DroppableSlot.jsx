@@ -14,8 +14,8 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
 
   // 스타일 상수
   const LOGO_SIZE = '24px'; 
-  const INNER_PADDING_LEFT = '13.017px';
-  const INNER_PADDING_RIGHT = '11.158px'; 
+  const INNER_PADDING_LEFT = '12px';
+  const INNER_PADDING_RIGHT = '12px'; 
 
   const handleClear = (e) => {
     e.stopPropagation();
@@ -66,28 +66,27 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
                       className="rounded-full flex-shrink-0 bg-white"
                       style={{ width: LOGO_SIZE, height: LOGO_SIZE }}
                   />
-                  <span className="text-gray-100 font-semibold text-[15px] truncate">
+                  <span className="text-body2-sb">
                       {chainName}
                   </span>
               </div>
               
-              {/* 삭제 버튼 (이미지 아이콘) */}
               <button
-                  onClick={handleClear}
-                  className="
-                    flex items-center justify-center 
-                    z-10 flex-shrink-0 
-                    opacity-60 hover:opacity-100 
-                    transition-opacity
-                  "
-                  title="Remove"
-              >
-                  <img 
-                    src="/Icons/icn_delete_20.png" 
-                    alt="delete" 
-                    className="w-5 h-5"
-                  />
-              </button>
+  onClick={handleClear}
+  className="
+    flex items-center justify-center 
+    z-10 flex-shrink-0 
+    opacity-80 hover:opacity-100 
+    transition-opacity
+  "
+  title="Remove"
+>
+  <img
+    src="/Icons/icon_delete_20.svg"
+    alt="delete"
+    className="w-5 h-5"
+  />
+</button>
           </div>
         ) : (
           /* [상태 2] 빈 슬롯일 때 */
@@ -96,7 +95,7 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
                 className="rounded-full bg-gray-600 flex-shrink-0"
                 style={{ width: LOGO_SIZE, height: LOGO_SIZE }}
               ></div>
-              <span className="text-gray-400 text-sm font-medium truncate">
+              <span className="text-gray-400 text-body2-sb">
                 {placeholderText || "Select Chain"}
               </span>
           </div>

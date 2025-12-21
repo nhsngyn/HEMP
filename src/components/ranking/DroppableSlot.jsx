@@ -1,6 +1,7 @@
 import React from "react";
 import { useDroppable } from "@dnd-kit/core";
 import useChainStore from "../../store/useChainStore";
+import { COLORS } from "../../constants/colors";
 
 const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText }) => {
   const { setNodeRef, isOver } = useDroppable({ id });
@@ -34,8 +35,8 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
         ${isOver ? "ring-1 ring-gray-500 bg-gray-800/50" : ""}
       `}
       style={{
-        border: isSelected ? '1px solid #29303A' : `1px dashed #29303A`, 
-        backgroundColor: isSelected ? '#191C23' : 'transparent',
+        border: isSelected ? '1px solid COLORS.GRAY800' : `1px dashed #29303A`, 
+        backgroundColor: isSelected ? 'COLORS.GRAY800' : 'transparent',
       }}
     >
       {/* 1. 하이라이트 선 (Left Edge Bar) */}
@@ -84,7 +85,8 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
   <img
     src="/Icons/icon_delete_20.svg"
     alt="delete"
-    className="w-5 h-5"
+    className="w-5 h-5" 
+    style={{ width: LOGO_SIZE, height: LOGO_SIZE }}
   />
 </button>
           </div>

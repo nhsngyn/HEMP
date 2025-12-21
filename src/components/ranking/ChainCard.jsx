@@ -14,8 +14,8 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
       className={`
         flex items-center 
         w-[206px]
-        h-[44px] 
-        px-2 
+        h-[44px]
+        px-2
         gap-2 
         self-stretch
         rounded-[7.4px]

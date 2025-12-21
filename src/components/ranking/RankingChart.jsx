@@ -126,16 +126,17 @@ const RankingChart = () => {
       <div className="flex flex-col h-full w-full select-none">
 
         {/* TITLE */}
-        <h2 className="text-GRAY200 text-body2_sb mb-2">
+        <h2 className="text-GRAY200 text-body2-b mb-[30px]">
           HEMP Rank
         </h2>
 
         {/* FILTER BUTTONS */}
         <div
           className="
-            flex items-center gap-4 
+            flex items-center gap-4
             mb-1 pb-3 shrink-0 
             border-b w-full
+            pl-[9px]
           "
           style={{ borderColor: COLORS.GRAY700 }}
         >
@@ -183,7 +184,7 @@ const RankingChart = () => {
         </div>
 
         {/* LIST AREA */}
-        <div className="flex-1 min-h-0 overflow-y-auto mb-4">
+        <div className="flex-1 min-h-0 overflow-y-auto mb-[35px]">
           <DroppableListArea>
             {sortedChains.map((chain) => {
               const isSelected = selectedIds.includes(chain.id);
@@ -201,11 +202,11 @@ const RankingChart = () => {
         </div>
 
         {/* SLOT AREA */}
-        <div className="shrink-0 flex flex-col gap-6 pt-2">
+        <div className="shrink-0 flex flex-col gap-[24px]">
 
           {/* Main */}
           <div>
-            <h3 className="text-gray-500 text-xs font-medium mb-2 pl-1">
+            <h3 className="text-gray-500 text-body3-m mb-[8px]">
               Main
             </h3>
             <DroppableSlot
@@ -219,10 +220,10 @@ const RankingChart = () => {
 
           {/* Comparison */}
           <div>
-            <h3 className="text-gray-500 text-xs font-medium mb-2 pl-1">
+            <h3 className="text-gray-500 text-body3-m mb-[8px]">
               Comparison
             </h3>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-[8px]">
               <DroppableSlot
                 id="sub1"
                 color={COLORS.SUB1}

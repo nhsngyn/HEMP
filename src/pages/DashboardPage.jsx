@@ -12,10 +12,9 @@ const DashboardPage = () => {
     return allChains.find(c => c.id === selectedMainId);
   }, [allChains, selectedMainId]);
 
-  // ✨ 배경색을 #111216으로 통일
   const cardStyle = {
     borderRadius: '15px',
-    background: '#111216' 
+    background:  '#15171C'
   };
 
   return (

@@ -1,21 +1,34 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect, useRef } from 'react';
 import ReactECharts from 'echarts-for-react';
 import useChainStore from '../../store/useChainStore';
 import useChainSelection from '../../hooks/useChainSelection';
 import { BUBBLE_CHART } from '../../constants/chart';
 
 const HempMap = () => {
-  const { allChains } = useChainStore();
+  // 차트 인스턴스 접근을 위한 Ref
+  const chartRef = useRef(null);
+
+  // 1. 상태 직접 구독 (반응성 보장)
+  const { allChains, selectedMainId, selectedSubId1, selectedSubId2 } = useChainStore();
   
-  // 선택된 체인 정보 및 핸들러 가져오기
   const { 
     selectChain,
-    getSelectionInfo,
-    selectedMainId, selectedSubId1, selectedSubId2
+    getSelectionInfo
   } = useChainSelection();
 
-  // 툴팁용 데이터 매핑 (체인 이름 -> 체인 객체)
+  // 2. 창 크기 변경 시 차트 리사이즈 (반응형 해결)
+  useEffect(() => {
+    const handleResize = () => {
+      if (chartRef.current) {
+        chartRef.current.getEchartsInstance().resize();
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const chainMap = useMemo(() => {
+    if (!allChains) return {};
     return allChains.reduce((acc, chain) => {
       acc[chain.name] = chain;
       return acc;
@@ -23,192 +36,242 @@ const HempMap = () => {
   }, [allChains]);
 
   const option = useMemo(() => {
-    if (!allChains || allChains.length === 0) return {};
+    if (!allChains || allChains.length === 0) return null;
 
-    const hasAnySelection = selectedMainId || selectedSubId1 || selectedSubId2;
-    
-    // ✨ 상수 파일에서 정의된 값 사용
+    // 선택 여부 확인
+    const hasAnySelection = !!(selectedMainId || selectedSubId1 || selectedSubId2);
     const { SIZES, THRESHOLDS } = BUBBLE_CHART;
 
-    // 프로포절 개수 기준 버블 크기 계산 (고정 임계값 사용)
     const calculateBubbleSize = (proposalCount, isSelected) => {
-      const count = proposalCount || 0;
+      const count = Number(proposalCount) || 0;
       let baseSize;
-
-      // Q3 이상 (Huge)
-      if (count >= THRESHOLDS.Q3) {
-        baseSize = SIZES.HUGE;
-      } 
-      // Q2 이상 (Large)
-      else if (count >= THRESHOLDS.Q2) {
-        baseSize = SIZES.LARGE;
-      } 
-      // Q1 이상 (Medium)
-      else if (count >= THRESHOLDS.Q1) {
-        baseSize = SIZES.MEDIUM;
-      } 
-      // 나머지 (Small)
-      else {
-        baseSize = SIZES.SMALL;
-      }
-
-      // 선택된 경우 크기 확대
+      if (count >= THRESHOLDS.Q3) baseSize = SIZES.HUGE;
+      else if (count >= THRESHOLDS.Q2) baseSize = SIZES.LARGE;
+      else if (count >= THRESHOLDS.Q1) baseSize = SIZES.MEDIUM;
+      else baseSize = SIZES.SMALL;
       return isSelected ? baseSize + SIZES.SELECTED_OFFSET : baseSize;
     };
 
     const seriesData = allChains.map((chain) => {
+      // 3. 여기서 선택 상태를 실시간 계산 (Selection Hook 사용)
       const selection = getSelectionInfo(chain.id);
-      const isSelected = !!selection;
-
+      const isSelected = !!selection; // boolean 변환
       const size = calculateBubbleSize(chain.proposals, isSelected);
       const logoUrl = chain.logoUrl || "";
 
       return {
         name: chain.name,
-        // [X축: HEMP Score, Y축: Participation]
-        value: [chain.score, chain.participation || 0],
+        value: [Number(chain.score) || 0, Number(chain.participation) || 0],
         symbol: 'circle',
         symbolSize: size,
-        
-        // 버블 내부 로고 (Rich Text)
         label: {
           show: true,
           position: 'center',
-          formatter: logoUrl ? '{logo|}' : '', // 로고 없으면 빈 문자열
+          formatter: logoUrl ? '{logo|}' : '',
           rich: {
             logo: {
               backgroundColor: { image: logoUrl },
               width: size * 0.9,
               height: size * 0.9,
-              borderRadius: (size * 0.9) / 2, // 둥근 로고
+              borderRadius: (size * 0.9) / 2,
             }
           }
         },
-        
-        // 스타일 설정
         itemStyle: {
-          color: '#E5E7EB', // 기본 버블 색상 (연한 회색/흰색)
-          
-          // 선택 안 된 상태에서 다른 게 선택되어 있다면 흐리게 처리
+          color: '#E5E7EB',
+          // 선택된 게 있는데 나는 선택 안 됐다면 흐리게
           opacity: hasAnySelection && !isSelected ? 0.1 : 1,
-          
-          // 선택 시 테두리 색상 (Main/Sub 색상)
           borderColor: isSelected ? selection.color : 'transparent',
           borderWidth: isSelected ? 3 : 0,
-          
-          // 선택 시 그림자 효과
           shadowBlur: isSelected ? 15 : 0,
           shadowColor: isSelected ? selection.color : 'transparent'
         },
-        // 선택된 버블이 항상 위에 오도록 Z-index 설정
         z: isSelected ? 100 : 2
       };
     });
 
+    const axisTextStyle = {
+      color: '#6D7380',
+      fontFamily: 'SUIT',
+      fontSize: 12,
+      fontWeight: 500,
+      lineHeight: 15.6,
+    };
+
+    const solidAxisLineStyle = {
+      show: true,
+      lineStyle: { color: '#6D7380', type: 'solid', width: 1 }
+    };
+
+    // 점선 라벨 스타일
+    const axisPointerLabelStyle = {
+      backgroundColor: '#29303A',
+      color: '#FFFFFF',
+      fontFamily: 'SUIT',
+      fontSize: 12,
+      padding: [4, 6],
+      borderRadius: 4,
+    };
+
     return {
       backgroundColor: 'transparent',
       textStyle: { fontFamily: 'SUIT' },
+      
+      // 애니메이션 설정
+      animation: true,
+      animationDuration: 300,
+
       grid: {
-        top: '25%', right: '10%', bottom: '15%', left: '10%',
-        containLabel: true
+        top: '20%', bottom: '12%', left: '8%', right: '8%',
+        containLabel: false 
       },
+
+      // 4. 툴팁: 'item' 트리거 (버블 위에 있을 때만 정보창 표시)
       tooltip: {
         trigger: 'item',
-        backgroundColor: 'rgba(26, 27, 32, 0.95)',
-        borderColor: '#4B5563',
-        textStyle: { color: '#fff', fontFamily: 'SUIT' },
+        padding: 0,
+        borderWidth: 0,
+        backgroundColor: 'transparent',
         formatter: (params) => {
           const chainData = chainMap[params.name]; 
           if (!chainData) return '';
           
-          // 툴팁 내용 구성
-          const logoImg = chainData.logoUrl 
-            ? `<img src="${chainData.logoUrl}" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;border-radius:50%;" />` 
-            : '';
-
           return `
-            <div style="font-weight:bold; margin-bottom:6px; font-size:14px; display:flex; align-items:center;">
-              ${logoImg} ${params.name}
-            </div>
-            <div style="color:#9CA3AF; font-size:12px; line-height:1.6;">
-              HEMP Score: <b style="color:white">${params.value[0]}</b><br/>
-              Participation: <b style="color:white">${params.value[1]}%</b><br/>
-              Proposals: <b style="color:#FCD34D">${chainData.proposals || 0}</b>
+            <div style="
+              display: inline-flex;
+              padding: 4px 8px;
+              align-items: center;
+              gap: 8px;
+              border-radius: 4px;
+              background: #29303A; 
+              font-family: 'SUIT';
+              font-size: 12px;
+              font-weight: 500;
+              line-height: 1.3;
+              box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            ">
+              <span style="color: #9CA3AF;">Proposals</span>
+              <span style="color: #FFFFFF;">${chainData.proposals || 0}</span>
             </div>
           `;
         }
       },
+
       xAxis: {
         name: 'HEMP Score',
-        nameLocation: 'middle',
-        nameGap: 25,
-        type: 'value',
-        scale: true, // 0부터 시작하지 않음
-        splitLine: { 
-          show: true,
-          lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' } 
-        },
-        axisLabel: { color: '#6D7380', fontSize: 11 },
-        nameTextStyle: { color: '#6D7380', fontSize: 11, fontWeight: 'bold' }
-      },
-      yAxis: {
-        name: 'Participation',
-        nameRotate: 90,
-        nameLocation: 'middle',
-        nameGap: 40,
+        nameLocation: 'end',
+        nameGap: 10,
+        nameTextStyle: { ...axisTextStyle, align: 'right', verticalAlign: 'top', padding: [10, 0, 0, 0] },
         type: 'value',
         scale: true,
+        axisLabel: { show: false }, 
+        axisTick: { show: false }, 
+        axisLine: solidAxisLineStyle,
+        
         splitLine: { 
           show: true,
           lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' } 
         },
-        axisLabel: { formatter: '{value}%', color: '#6D7380', fontSize: 11 },
-        nameTextStyle: { color: '#6D7380', fontSize: 11, fontWeight: 'bold' }
+        
+        // 5. 점선(수치) 강제 표시: tooltip trigger가 item이어도 점선이 나오게 설정
+        axisPointer: {
+          show: true, // 항상 켜짐
+          type: 'line',
+          snap: false, // 마우스 따라 부드럽게 이동
+          lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.3)' },
+          label: {
+            show: true,
+            ...axisPointerLabelStyle,
+            formatter: (params) => Math.round(params.value)
+          }
+        }
       },
+
+      yAxis: {
+        name: 'Participation',
+        nameLocation: 'end',
+        nameGap: 10,
+        nameTextStyle: { ...axisTextStyle, align: 'left', padding: [0, 0, 0, -10] },
+        type: 'value',
+        scale: true,
+        axisLabel: { show: false }, 
+        axisTick: { show: false }, 
+        axisLine: solidAxisLineStyle,
+        
+        splitLine: { 
+          show: true,
+          lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' } 
+        },
+
+        // 5. 점선(수치) 강제 표시
+        axisPointer: {
+          show: true, // 항상 켜짐
+          type: 'line',
+          snap: false, // 마우스 따라 부드럽게 이동
+          lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.3)' },
+          label: {
+            show: true,
+            ...axisPointerLabelStyle,
+            formatter: (params) => Math.round(params.value)
+          }
+        }
+      },
+
       series: [
         {
           type: 'scatter',
           data: seriesData,
-          // 애니메이션 설정
-          animationDurationUpdate: 500,
-          animationEasingUpdate: 'cubicOut'
+          large: true, 
+          largeThreshold: 500,
         }
       ]
     };
-  }, [allChains, selectedMainId, selectedSubId1, selectedSubId2, getSelectionInfo, chainMap]);
+  }, [allChains, selectedMainId, selectedSubId1, selectedSubId2, getSelectionInfo, chainMap]); // 의존성 배열 확인
 
-  // 클릭 핸들러
   const onChartClick = (params) => {
     const clickedChain = allChains.find(c => c.name === params.name);
     if (clickedChain) {
-      // 체인 선택 액션 실행
       selectChain(clickedChain.id);
     }
   };
 
+  // 로딩
+  if (!allChains || allChains.length === 0) {
+    return (
+      <div className="w-full h-full flex items-center justify-center text-gray-500">
+        <span className="animate-pulse">Loading Chart...</span>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full h-full relative">
-      {/* 차트 제목 (왼쪽 상단 배지 스타일) */}
       <div className="absolute top-4 left-5 flex items-center gap-2 z-10 pointer-events-none">
-        <div 
-          className="flex items-center justify-center rounded-full text-[11px] font-bold text-gray-300"
-          style={{ width: '20px', height: '20px', backgroundColor: 'rgba(255,255,255,0.1)' }}
-        >
-          1
-        </div>
-        <h3 className="text-white font-bold text-base">
-          HEMP Map
-        </h3>
+        <img src="/Icons/icn_num1.png" alt="1" width="20" height="20" />
+        <h3 className="text-white font-bold text-base">HEMP Map</h3>
       </div>
 
-      <ReactECharts 
-        option={option} 
-        style={{ height: '100%', width: '100%' }} 
-        opts={{ renderer: 'svg' }}
-        onEvents={{
-          click: onChartClick
-        }}
-      />
+      <div className="absolute top-4 right-5 z-10 group">
+        <img 
+          src="/Icons/Frame 183.png" 
+          alt="Info" 
+          width="20" height="20"
+          className="cursor-help opacity-70 hover:opacity-100 transition-opacity"
+        />
+        <div className="absolute right-0 top-6 w-48 p-2 bg-gray-800 text-xs text-gray-300 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+          Circle size reflects the volume of proposals.
+        </div>
+      </div>
+
+      {option && (
+        <ReactECharts 
+          ref={chartRef}
+          option={option} 
+          style={{ height: '100%', width: '100%' }} 
+          opts={{ renderer: 'svg' }}
+          onEvents={{ click: onChartClick }}
+        />
+      )}
     </div>
   );
 };

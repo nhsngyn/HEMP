@@ -1,0 +1,91 @@
+﻿id,title,type,status,ProcessingTime,Participation,Consensus
+204,Quasar partnership proposal for cosmos etf,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",1.0,0.9179
+268,Upgrade v29 Phoenix,MsgSoftwareUpgrade,REJECTED,"3 days, 0 hours 0 minutes",1.0,0.9621
+28,USDC Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.957967929,0.9977
+27,ATOM  LUNA Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.954981327,0.9983
+25,ATOM Airdrop for LUNALUNCCOSMOS holders ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.945588082,0.9976
+257,ATOM Airdrop  First Airdrop 2025 ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.942247238,0.9879
+26,APTOS Airdrop for LUNALUNCCOSMOS holders ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.925959786,0.9974
+258,Whitelist Union Labs as Cosmwasm Deployer,MsgUpdateParams,REJECTED,"3 days, 0 hours 15 minutes",0.915005155,0.2081
+267,Nebula7    Get Atom Airdrop  New Version ,Text,REJECTED,"3 days, 0 hours 0 minutes",0.862829971,0.981
+31,ATOM  LUNA Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.854998326,0.9974
+29,USDC Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.854086345,0.998
+30,ATOM Airdrop for LUNALUNCCOSMOS holders ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.853675853,0.9981
+24,ATOM  LUNA Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.819425485,0.9978
+23, Increase Deposit for Proposals to 100 STRD,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.814889752,0.9965
+19,Parameter Change Increase Deposit for Proposals to 2000 STRD,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 1 minutes",0.782821952,0.4217
+20,APTOS Airdrop for LUNALUNCCOSMOS holders ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.770501792,0.9971
+21,ATOM Airdrop for LUNALUNCCOSMOS holders ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.770425791,0.9971
+14,APTOS Airdrop for LUNALUNCCOSMOS holders ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.741184318,0.9956
+18,New Features Available ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.740504121,0.9966
+15,ATOM  LUNA Airdrop ,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 0 minutes",0.728328437,0.9958
+2,Stride v2 Orion Release,MsgExecLegacyContent,REJECTED,"3 days, 0 hours 11 minutes",0.563307607,0.1554
+206,Stride v10 Perseus Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 2 minutes",1.0,0.9998
+207,Stride v11 Virgo Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 2 minutes",1.0,0.9999
+228,Transfer 9000000 STRD from the Stride Incentive Pool to the Stride Incentives Multisig,MsgExecLegacyContent,PASSED,"3 days, 0 hours 2 minutes",1.0,0.9998
+230,Temporarily Authorize Stride Association to Control dYdX Hostchain Validator Set,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9997
+201,Join ATOM Economic Zone and adopt ICS,MsgExecLegacyContent,PASSED,"3 days, 0 hours 57 minutes",1.0,0.9901
+208,Stride v12 Andromeda Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9995
+233,Stride v19 Pictor Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+205,Signaling proposal to acquire Bad Kids,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.7099
+214,Stride v14 Pegasus Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+198,Enable Autopilot,MsgExecLegacyContent,PASSED,"3 days, 0 hours 11 minutes",1.0,0.9999
+234,Facilitate a large deposit of DYDX from the dYdX community treasury,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9667
+232,Enable Conversion of USDC Staking Rewards to DYDX for the dYdX Host Zone,MsgCreateTradeRoute,PASSED,"3 days, 0 hours 3 minutes",1.0,0.9999
+226,Stride v17 Leo Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+235,Stride v20 Crux Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+217,Stride v15 Aries Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+165,Stride v8 Octans Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 2 minutes",1.0,1.0
+250,Decrease Max ICA Messages Per TX for SOMM,MsgUpdateHostZoneParams,PASSED,"3 days, 1 hours 7 minutes",1.0,0.9999
+154,Stride v7 Taurus Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 3 minutes",1.0,0.9999
+229,Stride v18 Chamaeleon Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+212,Set Unbonding Time in CCV Consumer to 14 Days,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9401
+211,Stride v13 Volans Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+227,ParamChange Change Block Params to Match Cosmos Hub,MsgUpdateParams,PASSED,"3 days, 0 hours 2 minutes",1.0,0.9989
+202,Stride v9 Cetus Release,MsgExecLegacyContent,PASSED,"3 days, 1 hours 54 minutes",1.0,0.9999
+263,Disable LSMLiquidStakes for cosmoshub4,MsgExecLegacyContent,PASSED,"3 days, 0 hours 48 minutes",1.0,0.9999
+237,Stride v22 Cassiopeia Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+248,Decrease Max ICA Messages Per TX for ATOM,MsgUpdateHostZoneParams,PASSED,"3 days, 0 hours 25 minutes",1.0,0.9992
+220,Stride v16 Bootes Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,1.0
+239,Set CosmWasm Instantiate Permissions,MsgUpdateParams,PASSED,"3 days, 0 hours 2 minutes",1.0,0.9999
+249,Stride v24 Pavo Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+203,Stride and Carbon Alliance Proposal stLUNA as Carbons Alliance Asset and STRD incentives for STRD collateral,MsgExecLegacyContent,PASSED,"3 days, 0 hours 24 minutes",1.0,0.9783
+255,Whitelist Interchain Inc as Cosmwasm Deployer,MsgUpdateParams,PASSED,"3 days, 0 hours 16 minutes",1.0,0.9999
+223,Increase Community Tax to 5 Percent,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9953
+265,Proposal Transfer Ownership of stBGT to BakerDAO,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+240,Implement CopyStaking for Strides Osmosis Delegations,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9576
+254,Adjust Strides Host Chain Delegations for dYdX Chain,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9848
+152,Stride v6 Tucana Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 5 minutes",1.0,0.9999
+261,Stride v26 Fornax Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+247,Stride v23 Centaurus Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+251,Decrease Max ICA Messages Per TX for ATOM OSMO,MsgUpdateHostZoneParams,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+236,Stride v21 Cygus Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+243,Adding the Haqq Network to Strides roadmap,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9998
+264,Stride v27 Lacerta Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 1 minutes",1.0,0.9999
+270,Stride Split STRD  STRDR,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9783
+259,Use NonSTRD Community Pool Funds to buy Mammoths,MsgCommunityPoolSpend,PASSED,"3 days, 0 hours 5 minutes",1.0,0.4116
+269,correct one Upgrade v29 Phoenix,MsgSoftwareUpgrade,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9937
+260,Stride v25 Serpens Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+266,Stride v28 Pyxis Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+252,Stride Tokenomics Update Allocate Protocol Fees to Buy Back and Burn STRD,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9628
+242,Increase TxSizeCostPerByte to Reduce Spam,MsgUpdateParams,PASSED,"3 days, 0 hours 2 minutes",1.0,0.9996
+241,Expand the Incentives Budget to Encompass DEX and CEX liquidity for STRD,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+12,Stride v5 Draco Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 1 minutes",1.0,0.9998
+9,Stride v4 Lyra Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 4 minutes",1.0,0.9999
+253,Decrease Max ICA Messages Per TX for SAGA,MsgUpdateHostZoneParams,PASSED,"3 days, 0 hours 1 minutes",1.0,0.9999
+256,Signaling Proposal 17857 STRD Grant for Bnocscom Dashboard,Text,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9989
+8,ReAllocate the Stride Protocol Commission Fee,MsgExecLegacyContent,PASSED,"3 days, 0 hours 3 minutes",1.0,0.9999
+153,Incentive Diversification,MsgExecLegacyContent,PASSED,"3 days, 0 hours 3 minutes",1.0,0.9632
+246,Launch the Stride Rewards Share Program,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9858
+262,Stride Tokenomics Adjustment Protocol Development and Sustainability,Text,PASSED,"3 days, 0 hours 7 minutes",1.0,0.9999
+13,Parameter Change Remove Validator Rebalancing Threshold,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",1.0,0.9999
+7,Stride v3 Aquarius Release,MsgExecLegacyContent,PASSED,"3 days, 0 hours 47 minutes",0.993408127,1.0
+215,Enable ustrd as an ICS reward denom,MsgExecLegacyContent,PASSED,"3 days, 0 hours 3 minutes",0.990823831,0.9999
+245,Implement CopyStaking for Strides Stargaze Delegations,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.989960114,0.9999
+244,Increase Max ICA Messages Per TX for ATOM STARS,MsgUpdateHostZoneParams,PASSED,"3 days, 0 hours 2 minutes",0.894348009,1.0
+22,Parameter Change Increase Deposit for Proposals to 2000 STRD,MsgExecLegacyContent,PASSED,"3 days, 0 hours 5 minutes",0.832476998,0.9986
+10,Redelegate Strides Cosmos Hub Validator Set,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.820881219,0.9869
+11,Setting Strides Roadmap for 2023,MsgExecLegacyContent,PASSED,"3 days, 0 hours 0 minutes",0.813040994,0.9682
+5,Stride v2 Orion Release,MsgExecLegacyContent,PASSED,"3 days, 3 hours 16 minutes",0.786996101,0.9631
+6,Param Change Initialize Num Validators Safety Param,MsgExecLegacyContent,PASSED,"3 days, 0 hours 3 minutes",0.71847557,1.0
+271,Upgrade v30 Hydrus,MsgSoftwareUpgrade,PASSED,"3 days, 0 hours 0 minutes",0.622498782,1.0

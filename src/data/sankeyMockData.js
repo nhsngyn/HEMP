@@ -1,4 +1,4 @@
-// [자동 생성] 실제 CSV 데이터에서 변환된 프로포절 데이터: 12/20/2025, 8:51:44 PM
+// [자동 생성] 실제 CSV 데이터에서 변환된 프로포절 데이터: 12/21/2025, 10:46:21 PM
 // 각 프로포절은 type, participationLevel, voteComposition, result, processingSpeed를 가짐
 
 export const sankeyMockPropositions = {

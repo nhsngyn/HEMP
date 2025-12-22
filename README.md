@@ -68,6 +68,3 @@ src/
 - **Production**: https://hemp-taupe.vercel.app
 - **Repository**: https://github.com/nhsngyn/HEMP
 
-## 라이선스
-
-MIT

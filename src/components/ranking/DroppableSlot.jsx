@@ -10,7 +10,7 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
   const selectedChain = allChains.find((c) => c.id === selectedChainId);
   const isSelected = !!selectedChain;
 
-  const logoUrl = selectedChain?.logoUrl || "/logos/chainImg.png"; 
+  const logoUrl = selectedChain?.logoUrl || ""; 
   const chainName = selectedChain?.name;
 
   // 스타일 상수
@@ -35,8 +35,8 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
         ${isOver ? "ring-1 ring-gray-500 bg-gray-800/50" : ""}
       `}
       style={{
-        border: isSelected ? '1px solid COLORS.GRAY800' : `1px dashed #29303A`, 
-        backgroundColor: isSelected ? 'COLORS.GRAY800' : 'transparent',
+        border: isSelected ? `1px solid ${COLORS.GRAY800}` : `1px dashed #29303A`, 
+        backgroundColor: isSelected ? COLORS.GRAY800 : 'transparent',
       }}
     >
       {/* 1. 하이라이트 선 (Left Edge Bar) */}
@@ -65,9 +65,13 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
                       src={logoUrl} 
                       alt={`${chainName} logo`}
                       className="rounded-full flex-shrink-0 bg-white"
-                      style={{ width: LOGO_SIZE, height: LOGO_SIZE }}
+                      style={{ 
+                        width: LOGO_SIZE, 
+                        height: LOGO_SIZE,
+                        objectFit: 'cover'
+                      }}
                   />
-                  <span className="text-body2-sb">
+                  <span className="text-[15px] font-semibold">
                       {chainName}
                   </span>
               </div>
@@ -97,7 +101,7 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
                 className="rounded-full bg-gray-600 flex-shrink-0"
                 style={{ width: LOGO_SIZE, height: LOGO_SIZE }}
               ></div>
-              <span className="text-gray-400 text-body2-sb">
+              <span className="text-gray-400 text-[15px] font-semibold">
                 {placeholderText || "Select Chain"}
               </span>
           </div>

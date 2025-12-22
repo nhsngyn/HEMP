@@ -74,14 +74,20 @@ const ProposalsTable = ({ mainChain }) => {
   };
 
   const formatStatus = (prop) => {
-    // 우선 실제 데이터에서 넘어온 status가 있으면 그대로 사용
-    if (prop.status) return prop.status;
+    let statusText = '';
 
-    // 그 외에는 result 기반으로 3가지 상태만 표기
-    if (prop.result === 'Passed') return 'PASSED';
-    if (prop.result === 'Rejected') return 'REJECTED';
-    // 나머지는 Failed로 처리
-    return 'FAILED';
+    // 우선 실제 데이터에서 넘어온 status가 있으면 그대로 사용
+    if (prop.status) {
+      statusText = prop.status;
+    } else {
+      // 그 외에는 result 기반으로 3가지 상태만 표기
+      if (prop.result === 'Passed') statusText = 'PASSED';
+      else if (prop.result === 'Rejected') statusText = 'REJECTED';
+      else statusText = 'FAILED';
+    }
+
+    // 퍼센트 제거 (예: "PASSED (26.3%)" -> "PASSED")
+    return statusText.replace(/\s*\([^)]*%\)/g, '').trim();
   };
 
   const formatProcessingTime = (prop) => {
@@ -96,9 +102,20 @@ const ProposalsTable = ({ mainChain }) => {
     return '-';
   };
 
+  // 타입 포맷팅: "Msg" 제거하고 대문자 기준 띄어쓰기
+  const formatTypeForDisplay = (type) => {
+    if (!type) return 'Other';
+    if (type.startsWith('Msg')) {
+      let formatted = type.substring(3);
+      formatted = formatted.replace(/([A-Z])/g, ' $1').trim();
+      return formatted;
+    }
+    return type;
+  };
+
   return (
     <div
-      className="w-full h-full bg-[#1A1B20] rounded-lg shadow-lg flex flex-col"
+      className="w-full h-full  rounded-lg shadow-lg flex flex-col"
       style={{
         padding: 'calc(24px * var(--scale))'
       }}
@@ -108,22 +125,29 @@ const ProposalsTable = ({ mainChain }) => {
         style={{ marginBottom: 'calc(16px * var(--scale))' }}
       >
         <h2
-          className="text-white font-semibold"
-          style={{ fontSize: 'calc(1rem * var(--scale))' }}
+          className="font-bold"
+          style={{
+            fontFamily: 'SUIT',
+            fontSize: '18px',
+            color: '#D1D5DB',
+            fontWeight: '700'
+          }}
         >
           All Proposals
-        </h2> <span className="text-gray-500 font-semibold" style={{ fontSize: 'calc(1rem * var(--scale))' }}> {filteredPropositions.length}</span>
+        </h2> <span className="text-gray-500 font-semibold" style={{ fontSize: 'calc(1rem * var(--scale))', fontFamily: 'SUIT' }}> {filteredPropositions.length}</span>
       </div>
 
       <div className="overflow-x-auto flex-1 min-h-0">
         <table className="w-full">
           <thead>
-            <tr className="border-b border-gray-700">
+            <tr className="border-b border-gray-800 ">
               <th
                 className="text-left text-gray-400 font-medium"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                  fontSize: 'calc(0.875rem * var(--scale))'
+                  fontSize: '12px',
+                  fontFamily: 'SUIT',
+                  fontWeight: 600
                 }}
               >
                 ID
@@ -132,7 +156,9 @@ const ProposalsTable = ({ mainChain }) => {
                 className="text-left text-gray-400 font-medium"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                  fontSize: 'calc(0.875rem * var(--scale))'
+                  fontSize: '12px',
+                  fontFamily: 'SUIT',
+                  fontWeight: 600
                 }}
               >
                 Title
@@ -141,7 +167,10 @@ const ProposalsTable = ({ mainChain }) => {
                 className="text-left text-gray-400 font-medium"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                  fontSize: 'calc(0.875rem * var(--scale))'
+                  fontSize: '12px',
+                  fontFamily: 'SUIT',
+                  width: '180px',
+                  fontWeight: 600
                 }}
               >
                 Type
@@ -150,7 +179,9 @@ const ProposalsTable = ({ mainChain }) => {
                 className="text-left text-gray-400 font-medium"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                  fontSize: 'calc(0.875rem * var(--scale))'
+                  fontSize: '12px',
+                  fontFamily: 'SUIT',
+                  fontWeight: 600
                 }}
               >
                 Participation
@@ -159,7 +190,10 @@ const ProposalsTable = ({ mainChain }) => {
                 className="text-left text-gray-400 font-medium"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                  fontSize: 'calc(0.875rem * var(--scale))'
+                  fontSize: '12px',
+                  fontFamily: 'SUIT',
+                  maxWidth: '140px',
+                  fontWeight: 600
                 }}
               >
                 Status
@@ -168,7 +202,9 @@ const ProposalsTable = ({ mainChain }) => {
                 className="text-left text-gray-400 font-medium"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                  fontSize: 'calc(0.875rem * var(--scale))'
+                  fontSize: '12px',
+                  fontFamily: 'SUIT',
+                  fontWeight: 600
                 }}
               >
                 Processing Time
@@ -180,8 +216,12 @@ const ProposalsTable = ({ mainChain }) => {
               /* Proposals Table */
               <tr
                 key={index}
-                className={` border-gray-800 hover:bg-gray-900/50 transition-colors ${index % 2 === 0 ? 'bg-[#191C23]' : 'bg-[#101217]'
+                className={` border-gray-800 hover:bg-gray-900/50 transition-colors ${index % 2 === 0 ? 'bg-transparent' : ''
                   }`}
+                style={{
+                  height: '48px',
+                  backgroundColor: index % 2 === 1 ? '#191C23' : 'transparent'
+                }}
               >
 
                 {/* ID */}
@@ -189,7 +229,8 @@ const ProposalsTable = ({ mainChain }) => {
                   className="text-gray-400"
                   style={{
                     padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                    fontSize: 'calc(0.875rem * var(--scale))'
+                    fontSize: '14px',
+                    fontFamily: 'SUIT'
                   }}
                 >
                   #{prop.id || (1000 + index)}
@@ -197,10 +238,13 @@ const ProposalsTable = ({ mainChain }) => {
 
                 {/* Title */}
                 <td
-                  className="text-gray-100 max-w-md truncate font-medium"
+                  className="max-w-md truncate"
                   style={{
                     padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                    fontSize: 'calc(0.875rem * var(--scale))'
+                    fontSize: 'calc(1.2rem * var(--scale))',
+                    fontFamily: 'SUIT',
+                    color: '#E8EAED',
+                    fontWeight: '500'
                   }}
                 >
                   {prop.title || 'Proposal Title'}
@@ -210,11 +254,47 @@ const ProposalsTable = ({ mainChain }) => {
                   className="text-gray-200 font-bold"
                   style={{
                     padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                    fontSize: 'calc(0.875rem * var(--scale))'
+                    fontSize: 'calc(1rem * var(--scale))',
+                    fontFamily: 'SUIT',
+                    width: '180px',
+                    lineHeight: '22px'
                   }}
                 >
-                  <span className="inline-flex items-center justify-center px-3 py-2 rounded-lg bg-[#29303A] text-gray-200 text-sm">
-                    {prop.type || 'Other'}
+                  <span
+                    className="inline-flex items-center justify-center rounded-sm font-extrabold transition-transform cursor-pointer"
+                    style={{
+                      fontFamily: 'SUIT',
+                      fontSize: '12px',
+                      maxWidth: '180px',
+                      height: '22px',
+                      padding: '3px 10px',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      verticalAlign: 'middle',
+                      boxSizing: 'border-box',
+                      backgroundColor: '#29303A',
+                      color: '#D1D5DB',
+                      transformOrigin: 'center',
+                      margin: 0,
+                      lineHeight: '22px'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'scale(1.1)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'scale(1)';
+                    }}
+                  >
+                    <span style={{
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      whiteSpace: 'nowrap',
+                      maxWidth: '100%',
+                      width: '100%'
+                    }}>
+                      {formatTypeForDisplay(prop.originalType || prop.type || 'Other')}
+                    </span>
                   </span>
                 </td>
 
@@ -223,7 +303,8 @@ const ProposalsTable = ({ mainChain }) => {
                   className="text-gray-300 font-bold"
                   style={{
                     padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                    fontSize: 'calc(0.875rem * var(--scale))'
+                    fontSize: 'calc(1rem * var(--scale))',
+                    fontFamily: 'SUIT'
                   }}
                 >
                   {prop.participation || '0.00%'}
@@ -234,7 +315,9 @@ const ProposalsTable = ({ mainChain }) => {
                   className={`font-extrabold ${getStatusColor(formatStatus(prop))}`}
                   style={{
                     padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                    fontSize: 'calc(0.875rem * var(--scale))'
+                    fontSize: 'calc(1rem * var(--scale))',
+                    fontFamily: 'SUIT',
+                    maxWidth: '140px'
                   }}
                 >
                   {formatStatus(prop)}
@@ -245,7 +328,8 @@ const ProposalsTable = ({ mainChain }) => {
                   className="text-gray-400 font-semibold"
                   style={{
                     padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                    fontSize: 'calc(0.875rem * var(--scale))'
+                    fontSize: 'calc(1rem * var(--scale))',
+                    fontFamily: 'SUIT'
                   }}
                 >
                   {formatProcessingTime(prop)}

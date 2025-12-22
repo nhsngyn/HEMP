@@ -1,18 +1,15 @@
-const { COLORS } = require('./src/constants/colors');
-
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      /* =========================
-       * COLOR SYSTEM
-       * ========================= */
-      colors: {
-        ...COLORS,
+      fontFamily: {
+        sans: ['SUIT', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
       },
+<<<<<<< HEAD
 
       /* =========================
        * TYPOGRAPHY SYSTEM
@@ -49,13 +46,14 @@ module.exports = {
         'body3-r': ['14px', { lineHeight: '140%', letterSpacing: '-0.02em', fontWeight: '400' }],
 
         // Caption 1
-        'caption1-ex': ['12px', { lineHeight: '130%', letterSpacing: '-0.02em', fontWeight: '800' }],
+        'caption1-eb': ['12px', { lineHeight: '130%', letterSpacing: '-0.02em', fontWeight: '800' }],
         'caption1-b': ['12px', { lineHeight: '130%', letterSpacing: '-0.02em', fontWeight: '700' }],
         'caption1-sb': ['12px', { lineHeight: '130%', letterSpacing: '-0.02em', fontWeight: '600' }],
         'caption1-m': ['12px', { lineHeight: '130%', letterSpacing: '-0.02em', fontWeight: '500' }],
         'caption1-r': ['12px', { lineHeight: '130%', letterSpacing: '-0.02em', fontWeight: '400' }],
+
       },
     },
   },
   plugins: [],
-};
+}

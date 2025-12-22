@@ -36,7 +36,7 @@ const DashboardPage = () => {
           <p className="text-gray-400 font-normal text-sm">
             Multidimensional Chain Health via HEMP
           </p>
-          <h2 className="text-white text-3xl font-bold mt-1">
+          <h2 className="text-gray-100 text-3xl font-bold mt-1">
             Deeper Analysis on Blockchains
           </h2>
         </div>

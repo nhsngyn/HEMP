@@ -14,7 +14,7 @@ const DashboardPage = () => {
 
   const cardStyle = {
     borderRadius: '15px',
-    background:  '#15171C'
+    background: '#15171C'
   };
 
   return (

@@ -33,7 +33,8 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
         className="
           flex-shrink-0 
           text-gray-200 
-          text-body2_m
+          text-base 
+          font-medium 
           truncate
         "
         style={{ width: '80px' }} 
@@ -48,11 +49,11 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
   <div
     className="
       relative
-      flex-1
       h-[20px]
       rounded-[3.59px]
       overflow-hidden
     "
+    style={{ width: '120px' }}
   >
     {/* 100점 기준 바 */}
     <div
@@ -60,10 +61,10 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
         absolute left-0 top-0
         h-full
         rounded-[3.59px]
-        bg-GRAY800
       "
       style={{
         width: '120px',
+        backgroundColor: COLORS.GRAY800,
       }}
     />
 

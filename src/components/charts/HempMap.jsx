@@ -7,10 +7,16 @@ import { COLORS } from '../../constants/colors';
 
 const HempMap = () => {
   const chartRef = useRef(null);
-  const { allChains, selectedMainId, selectedSubId1, selectedSubId2 } = useChainStore();
+
+  const {
+    allChains,
+    selectedMainId,
+    selectedSubId1,
+    selectedSubId2,
+  } = useChainStore();
+
   const { selectChain, getSelectionInfo } = useChainSelection();
 
-  // 창 크기 변경 시 차트 리사이즈 (반응형)
   useEffect(() => {
     const handleResize = () => {
       chartRef.current?.getEchartsInstance().resize();
@@ -19,6 +25,7 @@ const HempMap = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  /* ---------------- chain map ---------------- */
   const chainMap = useMemo(() => {
     if (!allChains) return {};
     return allChains.reduce((acc, chain) => {
@@ -27,46 +34,45 @@ const HempMap = () => {
     }, {});
   }, [allChains]);
 
+  /* ---------------- chart option ---------------- */
   const option = useMemo(() => {
     if (!allChains || allChains.length === 0) return null;
 
-    const hasAnySelection = !!(selectedMainId || selectedSubId1 || selectedSubId2);
     const { SIZES, THRESHOLDS } = BUBBLE_CHART;
 
     const calculateBubbleSize = (proposalCount, isSelected) => {
       const count = Number(proposalCount) || 0;
-      let baseSize;
-      if (count >= THRESHOLDS.Q3) baseSize = SIZES.HUGE;
-      else if (count >= THRESHOLDS.Q2) baseSize = SIZES.LARGE;
-      else if (count >= THRESHOLDS.Q1) baseSize = SIZES.MEDIUM;
-      else baseSize = SIZES.SMALL;
-      return isSelected ? baseSize + SIZES.SELECTED_OFFSET : baseSize;
+      let base;
+      if (count >= THRESHOLDS.Q3) base = SIZES.HUGE;
+      else if (count >= THRESHOLDS.Q2) base = SIZES.LARGE;
+      else if (count >= THRESHOLDS.Q1) base = SIZES.MEDIUM;
+      else base = SIZES.SMALL;
+      return isSelected ? base + SIZES.SELECTED_OFFSET : base;
     };
 
     const seriesData = allChains.map((chain) => {
       const selection = getSelectionInfo(chain.id);
-      const isSelected = !!selection;
+      const isSelected = Boolean(selection);
       const size = calculateBubbleSize(chain.proposals, isSelected);
-      const logoUrl = chain.logoUrl || '';
+      const logoUrl = chain.logoUrl;
 
       return {
         id: chain.id,
         name: chain.name,
-        value: [Number(chain.score) || 0, Number(chain.participation) || 0],
-
-        // ✅ 로고 정렬 해결: symbol을 이미지로 사용
+        value: [
+          Number(chain.score) || 0,
+          Number(chain.participation) || 0,
+        ],
         symbol: logoUrl ? `image://${logoUrl}` : 'circle',
-        symbolSize: size * 0.9,
-
-        // (기존 디자인 유지)
+        symbolSize: size,
+        
         itemStyle: {
-          color: COLORS.GRAY100,
-          opacity: hasAnySelection && !isSelected ? 0.1 : 1,
-          borderColor: isSelected ? selection.color : 'transparent',
-          borderWidth: isSelected ? 3 : 0,
-          shadowBlur: isSelected ? 15 : 0,
+          opacity: isSelected ? 1 : 0.2, 
+          shadowBlur: isSelected ? 20 : 0,
           shadowColor: isSelected ? selection.color : 'transparent',
+          color: logoUrl ? undefined : COLORS.WHITE,
         },
+        
         z: isSelected ? 100 : 10,
       };
     });
@@ -80,16 +86,19 @@ const HempMap = () => {
       letterSpacing: -0.24,
     };
 
-    const solidAxisLineStyle = {
+    const axisLineStyle = {
       show: true,
-      lineStyle: { color: COLORS.GRAY400, type: 'solid', width: 1 },
+      lineStyle: {
+        color: COLORS.GRAY700,
+        type: 'solid',
+        width: 1,
+      },
     };
 
     return {
       backgroundColor: 'transparent',
+      animation: false,
       textStyle: { fontFamily: 'SUIT' },
-      animation: true,
-      animationDuration: 200,
 
       grid: {
         left: 83,
@@ -100,14 +109,20 @@ const HempMap = () => {
       },
 
       tooltip: {
-        trigger: 'item',
-        position: 'top',
+        trigger: 'item', 
         backgroundColor: 'transparent',
         padding: 0,
         borderWidth: 0,
+
         axisPointer: {
-          type: 'cross',
-          snap: true,
+          show: true,     
+          type: 'cross',  
+          snap: true,     
+          crossStyle: {
+            type: 'dashed',
+            width: 1,
+            color: COLORS.GRAY300,
+          },
           label: {
             show: true,
             backgroundColor: 'transparent',
@@ -115,32 +130,25 @@ const HempMap = () => {
             fontFamily: 'SUIT',
             fontSize: 14,
             fontWeight: 600,
+            color: COLORS.WHITE,
             formatter: (params) => Math.round(params.value),
           },
-          crossStyle: {
-            type: 'dashed',
-            width: 1,
-          },
         },
+
         formatter: (params) => {
           const chainData = chainMap[params.name];
           if (!chainData) return '';
           return `
             <div style="
-              display: inline-flex;
-              padding: 4px 8px;
-              align-items: center;
-              gap: 8px;
-              border-radius: 4px;
-              background: ${COLORS.GRAY700};
-              font-family: 'SUIT';
-              font-size: 12px;
-              font-weight: 500;
-              box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+              display:inline-flex;
+              padding:4px 8px;
+              gap:8px;
+              border-radius:4px;
+              background:${COLORS.GRAY700};
               margin-bottom: 8px;
             ">
-              <span style="color: ${COLORS.GRAY300};">Proposals</span>
-              <span style="color: ${COLORS.WHITE};">${chainData.proposals || 0}</span>
+              <span style="color:${COLORS.GRAY200}; font-size:12px;">Proposals</span>
+              <span style="color:${COLORS.WHITE}; font-weight:600;">${chainData.proposals ?? 0}</span>
             </div>
           `;
         },
@@ -153,17 +161,18 @@ const HempMap = () => {
           ...axisTextStyle,
           align: 'right',
           verticalAlign: 'top',
-          padding: [12, 16, 0, 0], // 6px 간격 유지
+          padding: [12, 16, 0, 0],
         },
         type: 'value',
         scale: true,
         axisLabel: { show: false },
         axisTick: { show: false },
-        axisLine: solidAxisLineStyle,
+        axisLine: axisLineStyle,
         splitLine: {
           show: true,
           lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' },
         },
+        axisPointer: { show: true, snap: true }
       },
 
       yAxis: {
@@ -180,11 +189,12 @@ const HempMap = () => {
         scale: true,
         axisLabel: { show: false },
         axisTick: { show: false },
-        axisLine: solidAxisLineStyle,
+        axisLine: axisLineStyle,
         splitLine: {
           show: true,
           lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' },
         },
+        axisPointer: { show: true, snap: true }
       },
 
       series: [
@@ -192,16 +202,30 @@ const HempMap = () => {
           type: 'scatter',
           data: seriesData,
           cursor: 'pointer',
-          large: false,
+          large: true,
+          progressive: 500,
+          emphasis: {
+            scale: false,
+            itemStyle: {}
+          }
         },
       ],
     };
-  }, [allChains, selectedMainId, selectedSubId1, selectedSubId2, getSelectionInfo, chainMap]);
+  }, [
+    allChains,
+    selectedMainId,
+    selectedSubId1,
+    selectedSubId2,
+    getSelectionInfo,
+    chainMap,
+  ]);
 
+  /* ---------------- events ---------------- */
+  
   const handleChartMouseOver = (params) => {
     if (params.componentType !== 'series') return;
-    const hoveredId = params.data.id;
 
+    const hoveredId = params.data.id;
     let lineColor = COLORS.GRAY300;
     let textColor = COLORS.WHITE;
 
@@ -216,30 +240,36 @@ const HempMap = () => {
       textColor = COLORS.SUB2;
     }
 
-    const instance = chartRef.current?.getEchartsInstance();
-    if (instance) {
-      instance.setOption({
-        tooltip: {
-          axisPointer: {
-            crossStyle: { color: lineColor },
-            label: { color: textColor },
-          },
+    chartRef.current?.getEchartsInstance().setOption({
+      tooltip: {
+        axisPointer: {
+          crossStyle: { color: lineColor },
+          label: { color: textColor },
         },
-      });
-    }
+      },
+    });
+  };
+
+  const handleChartMouseOut = () => {
+    chartRef.current?.getEchartsInstance().setOption({
+      tooltip: {
+        axisPointer: {
+          crossStyle: { color: COLORS.GRAY300 },
+          label: { color: COLORS.WHITE },
+        },
+      },
+    });
   };
 
   const onChartClick = (params) => {
-    const clickedChain = allChains.find((c) => c.name === params.name);
-    if (clickedChain) {
-      selectChain(clickedChain.id);
-    }
+    const chain = allChains.find((c) => c.name === params.name);
+    if (chain) selectChain(chain.id);
   };
 
-  if (!allChains || allChains.length === 0) {
+  if (!option) {
     return (
       <div className="w-full h-full flex items-center justify-center text-gray-500">
-        <span className="animate-pulse">Loading Chart...</span>
+        Loading Chart…
       </div>
     );
   }
@@ -247,45 +277,64 @@ const HempMap = () => {
   return (
     <div className="w-full h-full relative p-[12px]">
       <div className="absolute top-[20px] left-[12px] flex items-center gap-2 z-10 pointer-events-none">
-        <img src="/Icons/icn_num1.png" alt="1" width="20" height="20" />
+        {/* 이미지 대신 직접 그린 원형 아이콘 */}
+        <div
+          className="flex items-center justify-center w-[18px] h-[18px] rounded-full text-white font-bold font-suit text-[11px] leading-none"
+          style={{ backgroundColor: COLORS.GRAY700}}
+        >
+          1
+        </div>
         <h3 className="text-white font-bold text-base font-suit">HEMP Map</h3>
       </div>
-
-      <div className="absolute top-4 right-5 z-10 group">
+      
+      {/* 인포메이션 툴팁 영역 (기존 유지) */}
+      <div className="absolute top-5 right-5 z-50 group">
         <img
-          src="/Icons/Frame 183.png"
+          src="/Icons/icn_info.svg"
           alt="Info"
           width="24"
           height="24"
           className="cursor-help opacity-70 hover:opacity-100 transition-opacity"
         />
+
         <div
-          className="absolute right-0 top-8 w-[280px] p-3 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50"
+          className="
+            absolute
+            right-5
+            w-max
+            max-w-[370px]
+            p-2
+            rounded-lg
+            shadow-xl
+            opacity-0
+            group-hover:opacity-100
+            transition-opacity
+            duration-200
+            pointer-events-none
+          "
           style={{ backgroundColor: COLORS.GRAY700 }}
         >
           <p
-            className="font-suit text-[14px] font-medium leading-[140%] tracking-[-0.28px]"
+            className="font-suit text-[12px] font-medium leading-[140%] text-left"
             style={{ color: COLORS.GRAY300 }}
           >
-            Circle size reflects the volume of proposals.
-            <br />
+            Circle size reflects the volume of proposals.<br />
             Chains are categorized into four tiers based on their ranking.
           </p>
         </div>
       </div>
 
-      {option && (
-        <ReactECharts
-          ref={chartRef}
-          option={option}
-          style={{ height: '100%', width: '100%' }}
-          opts={{ renderer: 'svg' }}
-          onEvents={{
-            click: onChartClick,
-            mouseover: handleChartMouseOver,
-          }}
-        />
-      )}
+      <ReactECharts
+        ref={chartRef}
+        option={option}
+        style={{ width: '100%', height: '100%' }}
+        opts={{ renderer: 'canvas' }}
+        onEvents={{
+          click: onChartClick,
+          mouseover: handleChartMouseOver,
+          mouseout: handleChartMouseOut,
+        }}
+      />
     </div>
   );
 };

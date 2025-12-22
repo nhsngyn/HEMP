@@ -1,6 +1,22 @@
 const fs = require('fs');
 const path = require('path');
 
+// 타입명 포맷팅: "Msg" 제거 + 대문자 기준 띄어쓰기
+function formatTypeName(csvType) {
+  if (!csvType) return '';
+
+  // "Msg"로 시작하지 않으면 원본 그대로 반환
+  if (!csvType.startsWith('Msg')) {
+    return csvType;
+  }
+
+  // "Msg"로 시작하면 제거하고 대문자 기준으로 띄어쓰기 추가
+  let formatted = csvType.substring(3);
+  formatted = formatted.replace(/([A-Z])/g, ' $1').trim();
+
+  return formatted;
+}
+
 // CSV 파일을 읽어서 차트 데이터 형식으로 변환하는 함수
 function convertCSVToPropositions(csvFilePath, outputPath = null) {
   // CSV 파일 읽기
@@ -83,18 +99,12 @@ function convertCSVToPropositions(csvFilePath, outputPath = null) {
     return 'FAILED';
   }
 
-  // type 매핑 (CSV의 type을 차트에서 사용하는 type으로 변환)
-  const typeMapping = {
-    'MsgExecLegacyContent': 'Software Upgrade',
-    'MsgCommunityPoolSpend': 'Governance',
-    'MsgUpdateParams': 'Parameter Change',
-    // 필요에 따라 추가 매핑
-  };
-
+  // type 매핑: 단일 파일 처리이므로 포맷팅만 적용
+  // (전체 통계 기반 상위 6개 선택은 process-all-csv.cjs 사용 권장)
   function mapType(csvType) {
     if (!csvType) return 'Other';
-    // 매핑에 있으면 사용, 없으면 원본 사용 (또는 'Other')
-    return typeMapping[csvType] || 'Other';
+    // 타입명 포맷팅 적용
+    return formatTypeName(csvType);
   }
 
   // 데이터 변환

@@ -12,6 +12,10 @@ const DashboardPage = () => {
     return allChains.find(c => c.id === selectedMainId);
   }, [allChains, selectedMainId]);
 
+  const cardStyle = {
+    borderRadius: '15px',
+    background: '#15171C'
+  };
 
   return (
     <div className="flex flex-col w-full h-full">
@@ -29,11 +33,11 @@ const DashboardPage = () => {
       >
         {/* 헤더 */}
         <div className="flex flex-col justify-end h-[133px] pb-4 shrink-0">
-          <p className="text-gray-400 text-body2-r">
-            Deeper Analysis on Blockchains
+          <p className="text-gray-400 font-normal text-sm">
+            Multidimensional Chain Health via HEMP
           </p>
           <h2 className="text-white text-3xl font-bold mt-1">
-           HEMP: Health Evaluation Metric using Proposals
+            Deeper Analysis on Blockchains
           </h2>
         </div>
 

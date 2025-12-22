@@ -67,9 +67,7 @@ const HempMap = () => {
         symbolSize: size,
 
         itemStyle: {
-          // 🔥 [핵심] 호버 여부와 상관없이, 선택되면 1, 아니면 무조건 0.2
           opacity: isSelected ? 1 : 0.2,
-
           shadowBlur: isSelected ? 20 : 0,
           shadowColor: isSelected ? selection.color : 'transparent',
           color: logoUrl ? undefined : COLORS.WHITE,
@@ -206,14 +204,9 @@ const HempMap = () => {
           cursor: 'pointer',
           large: true,
           progressive: 500,
-
-          // 🔥 [핵심] 호버 시 자동 효과(사이즈 확대, 스타일 변경) 완전 차단
           emphasis: {
-            scale: false, // 호버 시 사이즈 커짐 방지
-            itemStyle: {
-              // 호버 시 스타일 변경 없음 (기존 itemStyle 유지)
-              // 명시적으로 설정하지 않으면 data의 itemStyle을 따름
-            }
+            scale: false,
+            itemStyle: {}
           }
         },
       ],
@@ -283,15 +276,63 @@ const HempMap = () => {
 
   return (
     <div className="w-full h-full relative p-[12px]">
-      <div className="absolute top-[20px] left-[12px] flex items-center gap-2 z-10 pointer-events-none">
-        <img src="/Icons/icn_num1.png" alt="1" width="20" height="20" />
-        <h3 className="text-white font-bold text-base font-suit">HEMP Map</h3>
+      <div className="absolute top-0 left-0 z-10 flex items-center gap-3 px-4 py-3">
+        <div
+          className="flex items-center justify-center rounded-full text-caption-sb"
+          style={{
+            width: '24px',
+            height: '24px',
+            backgroundColor: '#ffffff15',
+            color: '#D1D5DB',
+            fontWeight: '700'
+          }}
+        >
+          1
+        </div>
+        <h2
+          className="text-title3-b"
+          style={{ color: '#D1D5DB' }}
+        >
+          HEMP Map
+        </h2>
       </div>
 
-      <div className="absolute top-4 right-5 z-10 group">
-        <img src="/Icons/Frame 183.png" alt="Info" width="24" height="24" className="cursor-help opacity-70 hover:opacity-100 transition-opacity" />
-        <div className="absolute right-0 top-8 w-[280px] p-3 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50" style={{ backgroundColor: COLORS.GRAY700 }}>
-          <p className="font-suit text-[14px] font-medium leading-[140%] tracking-[-0.28px]" style={{ color: COLORS.GRAY300 }}>
+      {/* 인포메이션 툴팁 영역 (기존 유지) */}
+      <div className="absolute top-5 right-5 z-50 group">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="cursor-help opacity-70 hover:opacity-100 transition-opacity"
+        >
+          <circle cx="12" cy="12" r="7.5" stroke="#6D7380" />
+          <circle cx="12" cy="8.2832" r="0.75" fill="#6D7380" />
+          <rect x="11.25" y="10.166" width="1.5" height="6.30078" rx="0.75" fill="#6D7380" />
+        </svg>
+
+        <div
+          className="
+            absolute
+            right-5
+            w-max
+            max-w-[370px]
+            p-2
+            rounded-lg
+            shadow-xl
+            opacity-0
+            group-hover:opacity-100
+            transition-opacity
+            duration-200
+            pointer-events-none
+          "
+          style={{ backgroundColor: COLORS.GRAY700 }}
+        >
+          <p
+            className="font-suit text-[12px] font-medium leading-[140%] text-left"
+            style={{ color: COLORS.GRAY300 }}
+          >
             Circle size reflects the volume of proposals.<br />
             Chains are categorized into four tiers based on their ranking.
           </p>

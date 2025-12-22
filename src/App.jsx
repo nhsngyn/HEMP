@@ -105,8 +105,8 @@ function App() {
             className="shrink-0 flex flex-col"
             style={{ gap: 'calc(1px * var(--scale))', marginBottom: '24px' }}
           >
-            <p className="font-extrabold" style={{ fontSize: '16px', fontFamily: 'SUIT', fontWeight: 600, color: '#6D7380' }}>Deeper Analysis on Blockchains</p>
-            <h1 className="font-semibold" style={{ fontSize: '22px', fontFamily: 'SUIT', fontWeight: 600, color: '#E8EAED' }}>
+            <p className="text-body2-sb" style={{ color: '#6D7380' }}>Deeper Analysis on Blockchains</p>
+            <h1 className="text-title2-sb" style={{ color: '#E8EAED' }}>
               HEMP: Health Evaluation Metric using Proposals
             </h1>
           </header>

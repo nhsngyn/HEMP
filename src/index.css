@@ -114,4 +114,56 @@ a:hover {
     scrollbar-width: thin;
     scrollbar-color: #29303A transparent;
   }
+
+  /* Typography Classes */
+  /* Caption (12px) */
+  .text-caption-r {
+    font-size: 12px;
+    font-family: 'SUIT', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+  }
+  .text-caption-sb {
+    font-size: 12px;
+    font-family: 'SUIT', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+  }
+
+  /* Body (14px, 16px) */
+  .text-body2-r {
+    font-size: 14px;
+    font-family: 'SUIT', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+  }
+  .text-body2-sb {
+    font-size: 14px;
+    font-family: 'SUIT', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+  }
+  .text-body1-r {
+    font-size: 16px;
+    font-family: 'SUIT', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+  }
+  .text-body1-sb {
+    font-size: 16px;
+    font-family: 'SUIT', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+  }
+
+  /* Title (18px, 22px, 28px) */
+  .text-title3-b {
+    font-size: 18px;
+    font-family: 'SUIT', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+  }
+  .text-title2-sb {
+    font-size: 22px;
+    font-family: 'SUIT', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+  }
+  .text-title1-b {
+    font-size: 28px;
+    font-family: 'SUIT', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+  }
 }

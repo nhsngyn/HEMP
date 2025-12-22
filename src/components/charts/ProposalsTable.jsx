@@ -124,17 +124,9 @@ const ProposalsTable = ({ mainChain }) => {
         className="flex items-center  justify-start gap-2 shrink-0 "
         style={{ marginBottom: 'calc(16px * var(--scale))' }}
       >
-        <h2
-          className="font-bold"
-          style={{
-            fontFamily: 'SUIT',
-            fontSize: '18px',
-            color: '#D1D5DB',
-            fontWeight: '700'
-          }}
-        >
+        <h2 className="text-title3-b" style={{ color: '#D1D5DB' }}>
           All Proposals
-        </h2> <span className="text-gray-500 font-semibold" style={{ fontSize: 'calc(1rem * var(--scale))', fontFamily: 'SUIT' }}> {filteredPropositions.length}</span>
+        </h2> <span className="text-gray-500 text-body1-sb"> {filteredPropositions.length}</span>
       </div>
 
       <div className="overflow-x-auto flex-1 min-h-0">
@@ -142,69 +134,51 @@ const ProposalsTable = ({ mainChain }) => {
           <thead>
             <tr className="border-b border-gray-800 ">
               <th
-                className="text-left text-gray-400 font-medium"
+                className="text-left text-gray-400 text-caption-sb"
                 style={{
-                  padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                  fontSize: '12px',
-                  fontFamily: 'SUIT',
-                  fontWeight: 600
+                  padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`
                 }}
               >
                 ID
               </th>
               <th
-                className="text-left text-gray-400 font-medium"
+                className="text-left text-gray-400 text-caption-sb"
                 style={{
-                  padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                  fontSize: '12px',
-                  fontFamily: 'SUIT',
-                  fontWeight: 600
+                  padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`
                 }}
               >
                 Title
               </th>
               <th
-                className="text-left text-gray-400 font-medium"
+                className="text-left text-gray-400 text-caption-sb"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                  fontSize: '12px',
-                  fontFamily: 'SUIT',
-                  width: '180px',
-                  fontWeight: 600
+                  width: '180px'
                 }}
               >
                 Type
               </th>
               <th
-                className="text-left text-gray-400 font-medium"
+                className="text-left text-gray-400 text-caption-sb"
                 style={{
-                  padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                  fontSize: '12px',
-                  fontFamily: 'SUIT',
-                  fontWeight: 600
+                  padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`
                 }}
               >
                 Participation
               </th>
               <th
-                className="text-left text-gray-400 font-medium"
+                className="text-left text-gray-400 text-caption-sb"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                  fontSize: '12px',
-                  fontFamily: 'SUIT',
-                  maxWidth: '140px',
-                  fontWeight: 600
+                  maxWidth: '140px'
                 }}
               >
                 Status
               </th>
               <th
-                className="text-left text-gray-400 font-medium"
+                className="text-left text-gray-400 text-caption-sb"
                 style={{
-                  padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                  fontSize: '12px',
-                  fontFamily: 'SUIT',
-                  fontWeight: 600
+                  padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`
                 }}
               >
                 Processing Time
@@ -226,11 +200,9 @@ const ProposalsTable = ({ mainChain }) => {
 
                 {/* ID */}
                 <td
-                  className="text-gray-400"
+                  className="text-gray-400 text-body2-r"
                   style={{
-                    padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                    fontSize: '14px',
-                    fontFamily: 'SUIT'
+                    padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`
                   }}
                 >
                   #{prop.id || (1000 + index)}
@@ -238,11 +210,9 @@ const ProposalsTable = ({ mainChain }) => {
 
                 {/* Title */}
                 <td
-                  className="max-w-md truncate"
+                  className="max-w-md truncate text-body2-r"
                   style={{
                     padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                    fontSize: 'calc(1.2rem * var(--scale))',
-                    fontFamily: 'SUIT',
                     color: '#E8EAED',
                     fontWeight: '500'
                   }}
@@ -261,10 +231,8 @@ const ProposalsTable = ({ mainChain }) => {
                   }}
                 >
                   <span
-                    className="inline-flex items-center justify-center rounded-sm font-extrabold transition-transform cursor-pointer"
+                    className="inline-flex items-center justify-center rounded-sm text-caption-sb transition-transform cursor-pointer"
                     style={{
-                      fontFamily: 'SUIT',
-                      fontSize: '12px',
                       maxWidth: '180px',
                       height: '22px',
                       padding: '3px 10px',
@@ -300,11 +268,9 @@ const ProposalsTable = ({ mainChain }) => {
 
                 {/* Participation */}
                 <td
-                  className="text-gray-300 font-bold"
+                  className="text-gray-300 text-body1-r font-bold"
                   style={{
-                    padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                    fontSize: 'calc(1rem * var(--scale))',
-                    fontFamily: 'SUIT'
+                    padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`
                   }}
                 >
                   {prop.participation || '0.00%'}
@@ -312,11 +278,9 @@ const ProposalsTable = ({ mainChain }) => {
 
                 {/* Status */}
                 <td
-                  className={`font-extrabold ${getStatusColor(formatStatus(prop))}`}
+                  className={`text-body1-r font-extrabold ${getStatusColor(formatStatus(prop))}`}
                   style={{
                     padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                    fontSize: 'calc(1rem * var(--scale))',
-                    fontFamily: 'SUIT',
                     maxWidth: '140px'
                   }}
                 >
@@ -325,11 +289,9 @@ const ProposalsTable = ({ mainChain }) => {
 
                 {/* Processing Time */}
                 <td
-                  className="text-gray-400 font-semibold"
+                  className="text-gray-400 text-body1-sb"
                   style={{
-                    padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                    fontSize: 'calc(1rem * var(--scale))',
-                    fontFamily: 'SUIT'
+                    padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`
                   }}
                 >
                   {formatProcessingTime(prop)}

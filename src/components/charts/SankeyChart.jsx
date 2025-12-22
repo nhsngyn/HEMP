@@ -992,22 +992,20 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
     <div ref={containerRef} className="w-full h-full absolute inset-0 flex flex-col" style={{ overflow: 'visible' }}>
       {/* Title with icon - absolute positioned */}
       <div className="absolute top-0 left-0 z-10 flex items-center gap-3 px-4 py-3">
-
         <div
-          className="flex items-center justify-center rounded-full"
+          className="flex items-center justify-center rounded-full text-caption-sb"
           style={{
             width: '24px',
             height: '24px',
             backgroundColor: '#ffffff15',
             color: '#D1D5DB',
-            fontSize: '12px',
             fontWeight: '700'
           }}
         >
           3
         </div>
         <h2
-          className="font-bold text-lg"
+          className="text-title3-b"
           style={{ color: '#D1D5DB' }}
         >
           Proposal Configuration Flow

@@ -126,9 +126,9 @@ const RankingChart = () => {
       <div className="flex flex-col h-full w-full select-none relative">
 
         {/* TITLE */}
-        <div className=" top-0 left-0 z-10 flex items-center gap-3 py-3">
+        <div className=" top-0 left-0 z-10 flex items-center gap-3 py-3" style={{ marginTop: '20px' }}>
           <h2
-            className="font-bold text-lg"
+            className="text-title3-b"
             style={{ color: '#D1D5DB' }}
           >
             HEMP Rank

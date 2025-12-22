@@ -1,10 +1,8 @@
-@import url('https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 2. í™”ë©´ ì „ì²´ ê½‰ ì±„ìš°ê¸° */
+
 html, body, #root {
   width: 100%;
   height: 100%;
@@ -13,9 +11,9 @@ html, body, #root {
   overflow: hidden; 
 }
 
-/* 3. ê¸°ë³¸ ë³€ìˆ˜ ë° ì„¤ì • */
+
 :root {
-  /* âœ¨ í°íŠ¸ ìˆœì„œ: SUITê°€ 1ìˆœìœ„ */
+ 
   font-family: 'SUIT', sans-serif;
   --scale: 1;
   --base-font-size: 16px;
@@ -32,12 +30,12 @@ html, body, #root {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* 4. ì „ì—­ í°íŠ¸ ê°•ì œ ì ìš© (ëª¨ë“  ìš”ì†Œ) */
+
 *, *::before, *::after {
   font-family: 'SUIT', sans-serif;
 }
 
-/* 5. ìŠ¤í¬ë¡¤ë°” ìŠ¤íƒ€ì¼ (ê¸°ë³¸) */
+
 *::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -56,13 +54,11 @@ html, body, #root {
   background: rgba(156, 163, 175, 0.5);
 }
 
-/* Firefox ìŠ¤í¬ë¡¤ë°” */
 * {
   scrollbar-width: thin;
   scrollbar-color: rgba(156, 163, 175, 0.3) transparent;
 }
 
-/* Retina ë””ìŠ¤í”Œë ˆì´ ìµœì í™” */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   * {
     -webkit-font-smoothing: antialiased;
@@ -70,13 +66,12 @@ html, body, #root {
   }
 }
 
-/* ë¶€ë“œëŸ¬ìš´ ìŠ¤í¬ë¡¤ */
 html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
 
-/* ë§í¬ ìŠ¤íƒ€ì¼ */
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -86,7 +81,7 @@ a:hover {
   color: #535bf2;
 }
 
-/* 6. ìœ í‹¸ë¦¬í‹° í´ëž˜ìŠ¤ (ì»¤ìŠ¤í…€ ìŠ¤í¬ë¡¤ë°”) */
+
 @layer utilities {
   .custom-scrollbar::-webkit-scrollbar {
     width: 1px;

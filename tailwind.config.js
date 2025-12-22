@@ -9,7 +9,6 @@ export default {
       fontFamily: {
         sans: ['SUIT', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
       },
-<<<<<<< HEAD
 
       /* =========================
        * TYPOGRAPHY SYSTEM

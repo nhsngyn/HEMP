@@ -12,10 +12,7 @@ const DashboardPage = () => {
     return allChains.find(c => c.id === selectedMainId);
   }, [allChains, selectedMainId]);
 
-  const cardStyle = {
-    borderRadius: '15px',
-    background:  '#15171C'
-  };
+  
 
   return (
     <div className="flex flex-col w-full h-full">

@@ -304,7 +304,8 @@ const HempMap = () => {
       bottom-full
       mr-2
       mb-2
-      w-[280px]
+      w-[354px]
+      h-[40px]
       p-3
       rounded
       shadow-lg
@@ -317,7 +318,7 @@ const HempMap = () => {
     style={{ backgroundColor: COLORS.GRAY700 }}
   >
     <p
-      className="font-suit text-[14px] font-medium leading-[140%] tracking-[-0.28px]"
+      className="font-suit text-body3-m tracking-[-0.28px]"
       style={{ color: COLORS.GRAY300 }}
     >
       Circle size reflects the volume of proposals.<br />

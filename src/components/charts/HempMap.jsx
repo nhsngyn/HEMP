@@ -289,14 +289,42 @@ const HempMap = () => {
       </div>
       
       <div className="absolute top-4 right-5 z-10 group">
-         <img src="/Icons/Frame 183.png" alt="Info" width="24" height="24" className="cursor-help opacity-70 hover:opacity-100 transition-opacity" />
-         <div className="absolute right-0 top-8 w-[280px] p-3 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50" style={{ backgroundColor: COLORS.GRAY700 }}>
-          <p className="font-suit text-[14px] font-medium leading-[140%] tracking-[-0.28px]" style={{ color: COLORS.GRAY300 }}>
-            Circle size reflects the volume of proposals.<br />
-            Chains are categorized into four tiers based on their ranking.
-          </p>
-        </div>
-      </div>
+  <img
+    src="/Icons/icn_info.svg"
+    alt="Info"
+    width="24"
+    height="24"
+    className="cursor-help opacity-70 hover:opacity-100 transition-opacity"
+  />
+
+  <div
+    className="
+      absolute
+      right-full
+      bottom-full
+      mr-2
+      mb-2
+      w-[280px]
+      p-3
+      rounded
+      shadow-lg
+      opacity-0
+      group-hover:opacity-100
+      transition-opacity
+      pointer-events-none
+      z-50
+    "
+    style={{ backgroundColor: COLORS.GRAY700 }}
+  >
+    <p
+      className="font-suit text-[14px] font-medium leading-[140%] tracking-[-0.28px]"
+      style={{ color: COLORS.GRAY300 }}
+    >
+      Circle size reflects the volume of proposals.<br />
+      Chains are categorized into four tiers based on their ranking.
+    </p>
+  </div>
+</div>
 
       <ReactECharts
         ref={chartRef}

@@ -123,12 +123,17 @@ const RankingChart = () => {
       onDragStart={(e) => setActiveId(e.active.id)}
       onDragEnd={handleDragEnd}
     >
-      <div className="flex flex-col h-full w-full select-none">
+      <div className="flex flex-col h-full w-full select-none relative">
 
         {/* TITLE */}
-        <h2 className="text-GRAY200 text-body2-b mb-[30px]">
-          HEMP Rank
-        </h2>
+        <div className=" top-0 left-0 z-10 flex items-center gap-3 py-3">
+          <h2
+            className="font-bold text-lg"
+            style={{ color: '#D1D5DB' }}
+          >
+            HEMP Rank
+          </h2>
+        </div>
 
         {/* FILTER BUTTONS */}
         <div
@@ -136,9 +141,11 @@ const RankingChart = () => {
             flex items-center gap-4
             mb-1 pb-3 shrink-0 
             border-b w-full
-            pl-[9px]
           "
-          style={{ borderColor: COLORS.GRAY700 }}
+          style={{
+            borderColor: COLORS.GRAY700,
+            paddingTop: 'calc(12px * var(--scale))' // py-3 (12px) + text height
+          }}
         >
           {/* Name Sort */}
           <button
@@ -148,8 +155,8 @@ const RankingChart = () => {
             <span
               className={
                 sortConfig.key === "name"
-                  ? "text-white text-caption1_sb"
-                  : "text-GRAY400 text-caption1_sb"
+                  ? "text-white text-xs font-semibold leading-tight"
+                  : "text-gray-400 text-xs font-semibold leading-tight"
               }
             >
               Name
@@ -169,8 +176,8 @@ const RankingChart = () => {
             <span
               className={
                 sortConfig.key === "score"
-                  ? "text-white text-caption1_sb"
-                  : "text-GRAY400 text-caption1_sb"
+                  ? "text-white text-xs font-semibold leading-tight"
+                  : "text-gray-400 text-xs font-semibold leading-tight"
               }
             >
               HEMP Score
@@ -206,7 +213,7 @@ const RankingChart = () => {
 
           {/* Main */}
           <div>
-            <h3 className="text-gray-500 text-body3-m mb-[8px]">
+            <h3 className="text-gray-500 text-xs font-medium mb-[8px]">
               Main
             </h3>
             <DroppableSlot
@@ -220,7 +227,7 @@ const RankingChart = () => {
 
           {/* Comparison */}
           <div>
-            <h3 className="text-gray-500 text-body3-m mb-[8px]">
+            <h3 className="text-gray-500 text-xs font-medium mb-[8px]">
               Comparison
             </h3>
             <div className="flex flex-col gap-[8px]">

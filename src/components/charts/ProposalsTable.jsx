@@ -232,7 +232,6 @@ const ProposalsTable = ({ mainChain }) => {
                   <span
                     className="inline-flex items-center justify-center rounded-sm text-caption1-b transition-transform cursor-pointer"
                     style={{
-                      maxWidth: '180px',
                       height: '22px',
                       padding: '3px 8px',
                       display: 'inline-flex',
@@ -244,7 +243,7 @@ const ProposalsTable = ({ mainChain }) => {
                       color: '#D1D5DB',
                       transformOrigin: 'center',
                       margin: 0,
-                      lineHeight: '22px'
+                      whiteSpace: 'nowrap'
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = 'scale(1.1)';

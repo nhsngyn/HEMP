@@ -67,9 +67,7 @@ const HempMap = () => {
         symbolSize: size,
         
         itemStyle: {
-          // 🔥 [핵심] 호버 여부와 상관없이, 선택되면 1, 아니면 무조건 0.2
           opacity: isSelected ? 1 : 0.2, 
-          
           shadowBlur: isSelected ? 20 : 0,
           shadowColor: isSelected ? selection.color : 'transparent',
           color: logoUrl ? undefined : COLORS.WHITE,
@@ -206,14 +204,9 @@ const HempMap = () => {
           cursor: 'pointer',
           large: true,
           progressive: 500,
-
-          // 🔥 [핵심] 호버 시 자동 효과(사이즈 확대, 스타일 변경) 완전 차단
           emphasis: {
-            scale: false, // 호버 시 사이즈 커짐 방지
-            itemStyle: {
-              // 호버 시 스타일 변경 없음 (기존 itemStyle 유지)
-              // 명시적으로 설정하지 않으면 data의 itemStyle을 따름
-            }
+            scale: false,
+            itemStyle: {}
           }
         },
       ],
@@ -284,48 +277,52 @@ const HempMap = () => {
   return (
     <div className="w-full h-full relative p-[12px]">
       <div className="absolute top-[20px] left-[12px] flex items-center gap-2 z-10 pointer-events-none">
-        <img src="/Icons/icn_num1.png" alt="1" width="20" height="20" />
+        {/* 이미지 대신 직접 그린 원형 아이콘 */}
+        <div
+          className="flex items-center justify-center w-[18px] h-[18px] rounded-full text-white font-bold font-suit text-[11px] leading-none"
+          style={{ backgroundColor: COLORS.GRAY700}}
+        >
+          1
+        </div>
         <h3 className="text-white font-bold text-base font-suit">HEMP Map</h3>
       </div>
       
-      <div className="absolute top-5 right-5 z-10 group">
-  <img
-    src="/Icons/icn_info.svg"
-    alt="Info"
-    width="24"
-    height="24"
-    className="opacity-80 hover:opacity-100 transition-opacity"
-  />
+      {/* 인포메이션 툴팁 영역 (기존 유지) */}
+      <div className="absolute top-5 right-5 z-50 group">
+        <img
+          src="/Icons/icn_info.svg"
+          alt="Info"
+          width="24"
+          height="24"
+          className="cursor-help opacity-70 hover:opacity-100 transition-opacity"
+        />
 
-  <div
-    className="
-      absolute
-      right-full
-      bottom-full
-      mr-2
-      mb-2
-      w-[354px]
-      h-[40px]
-      p-3
-      rounded
-      shadow-lg
-      opacity-0
-      group-hover:opacity-100
-      transition-opacity
-      pointer-events-none
-      z-50
-    "
-    style={{ backgroundColor: COLORS.GRAY700 }}
-  >
-    <p
-      className="font-suit text-body3-m tracking-[-0.28px]"
-      style={{ color: COLORS.GRAY300 }}
-    >
-      Circle size reflects the volume of proposals.<br />
-      Chains are categorized into four tiers based on their ranking.
-    </p>
-  </div>
-</div>
+        <div
+          className="
+            absolute
+            right-5
+            w-max
+            max-w-[370px]
+            p-2
+            rounded-lg
+            shadow-xl
+            opacity-0
+            group-hover:opacity-100
+            transition-opacity
+            duration-200
+            pointer-events-none
+          "
+          style={{ backgroundColor: COLORS.GRAY700 }}
+        >
+          <p
+            className="font-suit text-[12px] font-medium leading-[140%] text-left"
+            style={{ color: COLORS.GRAY300 }}
+          >
+            Circle size reflects the volume of proposals.<br />
+            Chains are categorized into four tiers based on their ranking.
+          </p>
+        </div>
+      </div>
 
       <ReactECharts
         ref={chartRef}

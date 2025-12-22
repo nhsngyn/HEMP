@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 import { sankeyMockPropositions, defaultDummyPropositions } from '../../data/sankeyMockData';
 import useChainStore from '../../store/useChainStore';
-import { COLORS } from '../../constants/colors';
 
 const ProposalsTable = ({ mainChain }) => {
   const { sankeyFilter } = useChainStore();
@@ -116,7 +115,10 @@ const ProposalsTable = ({ mainChain }) => {
 
   return (
     <div
-      className="w-full h-full flex flex-col"
+      className="w-full h-full  rounded-lg shadow-lg flex flex-col"
+      style={{
+        padding: 'calc(24px * var(--scale))'
+      }}
     >
       <div
         className="flex items-center  justify-start gap-2 shrink-0 "
@@ -198,7 +200,7 @@ const ProposalsTable = ({ mainChain }) => {
 
                 {/* ID */}
                 <td
-                  className="text-gray-400 text-body2-r"
+                  className="text-gray-400 text-body3-m"
                   style={{
                     padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`
                   }}
@@ -208,11 +210,10 @@ const ProposalsTable = ({ mainChain }) => {
 
                 {/* Title */}
                 <td
-                  className="max-w-md truncate text-body2-r"
+                  className="max-w-md truncate text-body3-m"
                   style={{
                     padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
-                    color: '#E8EAED',
-                    fontWeight: '500'
+                    color: '#E8EAED'
                   }}
                 >
                   {prop.title || 'Proposal Title'}
@@ -229,11 +230,11 @@ const ProposalsTable = ({ mainChain }) => {
                   }}
                 >
                   <span
-                    className="inline-flex items-center justify-center rounded-sm text-caption-sb transition-transform cursor-pointer"
+                    className="inline-flex items-center justify-center rounded-sm text-caption1-b transition-transform cursor-pointer"
                     style={{
                       maxWidth: '180px',
                       height: '22px',
-                      padding: '3px 10px',
+                      padding: '3px 8px',
                       display: 'inline-flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -266,7 +267,7 @@ const ProposalsTable = ({ mainChain }) => {
 
                 {/* Participation */}
                 <td
-                  className="text-gray-300 text-body1-r font-bold"
+                  className="text-gray-300 text-caption1-sb"
                   style={{
                     padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`
                   }}
@@ -276,7 +277,7 @@ const ProposalsTable = ({ mainChain }) => {
 
                 {/* Status */}
                 <td
-                  className={`text-body1-r font-extrabold ${getStatusColor(formatStatus(prop))}`}
+                  className={`text-caption1-eb ${getStatusColor(formatStatus(prop))}`}
                   style={{
                     padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
                     maxWidth: '140px'
@@ -287,7 +288,7 @@ const ProposalsTable = ({ mainChain }) => {
 
                 {/* Processing Time */}
                 <td
-                  className="text-gray-400 text-body1-sb"
+                  className="text-gray-400 text-body3-sb"
                   style={{
                     padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`
                   }}

@@ -993,13 +993,12 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
       {/* Title with icon - absolute positioned */}
       <div className="absolute top-0 left-0 z-10 flex items-center gap-3 px-4 py-3">
         <div
-          className="flex items-center justify-center rounded-full text-caption-sb"
+          className="flex items-center justify-center rounded-full text-caption1-sb"
           style={{
-            width: '24px',
-            height: '24px',
+            width: '18px',
+            height: '18px',
             backgroundColor: '#ffffff15',
-            color: '#D1D5DB',
-            fontWeight: '700'
+            color: '#D1D5DB'
           }}
         >
           3

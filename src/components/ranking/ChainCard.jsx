@@ -37,53 +37,53 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
           font-medium 
           truncate
         "
-        style={{ width: '80px' }} 
+        style={{ width: '80px' }}
       >
         {chain.name}
       </div>
 
-    {/* 2. 막대 + 점수 컨테이너 */}
-<div className="flex items-center gap-2 flex-1 min-w-0">
+      {/* 2. 막대 + 점수 컨테이너 */}
+      <div className="flex items-center gap-2 flex-1 min-w-0">
 
-  {/* 막대바 배경 */}
-  <div
-    className="
+        {/* 막대바 배경 */}
+        <div
+          className="
       relative
       h-[20px]
       rounded-[3.59px]
       overflow-hidden
     "
-    style={{ width: '120px' }}
-  >
-    {/* 100점 기준 바 */}
-    <div
-      className="
+          style={{ width: '120px' }}
+        >
+          {/* 100점 기준 바 */}
+          <div
+            className="
         absolute left-0 top-0
         h-full
         rounded-[3.59px]
       "
-      style={{
-        width: '120px',
-        backgroundColor: COLORS.GRAY800,
-      }}
-    />
+            style={{
+              width: '120px',
+              backgroundColor: COLORS.GRAY800,
+            }}
+          />
 
-    {/* 실제 점수 바 */}
-    <div
-      className="
+          {/* 실제 점수 바 */}
+          <div
+            className="
         absolute left-0 top-0
         h-full
         rounded-[3.59px]
       "
-      style={{
-        width: `${barWidth}px`,
-        backgroundColor: isSelected
-          ? highlightColor
-          : COLORS.GRAY700,
-      }}
-    />
-  </div>
-</div>
+            style={{
+              width: `${barWidth}px`,
+              backgroundColor: isSelected
+                ? highlightColor
+                : COLORS.GRAY700,
+            }}
+          />
+        </div>
+      </div>
 
     </div>
   );

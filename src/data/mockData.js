@@ -1,11 +1,11 @@
-// [자동 생성] CSV 데이터로 업데이트: 2025-12-21T20:14:51.193Z
+// [자동 생성] CSV 데이터로 업데이트: 2025-12-22T06:43:54.814Z
 // [로고 업데이트] 각 체인별 로고 이미지 적용
 
 export const mockChains = [
   {
     "id": "stride",
     "name": "Stride",
-    "score": 53.13,
+    "score": 74.23,
     "logoUrl": "/logos/strde.png",
     "proposals": 90,
     "participation": 24.63,
@@ -18,7 +18,7 @@ export const mockChains = [
   {
     "id": "kava",
     "name": "Kava",
-    "score": 54.54,
+    "score": 62.69,
     "logoUrl": "/logos/kava.png",
     "proposals": 200,
     "participation": 12.43,
@@ -31,7 +31,7 @@ export const mockChains = [
   {
     "id": "secret",
     "name": "Secret",
-    "score": 42.82,
+    "score": 60.52,
     "logoUrl": "/logos/secret.png",
     "proposals": 201,
     "participation": 15.47,
@@ -44,7 +44,7 @@ export const mockChains = [
   {
     "id": "xpla",
     "name": "Xpla",
-    "score": 70.56,
+    "score": 63.67,
     "logoUrl": "/logos/xpla.png",
     "proposals": 30,
     "participation": 14.12,
@@ -57,7 +57,7 @@ export const mockChains = [
   {
     "id": "gravity-bridge",
     "name": "Gravity-bridge",
-    "score": 57.62,
+    "score": 63.34,
     "logoUrl": "/logos/gravity-bridge.png",
     "proposals": 196,
     "participation": 20.59,
@@ -70,7 +70,7 @@ export const mockChains = [
   {
     "id": "agoric",
     "name": "Agoric",
-    "score": 68.62,
+    "score": 70.97,
     "logoUrl": "/logos/agoric.png",
     "proposals": 79,
     "participation": 14.91,
@@ -83,7 +83,7 @@ export const mockChains = [
   {
     "id": "chihuahua",
     "name": "Chihuahua",
-    "score": 63,
+    "score": 64.92,
     "logoUrl": "/logos/chihuahua.png",
     "proposals": 81,
     "participation": 20.03,
@@ -96,7 +96,7 @@ export const mockChains = [
   {
     "id": "injective",
     "name": "Injective",
-    "score": 46.64,
+    "score": 74.03,
     "logoUrl": "/logos/injective.png",
     "proposals": 377,
     "participation": 16.27,
@@ -109,7 +109,7 @@ export const mockChains = [
   {
     "id": "cosmos",
     "name": "Cosmos",
-    "score": 67.15,
+    "score": 70.11,
     "logoUrl": "/logos/cosmo.png",
     "proposals": 179,
     "participation": 12.39,
@@ -122,7 +122,7 @@ export const mockChains = [
   {
     "id": "akash",
     "name": "Akash",
-    "score": 72.17,
+    "score": 66.37,
     "logoUrl": "/logos/akash.png",
     "proposals": 135,
     "participation": 19.06,
@@ -135,7 +135,7 @@ export const mockChains = [
   {
     "id": "dydx",
     "name": "Dydx",
-    "score": 49.4,
+    "score": 73.93,
     "logoUrl": "/logos/dydx.png",
     "proposals": 300,
     "participation": 14.37,
@@ -148,7 +148,7 @@ export const mockChains = [
   {
     "id": "sei",
     "name": "Sei",
-    "score": 53.63,
+    "score": 78.19,
     "logoUrl": "/logos/sei.png",
     "proposals": 65,
     "participation": 22.98,
@@ -161,7 +161,7 @@ export const mockChains = [
   {
     "id": "provenance",
     "name": "Provenance",
-    "score": 56.61,
+    "score": 78.7,
     "logoUrl": "/logos/provenance.png",
     "proposals": 34,
     "participation": 11.2,
@@ -174,7 +174,7 @@ export const mockChains = [
   {
     "id": "axelar",
     "name": "Axelar",
-    "score": 70.75,
+    "score": 73.18,
     "logoUrl": "/logos/axelar.png",
     "proposals": 262,
     "participation": 20.27,
@@ -187,7 +187,7 @@ export const mockChains = [
   {
     "id": "persistence",
     "name": "Persistence",
-    "score": 66.33,
+    "score": 80.61,
     "logoUrl": "/logos/persistence.png",
     "proposals": 137,
     "participation": 19.02,
@@ -200,7 +200,7 @@ export const mockChains = [
   {
     "id": "terra",
     "name": "Terra",
-    "score": 71.61,
+    "score": 71.34,
     "logoUrl": "/logos/terra.png",
     "proposals": 118,
     "participation": 20.43,
@@ -213,7 +213,7 @@ export const mockChains = [
   {
     "id": "stargaze",
     "name": "Stargaze",
-    "score": 64.56,
+    "score": 72.79,
     "logoUrl": "/logos/stargaze.png",
     "proposals": 295,
     "participation": 14.06,
@@ -226,7 +226,7 @@ export const mockChains = [
   {
     "id": "osmosis",
     "name": "Osmosis",
-    "score": 55.67,
+    "score": 72.7,
     "logoUrl": "/logos/osmosis.png",
     "proposals": 791,
     "participation": 14.42,

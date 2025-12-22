@@ -126,9 +126,9 @@ const RankingChart = () => {
       <div className="flex flex-col h-full w-full select-none relative">
 
         {/* TITLE */}
-        <div className=" top-0 left-0 z-10 flex items-center gap-3 py-3" style={{ marginTop: '20px' }}>
+        <div className=" top-0 left-0 z-10 flex items-center gap-3 py-3">
           <h2
-            className="text-title3-b"
+            className="font-bold text-lg"
             style={{ color: '#D1D5DB' }}
           >
             HEMP Rank
@@ -138,19 +138,24 @@ const RankingChart = () => {
         {/* FILTER BUTTONS */}
         <div
           className="
-            flex items-center gap-4
+            flex items-center
             mb-1 pb-3 shrink-0 
-            border-b w-full
+            border-b
           "
           style={{
             borderColor: COLORS.GRAY700,
-            paddingTop: 'calc(12px * var(--scale))' // py-3 (12px) + text height
+            paddingTop: 'calc(12px * var(--scale))', // py-3 (12px) + text height
+            width: '206px',
+            paddingLeft: '8px',
+            paddingRight: '8px',
+            gap: '8px'
           }}
         >
           {/* Name Sort */}
           <button
-            className="flex items-center gap-1"
+            className="flex items-center gap-1 flex-shrink-0"
             onClick={() => handleSortClick("name")}
+            style={{ width: '80px' }}
           >
             <span
               className={
@@ -170,7 +175,7 @@ const RankingChart = () => {
 
           {/* Score Sort */}
           <button
-            className="flex items-center gap-1"
+            className="flex items-center gap-1 flex-1 min-w-0"
             onClick={() => handleSortClick("score")}
           >
             <span

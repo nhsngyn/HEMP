@@ -116,11 +116,7 @@ const ProposalsTable = ({ mainChain }) => {
 
   return (
     <div
-      className="w-full h-full rounded-lg shadow-lg flex flex-col"
-      style={{
-        padding: 'calc(24px * var(--scale))',
-        backgroundColor: COLORS.GRAYBG
-      }}
+      className="w-full h-full flex flex-col"
     >
       <div
         className="flex items-center  justify-start gap-2 shrink-0 "

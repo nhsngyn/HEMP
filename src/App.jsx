@@ -106,8 +106,8 @@ function App() {
           </div>
 
           <div
-            className="w-full relative overflow-hidden rounded-2xl shadow-lg"
-            style={{ height: "401px", backgroundColor: COLORS.GRAYBG }}
+            className="w-full flex-1 relative overflow-hidden rounded-2xl shadow-lg"
+            style={{ backgroundColor: COLORS.GRAYBG, marginBottom: "47px" }}
           >
             <SankeyChart />
           </div>
@@ -117,7 +117,6 @@ function App() {
           id="proposals-section"
           className="w-full"
           style={{
-            padding: "calc(12px * var(--scale))",
             paddingLeft: "24px",
             paddingRight: "24px",
             boxSizing: "border-box",

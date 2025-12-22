@@ -1005,7 +1005,7 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
           3
         </div>
         <h2
-          className="text-title3-b"
+          className="text-body3-b"
           style={{ color: '#D1D5DB' }}
         >
           Proposal Configuration Flow

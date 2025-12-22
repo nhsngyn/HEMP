@@ -126,7 +126,7 @@ const ProposalsTable = ({ mainChain }) => {
         className="flex items-center  justify-start gap-2 shrink-0 "
         style={{ marginBottom: 'calc(16px * var(--scale))' }}
       >
-        <h2 className="text-title3-b" style={{ color: '#D1D5DB' }}>
+        <h2 className="text-body3-b" style={{ color: '#D1D5DB' }}>
           All Proposals
         </h2> <span className="text-gray-500 text-body1-sb"> {filteredPropositions.length}</span>
       </div>

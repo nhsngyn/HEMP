@@ -143,7 +143,7 @@ const RankingChart = () => {
           </DroppableListArea>
         </div>
 
-        <div className="shrink-0 flex flex-col gap-6">
+        <div className="shrink-0 flex flex-col" style={{ gap: "35px" }}>
           <div>
             <h3 className="text-body3-m text-gray-500 mb-2">Main</h3>
             <DroppableSlot

@@ -25,23 +25,7 @@ function App() {
     [allChains, selectedMainId]
   );
   useEffect(() => {
-    const prevMainId = prevMainIdRef.current;
-
-    if (!selectedMainId || prevMainId === selectedMainId) {
-      prevMainIdRef.current = selectedMainId;
-      return;
-    }
-
     prevMainIdRef.current = selectedMainId;
-
-    setTimeout(() => {
-      const scrollContainer = document.getElementById("main-scroll-container");
-      const headerEl = document.getElementById("dashboard-header");
-      if (!scrollContainer || !headerEl) return;
-
-      const headerBottom = headerEl.offsetTop + headerEl.offsetHeight;
-      scrollContainer.scrollTo({ top: headerBottom + 30, behavior: "smooth" });
-    }, 50);
   }, [selectedMainId]);
 
   useEffect(() => {
@@ -122,8 +106,8 @@ function App() {
           </div>
 
           <div
-            className="w-full min-h-0 relative overflow-hidden rounded-2xl shadow-lg"
-            style={{ flex: "6 0 0", backgroundColor: COLORS.GRAYBG }}
+            className="w-full relative overflow-hidden rounded-2xl shadow-lg"
+            style={{ height: "401px", backgroundColor: COLORS.GRAYBG }}
           >
             <SankeyChart />
           </div>

@@ -138,24 +138,19 @@ const RankingChart = () => {
         {/* FILTER BUTTONS */}
         <div
           className="
-            flex items-center
+            flex items-center gap-4
             mb-1 pb-3 shrink-0 
-            border-b
+            border-b w-full
           "
           style={{
             borderColor: COLORS.GRAY700,
-            paddingTop: 'calc(12px * var(--scale))', // py-3 (12px) + text height
-            width: '206px',
-            paddingLeft: '8px',
-            paddingRight: '8px',
-            gap: '8px'
+            paddingTop: 'calc(20px * var(--scale))' // py-3 (12px) + text height
           }}
         >
           {/* Name Sort */}
           <button
-            className="flex items-center gap-1 flex-shrink-0"
+            className="flex items-center gap-1"
             onClick={() => handleSortClick("name")}
-            style={{ width: '80px' }}
           >
             <span
               className={
@@ -175,7 +170,7 @@ const RankingChart = () => {
 
           {/* Score Sort */}
           <button
-            className="flex items-center gap-1 flex-1 min-w-0"
+            className="flex items-center gap-1"
             onClick={() => handleSortClick("score")}
           >
             <span

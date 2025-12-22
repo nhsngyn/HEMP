@@ -11,7 +11,7 @@ const MainLayout = ({ leftSidebar, children }) => {
   const CANVAS_HEIGHT = 750;
   const SIDEBAR_RATIO = 0.18; // 20%
   const CONTENT_RATIO = 0.8; // 80%
-  const minSidebarWidth = 240; // 최소 사이드바 너비
+  const SIDEBAR_WIDTH = 260; // 사이드바 너비 고정
 
   useEffect(() => {
     const updateScale = () => {
@@ -20,9 +20,8 @@ const MainLayout = ({ leftSidebar, children }) => {
       const viewportWidth = window.innerWidth;
       const viewportHeight = window.innerHeight;
 
-      // 사이드바 너비 계산 (최소 너비 보장)
-      const calculatedSidebarWidth = viewportWidth * SIDEBAR_RATIO;
-      const newSidebarWidth = Math.max(calculatedSidebarWidth, minSidebarWidth);
+      // 사이드바 너비 고정
+      const newSidebarWidth = SIDEBAR_WIDTH;
       const availableContentWidth = viewportWidth - newSidebarWidth;
       const availableContentHeight = viewportHeight;
 

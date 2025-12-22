@@ -3,9 +3,11 @@ import RankingChart from "../ranking/RankingChart";
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-col w-full h-full px-4 py-[50px] text-white"
+    <div className="flex flex-col w-full h-full py-[50px] text-white"
       style={{
         background: '#15171C',
+        paddingLeft: '24px',
+        paddingRight: '22px',
       }}>
       {/* 상단 타이틀 */}
       <div className="mb-[40px]">

@@ -94,7 +94,7 @@ function App() {
             paddingTop: 'calc(10px * var(--scale))',
             paddingLeft: '24px',
             paddingRight: '24px',
-            gap: '24px',
+            gap: '12px',
             height: '1080px',
             boxSizing: 'border-box'
           }}

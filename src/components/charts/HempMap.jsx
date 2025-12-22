@@ -288,13 +288,13 @@ const HempMap = () => {
         <h3 className="text-white font-bold text-base font-suit">HEMP Map</h3>
       </div>
       
-      <div className="absolute top-4 right-5 z-10 group">
+      <div className="absolute top-5 right-5 z-10 group">
   <img
     src="/Icons/icn_info.svg"
     alt="Info"
     width="24"
     height="24"
-    className="cursor-help opacity-70 hover:opacity-100 transition-opacity"
+    className="opacity-80 hover:opacity-100 transition-opacity"
   />
 
   <div

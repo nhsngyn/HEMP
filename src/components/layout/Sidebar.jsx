@@ -10,7 +10,7 @@ const Sidebar = () => {
         height: '100%',
         paddingLeft: '24px',
         paddingRight: '22px',
-        paddingTop: '133px',
+        paddingTop: '51px',
         paddingBottom: '62px',
         boxSizing: 'border-box',
       }}

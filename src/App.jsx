@@ -78,7 +78,7 @@ function App() {
         <section
           className="w-full flex flex-col"
           style={{
-            paddingTop: "133px",
+            paddingTop: "51px",
             paddingLeft: "24px",
             paddingRight: "24px",
             paddingBottom: "24px",

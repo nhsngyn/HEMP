@@ -288,13 +288,13 @@ const HempMap = () => {
         <h3 className="text-white font-bold text-base font-suit">HEMP Map</h3>
       </div>
       
-      <div className="absolute top-4 right-5 z-10 group">
+      <div className="absolute top-5 right-5 z-10 group">
   <img
     src="/Icons/icn_info.svg"
     alt="Info"
     width="24"
     height="24"
-    className="cursor-help opacity-70 hover:opacity-100 transition-opacity"
+    className="opacity-80 hover:opacity-100 transition-opacity"
   />
 
   <div
@@ -304,7 +304,8 @@ const HempMap = () => {
       bottom-full
       mr-2
       mb-2
-      w-[280px]
+      w-[354px]
+      h-[40px]
       p-3
       rounded
       shadow-lg
@@ -317,7 +318,7 @@ const HempMap = () => {
     style={{ backgroundColor: COLORS.GRAY700 }}
   >
     <p
-      className="font-suit text-[14px] font-medium leading-[140%] tracking-[-0.28px]"
+      className="font-suit text-body3-m tracking-[-0.28px]"
       style={{ color: COLORS.GRAY300 }}
     >
       Circle size reflects the volume of proposals.<br />

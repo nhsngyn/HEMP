@@ -55,7 +55,6 @@ const ProposalsTable = ({ mainChain }) => {
       });
     }
 
-    // ID 순서로 정렬 (오름차순)
     return result.sort((a, b) => {
       const idA = a.id || 0;
       const idB = b.id || 0;
@@ -63,7 +62,6 @@ const ProposalsTable = ({ mainChain }) => {
     });
   }, [sankeyFilter, propositions]);
 
-  // Tailwind arbitrary color classes로 상태 색상 지정
   const getStatusColor = (statusRaw) => {
     if (!statusRaw) return 'text-[#6D7380]';
     const status = statusRaw.toUpperCase();
@@ -76,26 +74,20 @@ const ProposalsTable = ({ mainChain }) => {
   const formatStatus = (prop) => {
     let statusText = '';
 
-    // 우선 실제 데이터에서 넘어온 status가 있으면 그대로 사용
     if (prop.status) {
       statusText = prop.status;
     } else {
-      // 그 외에는 result 기반으로 3가지 상태만 표기
       if (prop.result === 'Passed') statusText = 'PASSED';
       else if (prop.result === 'Rejected') statusText = 'REJECTED';
       else statusText = 'FAILED';
     }
 
-    // 퍼센트 제거 (예: "PASSED (26.3%)" -> "PASSED")
     return statusText.replace(/\s*\([^)]*%\)/g, '').trim();
   };
 
   const formatProcessingTime = (prop) => {
 
-    // 종료된 경우: 총 소요 시간 (processingTime 이 있으면 사용)
     if (prop.processingTime) return prop.processingTime;
-
-    // 더미 데이터용 기본값 (speed 기반)
     if (prop.processingSpeed === 'Fast') return '1-2 days';
     if (prop.processingSpeed === 'Normal') return '2-5 days';
     if (prop.processingSpeed === 'Slow') return '4-9 days';

@@ -1,17 +1,73 @@
-# React + Vite
+# HEMP: Health Evaluation Metric using Proposals
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+블록체인 거버넌스 제안(Proposal) 데이터를 기반으로 체인의 건강도를 평가하고 시각화하는 대시보드입니다.
 
-Currently, two official plugins are available:
+## 주요 기능
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **HEMP Map (버블 차트)**: 체인별 HEMP 점수와 참여율을 버블 차트로 시각화
+- **레이더 차트**: 선택한 체인들의 5가지 지표(VIB, Participation, Success Rate, Stability, Consensus)를 비교
+- **생키 다이어그램**: 제안의 흐름(Type → Status → Participation → Vote Composition → Processing Speed)을 시각화
+- **랭킹 시스템**: 드래그앤드롭으로 체인을 선택하고 비교
+- **제안 테이블**: 선택한 체인의 모든 제안 목록을 필터링하여 표시
 
-## React Compiler
+## 기술 스택
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 19, Vite
+- **상태 관리**: Zustand
+- **스타일링**: Tailwind CSS
+- **차트**: ECharts, D3.js, d3-sankey
+- **드래그앤드롭**: @dnd-kit
+- **배포**: Vercel
 
-## Expanding the ESLint configuration
+## 설치 및 실행
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# 의존성 설치
+npm install
 
+# 개발 서버 실행
+npm run dev
+
+# 프로덕션 빌드
+npm run build
+
+# 프리뷰
+npm run preview
+```
+
+## 프로젝트 구조
+
+```
+src/
+├── components/
+│   ├── charts/          # 차트 컴포넌트 (버블, 레이더, 생키, 테이블)
+│   ├── layout/          # 레이아웃 컴포넌트 (메인, 사이드바)
+│   └── ranking/         # 랭킹 관련 컴포넌트 (DnD)
+├── constants/           # 상수 정의 (색상, 차트 설정)
+├── data/               # 목 데이터
+├── hooks/              # 커스텀 훅
+└── store/              # Zustand 스토어
+```
+
+## 디자인 시스템
+
+### 색상
+- Main: #93E729 (Green)
+- Sub1: #3CA7C4 (Blue)
+- Sub2: #BBB143 (Yellow)
+- Background: #101010 (Pure Black)
+- Card Background: #17181c (Gray)
+
+### 타이포그래피
+- Title: 22px, 20px
+- Body: 18px, 16px, 14px
+- Caption: 12px
+
+## 배포
+
+- **Production**: https://hemp-taupe.vercel.app
+- **Repository**: https://github.com/nhsngyn/HEMP
+
+## 라이선스
+
+MIT

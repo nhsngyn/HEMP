@@ -3,14 +3,10 @@ import * as d3 from 'd3';
 import useChainStore from '../../store/useChainStore';
 import { COLORS } from '../../constants/colors';
 
-// 상수 정의
-// 각 지표별 만점(가중치)을 반영
-// - VIB, Participation: 26점 만점
-// - Success Rate(=Acceptance), Stability, Consensus: 16점 만점
 const METRICS = [
   { key: 'vib', label: 'VIB (Validator Influence Balance)', maxValue: 26 },
   { key: 'participation', label: 'Participation', maxValue: 26 },
-  { key: 'rejection', label: 'Success Rate', maxValue: 16 }, // Acceptance
+  { key: 'rejection', label: 'Success Rate', maxValue: 16 },
   { key: 'stability', label: 'Stability', maxValue: 16 },
   { key: 'consensus', label: 'Consensus', maxValue: 16 },
 ];
@@ -18,7 +14,7 @@ const METRICS = [
 const CHART_CONFIG = {
   GRID_LEVELS: 5,
   PADDING: 70,
-  LABEL_OFFSET: 40, // 차트와 축 라벨 사이 간격 (균일하게 조정)
+  LABEL_OFFSET: 40,
 };
 
 const CHAIN_CONFIGS = [

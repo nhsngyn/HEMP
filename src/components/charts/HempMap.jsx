@@ -25,7 +25,6 @@ const HempMap = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  /* ---------------- chain map ---------------- */
   const chainMap = useMemo(() => {
     if (!allChains) return {};
     return allChains.reduce((acc, chain) => {
@@ -34,7 +33,6 @@ const HempMap = () => {
     }, {});
   }, [allChains]);
 
-  /* ---------------- chart option ---------------- */
   const option = useMemo(() => {
     if (!allChains || allChains.length === 0) return null;
 

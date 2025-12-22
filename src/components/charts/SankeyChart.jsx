@@ -5,19 +5,16 @@ import useChainStore from '../../store/useChainStore';
 import { COLORS } from '../../constants/colors';
 import { sankeyMockPropositions, defaultDummyPropositions } from '../../data/sankeyMockData';
 
-// 상수 정의
-// 타입별 색상 (기존 단색 방식)
 const TYPE_COLOR_PALETTE = [
-  '#FF6B6B', // 빨간색
-  '#FF8E53', // 주황색
-  '#FFD93D', // 노란색
-  '#6BCF7F', // 초록색
-  '#4D96FF', // 파란색
-  '#9B59B6', // 보라색
+  '#FF6B6B',
+  '#FF8E53',
+  '#FFD93D',
+  '#6BCF7F',
+  '#4D96FF',
+  '#9B59B6',
 ];
-const OTHER_COLOR = '#9CA3AF'; // 회색 (Other용)
+const OTHER_COLOR = '#9CA3AF';
 
-// 타입별 색상 맵 (동적으로 생성됨)
 let TYPE_COLORS = {};
 
 const RESULT_TO_PARTICIPATION_COLORS = {
@@ -26,7 +23,6 @@ const RESULT_TO_PARTICIPATION_COLORS = {
   'Failed': '#4C556445'
 };
 
-// Result → Participation 링크 활성화 색상 (호버/선택 시)
 const RESULT_TO_PARTICIPATION_ACTIVATED_COLORS = {
   'Passed': '#4DD36899',
   'Rejected': '#DF4E4Ecc',
@@ -41,19 +37,15 @@ const MIN_NODE_GAP = 4;
 const MIN_NODE_HEIGHT = 10;
 const LINK_OPACITY = 0.6;
 const MIN_LINK_WIDTH = 4;
-const SANKEY_ITERATIONS = 32; // 렌더링 횟수
+const SANKEY_ITERATIONS = 32;
 
-// 노드 카테고리 정의 (types는 동적으로 추출됨)
 const NODE_CATEGORIES = {
-  // types는 generateSankeyData에서 동적으로 추출
   results: ['Passed', 'Rejected', 'Failed'],
   participationLevels: ['High', 'Mid', 'Low'],
   voteCompositions: ['Consensus', 'Contested', 'Polarized'],
   processingSpeeds: ['Fast', 'Normal', 'Slow']
 };
 
-// Generate Sankey data for Proposition Configuration Flow
-// Column order: Type(0) -> Result(1) -> Participation(2) -> Vote Composition(3) -> Processing Speed(4)
 const generateSankeyData = (mainChain, mockPropositions) => {
   if (!mainChain) {
     return { nodes: [], links: [] };

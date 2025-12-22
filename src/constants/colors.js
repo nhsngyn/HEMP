@@ -13,7 +13,8 @@ export const COLORS = {
   GRAY500: '#4C5564',
   GRAY700: '#29303A',
   GRAY800: '#191C23',
-  GRAY900: '#101217',
+  GRAY900: '#101010', /* 순수한 회색 - 파란 톤 제거 */
+  GRAYBG: '#17181c', /* 카드/사이드바 배경색 */
   
   SKYBLUE: '#3CA7C4',
   YELLOW: '#BBB143',

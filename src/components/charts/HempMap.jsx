@@ -110,14 +110,18 @@ const HempMap = () => {
 
       tooltip: {
         trigger: 'item',
+        triggerOn: 'mousemove',
         backgroundColor: 'transparent',
         padding: 0,
         borderWidth: 0,
+        confine: true,
+        alwaysShowContent: false,
 
         axisPointer: {
           show: true,
           type: 'cross',
           snap: true,
+          link: [{ xAxisIndex: 'all' }],
           crossStyle: {
             type: 'dashed',
             width: 1,
@@ -225,7 +229,11 @@ const HempMap = () => {
   const handleChartMouseOver = (params) => {
     if (params.componentType !== 'series') return;
 
+    const echartsInstance = chartRef.current?.getEchartsInstance();
+    if (!echartsInstance) return;
+
     const hoveredId = params.data.id;
+    const hoveredData = params.data.value; // [x, y] 좌표
     let lineColor = COLORS.GRAY300;
     let textColor = COLORS.WHITE;
 
@@ -240,7 +248,15 @@ const HempMap = () => {
       textColor = COLORS.SUB2;
     }
 
-    chartRef.current?.getEchartsInstance().setOption({
+    // 버블의 좌표에 axisPointer 고정
+    echartsInstance.dispatchAction({
+      type: 'updateAxisPointer',
+      currTrigger: 'mousemove',
+      x: hoveredData[0],
+      y: hoveredData[1],
+    });
+
+    echartsInstance.setOption({
       tooltip: {
         axisPointer: {
           crossStyle: { color: lineColor },
@@ -251,7 +267,10 @@ const HempMap = () => {
   };
 
   const handleChartMouseOut = () => {
-    chartRef.current?.getEchartsInstance().setOption({
+    const echartsInstance = chartRef.current?.getEchartsInstance();
+    if (!echartsInstance) return;
+
+    echartsInstance.setOption({
       tooltip: {
         axisPointer: {
           crossStyle: { color: COLORS.GRAY300 },

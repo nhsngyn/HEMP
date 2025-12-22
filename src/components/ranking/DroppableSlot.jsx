@@ -13,7 +13,18 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
   const logoUrl = selectedChain?.logoUrl || ""; 
   const chainName = selectedChain?.name;
 
-  // 스타일 상수
+  // color prop을 실제 색상 값으로 변환
+  const getColorValue = (colorType) => {
+    switch (colorType) {
+      case 'main': return COLORS.MAIN;
+      case 'sub1': return COLORS.SUB1;
+      case 'sub2': return COLORS.SUB2;
+      default: return COLORS.GRAY500;
+    }
+  };
+
+  const highlightColor = getColorValue(color);
+
   const LOGO_SIZE = '24px'; 
   const INNER_PADDING_LEFT = '12px';
   const INNER_PADDING_RIGHT = '12px'; 
@@ -39,12 +50,12 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
         backgroundColor: isSelected ? COLORS.GRAY800 : 'transparent',
       }}
     >
-      {/* 1. 하이라이트 선 (Left Edge Bar) */}
+      {/* 1. 하이라이트 선 */}
       <div 
         className="flex-shrink-0 self-stretch"
         style={{ 
           width: '5.772px', 
-          backgroundColor: color, 
+          backgroundColor: highlightColor, 
           borderRadius: '5.744px 0 0 5.744px',
         }}
       ></div>
@@ -58,9 +69,9 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
         }}
       >
         {selectedChain ? (
-          /* [상태 1] 체인이 선택되었을 때 */
+          /* 체인이 선택되었을 때 */
           <div className="flex items-center w-full justify-between">
-              <div className="flex items-center gap-2"> 
+              <div className="flex items-center gap-[8px]"> 
                   <img 
                       src={logoUrl} 
                       alt={`${chainName} logo`}
@@ -71,7 +82,7 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
                         objectFit: 'cover'
                       }}
                   />
-                  <span className="text-[15px] font-semibold">
+                  <span className="text-body2-sb">
                       {chainName}
                   </span>
               </div>
@@ -95,13 +106,13 @@ const DroppableSlot = ({ id, color, selectedChainId, onClear, placeholderText })
 </button>
           </div>
         ) : (
-          /* [상태 2] 빈 슬롯일 때 */
+          /* 빈 슬롯일 때 */
           <div className="flex items-center gap-2 w-full opacity-40">
              <div 
                 className="rounded-full bg-gray-600 flex-shrink-0"
                 style={{ width: LOGO_SIZE, height: LOGO_SIZE }}
               ></div>
-              <span className="text-gray-400 text-[15px] font-semibold">
+              <span className="text-gray-400 text-body2-sb">
                 {placeholderText || "Select Chain"}
               </span>
           </div>

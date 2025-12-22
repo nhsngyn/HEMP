@@ -1,6 +1,4 @@
 import React from "react";
-import { COLORS } from '../../constants/colors';
-
 
 const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
   const isSelected = !!selectionInfo;
@@ -11,80 +9,31 @@ const ChainCard = ({ chain, selectionInfo, isDragging, isOverlay }) => {
 
   return (
     <div
-      className={`
-        flex items-center 
-        w-[206px]
-        h-[44px]
-        px-2
-        gap-2 
-        self-stretch
-        rounded-[7.4px]
-        transition-all 
-      `}
+      className={`flex items-center w-full h-[44px] px-2 gap-2 rounded-[7.4px] transition-all ${
+        isDragging ? 'opacity-35' : 'opacity-100'
+      }`}
       style={{
-        border: isSelected
-          ? `0.93px solid ${highlightColor}`
-          : '0.93px solid transparent',
-        opacity: isDragging ? 0.35 : 1,
+        borderWidth: '0.93px',
+        borderStyle: 'solid',
+        borderColor: isSelected ? highlightColor : 'transparent',
+        boxSizing: 'border-box',
       }}
     >
-      {/* 1. 이름 영역*/}
-      <div
-        className="
-          flex-shrink-0 
-          text-gray-200 
-          text-base 
-          font-medium 
-          truncate
-        "
-        style={{ width: '80px' }} 
-      >
+      <div className="w-[80px] flex-shrink-0 truncate text-body2-m text-gray-200">
         {chain.name}
       </div>
 
-    {/* 2. 막대 + 점수 컨테이너 */}
-<div className="flex items-center gap-2 flex-1 min-w-0">
-
-  {/* 막대바 배경 */}
-  <div
-    className="
-      relative
-      h-[20px]
-      rounded-[3.59px]
-      overflow-hidden
-    "
-    style={{ width: '120px' }}
-  >
-    {/* 100점 기준 바 */}
-    <div
-      className="
-        absolute left-0 top-0
-        h-full
-        rounded-[3.59px]
-      "
-      style={{
-        width: '120px',
-        backgroundColor: COLORS.GRAY800,
-      }}
-    />
-
-    {/* 실제 점수 바 */}
-    <div
-      className="
-        absolute left-0 top-0
-        h-full
-        rounded-[3.59px]
-      "
-      style={{
-        width: `${barWidth}px`,
-        backgroundColor: isSelected
-          ? highlightColor
-          : COLORS.GRAY700,
-      }}
-    />
-  </div>
-</div>
-
+      <div className="flex items-center gap-2 flex-1 min-w-0">
+        <div className="relative w-[120px] h-[20px] rounded-[3.59px] overflow-hidden bg-gray-800">
+          <div
+            className={`absolute left-0 top-0 h-full rounded-[3.59px] ${isSelected ? '' : 'bg-gray-700'}`}
+            style={{
+              width: `${barWidth}px`,
+              backgroundColor: isSelected ? highlightColor : undefined,
+            }}
+          />
+        </div>
+      </div>
     </div>
   );
 };

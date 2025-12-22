@@ -10,7 +10,6 @@ import { createPortal } from "react-dom";
 
 import useChainStore from "../../store/useChainStore";
 import useChainSelection from "../../hooks/useChainSelection";
-import { COLORS } from "../../constants/colors";
 
 import DraggableChain from "./DraggableChain";
 import DroppableSlot from "./DroppableSlot";
@@ -33,13 +32,9 @@ const RankingChart = () => {
   } = useChainSelection();
 
   const [activeId, setActiveId] = React.useState(null);
-
-  /* =========================
-   * SORT CONFIG
-   * ========================= */
   const [sortConfig, setSortConfig] = React.useState({
-    key: "score", // 'name' | 'score'
-    order: "desc", // 'asc' | 'desc'
+    key: "score",
+    order: "desc",
   });
 
   const sensors = useSensors(
@@ -48,9 +43,6 @@ const RankingChart = () => {
     })
   );
 
-  /* =========================
-   * SORTED CHAINS
-   * ========================= */
   const sortedChains = [...allChains].sort((a, b) => {
     const { key, order } = sortConfig;
 
@@ -68,41 +60,24 @@ const RankingChart = () => {
   });
 
   const activeChain = allChains.find((c) => c.id === activeId);
-  const selectedIds = [
-    selectedMainId,
-    selectedSubId1,
-    selectedSubId2,
-  ].filter((id) => id !== null);
+  const selectedIds = [selectedMainId, selectedSubId1, selectedSubId2].filter(Boolean);
 
-  /* =========================
-   * SORT HANDLERS
-   * ========================= */
   const handleSortClick = (key) => {
-    setSortConfig((prev) => {
-      if (prev.key === key) {
-        return {
-          ...prev,
-          order: prev.order === "asc" ? "desc" : "asc",
-        };
-      }
-      return { key, order: "asc" };
-    });
+    setSortConfig((prev) =>
+      prev.key === key
+        ? { ...prev, order: prev.order === "asc" ? "desc" : "asc" }
+        : { key, order: "asc" }
+    );
   };
 
   const getSortIcon = (key) => {
-    if (sortConfig.key !== key) {
-      return "/Icons/icn_sort_default_24.svg";
-    }
+    if (sortConfig.key !== key) return "/Icons/icn_sort_default_24.svg";
     return sortConfig.order === "asc"
       ? "/Icons/icn_sort_up_24.svg"
       : "/Icons/icn_sort_down_24.svg";
   };
 
-  /* =========================
-   * DND HANDLERS
-   * ========================= */
-  const handleDragEnd = (event) => {
-    const { active, over } = event;
+  const handleDragEnd = ({ active, over }) => {
     setActiveId(null);
     if (!over) return;
 
@@ -123,75 +98,35 @@ const RankingChart = () => {
       onDragStart={(e) => setActiveId(e.active.id)}
       onDragEnd={handleDragEnd}
     >
-      <div className="flex flex-col h-full w-full select-none relative">
-
-        {/* TITLE */}
-        <div className=" top-0 left-0 z-10 flex items-center gap-3 py-3">
-          <h2
-            className="font-bold text-lg"
-            style={{ color: '#D1D5DB' }}
-          >
-            HEMP Rank
-          </h2>
+      <div className="flex flex-col h-full w-full relative select-none">
+        <div className="flex items-center gap-3 shrink-0" style={{ marginBottom: '12px' }}>
+          <h2 className="text-body2-b text-gray-200">HEMP Rank</h2>
         </div>
 
-        {/* FILTER BUTTONS */}
         <div
-          className="
-            flex items-center gap-4
-            mb-1 pb-3 shrink-0 
-            border-b w-full
-          "
-          style={{
-            borderColor: COLORS.GRAY700,
-            paddingTop: 'calc(20px * var(--scale))' // py-3 (12px) + text height
-          }}
+          className="flex items-center gap-4 mb-1 pb-3 shrink-0 border-b border-gray-700 w-full"
+          style={{ paddingTop: 'calc(20px * var(--scale))' }}
         >
-          {/* Name Sort */}
           <button
             className="flex items-center gap-1"
             onClick={() => handleSortClick("name")}
+            style={{ paddingLeft: '8px' }}
           >
-            <span
-              className={
-                sortConfig.key === "name"
-                  ? "text-white text-xs font-semibold leading-tight"
-                  : "text-gray-400 text-xs font-semibold leading-tight"
-              }
-            >
+            <span className={`text-caption1-sb ${sortConfig.key === "name" ? "text-white" : "text-gray-400"}`}>
               Name
             </span>
-            <img
-              src={getSortIcon("name")}
-              className="w-6 h-6"
-              alt="sort by name"
-            />
+            <img src={getSortIcon("name")} className="w-6 h-6" alt="sort by name" />
           </button>
 
-          {/* Score Sort */}
-          <button
-            className="flex items-center gap-1"
-            onClick={() => handleSortClick("score")}
-          >
-            <span
-              className={
-                sortConfig.key === "score"
-                  ? "text-white text-xs font-semibold leading-tight"
-                  : "text-gray-400 text-xs font-semibold leading-tight"
-              }
-            >
+          <button className="flex items-center gap-1" onClick={() => handleSortClick("score")}>
+            <span className={`text-caption1-sb ${sortConfig.key === "score" ? "text-white" : "text-gray-400"}`}>
               HEMP Score
             </span>
-            <img
-              src={getSortIcon("score")}
-              className="w-6 h-6"
-              alt="sort by score"
-            />
+            <img src={getSortIcon("score")} className="w-6 h-6" alt="sort by score" />
           </button>
         </div>
 
-        {/* LIST AREA */}
-        <div className="flex-1 min-h-0 overflow-y-auto mb-[35px]">
+        <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden mb-[35px]">
           <DroppableListArea>
             {sortedChains.map((chain) => {
               const isSelected = selectedIds.includes(chain.id);
@@ -208,40 +143,32 @@ const RankingChart = () => {
           </DroppableListArea>
         </div>
 
-        {/* SLOT AREA */}
-        <div className="shrink-0 flex flex-col gap-[24px]">
-
-          {/* Main */}
+        <div className="shrink-0 flex flex-col gap-6">
           <div>
-            <h3 className="text-gray-500 text-xs font-medium mb-[8px]">
-              Main
-            </h3>
+            <h3 className="text-body3-m text-gray-500 mb-2">Main</h3>
             <DroppableSlot
               id="main"
-              color={COLORS.MAIN}
-              placeholderText="Main Chain"
+              color="main"
+              placeholderText="Drop here"
               selectedChainId={selectedMainId}
               onClear={() => clearSlot("main")}
             />
           </div>
 
-          {/* Comparison */}
           <div>
-            <h3 className="text-gray-500 text-xs font-medium mb-[8px]">
-              Comparison
-            </h3>
-            <div className="flex flex-col gap-[8px]">
+            <h3 className="text-body3-m text-gray-500 mb-2">Comparison</h3>
+            <div className="flex flex-col gap-2">
               <DroppableSlot
                 id="sub1"
-                color={COLORS.SUB1}
-                placeholderText="Chain1"
+                color="sub1"
+                placeholderText="Drop here"
                 selectedChainId={selectedSubId1}
                 onClear={() => clearSlot("sub1")}
               />
               <DroppableSlot
                 id="sub2"
-                color={COLORS.SUB2}
-                placeholderText="Chain2"
+                color="sub2"
+                placeholderText="Drop here"
                 selectedChainId={selectedSubId2}
                 onClear={() => clearSlot("sub2")}
               />
@@ -250,15 +177,9 @@ const RankingChart = () => {
         </div>
       </div>
 
-      {/* DRAG OVERLAY */}
       {createPortal(
         <DragOverlay>
-          {activeChain && (
-            <DraggableChain
-              chain={activeChain}
-              isOverlay
-            />
-          )}
+          {activeChain && <DraggableChain chain={activeChain} isOverlay />}
         </DragOverlay>,
         document.body
       )}

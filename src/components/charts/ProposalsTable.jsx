@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { sankeyMockPropositions, defaultDummyPropositions } from '../../data/sankeyMockData';
 import useChainStore from '../../store/useChainStore';
+import { COLORS } from '../../constants/colors';
 
 const ProposalsTable = ({ mainChain }) => {
   const { sankeyFilter } = useChainStore();
@@ -115,9 +116,10 @@ const ProposalsTable = ({ mainChain }) => {
 
   return (
     <div
-      className="w-full h-full  rounded-lg shadow-lg flex flex-col"
+      className="w-full h-full rounded-lg shadow-lg flex flex-col"
       style={{
-        padding: 'calc(24px * var(--scale))'
+        padding: 'calc(24px * var(--scale))',
+        backgroundColor: COLORS.GRAYBG
       }}
     >
       <div

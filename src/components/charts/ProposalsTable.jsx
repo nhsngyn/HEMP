@@ -5,63 +5,6 @@ import useChainStore from '../../store/useChainStore';
 const ProposalsTable = ({ mainChain }) => {
   const { sankeyFilter } = useChainStore();
 
-  const propositions = useMemo(() => { // 메인 체인 데이터에서 프로포절 데이터를 가져옴
-    if (!mainChain) return [];
-
-    const mockData = {
-      ...sankeyMockPropositions,
-      'default': defaultDummyPropositions
-    };
-
-    return (mainChain.propositions && Array.isArray(mainChain.propositions) && mainChain.propositions.length > 0)
-      ? mainChain.propositions
-      : (mockData[mainChain.id] || mockData['default'] || []);
-  }, [mainChain]);
-
-  const filteredPropositions = useMemo(() => {
-    let result = propositions;
-
-    if (sankeyFilter && propositions.length > 0) {
-      const { sourceColumn, targetColumn, sourceName, targetName, type } = sankeyFilter;
-
-      result = propositions.filter((p) => {
-        const propType = p.type || 'Other';
-        const result = p.result || 'Passed';
-        const participationLevel = p.participationLevel || p.participation || 'Mid';
-        const voteComposition = p.voteComposition || 'Consensus';
-        const processingSpeed = p.processingSpeed || 'Normal';
-
-        // Type → Result
-        if (sourceColumn === 0 && targetColumn === 1) {
-          return propType === sourceName && result === targetName;
-        }
-        // Result → Participation
-        if (sourceColumn === 1 && targetColumn === 2) {
-          const typeMatch = type ? propType === type : true;
-          return result === sourceName && participationLevel === targetName && typeMatch;
-        }
-        // Participation → Vote Composition
-        if (sourceColumn === 2 && targetColumn === 3) {
-          const typeMatch = type ? propType === type : true;
-          return participationLevel === sourceName && voteComposition === targetName && typeMatch;
-        }
-        // Vote Composition → Processing Speed
-        if (sourceColumn === 3 && targetColumn === 4) {
-          const typeMatch = type ? propType === type : true;
-          return voteComposition === sourceName && processingSpeed === targetName && typeMatch;
-        }
-
-        return true;
-      });
-    }
-
-    return result.sort((a, b) => {
-      const idA = a.id || 0;
-      const idB = b.id || 0;
-      return idA - idB;
-    });
-  }, [sankeyFilter, propositions]);
-
   const getStatusColor = (statusRaw) => {
     if (!statusRaw) return 'text-[#6D7380]';
     const status = statusRaw.toUpperCase();
@@ -86,7 +29,6 @@ const ProposalsTable = ({ mainChain }) => {
   };
 
   const formatProcessingTime = (prop) => {
-
     if (prop.processingTime) return prop.processingTime;
     if (prop.processingSpeed === 'Fast') return '1-2 days';
     if (prop.processingSpeed === 'Normal') return '2-5 days';
@@ -104,6 +46,85 @@ const ProposalsTable = ({ mainChain }) => {
     }
     return type;
   };
+
+  const propositions = useMemo(() => { // 메인 체인 데이터에서 프로포절 데이터를 가져옴
+    if (!mainChain) return [];
+
+    const mockData = {
+      ...sankeyMockPropositions,
+      'default': defaultDummyPropositions
+    };
+
+    return (mainChain.propositions && Array.isArray(mainChain.propositions) && mainChain.propositions.length > 0)
+      ? mainChain.propositions
+      : (mockData[mainChain.id] || mockData['default'] || []);
+  }, [mainChain]);
+
+  const filteredPropositions = useMemo(() => {
+    let result = propositions;
+
+    if (sankeyFilter && propositions.length > 0) {
+      const { sourceColumn, targetColumn, sourceName, targetName, type } = sankeyFilter;
+
+      result = propositions.filter((p) => {
+        // SankeyChart에서 사용하는 것과 동일한 방식으로 타입/결과를 정규화해서 비교
+        const normalizedType = formatTypeForDisplay(p.originalType || p.type || 'Other');
+        const normalizedResult = (p.result || formatStatus(p)).replace(/\s*\([^)]*%\)/g, '').trim();
+        const participationLevel = p.participationLevel || p.participation || 'Mid';
+        const voteComposition = p.voteComposition || 'Consensus';
+        const processingSpeed = p.processingSpeed || 'Normal';
+
+        // Type → Result
+        if (sourceColumn === 0 && targetColumn === 1) {
+          return (
+            normalizedType.toLowerCase() === String(sourceName).toLowerCase() &&
+            normalizedResult.toLowerCase() === String(targetName).toLowerCase()
+          );
+        }
+        // Result → Participation
+        if (sourceColumn === 1 && targetColumn === 2) {
+          const typeMatch = type
+            ? normalizedType.toLowerCase() === String(type).toLowerCase()
+            : true;
+          return (
+            normalizedResult.toLowerCase() === String(sourceName).toLowerCase() &&
+            String(participationLevel).toLowerCase() === String(targetName).toLowerCase() &&
+            typeMatch
+          );
+        }
+        // Participation → Vote Composition
+        if (sourceColumn === 2 && targetColumn === 3) {
+          const typeMatch = type
+            ? normalizedType.toLowerCase() === String(type).toLowerCase()
+            : true;
+          return (
+            String(participationLevel).toLowerCase() === String(sourceName).toLowerCase() &&
+            String(voteComposition).toLowerCase() === String(targetName).toLowerCase() &&
+            typeMatch
+          );
+        }
+        // Vote Composition → Processing Speed
+        if (sourceColumn === 3 && targetColumn === 4) {
+          const typeMatch = type
+            ? normalizedType.toLowerCase() === String(type).toLowerCase()
+            : true;
+          return (
+            String(voteComposition).toLowerCase() === String(sourceName).toLowerCase() &&
+            String(processingSpeed).toLowerCase() === String(targetName).toLowerCase() &&
+            typeMatch
+          );
+        }
+
+        return true;
+      });
+    }
+
+    return result.sort((a, b) => {
+      const idA = a.id || 0;
+      const idB = b.id || 0;
+      return idA - idB;
+    });
+  }, [sankeyFilter, propositions]);
 
   return (
     <div

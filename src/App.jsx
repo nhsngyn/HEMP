@@ -107,7 +107,7 @@ function App() {
 
           <div
             className="w-full flex-1 relative overflow-hidden rounded-2xl shadow-lg"
-            style={{ backgroundColor: COLORS.GRAYBG, marginBottom: "47px" }}
+            style={{ backgroundColor: COLORS.GRAYBG, marginBottom: "47px", minHeight: "480px" }}
           >
             <SankeyChart />
           </div>

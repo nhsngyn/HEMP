@@ -119,6 +119,7 @@ function App() {
           style={{
             paddingLeft: "24px",
             paddingRight: "24px",
+            paddingBottom: "24px",
             boxSizing: "border-box",
           }}
         >

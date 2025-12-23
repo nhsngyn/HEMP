@@ -126,7 +126,7 @@ const ProposalsTable = ({ mainChain }) => {
           <thead>
             <tr className="border-b border-gray-800 ">
               <th
-                className="text-left text-gray-400 text-caption-sb"
+                className="text-left text-gray-400 text-caption1-sb"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`
                 }}
@@ -134,7 +134,7 @@ const ProposalsTable = ({ mainChain }) => {
                 ID
               </th>
               <th
-                className="text-left text-gray-400 text-caption-sb"
+                className="text-left text-gray-400 text-caption1-sb"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`
                 }}
@@ -142,7 +142,7 @@ const ProposalsTable = ({ mainChain }) => {
                 Title
               </th>
               <th
-                className="text-left text-gray-400 text-caption-sb"
+                className="text-left text-gray-400 text-caption1-sb"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
                   width: '180px'
@@ -151,7 +151,7 @@ const ProposalsTable = ({ mainChain }) => {
                 Type
               </th>
               <th
-                className="text-left text-gray-400 text-caption-sb"
+                className="text-left text-gray-400 text-caption1-sb"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`
                 }}
@@ -159,7 +159,7 @@ const ProposalsTable = ({ mainChain }) => {
                 Participation
               </th>
               <th
-                className="text-left text-gray-400 text-caption-sb"
+                className="text-left text-gray-400 text-caption1-sb"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`,
                   maxWidth: '140px'
@@ -168,7 +168,7 @@ const ProposalsTable = ({ mainChain }) => {
                 Status
               </th>
               <th
-                className="text-left text-gray-400 text-caption-sb"
+                className="text-left text-gray-400 text-caption1-sb"
                 style={{
                   padding: `calc(12px * var(--scale)) calc(16px * var(--scale))`
                 }}

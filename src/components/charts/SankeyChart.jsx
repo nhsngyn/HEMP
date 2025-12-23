@@ -819,8 +819,8 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
         .attr('dy', '0.35em')
         .attr('text-anchor', (d) => d.column === maxColumn ? 'end' : 'start')
         .attr('font-size', '12px')
-        .attr('font-weight', (d) => isNodeSelected(d) ? '800' : '600')
-        .attr('fill', (d) => isNodeSelected(d) ? '#FFFFFF' : '#9CA3AE')
+        .attr('font-weight', (d) => isNodeSelected(d) ? '700' : '500')
+        .attr('fill', (d) => isNodeSelected(d) ? '#FFFFFF' : '#D1D5DB')
         .attr('pointer-events', 'none')
         .attr('font-family', 'SUIT')
         .text((d) => d.name);
@@ -849,8 +849,8 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
             .attr('y', labelY)
             .attr('text-anchor', 'middle')
             .attr('fill', '#6D7380')
-            .attr('font-size', '13px')
-            .attr('font-weight', '600')
+            .attr('font-size', '12px')
+            .attr('font-weight', '700')
             .attr('font-family', 'SUIT')
             .attr('pointer-events', 'none');
 
@@ -869,8 +869,8 @@ const SankeyChart = ({ width = 1400, height = 700 }) => {
             .attr('y', labelY)
             .attr('text-anchor', 'middle')
             .attr('fill', '#6D7380')
-            .attr('font-size', '13px')
-            .attr('font-weight', '600')
+            .attr('font-size', '12px')
+            .attr('font-weight', '700')
             .attr('font-family', 'SUIT')
             .attr('pointer-events', 'none')
             .text(labelText);
